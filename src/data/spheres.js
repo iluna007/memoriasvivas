@@ -1,21 +1,18 @@
-// 18 colores distintos para las esferas
-export const SPHERE_COLORS = [
-  '#e53935', '#d81b60', '#8e24aa', '#5e35b1', '#3949ab',
-  '#1e88e5', '#00acc1', '#00897b', '#43a047', '#7cb342',
-  '#c0ca33', '#fdd835', '#ffb300', '#fb8c00', '#f4511e',
-  '#6d4c41', '#757575', '#546e7a'
-]
+import { SPHERE_CONTENT } from './sphereContent'
+
+/** Número de esferas (desde sphereContent, única fuente de verdad). */
+const COUNT = SPHERE_CONTENT.length
 
 function seededRandom(seed) {
   const x = Math.sin(seed * 12.9898) * 43758.5453
   return x - Math.floor(x)
 }
 
-// Posiciones iniciales repartidas en el espacio
+// Posiciones iniciales repartidas en el espacio (tantas como items en SPHERE_CONTENT)
 export function getSphereInitialPositions() {
   const positions = []
   const radius = 6
-  for (let i = 0; i < 18; i++) {
+  for (let i = 0; i < COUNT; i++) {
     const theta = seededRandom(i * 2.1) * Math.PI * 2
     const phi = Math.acos(2 * seededRandom(i * 3.7) - 1)
     const r = radius * (0.5 + seededRandom(i * 5.3) * 0.5)
@@ -30,7 +27,7 @@ export function getSphereInitialPositions() {
 
 // Parámetros de movimiento flotante por esfera
 export function getSphereMotionParams() {
-  return Array.from({ length: 18 }, (_, i) => ({
+  return Array.from({ length: COUNT }, (_, i) => ({
     speedX: 0.3 + seededRandom(i * 7) * 0.4,
     speedY: 0.3 + seededRandom(i * 11) * 0.4,
     speedZ: 0.3 + seededRandom(i * 13) * 0.4,

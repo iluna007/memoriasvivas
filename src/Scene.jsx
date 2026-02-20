@@ -2,13 +2,10 @@ import { useRef, useMemo, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 import { BoxGeometry, BufferAttribute, BufferGeometry, EdgesGeometry } from 'three'
-import {
-  SPHERE_COLORS,
-  getSphereInitialPositions,
-  getSphereMotionParams
-} from './data/spheres'
+import { SPHERE_CONTENT } from './data/sphereContent'
+import { getSphereInitialPositions, getSphereMotionParams } from './data/spheres'
 
-const SPHERE_COUNT = 18
+const SPHERE_COUNT = SPHERE_CONTENT.length
 // Máximo de segmentos (todas las parejas); solo se dibujan los que estén bajo el umbral
 const SEGMENT_COUNT = (SPHERE_COUNT * (SPHERE_COUNT - 1)) / 2
 
@@ -76,7 +73,7 @@ function SphereWeb({ positionsRef, paused, proximityThreshold }) {
 const HOVER_SCALE = 1.25
 const SCALE_LERP = 0.18
 
-function FloatingSphere({ id, basePosition, motion, color, paused, onSelect, positionsRef, motionSpeed, motionAmplitude }) {
+function FloatingSphere({ id, basePosition, motion, title, color, paused, onSelect, positionsRef, motionSpeed, motionAmplitude }) {
   const meshRef = useRef()
   const positionRef = useRef({ ...basePosition })
   const scaleRef = useRef(1)
@@ -103,8 +100,6 @@ function FloatingSphere({ id, basePosition, motion, color, paused, onSelect, pos
       }
     }
   })
-
-  const title = `Esfera ${id + 1}`
 
   return (
     <mesh
@@ -187,7 +182,8 @@ export function Scene({ paused, onSphereClick, sceneParams = {} }) {
           id={i}
           basePosition={pos}
           motion={motionParams[i]}
-          color={SPHERE_COLORS[i]}
+          title={SPHERE_CONTENT[i]?.title ?? `Esfera ${i + 1}`}
+          color={SPHERE_CONTENT[i]?.color ?? '#888'}
           paused={paused}
           onSelect={onSphereClick}
           positionsRef={positionsRef}

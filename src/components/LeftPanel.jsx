@@ -1,15 +1,15 @@
-import { SPHERE_COLORS } from '../data/spheres'
-
-const PLACEHOLDER_IMAGES = [
-  'https://placehold.co/400x240/1a1a1a/666?text=Imagen+1',
-  'https://placehold.co/400x240/1a1a1a/666?text=Imagen+2'
-]
+import { getSphereContent } from '../data/sphereContent'
 
 export function LeftPanel({ selectedSphereId, onClose }) {
-  const title = selectedSphereId != null
-    ? `Esfera ${selectedSphereId + 1}`
-    : ''
-  const color = selectedSphereId != null ? SPHERE_COLORS[selectedSphereId] : null
+  const content = selectedSphereId != null ? getSphereContent(selectedSphereId) : null
+  const color = content?.color ?? null
+  const title = content?.title ?? ''
+  const description = content?.description ?? ''
+  const image = content?.image ?? ''
+  const images = Array.isArray(content?.images) ? content.images : []
+  const videos = Array.isArray(content?.videos) ? content.videos : []
+
+  const allImages = [image, ...images].filter(Boolean)
 
   return (
     <aside
@@ -37,26 +37,44 @@ export function LeftPanel({ selectedSphereId, onClose }) {
           {title}
         </h2>
 
-        <p className="text-white/80 text-sm leading-relaxed mb-6 select-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
+        {description && (
+          <p className="text-white/80 text-sm leading-relaxed mb-6 select-text">
+            {description}
+          </p>
+        )}
 
-        <div className="space-y-4">
-          <div className="rounded-lg overflow-hidden bg-white/5 border border-white/10">
-            <img
-              src={PLACEHOLDER_IMAGES[0]}
-              alt="Placeholder 1"
-              className="w-full h-auto block"
-            />
+        {allImages.length > 0 && (
+          <div className="space-y-4 mb-6">
+            {allImages.map((src, idx) => (
+              <div key={idx} className="rounded-lg overflow-hidden bg-white/5 border border-white/10">
+                <img
+                  src={src}
+                  alt=""
+                  className="w-full h-auto block"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
-          <div className="rounded-lg overflow-hidden bg-white/5 border border-white/10">
-            <img
-              src={PLACEHOLDER_IMAGES[1]}
-              alt="Placeholder 2"
-              className="w-full h-auto block"
-            />
+        )}
+
+        {videos.length > 0 && (
+          <div className="space-y-4">
+            <h3 className="text-sm font-medium text-white/70">Vídeos</h3>
+            {videos.map((url, idx) => (
+              <div key={idx} className="rounded-lg overflow-hidden bg-white/5 border border-white/10 aspect-video">
+                <video
+                  src={url}
+                  controls
+                  className="w-full h-full object-contain"
+                  preload="metadata"
+                >
+                  Tu navegador no soporta la etiqueta de vídeo.
+                </video>
+              </div>
+            ))}
           </div>
-        </div>
+        )}
       </div>
     </aside>
   )
