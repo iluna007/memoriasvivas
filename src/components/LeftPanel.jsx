@@ -14,23 +14,30 @@ export function LeftPanel({ selectedSphereId, onClose }) {
   return (
     <aside
       className="fixed left-0 top-0 bottom-0 w-[380px] max-w-[90vw] bg-black/95 backdrop-blur-sm border-r border-white/10 flex flex-col z-10 shadow-2xl"
-      style={{ borderLeftWidth: color ? 4 : 0, borderLeftStyle: 'solid', borderLeftColor: color ?? 'transparent' }}
+      style={{
+        borderLeftWidth: color ? 4 : 0,
+        borderLeftStyle: 'solid',
+        borderLeftColor: color ?? 'transparent',
+        paddingLeft: 'env(safe-area-inset-left)',
+        paddingTop: 'env(safe-area-inset-top)',
+        paddingBottom: 'env(safe-area-inset-bottom)'
+      }}
     >
-      <div className="p-6 flex-1 overflow-y-auto relative">
+      <div className="p-4 sm:p-6 flex-1 overflow-y-auto relative overscroll-contain">
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-2 right-2 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-xl leading-none transition-colors"
+          className="absolute top-2 right-2 min-w-[44px] min-h-[44px] w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 active:bg-white/25 flex items-center justify-center text-white text-xl leading-none transition-colors touch-manipulation"
           aria-label="Cerrar"
         >
           ×
         </button>
 
-        <h2 className="text-2xl font-semibold text-white pr-10 mb-4" style={{ color: color ?? '#fff' }}>
+        <h2 className="text-xl sm:text-2xl font-semibold text-white pr-12 mb-4" style={{ color: color ?? '#fff' }}>
           {title}
         </h2>
 
-        <p className="text-white/80 text-sm leading-relaxed mb-6">
+        <p className="text-white/80 text-sm leading-relaxed mb-6 select-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </p>
 
