@@ -1,5 +1,6 @@
-import { useRef, useMemo } from 'react'
+import { useRef, useMemo, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
+import { Html } from '@react-three/drei'
 import { BoxGeometry, BufferAttribute, BufferGeometry, EdgesGeometry } from 'three'
 import {
   SPHERE_COLORS,
@@ -72,9 +73,14 @@ function SphereWeb({ positionsRef, paused, proximityThreshold }) {
   )
 }
 
+const HOVER_SCALE = 1.25
+const SCALE_LERP = 0.18
+
 function FloatingSphere({ id, basePosition, motion, color, paused, onSelect, positionsRef, motionSpeed, motionAmplitude }) {
   const meshRef = useRef()
   const positionRef = useRef({ ...basePosition })
+  const scaleRef = useRef(1)
+  const [hovered, setHovered] = useState(false)
 
   useFrame((state) => {
     const t = state.clock.elapsedTime * (motionSpeed ?? 1)
@@ -87,6 +93,9 @@ function FloatingSphere({ id, basePosition, motion, color, paused, onSelect, pos
     }
     if (meshRef.current) {
       meshRef.current.position.copy(positionRef.current)
+      const targetScale = hovered ? HOVER_SCALE : 1
+      scaleRef.current += (targetScale - scaleRef.current) * SCALE_LERP
+      meshRef.current.scale.setScalar(scaleRef.current)
       if (positionsRef?.current && positionsRef.current[id]) {
         positionsRef.current[id].x = positionRef.current.x
         positionsRef.current[id].y = positionRef.current.y
@@ -94,6 +103,8 @@ function FloatingSphere({ id, basePosition, motion, color, paused, onSelect, pos
       }
     }
   })
+
+  const title = `Esfera ${id + 1}`
 
   return (
     <mesh
@@ -105,9 +116,11 @@ function FloatingSphere({ id, basePosition, motion, color, paused, onSelect, pos
       }}
       onPointerOver={(e) => {
         e.stopPropagation()
+        setHovered(true)
         document.body.style.cursor = 'pointer'
       }}
       onPointerOut={() => {
+        setHovered(false)
         document.body.style.cursor = 'default'
       }}
       castShadow
@@ -115,6 +128,29 @@ function FloatingSphere({ id, basePosition, motion, color, paused, onSelect, pos
     >
       <sphereGeometry args={[0.35, 24, 24]} />
       <meshStandardMaterial color={color} />
+      {hovered && (
+        <Html
+          position={[0, 0.55, 0]}
+          center
+          distanceFactor={8}
+          style={{
+            pointerEvents: 'none',
+            userSelect: 'none',
+            whiteSpace: 'nowrap',
+            fontFamily: 'system-ui, sans-serif',
+            fontSize: '14px',
+            color: '#fff',
+            textShadow: '0 0 8px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.8)',
+            padding: '4px 10px',
+            borderRadius: '6px',
+            background: 'rgba(0,0,0,0.75)',
+            border: '1px solid rgba(255,255,255,0.15)'
+          }}
+          transform
+        >
+          {title}
+        </Html>
+      )}
     </mesh>
   )
 }
