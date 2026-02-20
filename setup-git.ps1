@@ -30,7 +30,12 @@ git branch -M main
 Write-Host "`nIntentando push..." -ForegroundColor Cyan
 git push -u origin main
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "`nSi el remoto ya tiene commits, ejecuta:" -ForegroundColor Yellow
-    Write-Host "  git pull origin main --allow-unrelated-histories" -ForegroundColor White
-    Write-Host "  git push -u origin main" -ForegroundColor White
+    Write-Host "`nEl remoto tiene commits (ej. README). Integrando..." -ForegroundColor Yellow
+    git pull origin main --allow-unrelated-histories --no-edit
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "Push de nuevo..." -ForegroundColor Cyan
+        git push -u origin main
+    } else {
+        Write-Host "Resuelve conflictos si los hay, luego: git push -u origin main" -ForegroundColor Yellow
+    }
 }
