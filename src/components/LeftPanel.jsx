@@ -13,7 +13,7 @@ export function LeftPanel({ selectedSphereId, onClose }) {
 
   return (
     <aside
-      className="fixed left-0 top-0 bottom-0 w-[380px] max-w-[90vw] bg-black/95 backdrop-blur-sm border-r border-white/10 flex flex-col z-10 shadow-2xl"
+      className="fixed left-0 top-0 bottom-0 w-[380px] max-w-[90vw] bg-black/95 backdrop-blur-sm border-r border-white/10 flex flex-col z-30 shadow-2xl"
       style={{
         borderLeftWidth: color ? 4 : 0,
         borderLeftStyle: 'solid',

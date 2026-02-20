@@ -33,7 +33,7 @@ export function ControlsPanel({ params, onChange }) {
   }
 
   const safeStyle = {
-    top: 'max(1rem, env(safe-area-inset-top))',
+    top: 'calc(3.5rem + max(0.5rem, env(safe-area-inset-top)))',
     right: 'max(1rem, env(safe-area-inset-right))'
   }
 
@@ -43,7 +43,7 @@ export function ControlsPanel({ params, onChange }) {
         type="button"
         onClick={() => setIsOpen(true)}
         style={safeStyle}
-        className="fixed w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-lg bg-black/90 backdrop-blur-sm border border-white/10 shadow-xl z-10 text-white/90 hover:bg-white/10 hover:text-white active:bg-white/15 transition-colors touch-manipulation"
+        className="fixed w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-lg bg-black/90 backdrop-blur-sm border border-white/10 shadow-xl z-[22] text-white/90 hover:bg-white/10 hover:text-white active:bg-white/15 transition-colors touch-manipulation"
         title="Abrir controles"
         aria-label="Abrir controles"
       >
@@ -55,7 +55,7 @@ export function ControlsPanel({ params, onChange }) {
   return (
     <aside
       style={safeStyle}
-      className="fixed w-72 max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)] overflow-y-auto bg-black/90 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl z-10 p-4 touch-manipulation"
+      className="fixed w-72 max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)] overflow-y-auto bg-black/90 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl z-[22] p-4 touch-manipulation"
     >
       <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
         <h3 className="text-white font-semibold text-sm pr-2">
