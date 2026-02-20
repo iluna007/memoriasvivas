@@ -1,10 +1,27 @@
 import { useRef, useMemo } from 'react'
 import { useFrame } from '@react-three/fiber'
+import { BoxGeometry, EdgesGeometry } from 'three'
 import {
   SPHERE_COLORS,
   getSphereInitialPositions,
   getSphereMotionParams
 } from './data/spheres'
+
+// Cubo que delimita el volumen donde se mueven las esferas (radio ~6 + amplitud ~1 → lado 16)
+const BOUNDS_SIZE = 16
+
+function BoundingBoxWireframe() {
+  const edgesGeometry = useMemo(() => {
+    const box = new BoxGeometry(BOUNDS_SIZE, BOUNDS_SIZE, BOUNDS_SIZE)
+    return new EdgesGeometry(box)
+  }, [])
+
+  return (
+    <lineSegments geometry={edgesGeometry}>
+      <lineBasicMaterial color="#444" transparent opacity={0.8} />
+    </lineSegments>
+  )
+}
 
 function FloatingSphere({ id, basePosition, motion, color, paused, onSelect }) {
   const meshRef = useRef()
@@ -50,6 +67,7 @@ export function Scene({ paused, onSphereClick }) {
 
   return (
     <>
+      <BoundingBoxWireframe />
       {initialPositions.map((pos, i) => (
         <FloatingSphere
           key={i}
