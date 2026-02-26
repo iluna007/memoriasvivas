@@ -122,7 +122,9 @@ export const SPHERE_CONTENT = [
     ] },
   {
     id: 'concept11',
-    title: 'Esfera 11', color: '#c0ca33', description: 'Descripción de la memoria 11.', image: '', images: [ 'https://placehold.co/400x240/1a1a1a/666?text=Imagen+1',
+    title: 'Esfera 11', color: '#c0ca33', 
+    description: 'Descripción de la primera memoria. Puedes editar este texto para cada esfera.is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    image: '', images: [ 'https://placehold.co/400x240/1a1a1a/666?text=Imagen+1',
     'https://placehold.co/400x240/1a1a1a/666?text=Imagen+2'],
     videos: [
       'https://www.youtube.com/watch?v=Rh_poGMBFAo',
