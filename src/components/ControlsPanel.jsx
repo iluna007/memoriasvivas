@@ -26,7 +26,14 @@ function IconChevronRight() {
 
 export function ControlsPanel({ params, onChange }) {
   const [isOpen, setIsOpen] = useState(false)
-  const { motionSpeed, proximityThreshold, motionAmplitude, showBoundingBox, showWeb } = params
+  const {
+    motionSpeed,
+    proximityThreshold,
+    motionAmplitude,
+    showBoundingBox,
+    showWeb,
+    backgroundColor = '#000000'
+  } = params
 
   const handleChange = (key, value) => {
     onChange({ ...params, [key]: value })
@@ -147,6 +154,29 @@ export function ControlsPanel({ params, onChange }) {
             onChange={(e) => handleChange('showWeb', e.target.checked)}
             className="w-5 h-5 sm:w-4 sm:h-4 rounded border-white/30 bg-white/10 accent-blue-500 cursor-pointer touch-manipulation"
           />
+        </div>
+
+        {/* Color de fondo */}
+        <div>
+          <label className="flex justify-between items-center text-xs text-white/90 mb-1">
+            <span>Color de fondo</span>
+            <span className="text-[10px] font-mono text-white/60">{backgroundColor}</span>
+          </label>
+          <div className="flex items-center gap-2">
+            <input
+              type="color"
+              value={backgroundColor}
+              onChange={(e) => handleChange('backgroundColor', e.target.value)}
+              className="w-10 h-8 rounded-md border border-white/20 bg-transparent cursor-pointer"
+            />
+            <input
+              type="text"
+              value={backgroundColor}
+              onChange={(e) => handleChange('backgroundColor', e.target.value)}
+              className="flex-1 bg-black/60 border border-white/20 text-white text-xs rounded-md px-2 py-1.5 font-mono focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
+              placeholder="#000000"
+            />
+          </div>
         </div>
       </div>
     </aside>

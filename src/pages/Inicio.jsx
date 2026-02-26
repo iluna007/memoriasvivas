@@ -10,7 +10,8 @@ const DEFAULT_PARAMS = {
   proximityThreshold: 5,
   motionAmplitude: 1,
   showBoundingBox: true,
-  showWeb: true
+  showWeb: true,
+  backgroundColor: '#000000'
 }
 
 export default function Inicio() {
@@ -38,7 +39,7 @@ export default function Inicio() {
           pixelRatio: typeof window !== 'undefined' ? Math.min(window.devicePixelRatio, 2) : 1
         }}
       >
-        <color attach="background" args={['#000000']} />
+        <color attach="background" args={[sceneParams.backgroundColor || '#000000']} />
         <ambientLight intensity={0.4} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
         <directionalLight position={[-5, -5, -5]} intensity={0.3} />
