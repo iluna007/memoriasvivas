@@ -157,7 +157,7 @@ export function Scene({ paused, onSphereClick, sceneParams = {} }) {
   const {
     motionSpeed = 1,
     proximityThreshold = 5,
-    motionAmplitude = 1,
+    motionAmplitude = 3,
     showBoundingBox = true,
     showWeb = true
   } = sceneParams

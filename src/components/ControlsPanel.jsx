@@ -126,7 +126,7 @@ export function ControlsPanel({ params, onChange }) {
           <input
             type="range"
             min="0"
-            max="2"
+            max="4"
             step="0.1"
             value={motionAmplitude}
             onChange={(e) => handleChange('motionAmplitude', parseFloat(e.target.value))}
