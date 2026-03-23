@@ -1,6 +1,6 @@
 export default function Sobre() {
   return (
-    <main className="pt-16 min-h-full bg-black text-white overflow-y-auto">
+    <main className="pt-16 min-h-full bg-black text-white">
       <div className="max-w-2xl mx-auto px-6 py-10 sm:py-14">
         <h1 className="text-3xl sm:text-4xl font-bold mb-6">
           Sobre Memorias Vivas
