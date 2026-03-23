@@ -27,6 +27,9 @@ export function Navbar() {
       <NavLink to="/personas" className={linkClass}>
         Personas
       </NavLink>
+      <NavLink to="/mapa" className={linkClass}>
+        Mapa
+      </NavLink>
       <NavLink to="/contacto" className={linkClass}>
         Contacto
       </NavLink>
