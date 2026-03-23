@@ -50,13 +50,30 @@ export default function Mapa() {
 
   if (!token) {
     return (
-      <main className="pt-16 min-h-full bg-black text-white px-6 py-10">
-        <h1 className="text-xl font-semibold mb-2">Mapa</h1>
-        <p className="text-white/70 text-sm max-w-md">
-          Falta la variable de entorno{' '}
-          <code className="text-amber-200/90">VITE_MAPBOX_ACCESS_TOKEN</code>. Crea un archivo{' '}
-          <code className="text-amber-200/90">.env</code> en la raíz del proyecto (puedes copiar{' '}
-          <code className="text-amber-200/90">.env.example</code>) y pega tu token público de Mapbox.
+      <main className="min-h-full bg-black px-6 py-10 pt-16 text-white">
+        <h1 className="mb-3 text-xl font-semibold">Mapa</h1>
+        <p className="mb-4 max-w-lg text-sm leading-relaxed text-white/75">
+          Falta la variable{' '}
+          <code className="rounded bg-white/10 px-1 py-0.5 text-amber-200/90">VITE_MAPBOX_ACCESS_TOKEN</code>{' '}
+          en el entorno del build.
+        </p>
+        <ul className="max-w-lg list-inside list-disc space-y-2 text-sm text-white/70">
+          <li>
+            <strong className="text-white/90">Netlify:</strong> Sitio →{' '}
+            <em>Site configuration</em> → <em>Environment variables</em> → añade{' '}
+            <code className="text-amber-200/90">VITE_MAPBOX_ACCESS_TOKEN</code> con tu token{' '}
+            <code className="text-white/80">pk.…</code>. Después ejecuta un nuevo deploy (mejor &quot;Clear cache and
+            deploy&quot;).
+          </li>
+          <li>
+            <strong className="text-white/90">En tu PC:</strong> crea <code className="text-amber-200/90">.env</code>{' '}
+            en la raíz del proyecto (puedes partir de <code className="text-amber-200/90">.env.example</code>) y pega el
+            mismo token.
+          </li>
+        </ul>
+        <p className="mt-4 text-xs text-white/45">
+          El archivo <code>.env</code> no se sube a Git; por eso en producción hay que configurarlo en el panel de
+          Netlify.
         </p>
       </main>
     )
