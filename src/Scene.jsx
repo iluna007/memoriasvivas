@@ -9,7 +9,8 @@ import {
   AdditiveBlending,
   Color,
   CanvasTexture,
-  SRGBColorSpace
+  SRGBColorSpace,
+  DoubleSide
 } from 'three'
 import { SPHERE_CONTENT } from './data/cmsSphereData'
 import { getSphereInitialPositions, getSphereMotionParams, getSphereColor } from './data/spheres'
@@ -125,9 +126,9 @@ function createDiamondSpikesTexture(colorHex, sphereId = 0) {
 
   const C = S / 2
   const halfToEdge = C * 0.98
-  /** Escala global de tamaño de spikes (más grandes) + variación por esfera */
+  /** Escala global de tamaño de spikes + variación por esfera (ancho base reducido abajo) */
   const globalLenBoost = 1.08 + spikeRand(sphereId, 0, 0) * 0.22
-  const globalWidthBoost = 1.05 + spikeRand(sphereId, 1, 1) * 0.18
+  const globalWidthBoost = 0.92 + spikeRand(sphereId, 1, 1) * 0.12
 
   /** [ángulo°, fracción base hacia el borde] — se modifica por rayo */
   const rayDefs = [
@@ -152,13 +153,13 @@ function createDiamondSpikesTexture(colorHex, sphereId = 0) {
     ctx.save()
     ctx.globalCompositeOperation = 'lighter'
     rayDefs.forEach(([angleDeg, baseLenFrac], rayIdx) => {
-      /** Longitud y ancho distintos por cada spike de cada esfera */
+      /** Longitud y ancho distintos por cada spike; base estrecha (no ancha junto al orbe) */
       const lenJitter = 0.9 + spikeRand(sphereId, rayIdx, 2) * 0.28
-      const widthJitter = 0.82 + spikeRand(sphereId, rayIdx, 3) * 0.38
+      const widthJitter = 0.94 + spikeRand(sphereId, rayIdx, 3) * 0.12
       const lenFrac = baseLenFrac * lenJitter * globalLenBoost * layer.lenScale
       const lenPx = halfToEdge * lenFrac
-      /** Base ancha tipo diamante: ~9–15% del canvas según rayo */
-      const wBaseRay = S * (0.092 + spikeRand(sphereId, rayIdx, 4) * 0.055) * globalWidthBoost
+      /** Base fina: ~2.2–4.2% del ancho del canvas */
+      const wBaseRay = S * (0.022 + spikeRand(sphereId, rayIdx, 4) * 0.02) * globalWidthBoost
       const w = wBaseRay * layer.wScale * widthJitter
       const rad = (angleDeg * Math.PI) / 180
       const ux = Math.cos(rad)
@@ -344,17 +345,35 @@ function FloatingSphere({
         />
       </mesh>
 
-      {/* Núcleo: más transparente para dejar protagonismo a los spikes */}
-      <mesh castShadow receiveShadow renderOrder={2}>
+      {/* Aura extra: un anillo (no esfera completa) alrededor del núcleo */}
+      <mesh
+        rotation={[-Math.PI / 2, 0, 0]}
+        renderOrder={2}
+        castShadow={false}
+        receiveShadow={false}
+      >
+        <ringGeometry args={[CORE_RADIUS * 1.05, CORE_RADIUS * 1.4, 72]} />
+        <meshBasicMaterial
+          color={threeColor}
+          transparent
+          opacity={0.36}
+          side={DoubleSide}
+          depthWrite={false}
+          toneMapped={false}
+        />
+      </mesh>
+
+      {/* Núcleo: aún más transparente */}
+      <mesh castShadow receiveShadow renderOrder={3}>
         <sphereGeometry args={[CORE_RADIUS, 32, 32]} />
         <meshStandardMaterial
           color={threeColor}
           emissive={threeColor}
-          emissiveIntensity={0.88}
-          roughness={0.42}
-          metalness={0.12}
+          emissiveIntensity={0.78}
+          roughness={0.45}
+          metalness={0.1}
           transparent
-          opacity={0.72}
+          opacity={0.48}
           toneMapped={false}
         />
       </mesh>
