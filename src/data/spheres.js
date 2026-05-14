@@ -25,7 +25,8 @@ export const SPHERE_COLORS = [
   '#fb8c00',
   '#f4511e',
   '#757575',
-  '#546e7a'
+  '#546e7a',
+  '#78909c'
 ]
 
 function seededRandom(seed) {

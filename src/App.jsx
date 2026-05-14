@@ -5,6 +5,7 @@ import Sobre from './pages/Sobre'
 import Personas from './pages/Personas'
 import Contacto from './pages/Contacto'
 import Mapa from './pages/Mapa'
+import Equipo from './pages/Equipo'
 
 function Layout() {
   return (
@@ -25,7 +26,8 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Inicio />} />
           <Route path="/sobre" element={<Sobre />} />
-          <Route path="/personas" element={<Personas />} />
+          <Route path="/comunidad" element={<Personas />} />
+          <Route path="/equipo" element={<Equipo />} />
           <Route path="/mapa" element={<Mapa />} />
           <Route path="/contacto" element={<Contacto />} />
         </Route>
