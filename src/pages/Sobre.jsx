@@ -1,35 +1,90 @@
 export default function Sobre() {
   return (
-    <main className="pt-16 min-h-full bg-black text-white">
-      <div className="max-w-2xl mx-auto px-6 py-10 sm:py-14">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-6">
-          Sobre Memorias Vivas
+    <main className="min-h-full bg-black pt-16 text-white">
+      <div className="mx-auto max-w-3xl px-6 py-10 sm:py-14">
+        {/* Placeholder de imagen */}
+        <div className="mb-10 aspect-[21/9] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900">
+          <img
+            src="https://placehold.co/1200x520/111/333?text=Imagen+de+portada"
+            alt=""
+            className="h-full w-full object-cover opacity-80"
+            loading="lazy"
+          />
+        </div>
+
+        <h1 className="mb-2 text-3xl font-bold leading-tight sm:text-4xl">
+          Constelar, cartografiar, imaginar
         </h1>
 
-        <p className="text-white/90 leading-relaxed mb-6">
-          Memorias Vivas es un proyecto que explora la memoria, el espacio y las conexiones
-          a través de una experiencia interactiva en 3D. Dieciocho esferas flotan en un
-          espacio delimitado, unidas por líneas que aparecen y desaparecen según la
-          proximidad entre ellas.
-        </p>
+        <div className="mt-8 space-y-6 text-[15px] leading-[1.8] text-white/85 selection:bg-white/20">
+          <p>
+            <em>Memorias vivas</em> (EC-640) es un repositorio en construcción, compuesto por
+            registros en audio, video, fotografía y texto que documentan encuentros, caminatas,
+            talleres y conversaciones con personas que habitan los territorios aledaños al Golfo
+            Dulce. Este repositorio se propone como una plataforma para activar la imaginación
+            colectiva, el reconocimiento mutuo y la defensa de los territorios que hacen posible
+            la vida.
+          </p>
 
-        <p className="text-white/90 leading-relaxed mb-6">
-          Cada esfera representa un nodo de memoria o un momento. Al hacer clic en una,
-          el movimiento se detiene y se abre un panel con más información, invitando a
-          profundizar en esa pieza del conjunto. El cubo que enmarca la escena recuerda
-          los límites del recuerdo; la red de líneas evoca las asociaciones que vamos
-          tejiendo entre nuestras propias memorias.
-        </p>
+          <p>
+            La información se dispone como una constelación y una forma de imaginar
+            conversaciones, pasados, proyecciones, imágenes, recorridos y procesos a través de
+            puntos de contacto que, al vincularse, dejan aparecer figuras. Así como trazamos
+            líneas imaginarias entre las estrellas para orientarnos en el cielo e imaginar
+            relatos, afectos y destinos, aquí las memorias dispersas se articulan para producir
+            nuevas formas de reconocimiento.
+          </p>
 
-        <h2 className="text-xl font-semibold mt-10 mb-3">Cómo usar la experiencia</h2>
-        <ul className="list-disc list-inside text-white/80 space-y-2 mb-8">
-          <li>En <strong>Inicio</strong> puedes rotar la cámara con el ratón o el tacto, hacer zoom y desplazarte.</li>
-          <li>Haz clic o toca una esfera para pausar la escena y ver su detalle en el panel izquierdo.</li>
-          <li>Usa el botón de controles (esquina superior derecha) para ajustar velocidad, amplitud y visibilidad de la red.</li>
-        </ul>
+          <p>
+            La constelación funciona como método y como medio para visualizar proximidades y
+            resonancias y, como la memoria, trabaja mediante juegos que reúnen restos, tiempos y
+            espacios. En ese montaje emergen relaciones entre humanos, historias, ríos, especies,
+            climas e infraestructuras, entendidas no como elementos aislados sino como entramados
+            dinámicos que producen sentido. Cada registro, caminata, conversación, fotografía,
+            sonido actúa como un vestigio que, al entrar en relación con otros, activa nuevas
+            lecturas sobre los territorios y las vidas que los sostienen.
+          </p>
 
-        <p className="text-white/70 text-sm">
-          Este sitio está construido con React, Three.js y Tailwind CSS.
+          <p>
+            Los vértices de estas constelaciones se articulan a partir de microhistorias,
+            narraciones de vida de experiencias cotidianas, familiares, comunitarias. Estas
+            historias, que suelen quedar fuera de los relatos oficiales, nos permiten poner el
+            acento sobre otras formas de pensar las comunidades nacionales y sus extranjerías.
+            Este proyecto se propone trazar líneas entre las experiencias cotidianas, las memorias
+            familiares, las historias de naturoculturas o de procesos de desigualdad, violencias
+            lentas y extractivismos. No se busca construir una narrativa totalizante, sino
+            atender a los gestos, a las voces y a las formas en que el recuerdo y los testimonios
+            de vida construyen futuro, o nos dan pistas sobre cómo vivir mejor. En este sentido,
+            la idea de constelación funciona aquí como una práctica de montaje que reúne
+            fragmentos dispersos para producir nuevas formas de percepción y de sentido que
+            integren diversos medios y perspectivas.
+          </p>
+
+          <p>
+            Proponemos que las personas usuarias de esta web puedan imaginar y trazar vínculos
+            entre temporalidades heterogéneas, heterotopías, afectos, paisajes y experiencias que
+            no suelen aparecer juntas dentro de las narrativas hegemónicas.
+          </p>
+
+          <p>
+            Las memorias no sólo permiten releer el pasado, sino también imaginar modos distintos
+            de vivir y comprender la realidad; modos que deben incluir otras formas de imaginar
+            que potencien futuros más inclusivos con otras formas de vida. El cuido entre humanos,
+            distintas especies de flora y fauna, de los ríos y de las diversas infraestructuras
+            que permiten la vida es vital en este proceso.
+          </p>
+
+          <p>
+            Constelar implica, entonces, reconocer que existen múltiples maneras de habitar el
+            territorio, de relacionarse con el entorno y de construir comunidades en
+            temporalidades no lineales. Constelar es atender a redes transgeneracionales y a las
+            maneras en que estas sobreviven, se transforman o cambian en las prácticas cotidianas,
+            en los afectos y en las formas locales de conocimiento.
+          </p>
+        </div>
+
+        <p className="mt-10 text-right text-sm font-medium italic text-white/60">
+          Rocío Zamora-Sauma
         </p>
       </div>
     </main>
