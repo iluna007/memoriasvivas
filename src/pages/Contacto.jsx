@@ -9,7 +9,7 @@ export default function Contacto() {
   }
 
   return (
-    <main className="pt-16 min-h-full bg-black text-white">
+    <main className="pt-16 min-h-full">
       <div className="max-w-xl mx-auto px-6 py-10 sm:py-14">
         <h1 className="text-3xl sm:text-4xl font-bold mb-2">
           Contacto

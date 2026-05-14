@@ -50,7 +50,7 @@ export default function Mapa() {
 
   if (!token) {
     return (
-      <main className="min-h-full bg-black px-6 py-10 pt-16 text-white">
+      <main className="min-h-full px-6 py-10 pt-16">
         <h1 className="mb-3 text-xl font-semibold">Mapa</h1>
         <p className="mb-4 max-w-lg text-sm leading-relaxed text-white/75">
           Falta la variable{' '}
@@ -80,7 +80,7 @@ export default function Mapa() {
   }
 
   return (
-    <main className="flex h-full min-h-0 flex-col bg-black pt-14">
+    <main className="flex h-full min-h-0 flex-col pt-14">
       <div className="relative min-h-0 w-full flex-1">
         <Map
           mapboxAccessToken={token}

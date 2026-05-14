@@ -11,7 +11,7 @@ export default function Personas() {
   }
 
   return (
-    <main className="pt-16 min-h-full bg-black text-white">
+    <main className="pt-16 min-h-full">
       <div className="max-w-6xl mx-auto px-6 py-10 sm:py-14">
         <h1 className="text-3xl sm:text-4xl font-bold mb-3">Personas en los relatos</h1>
         <p className="text-white/75 text-sm sm:text-base max-w-2xl mb-10 leading-relaxed">

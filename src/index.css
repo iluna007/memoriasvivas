@@ -24,7 +24,16 @@ body,
 }
 
 body {
-  background: #000;
+  background: #05080f;
   overscroll-behavior: none;
   touch-action: pan-x pan-y;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 1; }
+}
+
+.animate-twinkle {
+  animation: twinkle 5s ease-in-out infinite;
 }

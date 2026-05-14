@@ -1,6 +1,6 @@
 export default function Sobre() {
   return (
-    <main className="min-h-full bg-black pt-16 text-white">
+    <main className="min-h-full pt-16">
       <div className="mx-auto max-w-3xl px-6 py-10 sm:py-14">
         {/* Placeholder de imagen */}
         <div className="mb-10 aspect-[21/9] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900">

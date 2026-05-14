@@ -6,7 +6,7 @@ export default function Equipo() {
   const toggle = (key) => setExpanded((prev) => ({ ...prev, [key]: !prev[key] }))
 
   return (
-    <main className="min-h-full bg-black pt-16 text-white">
+    <main className="min-h-full pt-16">
       <div className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
         <h1 className="mb-3 text-3xl font-bold sm:text-4xl">Miembros de la comunidad</h1>
         <p className="mb-10 max-w-2xl text-sm leading-relaxed text-white/75 sm:text-base">

@@ -8,25 +8,25 @@ const COUNT = SPHERE_CONTENT.length
  * Debe tener al menos COUNT entradas; si añades conceptos, amplía este array.
  */
 export const SPHERE_COLORS = [
-  '#e53935',
-  '#d81b60',
-  '#8e24aa',
-  '#5e35b1',
-  '#3949ab',
-  '#1e88e5',
-  '#039be5',
-  '#00acc1',
-  '#00897b',
-  '#43a047',
-  '#7cb342',
-  '#c0ca33',
-  '#fdd835',
-  '#ffb300',
-  '#fb8c00',
-  '#f4511e',
-  '#757575',
-  '#546e7a',
-  '#78909c'
+  '#ffffff',
+  '#e8f0ff',
+  '#d0e4ff',
+  '#f0f4ff',
+  '#c8dffe',
+  '#dfe9ff',
+  '#b8d4fe',
+  '#f5f8ff',
+  '#e0ecff',
+  '#ccd8f0',
+  '#ffffff',
+  '#d8e6ff',
+  '#eaf0ff',
+  '#b0c8ee',
+  '#f2f6ff',
+  '#c0d6f8',
+  '#e4ecff',
+  '#d4dff5',
+  '#ffffff'
 ]
 
 function seededRandom(seed) {
@@ -34,10 +34,12 @@ function seededRandom(seed) {
   return x - Math.floor(x)
 }
 
-// Posiciones iniciales repartidas en el espacio (tantas como conceptos en CMS)
-export function getSphereInitialPositions() {
+/**
+ * Posiciones iniciales. `radius` controla el tamaño del volumen esférico
+ * donde se reparten las estrellas (default 6, se puede subir desde controles).
+ */
+export function getSphereInitialPositions(radius = 6) {
   const positions = []
-  const radius = 6
   for (let i = 0; i < COUNT; i++) {
     const theta = seededRandom(i * 2.1) * Math.PI * 2
     const phi = Math.acos(2 * seededRandom(i * 3.7) - 1)

@@ -4,6 +4,7 @@ import { OrbitControls } from '@react-three/drei'
 import { Scene } from '../Scene'
 import { LeftPanel } from '../components/LeftPanel'
 import { ControlsPanel } from '../components/ControlsPanel'
+import CameraLegend from '../components/CameraLegend'
 
 const DEFAULT_PARAMS = {
   motionSpeed: 1,
@@ -11,7 +12,9 @@ const DEFAULT_PARAMS = {
   motionAmplitude: 1,
   showBoundingBox: true,
   showWeb: true,
-  backgroundColor: '#000000'
+  backgroundColor: '#05080f',
+  spaceRadius: 10,
+  ownAxisSpin: 1
 }
 
 export default function Inicio() {
@@ -29,6 +32,7 @@ export default function Inicio() {
       )}
 
       <ControlsPanel params={sceneParams} onChange={setSceneParams} />
+      <CameraLegend />
 
       <Canvas
         camera={{ position: [8, 5, 8], fov: 50 }}

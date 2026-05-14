@@ -32,7 +32,9 @@ export function ControlsPanel({ params, onChange }) {
     motionAmplitude,
     showBoundingBox,
     showWeb,
-    backgroundColor = '#000000'
+    backgroundColor = '#000000',
+    spaceRadius = 10,
+    ownAxisSpin = 1
   } = params
 
   const handleChange = (key, value) => {
@@ -132,6 +134,46 @@ export function ControlsPanel({ params, onChange }) {
             onChange={(e) => handleChange('motionAmplitude', parseFloat(e.target.value))}
             className="w-full h-3 sm:h-2 rounded-lg appearance-none cursor-pointer bg-white/20 accent-blue-500 touch-manipulation"
           />
+        </div>
+
+        {/* Radio del espacio */}
+        <div>
+          <label className="flex justify-between items-center text-xs text-white/90 mb-1">
+            <span>Tamaño del espacio</span>
+            <span className="text-white/60 tabular-nums">{spaceRadius.toFixed(0)}</span>
+          </label>
+          <input
+            type="range"
+            min="4"
+            max="30"
+            step="1"
+            value={spaceRadius}
+            onChange={(e) => handleChange('spaceRadius', parseFloat(e.target.value))}
+            className="w-full h-3 sm:h-2 rounded-lg appearance-none cursor-pointer bg-white/20 accent-blue-500 touch-manipulation"
+          />
+          <p className="text-[10px] text-white/50 mt-0.5">
+            Radio de distribución de las estrellas
+          </p>
+        </div>
+
+        {/* Rotación sobre eje propio */}
+        <div>
+          <label className="flex justify-between items-center text-xs text-white/90 mb-1">
+            <span>Rotación eje propio</span>
+            <span className="text-white/60 tabular-nums">{ownAxisSpin.toFixed(1)}×</span>
+          </label>
+          <input
+            type="range"
+            min="0"
+            max="2"
+            step="0.1"
+            value={ownAxisSpin}
+            onChange={(e) => handleChange('ownAxisSpin', parseFloat(e.target.value))}
+            className="w-full h-3 sm:h-2 rounded-lg appearance-none cursor-pointer bg-white/20 accent-blue-500 touch-manipulation"
+          />
+          <p className="text-[10px] text-white/50 mt-0.5">
+            Giro de cada estrella sobre su eje (0 = sin giro)
+          </p>
         </div>
 
         {/* Toggle cubo delimitador */}
