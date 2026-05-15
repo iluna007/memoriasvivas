@@ -1,19 +1,18 @@
 import { useState } from 'react'
+import { useOutletContext } from 'react-router-dom'
 import { EQUIPO } from '../data/equipo'
+import { getContentPageTheme } from '../utils/pageThemeClasses'
 
 export default function Equipo() {
+  const { theme = 'dark' } = useOutletContext() ?? {}
+  const t = getContentPageTheme(theme)
   const [expanded, setExpanded] = useState(() => ({}))
   const toggle = (key) => setExpanded((prev) => ({ ...prev, [key]: !prev[key] }))
 
   return (
     <main className="min-h-full pt-16">
       <div className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
-        <h1 className="mb-3 text-3xl font-bold sm:text-4xl">Miembros de la comunidad</h1>
-        <p className="mb-10 max-w-2xl text-sm leading-relaxed text-white/75 sm:text-base">
-          Equipo de trabajo detrás de Memorias Vivas. Cada tarjeta puede ampliarse para leer una breve
-          biografía.
-        </p>
-
+        
         <div className="columns-1 gap-6 sm:columns-2 lg:columns-3 [column-fill:_balance]">
           {EQUIPO.map((m) => {
             const isOpen = !!expanded[m.key]
@@ -21,10 +20,7 @@ export default function Equipo() {
             const placeholder = `https://placehold.co/400x480/1a1a1a/666?text=${encodeURIComponent(fullName.slice(0, 18))}`
 
             return (
-              <article
-                key={m.key}
-                className="mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-lg backdrop-blur-sm"
-              >
+              <article key={m.key} className={`mb-6 break-inside-avoid overflow-hidden rounded-2xl ${t.card}`}>
                 <div className="relative aspect-[5/6] w-full bg-zinc-900">
                   <img
                     src={placeholder}
@@ -36,25 +32,20 @@ export default function Equipo() {
                 </div>
 
                 <div className="p-4 sm:p-5">
-                  <h2 className="mb-1 text-lg font-semibold text-white">{fullName}</h2>
-                  <p className="mb-1 text-xs font-medium text-white/55">{m.cargo}</p>
+                  <h2 className={`mb-1 text-lg font-semibold ${t.cardTitle}`}>{fullName}</h2>
+                  <p className={`mb-1 text-xs font-medium ${t.cardSub}`}>{m.cargo}</p>
                   {(m.escuela || m.sede) && (
-                    <p className="mb-3 text-[11px] text-white/40">
-                      {[m.escuela, m.sede].filter(Boolean).join(' · ')}
-                    </p>
+                    <p className={`mb-3 text-[11px] ${t.cardHint}`}>{[m.escuela, m.sede].filter(Boolean).join(' · ')}</p>
                   )}
 
                   <button
                     type="button"
                     onClick={() => toggle(m.key)}
-                    className="flex w-full items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm font-medium text-white/90 transition-colors hover:bg-white/10 active:bg-white/15 touch-manipulation"
+                    className={`flex w-full touch-manipulation items-center justify-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${t.btnOutline}`}
                     aria-expanded={isOpen}
                   >
                     {isOpen ? 'Ocultar biografía' : 'Ver más'}
-                    <span
-                      className={`inline-block transition-transform ${isOpen ? 'rotate-180' : ''}`}
-                      aria-hidden
-                    >
+                    <span className={`inline-block transition-transform ${isOpen ? 'rotate-180' : ''}`} aria-hidden>
                       ▼
                     </span>
                   </button>
@@ -65,7 +56,7 @@ export default function Equipo() {
                     }`}
                   >
                     <div className="min-h-0 overflow-hidden">
-                      <p className="mt-4 select-text border-t border-white/10 pt-4 text-sm leading-relaxed text-white/80">
+                      <p className={`mt-4 select-text border-t pt-4 text-sm leading-relaxed ${t.cardBio} ${t.divider}`}>
                         {m.bio}
                       </p>
                     </div>

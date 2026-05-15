@@ -1,9 +1,14 @@
+import { useOutletContext } from 'react-router-dom'
+import { getContentPageTheme } from '../utils/pageThemeClasses'
+
 export default function Sobre() {
+  const { theme = 'dark' } = useOutletContext() ?? {}
+  const t = getContentPageTheme(theme)
+
   return (
     <main className="min-h-full pt-16">
       <div className="mx-auto max-w-3xl px-6 py-10 sm:py-14">
-        {/* Placeholder de imagen */}
-        <div className="mb-10 aspect-[21/9] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900">
+        <div className={`mb-10 aspect-[21/9] w-full overflow-hidden rounded-2xl ${t.heroFrame}`}>
           <img
             src="https://placehold.co/1200x520/111/333?text=Imagen+de+portada"
             alt=""
@@ -12,11 +17,9 @@ export default function Sobre() {
           />
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold leading-tight sm:text-4xl">
-          Constelar, cartografiar, imaginar
-        </h1>
+        <h1 className="mb-2 text-3xl font-bold leading-tight sm:text-4xl">Constelar, cartografiar, imaginar</h1>
 
-        <div className="mt-8 space-y-6 text-[15px] leading-[1.8] text-white/85 selection:bg-white/20">
+        <div className={`mt-8 space-y-6 text-[15px] leading-[1.8] ${t.body}`}>
           <p>
             <em>Memorias vivas</em> (EC-640) es un repositorio en construcción, compuesto por
             registros en audio, video, fotografía y texto que documentan encuentros, caminatas,
@@ -83,9 +86,7 @@ export default function Sobre() {
           </p>
         </div>
 
-        <p className="mt-10 text-right text-sm font-medium italic text-white/60">
-          Rocío Zamora-Sauma
-        </p>
+        <p className={`mt-10 text-right text-sm font-medium italic ${t.muted}`}>Rocío Zamora-Sauma</p>
       </div>
     </main>
   )

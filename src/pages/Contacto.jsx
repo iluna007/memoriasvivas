@@ -1,6 +1,10 @@
 import { useState } from 'react'
+import { useOutletContext } from 'react-router-dom'
+import { getContentPageTheme } from '../utils/pageThemeClasses'
 
 export default function Contacto() {
+  const { theme = 'dark' } = useOutletContext() ?? {}
+  const t = getContentPageTheme(theme)
   const [sent, setSent] = useState(false)
 
   const handleSubmit = (e) => {
@@ -8,54 +12,36 @@ export default function Contacto() {
     setSent(true)
   }
 
+  const inputBase = `w-full rounded-lg border px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 ${t.input}`
+
   return (
-    <main className="pt-16 min-h-full">
-      <div className="max-w-xl mx-auto px-6 py-10 sm:py-14">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-2">
-          Contacto
-        </h1>
-        <p className="text-white/70 text-sm mb-8">
-          Escríbenos o envíanos un mensaje sobre Memorias Vivas.
-        </p>
+    <main className="min-h-full pt-16">
+      <div className="mx-auto max-w-xl px-6 py-10 sm:py-14">
+        <h1 className="mb-2 text-3xl font-bold sm:text-4xl">Contacto</h1>
+        <p className={`mb-8 text-sm ${t.lead}`}>Escríbenos o envíanos un mensaje sobre Memorias Vivas.</p>
 
         {sent ? (
-          <div className="p-6 rounded-lg bg-white/5 border border-white/10 text-center">
-            <p className="text-white/90">
-              Gracias por tu mensaje. Te responderemos lo antes posible.
-            </p>
+          <div className={`rounded-lg p-6 text-center ${t.successBox}`}>
+            <p className={t.body}>Gracias por tu mensaje. Te responderemos lo antes posible.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-white/90 mb-1.5">
+              <label htmlFor="name" className={`mb-1.5 block text-sm font-medium ${t.label}`}>
                 Nombre
               </label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                required
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
-                placeholder="Tu nombre"
-              />
+              <input id="name" type="text" name="name" required className={inputBase} placeholder="Tu nombre" />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-white/90 mb-1.5">
+              <label htmlFor="email" className={`mb-1.5 block text-sm font-medium ${t.label}`}>
                 Correo electrónico
               </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                required
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
-                placeholder="tu@email.com"
-              />
+              <input id="email" type="email" name="email" required className={inputBase} placeholder="tu@email.com" />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-white/90 mb-1.5">
+              <label htmlFor="message" className={`mb-1.5 block text-sm font-medium ${t.label}`}>
                 Mensaje
               </label>
               <textarea
@@ -63,24 +49,24 @@ export default function Contacto() {
                 name="message"
                 rows={5}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent resize-y min-h-[120px]"
+                className={`min-h-[120px] w-full resize-y rounded-lg border px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 ${t.input}`}
                 placeholder="Escribe tu mensaje..."
               />
             </div>
 
             <button
               type="submit"
-              className="w-full min-h-[48px] py-3 px-4 rounded-lg bg-white/15 hover:bg-white/25 text-white font-medium transition-colors touch-manipulation"
+              className={`min-h-[48px] w-full touch-manipulation rounded-lg px-4 py-3 font-medium transition-colors ${t.btnPrimary}`}
             >
               Enviar mensaje
             </button>
           </form>
         )}
 
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <p className="text-white/60 text-sm">
+        <div className={`mt-12 border-t pt-8 ${t.divider}`}>
+          <p className={`text-sm ${t.muted}`}>
             También puedes contactarnos por correo en{' '}
-            <a href="mailto:contacto@memoriasvivas.example" className="text-white/90 underline hover:text-white">
+            <a href="mailto:contacto@memoriasvivas.example" className={t.link}>
               contacto@memoriasvivas.example
             </a>
           </p>

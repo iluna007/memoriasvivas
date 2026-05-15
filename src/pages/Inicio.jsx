@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useOutletContext } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { Scene } from '../Scene'
@@ -18,6 +19,7 @@ const DEFAULT_PARAMS = {
 }
 
 export default function Inicio() {
+  const { theme = 'dark' } = useOutletContext() ?? {}
   const [selectedSphere, setSelectedSphere] = useState(null)
   const [sceneParams, setSceneParams] = useState(DEFAULT_PARAMS)
   const isPaused = selectedSphere !== null
@@ -26,13 +28,14 @@ export default function Inicio() {
     <div className="w-full h-full relative">
       {selectedSphere !== null && (
         <LeftPanel
+          theme={theme}
           selectedSphereId={selectedSphere}
           onClose={() => setSelectedSphere(null)}
         />
       )}
 
-      <ControlsPanel params={sceneParams} onChange={setSceneParams} />
-      <CameraLegend />
+      <ControlsPanel theme={theme} params={sceneParams} onChange={setSceneParams} />
+      <CameraLegend theme={theme} />
 
       <Canvas
         camera={{ position: [8, 5, 8], fov: 50 }}

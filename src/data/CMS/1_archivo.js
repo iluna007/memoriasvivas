@@ -1,7 +1,13 @@
 // Generado automáticamente desde: 1.Archivo
 // Archivo: CMS Memorias vivas | 22/3/2026
+//
+// Puedes mezclar en este array relatos en formato actual (id_relato + título) y filas importadas
+// con nombres de columna ISAD (AtoM 2.6). Ver `src/data/adapters/archivoIsadAdapter.js` y
+// `1_archivo_isad.ejemplo.js`. La salida siempre se normaliza al shape que consume el sitio.
 
-const archivo = [
+import { normalizeArchivoRows } from '../adapters/archivoIsadAdapter.js'
+
+const rawArchivo = [
   {
     "id_relato": "V1",
     "título": "Entrevista a Yolanda Rodríguez. Miembro del Grupo de monitoreo biológico de Rancho Quemado",
@@ -344,6 +350,6 @@ const archivo = [
     "ids_personas": null,
     "ids_practicas": null
   }
-];
+]
 
-export default archivo;
+export default normalizeArchivoRows(rawArchivo)

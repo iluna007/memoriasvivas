@@ -1,4 +1,5 @@
 import { useMemo, useState, useCallback } from 'react'
+import { useOutletContext } from 'react-router-dom'
 import Map, { Marker } from 'react-map-gl/mapbox'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { buildOsaMapPins } from '../data/osaMapPins'
@@ -41,6 +42,8 @@ function getYoutubeEmbedUrl(url) {
 }
 
 export default function Mapa() {
+  const { theme = 'dark' } = useOutletContext() ?? {}
+  const isLight = theme === 'light'
   const token = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN
   const [selected, setSelected] = useState(null)
 
@@ -52,26 +55,28 @@ export default function Mapa() {
     return (
       <main className="min-h-full px-6 py-10 pt-16">
         <h1 className="mb-3 text-xl font-semibold">Mapa</h1>
-        <p className="mb-4 max-w-lg text-sm leading-relaxed text-white/75">
+        <p className="mb-4 max-w-lg text-sm leading-relaxed text-inherit/80">
           Falta la variable{' '}
-          <code className="rounded bg-white/10 px-1 py-0.5 text-amber-200/90">VITE_MAPBOX_ACCESS_TOKEN</code>{' '}
+          <code className={`rounded px-1 py-0.5 ${isLight ? 'bg-amber-100 text-amber-900' : 'bg-white/10 text-amber-200/90'}`}>
+            VITE_MAPBOX_ACCESS_TOKEN
+          </code>{' '}
           en el entorno del build.
         </p>
-        <ul className="max-w-lg list-inside list-disc space-y-2 text-sm text-white/70">
+        <ul className="max-w-lg list-inside list-disc space-y-2 text-sm text-inherit/75">
           <li>
-            <strong className="text-white/90">Netlify:</strong> Sitio →{' '}
+            <strong className="text-inherit/95">Netlify:</strong> Sitio →{' '}
             <em>Site configuration</em> → <em>Environment variables</em> → añade{' '}
-            <code className="text-amber-200/90">VITE_MAPBOX_ACCESS_TOKEN</code> con tu token{' '}
-            <code className="text-white/80">pk.…</code>. Después ejecuta un nuevo deploy (mejor &quot;Clear cache and
+            <code className={isLight ? 'text-amber-800' : 'text-amber-200/90'}>VITE_MAPBOX_ACCESS_TOKEN</code> con tu token{' '}
+            <code className="text-inherit/85">pk.…</code>. Después ejecuta un nuevo deploy (mejor &quot;Clear cache and
             deploy&quot;).
           </li>
           <li>
-            <strong className="text-white/90">En tu PC:</strong> crea <code className="text-amber-200/90">.env</code>{' '}
-            en la raíz del proyecto (puedes partir de <code className="text-amber-200/90">.env.example</code>) y pega el
-            mismo token.
+            <strong className="text-inherit/95">En tu PC:</strong> crea{' '}
+            <code className={isLight ? 'text-amber-800' : 'text-amber-200/90'}>.env</code> en la raíz del proyecto (puedes partir de{' '}
+            <code className={isLight ? 'text-amber-800' : 'text-amber-200/90'}>.env.example</code>) y pega el mismo token.
           </li>
         </ul>
-        <p className="mt-4 text-xs text-white/45">
+        <p className="mt-4 text-xs text-inherit/55">
           El archivo <code>.env</code> no se sube a Git; por eso en producción hay que configurarlo en el panel de
           Netlify.
         </p>
@@ -116,18 +121,30 @@ export default function Mapa() {
               aria-label="Cerrar"
               onClick={closePopup}
             />
-            <div className="relative z-10 w-full max-w-3xl rounded-xl border border-white/15 bg-black/95 p-4 shadow-2xl">
+            <div
+              className={
+                'relative z-10 w-full max-w-3xl rounded-xl p-4 shadow-2xl ' +
+                (isLight
+                  ? 'border border-zinc-200 bg-white text-zinc-900'
+                  : 'border border-white/15 bg-black/95 text-white')
+              }
+            >
               <button
                 type="button"
                 onClick={closePopup}
-                className="absolute right-2 top-2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
+                className={
+                  'absolute right-2 top-2 z-20 flex h-10 w-10 items-center justify-center rounded-full ' +
+                  (isLight ? 'bg-zinc-200 text-zinc-800 hover:bg-zinc-300' : 'bg-white/10 text-white hover:bg-white/20')
+                }
                 aria-label="Cerrar"
               >
                 ×
               </button>
-              <h2 className="pr-12 text-base font-semibold text-white sm:text-lg">{selected.titulo}</h2>
-              <p className="mt-1 text-xs text-white/45">{selected.idRelato}</p>
-              <div className="mt-4 aspect-video w-full overflow-hidden rounded-lg border border-white/10 bg-black">
+              <h2 className={'pr-12 text-base font-semibold sm:text-lg ' + (isLight ? 'text-zinc-900' : 'text-white')}>
+                {selected.titulo}
+              </h2>
+              <p className={'mt-1 text-xs ' + (isLight ? 'text-zinc-500' : 'text-white/45')}>{selected.idRelato}</p>
+              <div className="mt-4 aspect-video w-full overflow-hidden rounded-lg border border-black/10 bg-black">
                 <iframe
                   src={getYoutubeEmbedUrl(selected.url)}
                   title={selected.titulo}

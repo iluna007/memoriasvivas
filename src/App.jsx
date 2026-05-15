@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
+import { Footer } from './components/Footer'
 import StarfieldCSS from './components/StarfieldCSS'
 import Inicio from './pages/Inicio'
 import Sobre from './pages/Sobre'
@@ -8,6 +9,7 @@ import Personas from './pages/Personas'
 import Contacto from './pages/Contacto'
 import Mapa from './pages/Mapa'
 import Equipo from './pages/Equipo'
+import Archivo from './pages/Archivo'
 
 const THEME_KEY = 'memoriasvivas-theme'
 const BG_COLOR_KEY = 'memoriasvivas-bg-color'
@@ -44,6 +46,7 @@ function Layout({ theme, onThemeToggle, bgColor, onBgColorChange }) {
       />
       <div className="relative z-10 flex-1 min-h-0 overflow-y-auto overscroll-y-contain">
         <Outlet context={{ theme, bgColor }} />
+        <Footer theme={theme} />
       </div>
     </div>
   )
@@ -93,6 +96,7 @@ export default function App() {
           <Route path="/comunidad" element={<Personas />} />
           <Route path="/equipo" element={<Equipo />} />
           <Route path="/mapa" element={<Mapa />} />
+          <Route path="/archivo" element={<Archivo />} />
           <Route path="/contacto" element={<Contacto />} />
         </Route>
       </Routes>
