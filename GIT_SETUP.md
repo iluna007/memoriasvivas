@@ -26,7 +26,7 @@ Remove-Item -Recurse -Force .git -ErrorAction SilentlyContinue
 # Crear repo nuevo
 git init
 git add .
-git commit -m "Memorias Vivas - 18 esferas Three.js"
+git commit -m "Memorias Vivas"
 git remote add origin https://github.com/iluna007/memoriasvivas.git
 git branch -M main
 git push -u origin main

@@ -12,7 +12,7 @@ git add .
 git status
 
 Write-Host "`nCreando commit inicial..." -ForegroundColor Cyan
-git commit -m "Memorias Vivas - 18 esferas Three.js"
+git commit -m "Memorias Vivas"
 
 Write-Host "`nComprobando si origin existe..." -ForegroundColor Cyan
 $origin = git remote get-url origin 2>$null

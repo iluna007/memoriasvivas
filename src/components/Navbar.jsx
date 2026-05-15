@@ -36,7 +36,7 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
     <nav style={navStyle} className={`fixed z-20 flex h-14 w-full items-center justify-between px-2 sm:px-4 ${navClass}`}>
       <div className="flex items-center gap-0.5 overflow-x-auto sm:gap-1">
         <NavLink to="/" end className={linkClass}>
-          Inicio
+          Constelaciones
         </NavLink>
         <NavLink to="/sobre" className={linkClass}>
           Sobre

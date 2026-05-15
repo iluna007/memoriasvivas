@@ -1,6 +1,6 @@
 # Memorias Vivas
 
-Proyecto **Vite + React (JS) + Three.js + Tailwind** con una escena 3D para explorar geometrías.
+Proyecto **Vite + React + Tailwind** con una escena 3D (React Three Fiber) para explorar la constelación.
 
 ## Contenido de la escena
 
@@ -28,6 +28,6 @@ Abre en el navegador la URL que muestre Vite (normalmente `http://localhost:5173
 
 - [Vite](https://vitejs.dev/)
 - [React 18](https://react.dev/)
-- [Three.js](https://threejs.org/) vía [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
+- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) (escena 3D / WebGL)
 - [@react-three/drei](https://github.com/pmndrs/drei) (OrbitControls, etc.)
 - [Tailwind CSS](https://tailwindcss.com/)
