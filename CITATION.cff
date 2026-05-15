@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: >-
+  Si utilizas este repositorio (código, datos o documentación integrada),
+  por favor cita el proyecto tal como se indica en los metadatos siguientes.
+  Para una referencia formal con DOI, enlaza además el archivo depositado en Zenodo
+  cuando exista (ver README del repositorio).
+type: software
+title: "Memorias Vivas (EC 640). Plataforma web"
+abstract: >-
+  Sitio web del proyecto EC 640 Memorias Vivas: preservación de la identidad local
+  y patrimonio cultural de comunidades aledañas al Golfo Dulce en la Península de Osa,
+  adscrito a la Vicerrectoría de Acción Social de la Universidad de Costa Rica.
+  Incluye constelación interactiva en 3D, archivo de relatos, mapa y contenidos curados.
+authors:
+  - family-names: Zamora-Sauma
+    given-names: Rocío
+    affiliation: Universidad de Costa Rica
+  - family-names: Luna
+    given-names: Iker
+    affiliation: Universidad de Costa Rica
+  - family-names: Hidalgo Redondo
+    given-names: Giselle
+    affiliation: Universidad de Costa Rica
+  - family-names: Vergara Heidke
+    given-names: Adrián
+    affiliation: Universidad de Costa Rica
+  - family-names: Barrantes
+    given-names: Felipe
+    affiliation: Universidad de Costa Rica
+  - family-names: Bello May
+    given-names: Carolina
+    affiliation: Universidad de Costa Rica
+  - family-names: Lobo Quesada
+    given-names: Esteban
+    affiliation: Universidad de Costa Rica
+  - family-names: Matamoros
+    given-names: Daniela
+    affiliation: Universidad de Costa Rica
+  - family-names: Odio Lagos
+    given-names: Kai
+    affiliation: Universidad de Costa Rica
+  - family-names: Mora
+    given-names: Montserrat
+    affiliation: Universidad de Costa Rica
+repository-code: "https://github.com/iluna007/memoriasvivas"
+url: "https://github.com/iluna007/memoriasvivas"
+version: 0.1.0
+date-released: "2026-05-14"
+keywords:
+  - memorias-vivas
+  - patrimonio-cultural
+  - golfo-dulce
+  - peninsula-osa
+  - costa-rica
+  - universidad-de-costa-rica
+  - accion-social
+  - web-interactiva

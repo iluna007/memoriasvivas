@@ -6,6 +6,18 @@ Aplicación **Vite + React** con interfaz en **Tailwind CSS**, escena **3D** con
 
 ---
 
+## Citar este repositorio
+
+GitHub detecta el archivo [`CITATION.cff`](./CITATION.cff) en la raíz y muestra el botón **«Citar este repositorio»** (menú lateral del repositorio o pestaña al crear un release), con formatos APA, BibTeX y otros generados a partir de los metadatos.
+
+1. **Cita básica (sin DOI)** — usa la salida que ofrezca GitHub a partir de `CITATION.cff`, o una referencia manual coherente con los autores y el título allí indicados.
+2. **DOI con Zenodo** (recomendado para publicaciones académicas): enlaza el repositorio público a [Zenodo](https://zenodo.org/), crea un **release** en GitHub y deja que Zenodo asigne un **DOI** a esa versión. Luego puedes añadir en `CITATION.cff` el bloque `identifiers` con `type: doi` y el valor del DOI, y mencionar el DOI en esta sección del README.
+3. **Repositorio público** — la integración con Zenodo y la cita automática de GitHub requieren que el código sea **público**.
+
+La lista de personas del equipo del proyecto también está en `src/data/CMS/7_equipo.js`; si cambia el equipo, actualiza `CITATION.cff` para mantener la cita al día.
+
+---
+
 ## Contenido principal
 
 | Ruta | Descripción |
