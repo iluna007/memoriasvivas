@@ -324,6 +324,9 @@ export function Footer({ theme = 'dark' }) {
               Preservación de la identidad local y patrimonio cultural de comunidades aledañas al Golfo Dulce en la
               Península de Osa.
             </p>
+            <div className="mt-5 max-w-sm">
+              <VisitorCounter theme={theme} t={t} />
+            </div>
           </div>
 
           <div className="min-w-0 shrink-0 space-y-4 lg:max-w-sm">
@@ -375,56 +378,44 @@ export function Footer({ theme = 'dark' }) {
           </div>
         </div>
 
-        <div className="mt-10 flex justify-center px-0 sm:mt-12">
-          <div className="w-full max-w-sm">
-            <VisitorCounter theme={theme} t={t} />
-          </div>
-        </div>
-
         <div className={`mt-10 border-t pt-8 ${t.divider}`}>
           <div
-            className={`mx-auto flex max-w-2xl flex-col gap-5 text-sm leading-relaxed ${t.body} sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-12 sm:gap-y-3`}
+            className={`mx-auto flex max-w-4xl flex-nowrap items-center justify-center gap-x-2 overflow-x-auto pb-1 text-xs leading-snug sm:gap-x-4 sm:text-sm ${t.body}`}
           >
-            <p className="flex items-start gap-2.5 sm:items-center">
-              <IconCode className={`mt-0.5 h-4 w-4 shrink-0 sm:mt-0 ${theme === 'light' ? 'text-zinc-500' : 'text-white/45'}`} aria-hidden />
-              <span>
-                Sitio de <span className="font-medium">código abierto</span>.{' '}
-                <FooterLink href={LINKS.repo} icon={IconGitHub} t={t}>
-                  Ver en GitHub
-                </FooterLink>
-              </span>
-            </p>
-            <p className="flex items-start gap-2.5 sm:items-center">
-              <IconSpark className={`mt-0.5 h-4 w-4 shrink-0 sm:mt-0 ${theme === 'light' ? 'text-zinc-500' : 'text-white/45'}`} aria-hidden />
-              <span>
-                Diseño{' '}
-                <a
-                  href={LINKS.portfolio}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`font-medium underline-offset-2 hover:underline ${t.link}`}
-                >
-                  Iker Luna
-                </a>
-                .
-              </span>
-            </p>
-          </div>
-
-          <div className="mt-8 flex flex-col items-center gap-2">
+            <span className="flex shrink-0 items-center gap-1.5 whitespace-nowrap">
+              <IconCode className={`h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4 ${theme === 'light' ? 'text-zinc-500' : 'text-white/45'}`} aria-hidden />
+              Sitio de <span className="font-medium">código abierto</span>.{' '}
+              <FooterLink href={LINKS.repo} icon={IconGitHub} t={t}>
+                Ver en GitHub
+              </FooterLink>
+            </span>
+            <span className={`shrink-0 px-0.5 ${t.muted}`} aria-hidden>
+              ·
+            </span>
+            <span className="flex shrink-0 items-center gap-1.5 whitespace-nowrap">
+              <IconSpark className={`h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4 ${theme === 'light' ? 'text-zinc-500' : 'text-white/45'}`} aria-hidden />
+              Diseño{' '}
+              <a
+                href={LINKS.portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`font-medium underline-offset-2 hover:underline ${t.link}`}
+              >
+                Iker Luna
+              </a>
+              .
+            </span>
+            <span className={`shrink-0 px-0.5 ${t.muted}`} aria-hidden>
+              ·
+            </span>
             <button
               type="button"
               onClick={() => setCiteOpen(true)}
-              className={`inline-flex min-h-[44px] touch-manipulation items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors ${
-                theme === 'light'
-                  ? 'border-zinc-300 bg-white text-zinc-900 hover:bg-zinc-50'
-                  : 'border-white/15 bg-white/5 text-white hover:bg-white/10'
-              }`}
+              className={`inline-flex min-h-[44px] shrink-0 touch-manipulation items-center gap-1 whitespace-nowrap rounded-md px-1 py-2 font-medium underline-offset-2 transition-colors hover:underline sm:min-h-0 sm:py-1 ${t.link}`}
             >
-              <IconQuote className="h-4 w-4 shrink-0 opacity-80" aria-hidden />
+              <IconQuote className="h-3.5 w-3.5 shrink-0 opacity-80 sm:h-4 sm:w-4" aria-hidden />
               Cómo citar · APA y Chicago
             </button>
-            
           </div>
 
           <p className={`mt-6 text-xs sm:text-center ${t.muted}`}>
