@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@netlify/blobs": "^10.7.6",
     "@react-three/drei": "^9.120.0",
     "@react-three/fiber": "^8.17.0",
     "mapbox-gl": "^3.20.0",

@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react'
 import { getContentPageTheme } from '../utils/pageThemeClasses'
+import { CITATION_HELP, CITATION_APA, CITATION_CHICAGO } from '../data/citationStrings'
 
 const LINKS = {
   ucr: 'https://www.ucr.ac.cr/',
@@ -82,6 +84,194 @@ function SocialIconButton({ href, label, Icon, theme }) {
   )
 }
 
+function IconQuote({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+      <path d="M7.5 4.5h-3a2 2 0 00-2 2v4a2 2 0 002 2h1v3l3-3M17.5 4.5h-3a2 2 0 00-2 2v4a2 2 0 002 2h1v3l3-3" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+const VISITOR_COUNT_CACHE = 'memoriasvivas-visitor-count'
+
+function VisitorCounter({ theme, t }) {
+  const [count, setCount] = useState(null)
+  const [status, setStatus] = useState('idle')
+
+  useEffect(() => {
+    try {
+      const cached = sessionStorage.getItem(VISITOR_COUNT_CACHE)
+      if (cached != null) {
+        const n = parseInt(cached, 10)
+        if (!Number.isNaN(n)) {
+          setCount(n)
+          setStatus('done')
+          return
+        }
+      }
+    } catch {
+      /* private mode */
+    }
+
+    setStatus('loading')
+    fetch('/.netlify/functions/visitor-count')
+      .then((r) => r.json())
+      .then((data) => {
+        if (typeof data?.count === 'number') {
+          try {
+            sessionStorage.setItem(VISITOR_COUNT_CACHE, String(data.count))
+          } catch {
+            /* ignore */
+          }
+          setCount(data.count)
+          setStatus('done')
+        } else {
+          setCount(null)
+          setStatus('unavailable')
+        }
+      })
+      .catch(() => {
+        setCount(null)
+        setStatus('unavailable')
+      })
+  }, [])
+
+  const box =
+    theme === 'light'
+      ? 'border border-zinc-200 bg-zinc-50/90 text-zinc-900'
+      : 'border border-white/10 bg-white/[0.04] text-white'
+
+  return (
+    <div className={`rounded-xl px-4 py-3 text-center ${box}`} aria-live="polite">
+      <p className={`text-[10px] font-semibold uppercase tracking-wide ${t.muted}`}>Visitas al sitio</p>
+      <p className={`mt-1 min-h-[2rem] text-2xl font-semibold tabular-nums ${t.cardTitle}`}>
+        {status === 'loading' ? '…' : typeof count === 'number' ? count.toLocaleString('es-CR') : '—'}
+      </p>
+      <p className={`mt-1.5 text-[10px] leading-snug ${t.muted}`}>
+        {status === 'unavailable'
+          ? 'Contador disponible en el sitio publicado (Netlify). En desarrollo local no hay función serverless.'
+          : 'Total acumulado en producción (Netlify Blobs). En esta sesión se cuenta una visita al cargar la aplicación.'}
+      </p>
+    </div>
+  )
+}
+
+function CitationDialog({ open, onClose, theme, t }) {
+  const [copied, setCopied] = useState(null)
+
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open, onClose])
+
+  const copy = async (key, text) => {
+    try {
+      await navigator.clipboard.writeText(text)
+      setCopied(key)
+      window.setTimeout(() => setCopied(null), 2200)
+    } catch {
+      setCopied('fail')
+      window.setTimeout(() => setCopied(null), 3500)
+    }
+  }
+
+  if (!open) return null
+
+  const backdrop = theme === 'light' ? 'bg-zinc-900/45' : 'bg-black/65'
+  const panel =
+    theme === 'light'
+      ? 'border border-zinc-200 bg-white text-zinc-900 shadow-2xl'
+      : 'border border-white/12 bg-zinc-950 text-white shadow-2xl'
+  const preBox =
+    theme === 'light'
+      ? 'border border-zinc-200 bg-zinc-50 text-zinc-800'
+      : 'border border-white/10 bg-black/40 text-white/90'
+  const closeBtn =
+    theme === 'light'
+      ? 'rounded-lg px-3 py-1.5 text-sm text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900'
+      : 'rounded-lg px-3 py-1.5 text-sm text-white/70 hover:bg-white/10 hover:text-white'
+  const copyBtn =
+    theme === 'light'
+      ? 'rounded-lg border border-zinc-300 bg-white px-3 py-1.5 text-xs font-medium text-zinc-900 hover:bg-zinc-50'
+      : 'rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-white hover:bg-white/10'
+
+  return (
+    <div
+      className={`fixed inset-0 z-[100] flex items-end justify-center p-4 backdrop-blur-sm sm:items-center ${backdrop}`}
+      role="presentation"
+      onClick={onClose}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="citation-dialog-title"
+        className={`max-h-[min(88vh,760px)] w-full max-w-2xl overflow-y-auto rounded-2xl p-5 sm:p-6 ${panel}`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="mb-4 flex items-start justify-between gap-3">
+          <h2 id="citation-dialog-title" className={`pr-4 text-lg font-semibold leading-snug ${t.cardTitle}`}>
+            Citar este proyecto
+          </h2>
+          <button type="button" onClick={onClose} className={`shrink-0 touch-manipulation ${closeBtn}`}>
+            Cerrar
+          </button>
+        </div>
+
+        <p className={`mb-5 text-sm leading-relaxed ${t.body}`}>{CITATION_HELP}</p>
+
+        <div className="space-y-5">
+          <div>
+            <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+              <h3 className={`text-sm font-semibold ${t.cardTitle}`}>APA (7.ª ed.)</h3>
+              <button type="button" onClick={() => copy('apa', CITATION_APA)} className={`touch-manipulation ${copyBtn}`}>
+                {copied === 'apa' ? 'Copiado' : 'Copiar APA'}
+              </button>
+            </div>
+            <pre
+              className={`max-h-40 overflow-auto whitespace-pre-wrap break-words rounded-xl p-3 text-left text-[11px] leading-relaxed sm:text-xs ${preBox}`}
+              tabIndex={0}
+            >
+              {CITATION_APA}
+            </pre>
+          </div>
+
+          <div>
+            <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+              <h3 className={`text-sm font-semibold ${t.cardTitle}`}>Chicago (17.ª ed., bibliografía)</h3>
+              <button type="button" onClick={() => copy('chi', CITATION_CHICAGO)} className={`touch-manipulation ${copyBtn}`}>
+                {copied === 'chi' ? 'Copiado' : 'Copiar Chicago'}
+              </button>
+            </div>
+            <pre
+              className={`max-h-40 overflow-auto whitespace-pre-wrap break-words rounded-xl p-3 text-left text-[11px] leading-relaxed sm:text-xs ${preBox}`}
+              tabIndex={0}
+            >
+              {CITATION_CHICAGO}
+            </pre>
+          </div>
+        </div>
+
+        {copied === 'fail' && (
+          <p className={`mt-4 text-xs ${theme === 'light' ? 'text-amber-800' : 'text-amber-200/90'}`}>
+            No se pudo usar el portapapeles desde el navegador. Selecciona el texto en los recuadros y copia manualmente
+            (Ctrl+C o Cmd+C).
+          </p>
+        )}
+
+        <p className={`mt-5 text-xs leading-relaxed ${t.muted}`}>
+          Revisa el archivo <code className="rounded bg-black/10 px-1 py-0.5 dark:bg-white/10">CITATION.cff</code> en la raíz
+          del repositorio para metadatos actualizados. Si el portapapeles no está disponible, selecciona el texto y copia
+          manualmente (Ctrl+C / Cmd+C).
+        </p>
+      </div>
+    </div>
+  )
+}
+
 function FooterLink({ href, children, icon: Icon, t }) {
   return (
     <a
@@ -102,6 +292,7 @@ function FooterLink({ href, children, icon: Icon, t }) {
 export function Footer({ theme = 'dark' }) {
   const t = getContentPageTheme(theme)
   const frame = theme === 'light' ? 'border-zinc-200 bg-zinc-100/80' : 'border-white/10 bg-black/25'
+  const [citeOpen, setCiteOpen] = useState(false)
 
   return (
     <footer className={`relative z-10 border-t ${frame} backdrop-blur-sm`} role="contentinfo">
@@ -184,6 +375,12 @@ export function Footer({ theme = 'dark' }) {
           </div>
         </div>
 
+        <div className="mt-10 flex justify-center px-0 sm:mt-12">
+          <div className="w-full max-w-sm">
+            <VisitorCounter theme={theme} t={t} />
+          </div>
+        </div>
+
         <div className={`mt-10 border-t pt-8 ${t.divider}`}>
           <div
             className={`mx-auto flex max-w-2xl flex-col gap-5 text-sm leading-relaxed ${t.body} sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-12 sm:gap-y-3`}
@@ -213,11 +410,30 @@ export function Footer({ theme = 'dark' }) {
               </span>
             </p>
           </div>
-          <p className={`mt-8 text-xs sm:text-center ${t.muted}`}>
+
+          <div className="mt-8 flex flex-col items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setCiteOpen(true)}
+              className={`inline-flex min-h-[44px] touch-manipulation items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors ${
+                theme === 'light'
+                  ? 'border-zinc-300 bg-white text-zinc-900 hover:bg-zinc-50'
+                  : 'border-white/15 bg-white/5 text-white hover:bg-white/10'
+              }`}
+            >
+              <IconQuote className="h-4 w-4 shrink-0 opacity-80" aria-hidden />
+              Cómo citar · APA y Chicago
+            </button>
+            
+          </div>
+
+          <p className={`mt-6 text-xs sm:text-center ${t.muted}`}>
             © {new Date().getFullYear()} Universidad de Costa Rica · Memorias Vivas
           </p>
         </div>
       </div>
+
+      <CitationDialog open={citeOpen} onClose={() => setCiteOpen(false)} theme={theme} t={t} />
     </footer>
   )
 }
