@@ -15,7 +15,10 @@ const DEFAULT_PARAMS = {
   showWeb: true,
   backgroundColor: '#05080f',
   spaceRadius: 10,
-  ownAxisSpin: 1
+  ownAxisSpin: 1,
+  opacityTwinkle: 1,
+  brightnessTwinkle: 1,
+  lineTwinkle: 1
 }
 
 export default function Inicio() {

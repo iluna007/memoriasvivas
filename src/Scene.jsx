@@ -9,6 +9,7 @@ import {
   AdditiveBlending,
   Color,
   CanvasTexture,
+  MathUtils,
   SRGBColorSpace
 } from 'three'
 import { SPHERE_CONTENT } from './data/cmsSphereData'
@@ -51,8 +52,9 @@ function rgbaFromHex(hex, a) {
 }
 
 /* ─── Web de líneas ─── */
-function SphereWeb({ positionsRef, paused, proximityThreshold }) {
+function SphereWeb({ positionsRef, paused, proximityThreshold, lineTwinkle = 1 }) {
   const lineRef = useRef()
+  const matRef = useRef()
   const geometry = useMemo(() => {
     const geom = new BufferGeometry()
     const positions = new Float32Array(SEGMENT_COUNT * 2 * 3)
@@ -61,8 +63,14 @@ function SphereWeb({ positionsRef, paused, proximityThreshold }) {
     return geom
   }, [])
 
-  useFrame(() => {
+  useFrame((state) => {
     if (!lineRef.current || !positionsRef.current) return
+    const tw = lineTwinkle ?? 0
+    if (matRef.current && tw > 0) {
+      const t = state.clock.elapsedTime
+      const w = 0.5 + 0.5 * Math.sin(t * 0.55 + 0.3)
+      matRef.current.opacity = MathUtils.lerp(0.22, 0.42, w * tw + (1 - tw) * 0.5)
+    }
     const posAttr = lineRef.current.geometry.attributes.position
     const positions = positionsRef.current
     let idx = 0
@@ -81,7 +89,7 @@ function SphereWeb({ positionsRef, paused, proximityThreshold }) {
 
   return (
     <lineSegments ref={lineRef} geometry={geometry}>
-      <lineBasicMaterial color="#4a7faa" transparent opacity={0.35} />
+      <lineBasicMaterial ref={matRef} color="#4a7faa" transparent opacity={0.35} />
     </lineSegments>
   )
 }
@@ -198,10 +206,27 @@ const COLOR_B = new Color('#90b8e8')
 const HOVER_SCALE = 1.25
 const SCALE_LERP = 0.18
 
-function AnimatedSpikeBillboard({ map, worldRadius, rotSpeed, scaleMin, scaleMax, pulseSpeed, colorSpeed, colorPhase, renderOrder }) {
+function AnimatedSpikeBillboard({
+  map,
+  worldRadius,
+  rotSpeed,
+  scaleMin,
+  scaleMax,
+  pulseSpeed,
+  colorSpeed,
+  colorPhase,
+  renderOrder,
+  opacitySpeed,
+  opacityPhase,
+  brightnessSpeed,
+  brightnessPhase,
+  opacityTwinkle = 1,
+  brightnessTwinkle = 1
+}) {
   const meshRef = useRef()
   const matRef = useRef()
   const lerpColor = useMemo(() => new Color(), [])
+  const outColor = useMemo(() => new Color(), [])
 
   useFrame((state) => {
     if (!meshRef.current) return
@@ -212,7 +237,25 @@ function AnimatedSpikeBillboard({ map, worldRadius, rotSpeed, scaleMin, scaleMax
     if (matRef.current) {
       const mix = 0.5 + 0.5 * Math.sin(t * colorSpeed + colorPhase)
       lerpColor.copy(COLOR_A).lerp(COLOR_B, mix)
-      matRef.current.color.copy(lerpColor)
+
+      const twOp = opacityTwinkle ?? 0
+      const twBr = brightnessTwinkle ?? 0
+      if (twOp > 0) {
+        const opWave = 0.5 + 0.5 * Math.sin(t * opacitySpeed + opacityPhase)
+        const op = MathUtils.lerp(0.42, 1, opWave * twOp + (1 - twOp))
+        matRef.current.opacity = op
+      } else {
+        matRef.current.opacity = 1
+      }
+
+      if (twBr > 0) {
+        const brWave = 0.5 + 0.5 * Math.sin(t * brightnessSpeed + brightnessPhase)
+        const br = MathUtils.lerp(0.72, 1.15, brWave * twBr + (1 - twBr))
+        outColor.copy(lerpColor).multiplyScalar(br)
+        matRef.current.color.copy(outColor)
+      } else {
+        matRef.current.color.copy(lerpColor)
+      }
     }
   })
 
@@ -235,7 +278,7 @@ function AnimatedSpikeBillboard({ map, worldRadius, rotSpeed, scaleMin, scaleMax
   )
 }
 
-function DualSpikesStar({ color, sphereId }) {
+function DualSpikesStar({ color, sphereId, opacityTwinkle = 1, brightnessTwinkle = 1 }) {
   const map = useMemo(() => createDiamondSpikesTexture(color, sphereId), [color, sphereId])
 
   const worldRadius = useMemo(() => 1.2 + spikeRand(sphereId, 9, 9) * 0.55, [sphereId])
@@ -249,19 +292,52 @@ function DualSpikesStar({ color, sphereId }) {
   const colorPhase1 = useMemo(() => spikeRand(sphereId, 12, 12) * Math.PI * 2, [sphereId])
   const colorPhase2 = useMemo(() => spikeRand(sphereId, 13, 13) * Math.PI * 2, [sphereId])
 
+  const opacitySpeed1 = useMemo(() => 0.35 + spikeRand(sphereId, 16, 16) * 0.55, [sphereId])
+  const opacitySpeed2 = useMemo(() => 0.28 + spikeRand(sphereId, 17, 17) * 0.5, [sphereId])
+  const opacityPhase1 = useMemo(() => spikeRand(sphereId, 18, 18) * Math.PI * 2, [sphereId])
+  const opacityPhase2 = useMemo(() => spikeRand(sphereId, 19, 19) * Math.PI * 2, [sphereId])
+  const brightnessSpeed1 = useMemo(() => 0.4 + spikeRand(sphereId, 20, 20) * 0.5, [sphereId])
+  const brightnessSpeed2 = useMemo(() => 0.32 + spikeRand(sphereId, 21, 21) * 0.48, [sphereId])
+  const brightnessPhase1 = useMemo(() => spikeRand(sphereId, 22, 22) * Math.PI * 2, [sphereId])
+  const brightnessPhase2 = useMemo(() => spikeRand(sphereId, 23, 23) * Math.PI * 2, [sphereId])
+
   useEffect(() => () => map.dispose(), [map])
 
   return (
     <>
       <AnimatedSpikeBillboard
-        map={map} worldRadius={worldRadius}
-        rotSpeed={rotSpeed1} scaleMin={0.35} scaleMax={1.0}
-        pulseSpeed={pulseSpeed1} colorSpeed={colorSpeed1} colorPhase={colorPhase1} renderOrder={4}
+        map={map}
+        worldRadius={worldRadius}
+        rotSpeed={rotSpeed1}
+        scaleMin={0.35}
+        scaleMax={1.0}
+        pulseSpeed={pulseSpeed1}
+        colorSpeed={colorSpeed1}
+        colorPhase={colorPhase1}
+        renderOrder={4}
+        opacitySpeed={opacitySpeed1}
+        opacityPhase={opacityPhase1}
+        brightnessSpeed={brightnessSpeed1}
+        brightnessPhase={brightnessPhase1}
+        opacityTwinkle={opacityTwinkle}
+        brightnessTwinkle={brightnessTwinkle}
       />
       <AnimatedSpikeBillboard
-        map={map} worldRadius={worldRadius * 0.85}
-        rotSpeed={rotSpeed2} scaleMin={0.3} scaleMax={0.92}
-        pulseSpeed={pulseSpeed2} colorSpeed={colorSpeed2} colorPhase={colorPhase2} renderOrder={3}
+        map={map}
+        worldRadius={worldRadius * 0.85}
+        rotSpeed={rotSpeed2}
+        scaleMin={0.3}
+        scaleMax={0.92}
+        pulseSpeed={pulseSpeed2}
+        colorSpeed={colorSpeed2}
+        colorPhase={colorPhase2}
+        renderOrder={3}
+        opacitySpeed={opacitySpeed2}
+        opacityPhase={opacityPhase2}
+        brightnessSpeed={brightnessSpeed2}
+        brightnessPhase={brightnessPhase2}
+        opacityTwinkle={opacityTwinkle}
+        brightnessTwinkle={brightnessTwinkle}
       />
     </>
   )
@@ -269,7 +345,19 @@ function DualSpikesStar({ color, sphereId }) {
 
 /* ─── Estrella flotante (sin esfera, sin anillo, solo spikes + hit area invisible) ─── */
 function FloatingStar({
-  id, basePosition, motion, title, color, paused, onSelect, positionsRef, motionSpeed, motionAmplitude, ownAxisSpin = 1
+  id,
+  basePosition,
+  motion,
+  title,
+  color,
+  paused,
+  onSelect,
+  positionsRef,
+  motionSpeed,
+  motionAmplitude,
+  ownAxisSpin = 1,
+  opacityTwinkle = 1,
+  brightnessTwinkle = 1
 }) {
   const groupRef = useRef()
   const spinGroupRef = useRef()
@@ -325,7 +413,12 @@ function FloatingStar({
       </mesh>
 
       <group ref={spinGroupRef}>
-        <DualSpikesStar color={color} sphereId={id} />
+        <DualSpikesStar
+          color={color}
+          sphereId={id}
+          opacityTwinkle={opacityTwinkle}
+          brightnessTwinkle={brightnessTwinkle}
+        />
       </group>
 
       {hovered && (
@@ -402,7 +495,10 @@ export function Scene({ paused, onSphereClick, sceneParams = {} }) {
     showBoundingBox = true,
     showWeb = true,
     spaceRadius = 10,
-    ownAxisSpin = 1
+    ownAxisSpin = 1,
+    opacityTwinkle = 1,
+    brightnessTwinkle = 1,
+    lineTwinkle = 1
   } = sceneParams
 
   const initialPositions = useMemo(() => getSphereInitialPositions(spaceRadius), [spaceRadius])
@@ -422,6 +518,7 @@ export function Scene({ paused, onSphereClick, sceneParams = {} }) {
           positionsRef={positionsRef}
           paused={paused}
           proximityThreshold={proximityThreshold}
+          lineTwinkle={lineTwinkle}
         />
       )}
       {initialPositions.map((pos, i) => (
@@ -438,6 +535,8 @@ export function Scene({ paused, onSphereClick, sceneParams = {} }) {
           motionSpeed={motionSpeed}
           motionAmplitude={motionAmplitude}
           ownAxisSpin={ownAxisSpin}
+          opacityTwinkle={opacityTwinkle}
+          brightnessTwinkle={brightnessTwinkle}
         />
       ))}
     </>

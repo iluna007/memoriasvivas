@@ -35,7 +35,10 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
     showWeb,
     backgroundColor = '#000000',
     spaceRadius = 10,
-    ownAxisSpin = 1
+    ownAxisSpin = 1,
+    opacityTwinkle = 1,
+    brightnessTwinkle = 1,
+    lineTwinkle = 1
   } = params
 
   const handleChange = (key, value) => {
@@ -136,6 +139,33 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
           </label>
           <input type="range" min="0" max="2" step="0.1" value={ownAxisSpin} onChange={(e) => handleChange('ownAxisSpin', parseFloat(e.target.value))} className={rangeTrack} />
           <p className={hint}>Giro de cada estrella sobre su eje (0 = sin giro)</p>
+        </div>
+
+        <div>
+          <label className={labelRow}>
+            <span>Oscilación de opacidad (estrellas)</span>
+            <span className={valMuted}>{opacityTwinkle.toFixed(2)}</span>
+          </label>
+          <input type="range" min="0" max="1" step="0.05" value={opacityTwinkle} onChange={(e) => handleChange('opacityTwinkle', parseFloat(e.target.value))} className={rangeTrack} />
+          <p className={hint}>0 = sin parpadeo; 1 = máximo contraste de transparencia</p>
+        </div>
+
+        <div>
+          <label className={labelRow}>
+            <span>Oscilación de brillo (estrellas)</span>
+            <span className={valMuted}>{brightnessTwinkle.toFixed(2)}</span>
+          </label>
+          <input type="range" min="0" max="1" step="0.05" value={brightnessTwinkle} onChange={(e) => handleChange('brightnessTwinkle', parseFloat(e.target.value))} className={rangeTrack} />
+          <p className={hint}>0 = brillo fijo; 1 = pulso de intensidad del color</p>
+        </div>
+
+        <div>
+          <label className={labelRow}>
+            <span>Pulso de la red (líneas)</span>
+            <span className={valMuted}>{lineTwinkle.toFixed(2)}</span>
+          </label>
+          <input type="range" min="0" max="1" step="0.05" value={lineTwinkle} onChange={(e) => handleChange('lineTwinkle', parseFloat(e.target.value))} className={rangeTrack} />
+          <p className={hint}>0 = opacidad fija; 1 = la red respira en opacidad</p>
         </div>
 
         <div className="flex items-center justify-between pt-1">
