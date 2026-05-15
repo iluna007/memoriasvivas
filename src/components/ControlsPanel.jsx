@@ -38,7 +38,8 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
     ownAxisSpin = 1,
     opacityTwinkle = 1,
     brightnessTwinkle = 1,
-    lineTwinkle = 1
+    lineTwinkle = 1,
+    starfieldDensity = 0.53
   } = params
 
   const handleChange = (key, value) => {
@@ -139,6 +140,25 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
           </label>
           <input type="range" min="0" max="2" step="0.1" value={ownAxisSpin} onChange={(e) => handleChange('ownAxisSpin', parseFloat(e.target.value))} className={rangeTrack} />
           <p className={hint}>Giro de cada estrella sobre su eje (0 = sin giro)</p>
+        </div>
+
+        <div>
+          <label className={labelRow}>
+            <span>Densidad símbolos de fondo (+ / ✦)</span>
+            <span className={valMuted}>
+              {Math.round(20 + Math.min(1, Math.max(0, starfieldDensity)) * 300)}
+            </span>
+          </label>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.02"
+            value={starfieldDensity}
+            onChange={(e) => handleChange('starfieldDensity', parseFloat(e.target.value))}
+            className={rangeTrack}
+          />
+          <p className={hint}>Cantidad de símbolos alrededor de la escena (menos = más ligero)</p>
         </div>
 
         <div>

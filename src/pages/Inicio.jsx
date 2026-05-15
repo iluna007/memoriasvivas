@@ -18,7 +18,8 @@ const DEFAULT_PARAMS = {
   ownAxisSpin: 1,
   opacityTwinkle: 1,
   brightnessTwinkle: 1,
-  lineTwinkle: 1
+  lineTwinkle: 1,
+  starfieldDensity: 0.53
 }
 
 export default function Inicio() {

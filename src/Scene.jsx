@@ -443,12 +443,21 @@ function FloatingStar({
 }
 
 /* ─── Fondo de estrellas con + y * ─── */
-function StarfieldBackground() {
-  const COUNT_BG = 180
+const STARFIELD_COUNT_MIN = 20
+const STARFIELD_COUNT_MAX = 320
+
+/** @param {number} density 0–1 */
+function starfieldSymbolCount(density) {
+  const d = Math.min(1, Math.max(0, density ?? 0.53))
+  return Math.round(STARFIELD_COUNT_MIN + d * (STARFIELD_COUNT_MAX - STARFIELD_COUNT_MIN))
+}
+
+function StarfieldBackground({ density = 0.53 }) {
+  const count = starfieldSymbolCount(density)
 
   const positions = useMemo(() => {
     const arr = []
-    for (let i = 0; i < COUNT_BG; i++) {
+    for (let i = 0; i < count; i++) {
       const r = 12 + spikeRand(i, 50, 50) * 18
       const theta = spikeRand(i, 51, 51) * Math.PI * 2
       const phi = Math.acos(2 * spikeRand(i, 52, 52) - 1)
@@ -462,10 +471,10 @@ function StarfieldBackground() {
       })
     }
     return arr
-  }, [])
+  }, [count])
 
   return (
-    <group renderOrder={-1}>
+    <group renderOrder={-1} key={count}>
       {positions.map((s, i) => (
         <Billboard key={i} position={[s.x, s.y, s.z]} follow>
           <Html
@@ -498,7 +507,8 @@ export function Scene({ paused, onSphereClick, sceneParams = {} }) {
     ownAxisSpin = 1,
     opacityTwinkle = 1,
     brightnessTwinkle = 1,
-    lineTwinkle = 1
+    lineTwinkle = 1,
+    starfieldDensity = 0.53
   } = sceneParams
 
   const initialPositions = useMemo(() => getSphereInitialPositions(spaceRadius), [spaceRadius])
@@ -511,7 +521,7 @@ export function Scene({ paused, onSphereClick, sceneParams = {} }) {
 
   return (
     <>
-      <StarfieldBackground />
+      <StarfieldBackground density={starfieldDensity} />
       {showBoundingBox && <BoundingBoxWireframe size={spaceRadius * 2.6} />}
       {showWeb && (
         <SphereWeb
