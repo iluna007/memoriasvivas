@@ -2,12 +2,8 @@ import { Fragment, useMemo, useState } from 'react'
 import archivo from '../data/CMS/1_archivo.js'
 import conceptos from '../data/CMS/6_conceptos.js'
 import { normalizeConceptId } from '../data/cmsSphereData'
-import {
-  VIDEO_SORT_OPTIONS,
-  CONCEPT_SORT_OPTIONS,
-  getSortedVideos,
-  getSortedConceptos
-} from '../utils/sortArchivo.js'
+import { VIDEO_SORT_OPTIONS, getSortedVideos } from '../utils/sortArchivo.js'
+import SortToolbar from '../components/archivo/SortToolbar.jsx'
 
 function getYoutubeEmbedUrl(url) {
   if (!url || typeof url !== 'string') return null
@@ -59,29 +55,6 @@ const RELATO_KNOWN_KEYS = new Set([
   'ids_personas',
   'ids_practicas'
 ])
-
-function SortToolbar({ sortBy, onSort, optionsMap }) {
-  const keys = Object.keys(optionsMap)
-  return (
-    <div className="flex flex-wrap gap-1 border-b border-zinc-500/25 bg-black/[0.03] px-2 py-1.5 sm:px-3 sm:py-2">
-      {keys.map((key) => (
-        <button
-          key={key}
-          type="button"
-          onClick={() => onSort(key)}
-          className={
-            'rounded-md px-2.5 py-1.5 text-xs font-medium transition-colors ' +
-            (sortBy === key
-              ? 'bg-white/15 text-inherit'
-              : 'text-inherit/70 hover:bg-white/10 hover:text-inherit')
-          }
-        >
-          {optionsMap[key].label}
-        </button>
-      ))}
-    </div>
-  )
-}
 
 function buildConceptLookup(rows) {
   const map = new Map()
@@ -193,7 +166,7 @@ function RelatoExpandedPanel({ item, conceptLookup }) {
   )
 }
 
-function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle, dictionaryByLetter }) {
+function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle }) {
   const th = 'border-b border-zinc-500/20 bg-black/[0.06] px-2 py-2 text-left text-[10px] font-semibold uppercase tracking-wide text-inherit/55 sm:px-2.5'
   const td = 'border-b border-zinc-500/15 px-2 py-2 align-top text-xs sm:px-2.5 sm:text-sm'
 
@@ -233,7 +206,7 @@ function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle, d
         </thead>
         {keys.map((groupKey) => (
           <tbody key={groupKey}>
-            {keys.length > 1 && !dictionaryByLetter && (
+            {keys.length > 1 && (
               <tr className="bg-black/[0.08]">
                 <td colSpan={VIDEO_COL_COUNT} className="px-2 py-1.5 text-xs font-semibold uppercase tracking-wider text-inherit/65 sm:px-3">
                   {groupKey}
@@ -295,77 +268,7 @@ function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle, d
   )
 }
 
-function ConceptoArchiveRow({ item, expanded, onToggle }) {
-  const id = item.id_concepto
-  const open = !!expanded[id]
-  const full = item.descripción_breve ?? ''
-  const hasMore = full.length > 280
-
-  return (
-    <div className="border-b border-zinc-500/15 last:border-b-0">
-      <button
-        type="button"
-        onClick={() => onToggle(id)}
-        className="flex w-full flex-col gap-1 px-3 py-2.5 text-left transition-colors hover:bg-white/[0.06] sm:flex-row sm:items-start sm:justify-between sm:gap-4 sm:px-4"
-      >
-        <div className="min-w-0 flex-1">
-          <span className="font-mono text-[11px] text-inherit/55">{id}</span>
-          <span className="mx-2 text-inherit/30">·</span>
-          <span className="text-sm font-semibold">{item.concepto}</span>
-          {item.eje && (
-            <span className="mt-1 block text-[11px] uppercase tracking-wide text-inherit/45">
-              {item.eje}
-            </span>
-          )}
-        </div>
-        <span className="shrink-0 text-[11px] text-inherit/50">{open ? 'Ocultar' : hasMore ? 'Ampliar' : ''}</span>
-      </button>
-      <div className="px-3 pb-2.5 text-xs leading-relaxed text-inherit/80 sm:px-4">
-        {open ? (
-          <p className="whitespace-pre-wrap border-t border-zinc-500/15 bg-black/[0.04] py-3">{full || '—'}</p>
-        ) : (
-          <p className={`text-inherit/75 ${hasMore ? 'line-clamp-3' : ''}`}>{full || '—'}</p>
-        )}
-      </div>
-    </div>
-  )
-}
-
-/** Índice alfabético: letra desplegable con términos bajo esa letra. */
-function LetterAccordion({ letter, count, children }) {
-  const [open, setOpen] = useState(false)
-  const label = letter === '#' ? '0–9 · otros' : letter
-
-  return (
-    <div className="border-b border-zinc-500/20 last:border-b-0">
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        className="flex w-full items-center justify-between gap-3 px-3 py-2.5 text-left transition-colors hover:bg-white/[0.06] sm:px-4"
-        aria-expanded={open}
-      >
-        <span className="flex min-w-0 flex-1 items-baseline gap-4">
-          <span
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-zinc-500/30 bg-black/[0.08] font-serif text-xl font-semibold tabular-nums text-inherit/90"
-            aria-hidden
-          >
-            {letter === '#' ? '#' : letter}
-          </span>
-          <span className="min-w-0">
-            <span className="block text-sm font-semibold text-inherit/90">{label}</span>
-            <span className="text-[11px] text-inherit/50">
-              {count} {count === 1 ? 'término' : 'términos'}
-            </span>
-          </span>
-        </span>
-        <span className="shrink-0 text-lg leading-none text-inherit/45 tabular-nums">{open ? '−' : '+'}</span>
-      </button>
-      {open && <div className="border-t border-zinc-500/15 bg-black/[0.02]">{children}</div>}
-    </div>
-  )
-}
-
-function ArchiveListBlock({ title, sortBy, onSort, optionsMap, grouped, keys, kind, dictionaryByLetter }) {
+function VideoArchiveBlock({ title, sortBy, onSort, optionsMap, grouped, keys }) {
   const [expanded, setExpanded] = useState(() => ({}))
   const conceptLookup = useMemo(() => buildConceptLookup(conceptos), [])
 
@@ -379,39 +282,13 @@ function ArchiveListBlock({ title, sortBy, onSort, optionsMap, grouped, keys, ki
 
       <div className="w-full overflow-hidden border border-zinc-500/25 shadow-sm sm:rounded-md">
         <SortToolbar sortBy={sortBy} onSort={onSort} optionsMap={optionsMap} />
-        {kind === 'video' ? (
-          <ArchivoVideoTable
-            grouped={grouped}
-            keys={keys}
-            conceptLookup={conceptLookup}
-            expanded={expanded}
-            onToggle={toggle}
-            dictionaryByLetter={dictionaryByLetter}
-          />
-        ) : (
-          <div>
-            {keys.map((groupKey) => (
-              <section key={groupKey}>
-                {keys.length > 1 && !dictionaryByLetter && (
-                  <h3 className="border-b border-zinc-500/20 bg-black/[0.06] px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-inherit/60 sm:px-4 sm:py-2">
-                    {groupKey}
-                  </h3>
-                )}
-                {kind === 'concepto' && dictionaryByLetter ? (
-                  <LetterAccordion letter={groupKey} count={grouped[groupKey].length}>
-                    {grouped[groupKey].map((item) => (
-                      <ConceptoArchiveRow key={item.id_concepto} item={item} expanded={expanded} onToggle={toggle} />
-                    ))}
-                  </LetterAccordion>
-                ) : (
-                  grouped[groupKey].map((item) => (
-                    <ConceptoArchiveRow key={item.id_concepto} item={item} expanded={expanded} onToggle={toggle} />
-                  ))
-                )}
-              </section>
-            ))}
-          </div>
-        )}
+        <ArchivoVideoTable
+          grouped={grouped}
+          keys={keys}
+          conceptLookup={conceptLookup}
+          expanded={expanded}
+          onToggle={toggle}
+        />
       </div>
     </section>
   )
@@ -419,36 +296,20 @@ function ArchiveListBlock({ title, sortBy, onSort, optionsMap, grouped, keys, ki
 
 export default function Archivo() {
   const [videoSort, setVideoSort] = useState('year')
-  const [conceptSort, setConceptSort] = useState('abc')
 
   const videoData = useMemo(() => getSortedVideos(archivo, videoSort), [videoSort])
-  const conceptData = useMemo(() => getSortedConceptos(conceptos, conceptSort), [conceptSort])
-  const dictionaryByLetter = conceptSort === 'abc'
 
   return (
     <main className="min-h-full w-full pt-16">
       <h1 className="sr-only">Archivo</h1>
       <div className="w-full max-w-none px-2 pb-6 pt-2 sm:px-4 lg:px-6">
-        <ArchiveListBlock
+        <VideoArchiveBlock
           title="Relatos audiovisuales"
           sortBy={videoSort}
           onSort={setVideoSort}
           optionsMap={VIDEO_SORT_OPTIONS}
           grouped={videoData.grouped}
           keys={videoData.keys}
-          kind="video"
-          dictionaryByLetter={false}
-        />
-
-        <ArchiveListBlock
-          title="Diccionario de conceptos"
-          sortBy={conceptSort}
-          onSort={setConceptSort}
-          optionsMap={CONCEPT_SORT_OPTIONS}
-          grouped={conceptData.grouped}
-          keys={conceptData.keys}
-          kind="concepto"
-          dictionaryByLetter={dictionaryByLetter}
         />
       </div>
     </main>

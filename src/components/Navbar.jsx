@@ -53,6 +53,9 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
         <NavLink to="/archivo" className={linkClass}>
           Archivo
         </NavLink>
+        <NavLink to="/diccionario" className={linkClass}>
+          Diccionario
+        </NavLink>
         <NavLink to="/contacto" className={linkClass}>
           Contacto
         </NavLink>

@@ -10,6 +10,7 @@ import Contacto from './pages/Contacto'
 import Mapa from './pages/Mapa'
 import Equipo from './pages/Equipo'
 import Archivo from './pages/Archivo'
+import Diccionario from './pages/Diccionario'
 
 const THEME_KEY = 'memoriasvivas-theme'
 const BG_COLOR_KEY = 'memoriasvivas-bg-color'
@@ -97,6 +98,7 @@ export default function App() {
           <Route path="/equipo" element={<Equipo />} />
           <Route path="/mapa" element={<Mapa />} />
           <Route path="/archivo" element={<Archivo />} />
+          <Route path="/diccionario" element={<Diccionario />} />
           <Route path="/contacto" element={<Contacto />} />
         </Route>
       </Routes>
