@@ -11,6 +11,10 @@ import Mapa from './pages/Mapa'
 import Equipo from './pages/Equipo'
 import Archivo from './pages/Archivo'
 import Diccionario from './pages/Diccionario'
+import Documentales from './pages/Documentales'
+import Publicaciones from './pages/Publicaciones'
+import MaterialDivulgacion from './pages/MaterialDivulgacion'
+import Actividades from './pages/Actividades'
 
 const THEME_KEY = 'memoriasvivas-theme'
 const BG_COLOR_KEY = 'memoriasvivas-bg-color'
@@ -99,6 +103,10 @@ export default function App() {
           <Route path="/mapa" element={<Mapa />} />
           <Route path="/archivo" element={<Archivo />} />
           <Route path="/diccionario" element={<Diccionario />} />
+          <Route path="/documentales" element={<Documentales />} />
+          <Route path="/publicaciones" element={<Publicaciones />} />
+          <Route path="/material-divulgacion" element={<MaterialDivulgacion />} />
+          <Route path="/actividades" element={<Actividades />} />
           <Route path="/contacto" element={<Contacto />} />
         </Route>
       </Routes>
