@@ -1,10 +1,10 @@
-import ContentSectionPage from '../components/ContentSectionPage'
+import { useOutletContext } from 'react-router-dom'
+import WorksListView from '../components/works/WorksListView'
+import { DOCUMENTALES_YOUTUBE } from '../data/documentalesYoutube'
+import '../components/works/worksList.css'
 
 export default function Documentales() {
-  return (
-    <ContentSectionPage
-      title="Documentales"
-      lead="Audiovisuales y piezas documentales producidas en el marco de Memorias Vivas y la documentación de territorios del Golfo Dulce y la Península de Osa."
-    />
-  )
+  const { theme = 'dark' } = useOutletContext() ?? {}
+
+  return <WorksListView theme={theme} items={DOCUMENTALES_YOUTUBE} />
 }
