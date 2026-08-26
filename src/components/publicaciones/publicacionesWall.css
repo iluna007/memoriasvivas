@@ -1,0 +1,272 @@
+.wall {
+  position: relative;
+  height: calc(100dvh - 4rem);
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+}
+
+.wall.is-grabbing {
+  cursor: grabbing;
+}
+
+.wall.is-light {
+  background: #eee;
+}
+
+.wall.is-dark {
+  background: #07080b;
+}
+
+.wall__viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.wall__world {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.wall__tile {
+  position: absolute;
+  pointer-events: auto;
+  transform-origin: center center;
+  transition: opacity 0.35s ease;
+}
+
+.wall.is-dimming .wall__tile:not(.is-hovered):not(:focus-visible) {
+  opacity: 0.85;
+}
+
+.wall__hint {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.wall__tooltip {
+  position: fixed;
+  z-index: 40;
+  max-width: 16rem;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  pointer-events: none;
+}
+
+.poster {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  overflow: hidden;
+  border: 0;
+  cursor: pointer;
+}
+
+.poster:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.poster--polaroid {
+  padding: 10px 10px 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.poster--placeholder {
+  opacity: 0.42;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  box-shadow: none;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: opacity 0.25s ease;
+}
+
+.wall.is-light .poster--placeholder {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.poster--placeholder:hover,
+.poster--placeholder:focus-visible {
+  opacity: 0.7;
+}
+
+.poster__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 0.9rem 1rem;
+}
+
+.poster__kicker {
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.poster__title {
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.poster__meta {
+  font-size: 0.68rem;
+  line-height: 1.4;
+  opacity: 0.82;
+}
+
+.poster__badge {
+  display: inline-flex;
+  margin-top: 0.4rem;
+  padding: 0.12rem 0.4rem;
+  border: 1px solid currentColor;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.poster--tall .poster__title {
+  font-size: clamp(1.05rem, 1.6vw, 1.55rem);
+}
+
+.poster--listing .poster__title {
+  font-size: clamp(0.92rem, 1.3vw, 1.2rem);
+}
+
+.poster--square {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.poster--square .poster__inner {
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.poster--square .poster__title {
+  font-size: clamp(1.1rem, 1.8vw, 1.7rem);
+}
+
+.poster--wide {
+  flex-direction: row;
+}
+
+.poster--wide .poster__inner {
+  flex: 1;
+}
+
+.poster--wide .poster__mark {
+  width: 38%;
+  min-width: 4.5rem;
+  align-self: stretch;
+  opacity: 0.35;
+}
+
+.poster--wordmark {
+  align-items: center;
+  justify-content: center;
+}
+
+.poster--wordmark .poster__title {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.poster--bleed {
+  position: relative;
+  color: #f5efe6;
+}
+
+.poster--bleed img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster--bleed .poster__inner {
+  position: relative;
+  z-index: 1;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgba(7, 8, 11, 0.82), transparent 58%);
+}
+
+.poster__ph-num {
+  display: block;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  font-weight: 400;
+}
+
+.poster__ph-label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.pub-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+}
+
+.pub-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 15, 0.62);
+}
+
+.wall.is-light ~ .pub-modal .pub-modal__backdrop,
+.pub-modal.is-light .pub-modal__backdrop {
+  background: rgba(245, 245, 245, 0.7);
+}
+
+.pub-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(36rem, 100%);
+  max-height: min(80dvh, 40rem);
+  overflow: auto;
+  padding: 1.5rem 1.6rem 1.4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wall__tile,
+  .poster--placeholder {
+    transition: none !important;
+  }
+}
