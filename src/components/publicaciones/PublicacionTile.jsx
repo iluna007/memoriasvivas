@@ -33,6 +33,7 @@ export function hashStr(id) {
 }
 
 export function pickVariant(item) {
+  if (item.tipo === 'documental') return 'image-bleed'
   if (item.portada) return hashStr(item.id) % 2 === 0 ? 'image-bleed' : 'poster-wide'
   if (item.tipo === 'placeholder') return hashStr(item.id) % 2 === 0 ? 'wordmark' : 'poster-square'
   if (item.detalle && (item.doi || item.enlaceTipo === 'doi')) return 'poster-listing'
@@ -74,7 +75,8 @@ export default function PublicacionTile({
   const nodeRef = useRef(null)
   const colors = paletteFor(item, isLight)
   const isPlaceholder = item.tipo === 'placeholder'
-  const polaroidOn = polaroid && !isPlaceholder
+  const isDocumental = item.tipo === 'documental'
+  const polaroidOn = polaroid && !isPlaceholder && !isDocumental
   const bleed = variant === 'image-bleed' && item.portada
   const frameStyle = bleed
     ? undefined
@@ -89,7 +91,7 @@ export default function PublicacionTile({
     ? { background: isLight ? '#f4efe6' : '#efe6d6', color: colors.fg }
     : null
 
-  const label = item.titulo
+  const label = isDocumental ? `${item.titulo} — documental` : item.titulo
 
   const animateHover = (entering) => {
     const el = nodeRef.current
@@ -117,6 +119,7 @@ export default function PublicacionTile({
     variantClass,
     polaroidOn ? 'poster--polaroid' : '',
     isPlaceholder ? 'poster--placeholder' : '',
+    isDocumental ? 'poster--documental' : '',
   ].filter(Boolean).join(' ')
 
   const inner = isPlaceholder ? (
@@ -127,6 +130,14 @@ export default function PublicacionTile({
   ) : (
     <div className="poster__inner">
       {bleed ? <img src={item.portada} alt="" draggable={false} /> : null}
+      {isDocumental ? (
+        <span className="poster__play" aria-hidden="true">
+          <svg viewBox="0 0 48 48" className="poster__play-icon" focusable="false">
+            <circle cx="24" cy="24" r="22" />
+            <path d="M19 15.5v17l14-8.5z" />
+          </svg>
+        </span>
+      ) : null}
       {variant === 'poster-wide' && !bleed ? <div className="poster__mark" aria-hidden="true" style={{ background: colors.fg }} /> : null}
       <div className="poster__kicker">
         {[item.fuente, item.anio].filter(Boolean).join(' · ')}
@@ -138,8 +149,11 @@ export default function PublicacionTile({
       {variant === 'poster-listing' && item.detalle ? (
         <p className="poster__meta line-clamp-3">{item.detalle}</p>
       ) : null}
-      {item.enlaceTipo === 'archive.org' ? <span className="poster__badge">Archive.org</span> : null}
-      {item.doi ? <span className="poster__badge">DOI {item.doi}</span> : null}
+      {isDocumental ? (
+        <span className="poster__badge poster__badge--documental">▶ Documental</span>
+      ) : null}
+      {!isDocumental && item.enlaceTipo === 'archive.org' ? <span className="poster__badge">Archive.org</span> : null}
+      {!isDocumental && item.doi ? <span className="poster__badge">DOI {item.doi}</span> : null}
     </div>
   )
 

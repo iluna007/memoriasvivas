@@ -17,7 +17,7 @@ function variantSpan(variant, item) {
     case 'wordmark':
       return { cols: 1, rows: 0.55 }
     case 'image-bleed':
-      return { cols: 1, rows: hashStr(item.id) % 2 === 0 ? 2 : 1 }
+      return { cols: 1, rows: item.tipo === 'documental' ? 2 : (hashStr(item.id) % 2 === 0 ? 2 : 1) }
     default:
       return { cols: 1, rows: 1 }
   }
@@ -32,7 +32,7 @@ function buildLayout(items, compact) {
 
   const placed = items.map((item) => {
     const variant = pickVariant(item)
-    const polaroid = item.tipo !== 'placeholder' && hashStr(item.id) % 4 === 0
+    const polaroid = item.tipo !== 'placeholder' && item.tipo !== 'documental' && hashStr(item.id) % 4 === 0
     const span = variantSpan(variant, item)
     const colSpan = Math.min(span.cols, cols)
     let bestCol = 0

@@ -220,6 +220,54 @@
   background: linear-gradient(to top, rgba(7, 8, 11, 0.82), transparent 58%);
 }
 
+.poster--documental .poster__inner {
+  background: linear-gradient(to top, rgba(7, 8, 11, 0.88) 0%, rgba(7, 8, 11, 0.45) 42%, transparent 70%);
+}
+
+.poster__play {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.poster__play-icon {
+  width: clamp(2.6rem, 28%, 3.4rem);
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
+}
+
+.poster__play-icon circle {
+  fill: rgba(12, 10, 8, 0.42);
+  stroke: rgba(245, 239, 230, 0.88);
+  stroke-width: 1.5;
+}
+
+.poster__play-icon path {
+  fill: #f5efe6;
+}
+
+.poster__badge--documental {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  margin-top: 0;
+  border-color: rgba(196, 92, 62, 0.9);
+  background: rgba(196, 92, 62, 0.88);
+  color: #f8efe8;
+  letter-spacing: 0.14em;
+  opacity: 1;
+  z-index: 3;
+}
+
+.wall.is-light .poster__badge--documental {
+  border-color: rgba(168, 74, 48, 0.95);
+  background: rgba(168, 74, 48, 0.92);
+  color: #fff8f4;
+}
+
 .poster__ph-num {
   display: block;
   font-size: 1.6rem;
