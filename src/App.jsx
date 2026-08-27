@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
+import IntroSplash from './components/IntroSplash'
 import StarfieldCSS from './components/StarfieldCSS'
 import Inicio from './pages/Inicio'
 import Sobre from './pages/Sobre'
@@ -85,6 +86,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <IntroSplash />
       <Routes>
         <Route
           element={

@@ -3,21 +3,12 @@ import { getContentPageTheme } from '../utils/pageThemeClasses'
 import { CITATION_HELP, CITATION_APA, CITATION_CHICAGO } from '../data/citationStrings'
 
 const LINKS = {
-  ucr: 'https://www.ucr.ac.cr/',
   sedeSur: 'https://sededelsur.ucr.ac.cr/',
   accionSocial: 'https://www.accionsocial.ucr.ac.cr/',
   filosofia: 'https://filosofia.ucr.ac.cr/',
   arquitectura: 'https://arquis.ucr.ac.cr/',
   repo: 'https://github.com/iluna007/memoriasvivas',
   portfolio: 'https://ikerluna.netlify.app/',
-}
-
-function IconLink({ className }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14 21 3" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
 }
 
 function IconGitHub({ className }) {
@@ -283,7 +274,7 @@ export function Footer({ theme = 'dark' }) {
                 theme === 'light' ? 'border-zinc-300' : 'border-white/25'
               }`}
             >
-              <span className={`font-semibold ${t.cardTitle}`}>EC 640 · Memorias Vivas</span>
+              <span className={`font-semibold ${t.cardTitle}`}>EC 649 · Memorias Vivas</span>
               <span className={t.muted}> — </span>
               Preservación de la identidad local y patrimonio cultural de comunidades aledañas al Golfo Dulce en la
               Península de Osa.
@@ -293,34 +284,64 @@ export function Footer({ theme = 'dark' }) {
             </div>
           </div>
 
-          <div className="min-w-0 shrink-0 space-y-4 lg:max-w-sm">
+          <div className="min-w-0 shrink-0 space-y-4 lg:max-w-md">
             <p className={`text-xs font-semibold uppercase tracking-wide ${t.muted}`}>Enlaces institucionales</p>
-            <ul className={`flex flex-col gap-2 text-sm ${t.body}`}>
-              <li>
-                <FooterLink href={LINKS.ucr} icon={IconLink} t={t}>
-                  Universidad de Costa Rica
-                </FooterLink>
-              </li>
-              <li>
-                <FooterLink href={LINKS.sedeSur} icon={IconLink} t={t}>
-                  Sede del Sur
-                </FooterLink>
-              </li>
-              <li>
-                <FooterLink href={LINKS.accionSocial} icon={IconLink} t={t}>
-                  Vicerrectoría de Acción Social
-                </FooterLink>
-              </li>
-              <li>
-                <FooterLink href={LINKS.filosofia} icon={IconLink} t={t}>
-                  Escuela de Filosofía
-                </FooterLink>
-              </li>
-              <li>
-                <FooterLink href={LINKS.arquitectura} icon={IconLink} t={t}>
-                  Escuela de Arquitectura
-                </FooterLink>
-              </li>
+            <ul className="grid list-none grid-cols-2 grid-rows-3 gap-x-5 gap-y-5 p-0 sm:gap-x-6 sm:gap-y-6">
+              {[
+                {
+                  src: '/branding/institucional-ef-filosofia.png',
+                  alt: 'Escuela de Filosofía',
+                  href: LINKS.filosofia,
+                },
+                {
+                  src: '/branding/institucional-vas-accion-social.png',
+                  alt: 'Vicerrectoría de Acción Social',
+                  href: LINKS.accionSocial,
+                },
+                {
+                  src: '/branding/institucional-ssur-sede-sur.png',
+                  alt: 'Sede del Sur',
+                  href: LINKS.sedeSur,
+                },
+                {
+                  src: '/branding/institucional-efll-filologia.png',
+                  alt: 'Escuela de Filología, Lingüística y Literatura',
+                  href: null,
+                },
+                {
+                  src: '/branding/institucional-eaq-arquitectura.png',
+                  alt: 'Escuela de Arquitectura',
+                  href: LINKS.arquitectura,
+                },
+                {
+                  src: '/branding/institucional-ec649-memorias-vivas.png',
+                  alt: 'EC 649 · Memorias Vivas',
+                  href: null,
+                },
+              ].map((logo) => {
+                const imgClass = `h-11 w-auto max-w-full object-contain opacity-80 transition-opacity hover:opacity-100 sm:h-14 ${
+                  theme === 'light' ? 'brightness-90 invert' : ''
+                }`
+                const img = (
+                  <img src={logo.src} alt={logo.alt} className={imgClass} draggable={false} />
+                )
+                return (
+                  <li key={logo.src} className="flex items-center justify-center">
+                    {logo.href ? (
+                      <a
+                        href={logo.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center"
+                      >
+                        {img}
+                      </a>
+                    ) : (
+                      <span className="inline-flex items-center justify-center">{img}</span>
+                    )}
+                  </li>
+                )
+              })}
             </ul>
           </div>
         </div>

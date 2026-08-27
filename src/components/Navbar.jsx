@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import ThemeToggle from './ThemeToggle'
 import BackgroundColorPicker from './BackgroundColorPicker'
 
@@ -34,7 +34,19 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
 
   return (
     <nav style={navStyle} className={`fixed z-20 flex h-14 w-full items-center justify-between px-2 sm:px-4 ${navClass}`}>
-      <div className="flex items-center gap-0.5 overflow-x-auto sm:gap-1">
+      <div className="flex min-w-0 items-center gap-0.5 overflow-x-auto sm:gap-1">
+        <Link
+          to="/"
+          className="mr-1.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-md touch-manipulation sm:mr-2"
+          aria-label="Memorias Vivas — inicio"
+        >
+          <img
+            src="/branding/memorias-vivas-icon-white.png"
+            alt="Memorias Vivas"
+            className={`h-8 w-8 object-contain ${isLight ? 'brightness-90 invert' : ''}`}
+            draggable={false}
+          />
+        </Link>
         <NavLink to="/" end className={linkClass}>
           Constelaciones
         </NavLink>

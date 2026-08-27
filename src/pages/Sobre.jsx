@@ -21,7 +21,7 @@ export default function Sobre() {
 
         <div className={`mt-8 space-y-6 text-[15px] leading-[1.8] ${t.body}`}>
           <p>
-            <em>Memorias vivas</em> (EC-640) es un repositorio en construcción, compuesto por
+            <em>Memorias vivas</em> (EC-649) es un repositorio en construcción, compuesto por
             registros en audio, video, fotografía y texto que documentan encuentros, caminatas,
             talleres y conversaciones con personas que habitan los territorios aledaños al Golfo
             Dulce. Este repositorio se propone como una plataforma para activar la imaginación

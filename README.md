@@ -1,6 +1,6 @@
 # Memorias Vivas
 
-Sitio web del proyecto **EC 640 · Memorias Vivas** — preservación de la identidad local y patrimonio cultural de comunidades aledañas al Golfo Dulce en la Península de Osa — adscrito a la [Vicerrectoría de Acción Social](https://www.accionsocial.ucr.ac.cr/) de la [Universidad de Costa Rica](https://www.ucr.ac.cr/).
+Sitio web del proyecto **EC 649 · Memorias Vivas** — preservación de la identidad local y patrimonio cultural de comunidades aledañas al Golfo Dulce en la Península de Osa — adscrito a la [Vicerrectoría de Acción Social](https://www.accionsocial.ucr.ac.cr/) de la [Universidad de Costa Rica](https://www.ucr.ac.cr/).
 
 Aplicación **Vite + React** con interfaz en **Tailwind CSS**, escena **3D** con [React Three Fiber](https://docs.pmnd.rs/react-three-fiber), **mapa** con Mapbox y secciones de contenido curado. Código abierto: [github.com/iluna007/memoriasvivas](https://github.com/iluna007/memoriasvivas).
 

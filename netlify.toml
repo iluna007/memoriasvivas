@@ -7,3 +7,10 @@
 
 [functions]
   directory = "netlify/functions"
+
+# SPA: rutas de React Router (/documentales, /publicaciones, etc.)
+# deben servir index.html en lugar de devolver 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
