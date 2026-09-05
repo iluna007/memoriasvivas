@@ -1,219 +1,33 @@
 [
   {
-    "tipo": "Grupo",
-    "nombre": "Canto del Tucán: Roger Atencio Badilla, Melanny Zúñiga Araya, Damaris Araya Sánchez, Luis Antonio Zúñiga Vargas",
-    "codigo": "FCT",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Cecilia Castro González",
-    "codigo": "CCG",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Cirila “Lila” González Valdés",
-    "codigo": "CGV",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Claudia Barrantes",
-    "codigo": "CB",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Hellen Mora",
-    "codigo": "HM",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Grupo",
-    "nombre": "La compañía",
-    "codigo": "LC",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Paisaje",
-    "nombre": "Paisaje de Golfito",
-    "codigo": "PGF",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Paquita Jiménez",
-    "codigo": "PJ",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Grupo",
-    "nombre": "Taller de Fanzines con infancias, impartido por Julián Torres.",
-    "codigo": "TFJT",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Grupo",
-    "nombre": "Taller Memoria Histórica",
-    "codigo": "TMH",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Virginia Miranda Cabezas",
-    "codigo": "VMC",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Virginia “Vicky” Cabrera",
-    "codigo": "VC",
-    "lugar": "T1 Golfito"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Alberto Rodríguez",
-    "codigo": "AR",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Alexander Solórzano",
-    "codigo": "AS",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Grupo",
-    "nombre": "Alice Castro y Felix Cambronero (Familia Castro Cambronero)",
-    "codigo": "FCC",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
     "tipo": "Persona",
     "nombre": "Alicia Castro Quesada",
     "codigo": "ACQ",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Delfín Ureña",
-    "codigo": "DU",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Eraida Muñoz",
-    "codigo": "EM",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Espíritu Ureña",
-    "codigo": "EU",
-    "lugar": "T2 Rancho Quemado"
+    "lugar": "Rancho Quemado"
   },
   {
     "tipo": "Persona",
     "nombre": "Félix Cambronero",
     "codigo": "FC",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Gilberto Jiménez Álvarez",
-    "codigo": "GJA",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Grupo",
-    "nombre": "Grupo de Monitoreo Biológico",
-    "codigo": "GMB",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Ismael Carvajal",
-    "codigo": "IC",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Jeremías Ureña",
-    "codigo": "JU",
-    "lugar": "T2 Rancho Quemado"
+    "lugar": "Rancho Quemado"
   },
   {
     "tipo": "Persona",
     "nombre": "Jessica Roldán",
     "codigo": "JR",
-    "lugar": "T2 Rancho Quemado"
+    "lugar": "Rancho Quemado"
   },
   {
     "tipo": "Persona",
-    "nombre": "Nuria Ureña",
-    "codigo": "NU",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Grupo",
-    "nombre": "Rancho Verde",
-    "codigo": "FRV",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Serbulo Sandoval",
-    "codigo": "SS",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Trino Ureña",
-    "codigo": "TU",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Yolanda Rodríguez",
-    "codigo": "YR",
-    "lugar": "T2 Rancho Quemado"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Eida Fletes",
-    "codigo": "EF",
-    "lugar": "T3 La Palma"
+    "nombre": "Espíritu Ureña",
+    "codigo": "EU",
+    "lugar": "Rancho Quemado"
   },
   {
     "tipo": "Persona",
     "nombre": "Reinaldo Aguilar",
     "codigo": "RA",
-    "lugar": "T4 Los Charcos"
-  },
-  {
-    "tipo": "Grupo",
-    "nombre": "Centro diurno de adultos mayores de Puerto Jiménez",
-    "codigo": "CDPJ",
-    "lugar": "T5 Puerto Jiménez"
-  },
-  {
-    "tipo": "Grupo",
-    "nombre": "Marielos Villalobos, Óscar Villalobos y Yaritza Villalobos, del grupo Folclórico de Puerto Jiménez",
-    "codigo": "GFPJ",
-    "lugar": "T5 Puerto Jiménez"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Catalina Arias Carmona",
-    "codigo": "CAC",
-    "lugar": null
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Evangelina Granados Vargas",
-    "codigo": "EGV",
-    "lugar": null
+    "lugar": "Los Charcos"
   },
   {
     "tipo": "Persona",
@@ -223,8 +37,194 @@
   },
   {
     "tipo": "Persona",
+    "nombre": "Hellen Mora",
+    "codigo": "HM",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Evangelina Granados Vargas",
+    "codigo": "EGV",
+    "lugar": null
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Eida Fletes",
+    "codigo": "EF",
+    "lugar": "La Palma"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Alice Castro y Felix Cambronero (Familia Castro Cambronero)",
+    "codigo": "FCC",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Delfín Ureña",
+    "codigo": "DU",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Yolanda Rodríguez",
+    "codigo": "YR",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Ismael Carvajal",
+    "codigo": "IC",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Serbulo Sandoval",
+    "codigo": "SS",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Eraida Muñoz",
+    "codigo": "EM",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Catalina Arias Carmona",
+    "codigo": "CAC",
+    "lugar": null
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Trino Ureña",
+    "codigo": "TU",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Jeremías Ureña",
+    "codigo": "JU",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Cirila “Lila” González Valdés",
+    "codigo": "CGV",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Cecilia Castro González",
+    "codigo": "CCG",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Virginia “Vicky” Cabrera",
+    "codigo": "VC",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Virginia Miranda Cabezas",
+    "codigo": "VMC",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Paquita Jiménez",
+    "codigo": "PJ",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
     "nombre": "Jorge Rojas Jiménez",
     "codigo": "JRJ",
     "lugar": null
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Alexander Solórzano",
+    "codigo": "AS",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Nuria Ureña",
+    "codigo": "NU",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Alberto Rodríguez",
+    "codigo": "AR",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Gilberto Jiménez Álvarez",
+    "codigo": "GJA",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Claudia Barrantes",
+    "codigo": "CB",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Canto del Tucán: Roger Atencio Badilla, Melanny Zúñiga Araya, Damaris Araya Sánchez, Luis Antonio Zúñiga Vargas",
+    "codigo": "FCT",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Grupo de Monitoreo Biológico",
+    "codigo": "GMB",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Centro diurno de adultos mayores de Puerto Jiménez",
+    "codigo": "CDPJ",
+    "lugar": "Puerto Jiménez"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "La compañía",
+    "codigo": "LC",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Rancho Verde",
+    "codigo": "FRV",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Marielos Villalobos, Óscar Villalobos y Yaritza Villalobos, del grupo Folclórico de Puerto Jiménez",
+    "codigo": "GFPJ",
+    "lugar": "Puerto Jiménez"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Taller de Fanzines con infancias, impartido por Julián Torres.",
+    "codigo": "TFJT",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Paisaje",
+    "nombre": "Paisaje de Golfito",
+    "codigo": "PGF",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Taller Memoria Histórica",
+    "codigo": "TMH",
+    "lugar": "Golfito"
   }
 ]

@@ -1,6 +1,5 @@
-// Diccionario de conceptos — Memorias Vivas
-// Escritas por Rocío Zamora-Sauma
-// Advertencia: Este diccionario se encuentra en proceso de construcción.
+// Generado desde: 06_Conceptos_actual.csv
+// Archivo: CMS Memorias vivas | 5/9/2026
 
 const conceptos = [
   {

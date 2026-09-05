@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { getSphereContent } from '../data/cmsSphereData'
 import { getSphereColor } from '../data/spheres'
+import { getCitasPorConcepto, getNombreEntidad, urlYoutubeConTimestamp } from '../data/citasHelpers'
 
 export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
   const isLight = theme === 'light'
@@ -17,6 +18,7 @@ export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
       ? { url: v, entrevista: null, registroAudiovisual: null, postProduccion: null }
       : { url: v.url, titulo: v.titulo, entrevista: v.entrevista ?? null, registroAudiovisual: v.registroAudiovisual ?? null, postProduccion: v.postProduccion ?? null }
   )
+  const citasDelConcepto = content?.id ? getCitasPorConcepto(content.id) : []
 
   const allImages = [image, ...images].filter(Boolean)
 
@@ -78,6 +80,15 @@ export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
     ? 'mt-4 select-text space-y-3 rounded-lg border border-zinc-200 bg-white/95 p-4 text-sm text-zinc-800'
     : 'mt-4 select-text space-y-3 rounded-lg border border-white/15 bg-black/50 p-4 text-sm text-white/85'
   const expLabel = isLight ? 'mb-1 text-[11px] font-medium uppercase tracking-wide text-zinc-500' : 'mb-1 text-[11px] font-medium uppercase tracking-wide text-white/45'
+  const citaItem = isLight
+    ? 'space-y-2 border-b border-zinc-200 py-4 last:border-b-0'
+    : 'space-y-2 border-b border-white/10 py-4 last:border-b-0'
+  const citaTexto = isLight ? 'select-text text-sm leading-relaxed text-zinc-800' : 'select-text text-sm leading-relaxed text-white/85'
+  const citaMeta = isLight ? 'text-xs text-zinc-500' : 'text-xs text-white/50'
+  const citaLink = isLight
+    ? 'inline-flex text-xs font-medium text-zinc-900 underline-offset-2 hover:underline'
+    : 'inline-flex text-xs font-medium text-white/90 underline-offset-2 hover:underline'
+  const citaEmpty = isLight ? 'text-sm text-zinc-500' : 'text-sm text-white/50'
 
   return (
     <aside
@@ -100,6 +111,33 @@ export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
         </h2>
 
         {description && <p className={descCls}>{description}</p>}
+
+        <div className="mb-6">
+          <h3 className={`${h3Cls} mb-2`}>Citas</h3>
+          {citasDelConcepto.length === 0 ? (
+            <p className={citaEmpty}>Todavía no hay citas registradas para este concepto.</p>
+          ) : (
+            <ul className="list-none p-0">
+              {citasDelConcepto.map((cita) => {
+                const yt = urlYoutubeConTimestamp(cita.ubicacion_video, cita.timestamps)
+                return (
+                  <li key={cita.id_cita} className={citaItem}>
+                    <p className={citaTexto}>&ldquo;{cita.texto_cita}&rdquo;</p>
+                    <p className={citaMeta}>
+                      — {getNombreEntidad(cita.codigo_entidad)}
+                      {cita.timestamps ? ` (${cita.timestamps})` : ''}
+                    </p>
+                    {yt && (
+                      <a href={yt} target="_blank" rel="noopener noreferrer" className={citaLink}>
+                        Ver en YouTube
+                      </a>
+                    )}
+                  </li>
+                )
+              })}
+            </ul>
+          )}
+        </div>
 
         {videos.length > 0 && (
           <div className="space-y-4">
