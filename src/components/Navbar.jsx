@@ -62,9 +62,6 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
         <NavLink to="/mapa" className={linkClass}>
           Mapa
         </NavLink>
-        <NavLink to="/archivo" className={linkClass}>
-          Archivo
-        </NavLink>
         <NavLink to="/diccionario" className={linkClass}>
           Diccionario
         </NavLink>
@@ -73,7 +70,7 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
         </NavLink>
         <NavLink to="/publicaciones" className={linkClass}>
           Publicaciones
-        </NavLink>
+        </NavLink>        
         <NavLink to="/material-divulgacion" className={linkClass}>
           Material de divulgación
         </NavLink>
@@ -82,6 +79,9 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
         </NavLink>
         <NavLink to="/contacto" className={linkClass}>
           Contacto
+        </NavLink>
+        <NavLink to="/archivo" className={linkClass}>
+          Archivo
         </NavLink>
       </div>
 
