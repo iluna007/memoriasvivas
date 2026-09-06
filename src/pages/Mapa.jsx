@@ -5,7 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import { buildOsaMapPins } from '../data/osaMapPins'
 
 /** Estilo personalizado Mapbox Studio */
-const MAP_STYLE = 'mapbox://styles/ikerluna/cmmp97lzz001o01s46t647djn'
+const MAP_STYLE = 'mapbox://styles/ikerluna/cmtpzoh1k00iz01s21qb3hlsf'
 
 /**
  * Vista inicial: sur de Costa Rica, península de Osa (zona de Matapalo / costa sur).
