@@ -10,9 +10,9 @@ export default function Sobre() {
       <div className="mx-auto max-w-3xl px-6 py-10 sm:py-14">
         <div className={`mb-10 aspect-[21/9] w-full overflow-hidden rounded-2xl ${t.heroFrame}`}>
           <img
-            src="https://placehold.co/1200x520/111/333?text=Imagen+de+portada"
-            alt=""
-            className="h-full w-full object-cover opacity-80"
+            src="/sobre/naturaleza-julian-torres.jpg"
+            alt="Detalle de follaje en la Península de Osa. Fotografía de Julián Torres."
+            className="h-full w-full object-cover"
             loading="lazy"
           />
         </div>

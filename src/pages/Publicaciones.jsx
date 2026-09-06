@@ -3,34 +3,36 @@ import { useOutletContext } from 'react-router-dom'
 import PublicacionesWall from '../components/publicaciones/PublicacionesWall'
 import { hashStr } from '../components/publicaciones/PublicacionTile'
 import publicacionesData from '../data/publicaciones.json'
-import { DOCUMENTALES_YOUTUBE } from '../data/documentalesYoutube'
 import '../components/publicaciones/publicacionesWall.css'
 
-function mapDocumentalToItem(doc) {
-  return {
-    id: `doc-${doc.id}`,
-    tipo: 'documental',
-    titulo: doc.title,
-    tituloAlt: null,
-    autores: [],
-    anio: doc.year ? Number(doc.year) || doc.year : null,
-    idioma: 'ES',
-    fuente: 'YouTube · Memorias Vivas',
-    detalle: null,
-    doi: null,
-    resumen: null,
-    url: doc.url,
-    enlaceTipo: 'youtube',
-    archivoLocal: null,
-    portada: doc.image ?? null,
-  }
+function isRocioPub(item) {
+  return (item.autores ?? []).some((a) => /roc[ií]o\s+zamora/i.test(String(a)))
 }
 
 function buildWallItems() {
-  const documentalesItems = DOCUMENTALES_YOUTUBE.map(mapDocumentalToItem)
-  return [...publicacionesData, ...documentalesItems].sort(
-    (a, b) => hashStr(a.id) - hashStr(b.id),
-  )
+  const filtered = publicacionesData.filter((item) => {
+    if (item.id === 'pub-001') return false // The Art of Memory
+    if (item.tipo === 'documental') return false
+    if (item.tipo === 'placeholder') return true
+    return isRocioPub(item)
+  })
+
+  const documentos = filtered
+    .filter((item) => item.tipo !== 'placeholder')
+    .sort((a, b) => String(a.titulo).localeCompare(String(b.titulo), 'es'))
+
+  const placeholders = filtered
+    .filter((item) => item.tipo === 'placeholder')
+    .sort((a, b) => hashStr(a.id) - hashStr(b.id))
+
+  // Documento · espacio · documento, y el resto de placeholders después.
+  const [entreEllos, ...restoPlaceholders] = placeholders
+  const inicio =
+    documentos.length >= 2 && entreEllos
+      ? [documentos[0], entreEllos, ...documentos.slice(1)]
+      : [...documentos, ...(entreEllos ? [entreEllos] : [])]
+
+  return [...inicio, ...restoPlaceholders]
 }
 
 export default function Publicaciones() {

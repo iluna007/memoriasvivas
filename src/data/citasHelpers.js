@@ -54,3 +54,30 @@ export function urlYoutubeConTimestamp(url, timestamps) {
   const separador = clean.includes('?') ? '&' : '?'
   return `${clean}${separador}t=${segundos}s`
 }
+
+/** Extrae el ID de video de una URL de YouTube (youtu.be, watch?v=, shorts). */
+export function getYoutubeVideoId(url) {
+  const clean = primeraUrl(url) ?? (url ? String(url).trim() : null)
+  if (!clean) return null
+  try {
+    const u = new URL(clean)
+    if (u.hostname.includes('youtu.be')) {
+      return u.pathname.replace('/', '') || null
+    }
+    if (u.hostname.includes('youtube.com')) {
+      const v = u.searchParams.get('v')
+      if (v) return v
+      if (u.pathname.startsWith('/shorts/')) return u.pathname.split('/')[2] || null
+      if (u.pathname.startsWith('/embed/')) return u.pathname.split('/')[2] || null
+    }
+    return null
+  } catch {
+    return null
+  }
+}
+
+/** URL de la miniatura estándar de YouTube para ese video. */
+export function urlMiniaturaYoutube(url) {
+  const id = getYoutubeVideoId(url)
+  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : null
+}

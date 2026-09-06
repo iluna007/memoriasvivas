@@ -1,9 +1,9 @@
 import { useState, useCallback, useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Outlet, Navigate } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
-import IntroSplash from './components/IntroSplash'
 import StarfieldCSS from './components/StarfieldCSS'
+import Intro from './pages/Intro'
 import Inicio from './pages/Inicio'
 import Sobre from './pages/Sobre'
 import Personas from './pages/Personas'
@@ -63,7 +63,9 @@ export default function App() {
   const [bgColor, setBgColor] = useState(getInitialBgColor)
 
   useEffect(() => {
-    try { localStorage.setItem(THEME_KEY, theme) } catch {}
+    try {
+      localStorage.setItem(THEME_KEY, theme)
+    } catch {}
     document.documentElement.classList.toggle('light', theme === 'light')
     document.documentElement.classList.toggle('dark', theme === 'dark')
   }, [theme])
@@ -86,8 +88,11 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <IntroSplash />
       <Routes>
+        {/* Home = intro (sin navbar / sin WebGL) */}
+        <Route path="/" element={<Intro />} />
+        <Route path="/intro" element={<Navigate to="/" replace />} />
+
         <Route
           element={
             <Layout
@@ -98,7 +103,7 @@ export default function App() {
             />
           }
         >
-          <Route path="/" element={<Inicio />} />
+          <Route path="/constelaciones" element={<Inicio />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/comunidad" element={<Personas />} />
           <Route path="/equipo" element={<Equipo />} />
@@ -106,8 +111,10 @@ export default function App() {
           <Route path="/archivo" element={<Archivo />} />
           <Route path="/diccionario" element={<Diccionario />} />
           <Route path="/documentales" element={<Documentales />} />
-          <Route path="/publicaciones" element={<Publicaciones />} />
-          <Route path="/material-divulgacion" element={<MaterialDivulgacion />} />
+          <Route path="/activaciones" element={<Publicaciones />} />
+          <Route path="/publicaciones" element={<Navigate to="/activaciones" replace />} />
+          <Route path="/pedagogias" element={<MaterialDivulgacion />} />
+          <Route path="/material-divulgacion" element={<Navigate to="/pedagogias" replace />} />
           <Route path="/actividades" element={<Actividades />} />
           <Route path="/contacto" element={<Contacto />} />
         </Route>

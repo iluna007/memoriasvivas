@@ -38,7 +38,8 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
         <Link
           to="/"
           className="mr-1.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-md touch-manipulation sm:mr-2"
-          aria-label="Memorias Vivas — inicio"
+          aria-label="Memorias Vivas — inicio / intro"
+          title="Inicio"
         >
           <img
             src="/branding/memorias-vivas-icon-white.png"
@@ -47,7 +48,7 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
             draggable={false}
           />
         </Link>
-        <NavLink to="/" end className={linkClass}>
+        <NavLink to="/constelaciones" className={linkClass}>
           Constelaciones
         </NavLink>
         <NavLink to="/sobre" className={linkClass}>
@@ -68,11 +69,11 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
         <NavLink to="/documentales" className={linkClass}>
           Documentales
         </NavLink>
-        <NavLink to="/publicaciones" className={linkClass}>
-          Publicaciones
+        <NavLink to="/activaciones" className={linkClass}>
+          Activaciones
         </NavLink>        
-        <NavLink to="/material-divulgacion" className={linkClass}>
-          Material de divulgación
+        <NavLink to="/pedagogias" className={linkClass}>
+          Pedagogías
         </NavLink>
         <NavLink to="/actividades" className={linkClass}>
           Actividades

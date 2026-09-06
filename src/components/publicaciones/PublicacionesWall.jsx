@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import gsap from 'gsap'
 import { getContentPageTheme } from '../../utils/pageThemeClasses'
 import PublicacionTile, { hashStr, pickVariant } from './PublicacionTile'
@@ -72,6 +73,7 @@ function wrap(value, size) {
 }
 
 export default function PublicacionesWall({ items, theme = 'dark' }) {
+  const navigate = useNavigate()
   const t = getContentPageTheme(theme)
   const isLight = theme === 'light'
   const rootRef = useRef(null)
@@ -113,6 +115,30 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
     }
   }, [])
 
+  const focusOnDocuments = useCallback(() => {
+    const docs = layout.placed.filter((cell) => cell.item.tipo !== 'placeholder')
+    if (!docs.length) {
+      panRef.current = { x: 0, y: 0 }
+      applyTransform()
+      return
+    }
+
+    const minX = Math.min(...docs.map((d) => d.x))
+    const minY = Math.min(...docs.map((d) => d.y))
+    const maxX = Math.max(...docs.map((d) => d.x + d.width))
+    const maxY = Math.max(...docs.map((d) => d.y + d.height))
+    const cx = (minX + maxX) / 2
+    const cy = (minY + maxY) / 2
+
+    const zone = rootRef.current
+    const vw = zone?.clientWidth ?? window.innerWidth
+    const vh = zone?.clientHeight ?? window.innerHeight
+
+    panRef.current.x = cx - vw / 2
+    panRef.current.y = cy - vh / 2
+    applyTransform()
+  }, [applyTransform, layout.placed])
+
   const killInertia = useCallback(() => {
     inertiaRef.current?.kill()
     inertiaRef.current = null
@@ -130,11 +156,7 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
       return
     }
     if (item.tipo === 'placeholder') {
-      setTooltip({
-        x: event.clientX ?? 24,
-        y: event.clientY ?? 24,
-        text: 'Este espacio está pendiente de contenido',
-      })
+      navigate('/contacto')
       return
     }
     if (item.archivoLocal) {
@@ -144,7 +166,7 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
     if (item.url) {
       window.open(item.url, '_blank', 'noopener,noreferrer')
     }
-  }, [])
+  }, [navigate])
 
   useEffect(() => {
     reducedMotionRef.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -154,18 +176,20 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
     mq.addEventListener('change', sync)
 
     const hintTimer = window.setTimeout(fadeHint, 2600)
-    applyTransform()
+    // Esperar un frame para tener medidas del viewport y centrar en documentos.
+    const raf = window.requestAnimationFrame(() => focusOnDocuments())
 
     return () => {
       mq.removeEventListener('change', sync)
       window.clearTimeout(hintTimer)
+      window.cancelAnimationFrame(raf)
       killInertia()
     }
-  }, [applyTransform, fadeHint, killInertia])
+  }, [applyTransform, fadeHint, focusOnDocuments, killInertia])
 
   useEffect(() => {
-    applyTransform()
-  }, [applyTransform, layout.tileW, layout.tileH])
+    focusOnDocuments()
+  }, [focusOnDocuments, layout.tileW, layout.tileH])
 
   useEffect(() => {
     if (!tooltip) return undefined

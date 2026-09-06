@@ -8,7 +8,7 @@
 [functions]
   directory = "netlify/functions"
 
-# SPA: rutas de React Router (/documentales, /publicaciones, etc.)
+# SPA: rutas de React Router (/documentales, /activaciones, etc.)
 # deben servir index.html en lugar de devolver 404.
 [[redirects]]
   from = "/*"

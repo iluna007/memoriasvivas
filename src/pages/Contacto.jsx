@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import { getContentPageTheme } from '../utils/pageThemeClasses'
+import { VideoLoopBackground } from '../components/VideoLoopBackground'
+
+const LOOP_BG_SRC = '/intro/introweb-loop.mp4'
 
 const PROJECT_SOCIAL = {
   youtube: 'https://www.youtube.com/@MemoriasVivasdelsur',
@@ -26,8 +29,8 @@ function IconInstagram({ className }) {
 function SocialIconButton({ href, label, Icon, theme }) {
   const ring =
     theme === 'light'
-      ? 'border border-zinc-300 bg-white/70 text-zinc-900 hover:border-zinc-400 hover:bg-zinc-100'
-      : 'border border-white/15 bg-white/5 text-white hover:border-white/25 hover:bg-white/10'
+      ? 'border border-zinc-300 bg-white/80 text-zinc-900 hover:border-zinc-400 hover:bg-zinc-100'
+      : 'border border-white/15 bg-white/10 text-white hover:border-white/25 hover:bg-white/15'
   return (
     <a
       href={href}
@@ -51,81 +54,107 @@ export default function Contacto() {
     setSent(true)
   }
 
+  const panel =
+    theme === 'light'
+      ? 'rounded-2xl border border-white/40 bg-white/85 p-6 shadow-xl backdrop-blur-md sm:p-8'
+      : 'rounded-2xl border border-white/10 bg-black/55 p-6 shadow-xl backdrop-blur-md sm:p-8'
+
   const inputBase = `w-full rounded-lg border px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 ${t.input}`
 
   return (
-    <main className="min-h-full pt-16">
-      <div className="mx-auto max-w-xl px-6 py-10 sm:py-14">
-        <h1 className="mb-2 text-3xl font-bold sm:text-4xl">Contacto</h1>
-        <p className={`mb-8 text-sm ${t.lead}`}>Escríbenos o envíanos un mensaje sobre Memorias Vivas.</p>
+    <main className="relative min-h-full overflow-hidden pt-16">
+      <div className="fixed inset-0 z-0">
+        <VideoLoopBackground src={LOOP_BG_SRC} overlayClassName="bg-black/40" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-xl px-6 py-10 sm:py-14">
+        <div className={panel}>
+          <h1 className="mb-2 text-3xl font-bold text-white sm:text-4xl">Contacto</h1>
+          <p className="mb-8 text-sm text-white/70">
+            Escríbenos o envíanos un mensaje sobre Memorias Vivas.
+          </p>
 
-        {sent ? (
-          <div className={`rounded-lg p-6 text-center ${t.successBox}`}>
-            <p className={t.body}>Gracias por tu mensaje. Te responderemos lo antes posible.</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <label htmlFor="name" className={`mb-1.5 block text-sm font-medium ${t.label}`}>
-                Nombre
-              </label>
-              <input id="name" type="text" name="name" required className={inputBase} placeholder="Tu nombre" />
+          {sent ? (
+            <div className="rounded-lg bg-white/10 p-6 text-center">
+              <p className="text-white/90">Gracias por tu mensaje. Te responderemos lo antes posible.</p>
             </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div>
+                <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-white/80">
+                  Nombre
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  required
+                  className={inputBase}
+                  placeholder="Tu nombre"
+                />
+              </div>
 
-            <div>
-              <label htmlFor="email" className={`mb-1.5 block text-sm font-medium ${t.label}`}>
-                Correo electrónico
-              </label>
-              <input id="email" type="email" name="email" required className={inputBase} placeholder="tu@email.com" />
-            </div>
+              <div>
+                <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-white/80">
+                  Correo electrónico
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  required
+                  className={inputBase}
+                  placeholder="tu@email.com"
+                />
+              </div>
 
-            <div>
-              <label htmlFor="message" className={`mb-1.5 block text-sm font-medium ${t.label}`}>
-                Mensaje
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={5}
-                required
-                className={`min-h-[120px] w-full resize-y rounded-lg border px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 ${t.input}`}
-                placeholder="Escribe tu mensaje..."
+              <div>
+                <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-white/80">
+                  Mensaje
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  required
+                  className={`min-h-[120px] w-full resize-y rounded-lg border px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 ${t.input}`}
+                  placeholder="Escribe tu mensaje..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className={`min-h-[48px] w-full touch-manipulation rounded-lg px-4 py-3 font-medium transition-colors ${t.btnPrimary}`}
+              >
+                Enviar mensaje
+              </button>
+            </form>
+          )}
+
+          <div className="mt-12 border-t border-white/15 pt-8">
+            <p className="mb-2 text-center text-xs font-semibold uppercase tracking-wide text-white/50">
+              Redes sociales del proyecto
+            </p>
+            <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
+              <SocialIconButton
+                href={PROJECT_SOCIAL.youtube}
+                label="Memorias Vivas en YouTube"
+                Icon={IconYouTube}
+                theme={theme}
+              />
+              <SocialIconButton
+                href={PROJECT_SOCIAL.instagram}
+                label="Memorias Vivas en Instagram"
+                Icon={IconInstagram}
+                theme={theme}
               />
             </div>
-
-            <button
-              type="submit"
-              className={`min-h-[48px] w-full touch-manipulation rounded-lg px-4 py-3 font-medium transition-colors ${t.btnPrimary}`}
-            >
-              Enviar mensaje
-            </button>
-          </form>
-        )}
-
-        <div className={`mt-12 border-t pt-8 ${t.divider}`}>
-          <p className={`mb-2 text-center text-xs font-semibold uppercase tracking-wide ${t.muted}`}>
-            Redes sociales del proyecto
-          </p>
-          <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
-            <SocialIconButton
-              href={PROJECT_SOCIAL.youtube}
-              label="Memorias Vivas en YouTube"
-              Icon={IconYouTube}
-              theme={theme}
-            />
-            <SocialIconButton
-              href={PROJECT_SOCIAL.instagram}
-              label="Memorias Vivas en Instagram"
-              Icon={IconInstagram}
-              theme={theme}
-            />
+            <p className="text-center text-sm text-white/55">
+              También puedes contactarnos por correo en{' '}
+              <a href="mailto:contacto@memoriasvivas.example" className={t.link}>
+                contacto@memoriasvivas.example
+              </a>
+            </p>
           </div>
-          <p className={`text-center text-sm ${t.muted}`}>
-            También puedes contactarnos por correo en{' '}
-            <a href="mailto:contacto@memoriasvivas.example" className={t.link}>
-              contacto@memoriasvivas.example
-            </a>
-          </p>
         </div>
       </div>
     </main>

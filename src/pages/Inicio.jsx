@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { Scene } from '../Scene'
 import { LeftPanel } from '../components/LeftPanel'
+import { RightPanel } from '../components/RightPanel'
 import { ControlsPanel } from '../components/ControlsPanel'
 import CameraLegend from '../components/CameraLegend'
 
@@ -31,11 +32,18 @@ export default function Inicio() {
   return (
     <div className="w-full h-full relative">
       {selectedSphere !== null && (
-        <LeftPanel
-          theme={theme}
-          selectedSphereId={selectedSphere}
-          onClose={() => setSelectedSphere(null)}
-        />
+        <>
+          <LeftPanel
+            theme={theme}
+            selectedSphereId={selectedSphere}
+            onClose={() => setSelectedSphere(null)}
+          />
+          <RightPanel
+            theme={theme}
+            selectedSphereId={selectedSphere}
+            onClose={() => setSelectedSphere(null)}
+          />
+        </>
       )}
 
       <ControlsPanel theme={theme} params={sceneParams} onChange={setSceneParams} />

@@ -47,11 +47,6 @@ function paletteFor(item, isLight) {
   return list[hashStr(item.id) % list.length]
 }
 
-function placeholderNumber(titulo) {
-  const match = String(titulo ?? '').match(/(\d+)\s*$/)
-  return match ? match[1].padStart(2, '0') : '—'
-}
-
 /**
  * @param {{
  *   item: object,
@@ -91,7 +86,11 @@ export default function PublicacionTile({
     ? { background: isLight ? '#f4efe6' : '#efe6d6', color: colors.fg }
     : null
 
-  const label = isDocumental ? `${item.titulo} — documental` : item.titulo
+  const label = isPlaceholder
+    ? 'Espacio disponible — Pensemos el archivo'
+    : isDocumental
+      ? `${item.titulo} — documental`
+      : item.titulo
 
   const animateHover = (entering) => {
     const el = nodeRef.current
@@ -123,9 +122,9 @@ export default function PublicacionTile({
   ].filter(Boolean).join(' ')
 
   const inner = isPlaceholder ? (
-    <span>
-      <span className="poster__ph-num">{placeholderNumber(item.titulo)}</span>
+    <span className="poster__ph">
       <span className="poster__ph-label">Espacio disponible</span>
+      <span className="poster__ph-cta">Pensemos el archivo</span>
     </span>
   ) : (
     <div className="poster__inner">

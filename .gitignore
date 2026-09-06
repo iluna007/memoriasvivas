@@ -13,6 +13,10 @@ dist-ssr
 *.local
 .env
 
+# Candidatos de imagen (locales). Solo se versiona el README.
+_assets-inbox/**
+!_assets-inbox/README.txt
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
