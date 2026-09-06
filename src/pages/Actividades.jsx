@@ -8,7 +8,6 @@ export default function Actividades() {
   return (
     <ContentSectionPage
       wide
-      title="Actividades"
       lead="Talleres, caminatas, encuentros y otras actividades realizadas o programadas con comunidades de la región sur de Costa Rica."
     >
       <ActividadesGaleria theme={theme} />
