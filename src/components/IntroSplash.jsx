@@ -74,6 +74,7 @@ export default function IntroSplash({ onDismiss }) {
         <VideoLoopBackground
           src={LOOP_BG_SRC}
           overlayClassName=""
+          startAt={4}
         />
       </div>
 

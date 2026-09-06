@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { getContentPageTheme } from '../../utils/pageThemeClasses'
 import PublicacionTile, { hashStr, pickVariant } from './PublicacionTile'
 import PublicacionModal from './PublicacionModal'
+import ActivacionesLegend from './ActivacionesLegend'
 
 const WORLD_COPIES = [-1, 0, 1]
 const DRAG_THRESHOLD = 8
@@ -85,7 +86,6 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
   const suppressClickRef = useRef(false)
   const reducedMotionRef = useRef(false)
   const sizeRef = useRef({ tileW: 1, tileH: 1 })
-  const hintRef = useRef(null)
   const tooltipRef = useRef(null)
   const hoveredRef = useRef(null)
 
@@ -144,12 +144,6 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
     inertiaRef.current = null
   }, [])
 
-  const fadeHint = useCallback(() => {
-    const hint = hintRef.current
-    if (!hint) return
-    gsap.to(hint, { opacity: 0, duration: reducedMotionRef.current ? 0.01 : 0.6, ease: 'power2.out' })
-  }, [])
-
   const activateItem = useCallback((item, event) => {
     if (suppressClickRef.current) {
       event.preventDefault()
@@ -175,17 +169,15 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
     sync()
     mq.addEventListener('change', sync)
 
-    const hintTimer = window.setTimeout(fadeHint, 2600)
     // Esperar un frame para tener medidas del viewport y centrar en documentos.
     const raf = window.requestAnimationFrame(() => focusOnDocuments())
 
     return () => {
       mq.removeEventListener('change', sync)
-      window.clearTimeout(hintTimer)
       window.cancelAnimationFrame(raf)
       killInertia()
     }
-  }, [applyTransform, fadeHint, focusOnDocuments, killInertia])
+  }, [applyTransform, focusOnDocuments, killInertia])
 
   useEffect(() => {
     focusOnDocuments()
@@ -209,7 +201,6 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
       if (event.button != null && event.button !== 0) return
       if (event.target.closest('.pub-modal')) return
       killInertia()
-      fadeHint()
       setGrabbing(true)
       suppressClickRef.current = false
       dragRef.current = {
@@ -294,7 +285,6 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
     const onWheel = (event) => {
       event.preventDefault()
       killInertia()
-      fadeHint()
       panRef.current.x += event.deltaX
       panRef.current.y += event.deltaY
       applyTransform()
@@ -310,7 +300,7 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
       window.removeEventListener('pointerup', onPointerUp)
       window.removeEventListener('pointercancel', onPointerUp)
     }
-  }, [applyTransform, compact, fadeHint, killInertia])
+  }, [applyTransform, compact, killInertia])
 
   const onHoverChange = useCallback((id) => {
     hoveredRef.current = id
@@ -351,12 +341,9 @@ export default function PublicacionesWall({ items, theme = 'dark' }) {
             </div>
           ))}
         </div>
-
-        <p ref={hintRef} className={`wall__hint ${t.muted}`}>
-          <span aria-hidden="true">✋</span>
-          Arrastra para explorar
-        </p>
       </div>
+
+      <ActivacionesLegend theme={theme} />
 
       {tooltip ? (
         <div
