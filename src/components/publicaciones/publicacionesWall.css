@@ -234,19 +234,19 @@
 }
 
 .poster__play-icon {
-  width: clamp(2.6rem, 28%, 3.4rem);
+  width: clamp(2.4rem, 26%, 3rem);
   height: auto;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
 }
 
 .poster__play-icon circle {
-  fill: rgba(12, 10, 8, 0.42);
-  stroke: rgba(245, 239, 230, 0.88);
-  stroke-width: 1.5;
+  fill: #fff;
+  stroke: rgba(0, 0, 0, 0.12);
+  stroke-width: 1;
 }
 
 .poster__play-icon path {
-  fill: #f5efe6;
+  fill: #000;
 }
 
 .poster__badge--documental {

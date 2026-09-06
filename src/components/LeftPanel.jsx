@@ -84,8 +84,8 @@ export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
                         className="h-full w-full object-cover"
                         loading="lazy"
                       />
-                      <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/35">
-                        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/60 text-white">
+                      <span className="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/20">
+                        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black shadow-sm">
                           ▶
                         </span>
                       </span>

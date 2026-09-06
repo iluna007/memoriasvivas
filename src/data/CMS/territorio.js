@@ -17,8 +17,8 @@ const territorio = [
   {
     "id_territorio": "T3",
     "nombre": "La Palma",
-    "lat": 8.633,
-    "lon": -83.517
+    "lat": 8.642588962,
+    "lon": -83.46184714
   },
   {
     "id_territorio": "T4",
@@ -31,6 +31,12 @@ const territorio = [
     "nombre": "Puerto Jiménez",
     "lat": 8.5389,
     "lon": -83.3053
+  },
+  {
+    "id_territorio": "T6",
+    "nombre": "Corcovado",
+    "lat": 8.5453,
+    "lon": -83.5712
   }
 ];
 

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
+import ExpandableMediaCard from '../components/ExpandableMediaCard'
 import { EQUIPO, pickEquipoFoto } from '../data/equipo'
 import { getContentPageTheme } from '../utils/pageThemeClasses'
 
@@ -67,67 +68,22 @@ export default function Equipo() {
                 const imgSrc = fotoByKey[m.key] || placeholder
 
                 return (
-                  <article
+                  <ExpandableMediaCard
                     key={m.key}
                     id={`equipo-${m.key}`}
-                    className={`overflow-hidden rounded-2xl ${t.card}`}
+                    theme={theme}
+                    imageSrc={imgSrc}
+                    imageAlt={fullName}
+                    title={fullName}
+                    subtitle={m.cargo}
+                    hint={[m.escuela, m.sede].filter(Boolean).join(' · ') || undefined}
+                    isOpen={isOpen}
+                    onToggle={() => toggle(m.key)}
+                    expandLabel="Ver más"
+                    collapseLabel="Ocultar biografía"
                   >
-                    <div className="relative aspect-[5/6] w-full bg-zinc-900">
-                      <img
-                        src={imgSrc}
-                        alt={fullName}
-                        className={`h-full w-full object-cover object-center opacity-90 transition-[filter] duration-500 ease-out ${
-                          isOpen ? 'grayscale-0' : 'grayscale'
-                        }`}
-                        loading="lazy"
-                      />
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                    </div>
-
-                    <div className="p-4 sm:p-5">
-                      <h2 className={`mb-1 text-lg font-semibold ${t.cardTitle}`}>{fullName}</h2>
-                      <p className={`mb-1 text-xs font-medium ${t.cardSub}`}>{m.cargo}</p>
-                      {(m.escuela || m.sede) && (
-                        <p className={`mb-3 text-[11px] ${t.cardHint}`}>
-                          {[m.escuela, m.sede].filter(Boolean).join(' · ')}
-                        </p>
-                      )}
-
-                      <button
-                        type="button"
-                        onClick={() => {
-                          toggle(m.key)
-                          if (!isOpen) {
-                            requestAnimationFrame(() => {
-                              document.getElementById(`equipo-${m.key}`)?.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'nearest',
-                              })
-                            })
-                          }
-                        }}
-                        className={`flex w-full touch-manipulation items-center justify-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${t.btnOutline}`}
-                        aria-expanded={isOpen}
-                      >
-                        {isOpen ? 'Ocultar biografía' : 'Ver más'}
-                        <span className={`inline-block transition-transform ${isOpen ? 'rotate-180' : ''}`} aria-hidden>
-                          ▼
-                        </span>
-                      </button>
-
-                      <div
-                        className={`grid transition-[grid-template-rows] duration-300 ease-out ${
-                          isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-                        }`}
-                      >
-                        <div className="min-h-0 overflow-hidden">
-                          <p className={`mt-4 select-text border-t pt-4 text-sm leading-relaxed ${t.cardBio} ${t.divider}`}>
-                            {m.bio}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
+                    <p className={`select-text text-sm leading-relaxed ${t.cardBio}`}>{m.bio}</p>
+                  </ExpandableMediaCard>
                 )
               })}
             </div>
