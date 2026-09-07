@@ -6,6 +6,21 @@ Aplicación **Vite + React** con interfaz en **Tailwind CSS**, escena **3D** con
 
 ---
 
+## Usar este proyecto como base
+
+Este repositorio está pensado para poder reutilizarse: comunidades, cátedras o proyectos similares pueden clonarlo y adaptarlo para construir su propio archivo de memoria/identidad local, sin partir de cero.
+
+Lo más fácil de personalizar:
+
+- **Contenido**: casi todos los textos y listados editables viven en `src/data/CMS/` (un archivo por sección) y se combinan mediante un adaptador en `src/data/` — no hace falta tocar componentes para cambiar el contenido.
+- **Textos institucionales**: `/sobre`, pie de página (`src/components/Footer.jsx`) y metadatos de `CITATION.cff`.
+- **Identidad visual**: colores y tema en `tailwind.config.js` y `src/utils/pageThemeClasses.js`.
+- **Mapa**: cambiá el estilo de Mapbox y las coordenadas iniciales en `src/pages/Mapa.jsx`, y los puntos/videos en `src/data/CMS/territorio.js` y `src/data/mapaVideosPlaylists.js`.
+
+Ver la licencia del código y del contenido más abajo antes de reutilizarlo.
+
+---
+
 ## Citar este repositorio
 
 GitHub detecta el archivo [`CITATION.cff`](./CITATION.cff) en la raíz y muestra el botón **«Citar este repositorio»** (menú lateral del repositorio o pestaña al crear un release), con formatos APA, BibTeX y otros generados a partir de los metadatos.
@@ -145,4 +160,11 @@ Cualquier hosting de sitios estáticos sirve la carpeta `dist/` tras `npm run bu
 
 ## Licencia y uso
 
-El uso del nombre y marcas de la Universidad de Costa Rica debe ajustarse a las políticas institucionales. El código del repositorio se ofrece como **código abierto** para fines del proyecto; revisa los archivos del repositorio si se añade una licencia explícita (`LICENSE`).
+Se separan **código** y **contenido**:
+
+| Qué | Licencia |
+|-----|----------|
+| Código de la plataforma (componentes, estilos, scripts, configuración; lo que no sea texto/fotos/datos del proyecto) | [MIT](./LICENSE) |
+| Contenido de Memorias Vivas (textos, datos CMS, fotografías y materiales propios del proyecto) | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es) |
+
+El uso del nombre y marcas de la Universidad de Costa Rica debe ajustarse a las políticas institucionales.

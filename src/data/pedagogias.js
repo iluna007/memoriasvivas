@@ -13,6 +13,7 @@ const ORDEN_CATEGORIAS = [
   'Presentaciones',
   'Recursos audiovisuales',
   'Material para docentes',
+  'Código fuente del sitio',
 ]
 
 const ICONOS_CATEGORIA = {
@@ -22,6 +23,7 @@ const ICONOS_CATEGORIA = {
   Presentaciones: '🖥️',
   'Recursos audiovisuales': '🎬',
   'Material para docentes': '🎓',
+  'Código fuente del sitio': '💻',
 }
 
 function slugCategoria(categoria) {
