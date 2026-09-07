@@ -160,11 +160,7 @@ Cualquier hosting de sitios estáticos sirve la carpeta `dist/` tras `npm run bu
 
 ## Licencia y uso
 
-Se separan **código** y **contenido**:
+- **Código**: [MIT](./LICENSE) — podés clonar, modificar y reutilizar este repositorio como base para tu propio sitio o sistema de archivo/memoria comunitaria.
+- **Contenido** (textos, datos del CMS, fotografías propias del proyecto): [CC BY-NC-SA 4.0](./LICENSE-CONTENT.md).
 
-| Qué | Licencia |
-|-----|----------|
-| Código de la plataforma (componentes, estilos, scripts, configuración; lo que no sea texto/fotos/datos del proyecto) | [MIT](./LICENSE) |
-| Contenido de Memorias Vivas (textos, datos CMS, fotografías y materiales propios del proyecto) | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es) |
-
-El uso del nombre y marcas de la Universidad de Costa Rica debe ajustarse a las políticas institucionales.
+El uso del nombre y las marcas de la Universidad de Costa Rica debe ajustarse a las políticas institucionales.
