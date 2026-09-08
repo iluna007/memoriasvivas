@@ -113,7 +113,7 @@ const equipo = [
     "cargo": "Asistente 2025-2026",
     "escuela": "Escuela de Filología, Lingüística y Literatura",
     "sede": "Sede Rodrigo Facio",
-    "bio": null,
+    "bio": "Zaguate transfronterizo, bachiller en Trabajo Social y estudiante de Comunicación Audiovisual y Multimedia de la Universidad de Costa Rica. Cuenta con más de cinco años de experiencia trabajando con comunidades rurales en contextos de movilidad humana, desplazamiento y crisis, especialmente en la Zona Norte. Su práctica se sitúa en el cruce entre el trabajo comunitario, la investigación social y la creación audiovisual. Ha coordinado procesos psicosociales, talleres y experiencias participativas con comunidades, organizaciones y colectivos defensores de derechos humanos. Actualmente, busca crear espacios para escuchar, documentar y narrar las historias que sostienen los territorios, combinando herramientas audiovisuales y participativas para tejer vínculos, imaginar lo colectivo y explorar futuros posibles.",
     "contribuciones": null,
     "fotos": null,
     "telefono": null,
