@@ -64,7 +64,7 @@ export default function Contacto() {
   return (
     <main className="relative min-h-full overflow-hidden pt-16">
       <div className="fixed inset-0 z-0">
-        <VideoLoopBackground src={LOOP_BG_SRC} overlayClassName="bg-black/40" />
+        <VideoLoopBackground src={LOOP_BG_SRC} overlayClassName="bg-black/40" startAt={3} />
       </div>
       <div className="relative z-10 mx-auto max-w-xl px-6 py-10 sm:py-14">
         <div className={panel}>
