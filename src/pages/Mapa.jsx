@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Map, { Marker, Source } from 'react-map-gl/mapbox'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { buildOsaMapPins } from '../data/osaMapPins'
@@ -43,6 +44,7 @@ function getYoutubeEmbedUrl(url) {
 
 /** Panel lateral izquierdo (misma base visual que LeftPanel de constelaciones). */
 function MapaVideosPanel({ territorio, selectedVideo, onSelectVideo, onBackToList, onClose, theme }) {
+  const { t } = useTranslation()
   const isLight = theme === 'light'
 
   const panelShell = isLight
@@ -70,14 +72,14 @@ function MapaVideosPanel({ territorio, selectedVideo, onSelectVideo, onBackToLis
       }}
     >
       <div className="relative flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6">
-        <button type="button" onClick={onClose} className={closeBtn} aria-label="Cerrar">
+        <button type="button" onClick={onClose} className={closeBtn} aria-label={t('mapa.cerrar')}>
           ×
         </button>
 
         {selectedVideo ? (
           <>
             <button type="button" onClick={onBackToList} className={backBtn}>
-              ← Volver a la lista
+              ← {t('mapa.volver')}
             </button>
             <h2 className="mb-1 pr-12 text-xl font-semibold sm:text-2xl">{territorio.nombre}</h2>
             <p className={`mb-4 text-sm ${meta}`}>{selectedVideo.titulo}</p>
@@ -95,12 +97,11 @@ function MapaVideosPanel({ territorio, selectedVideo, onSelectVideo, onBackToLis
           <>
             <h2 className="mb-1 pr-12 text-xl font-semibold sm:text-2xl">{territorio.nombre}</h2>
             <p className={`mb-4 ${meta}`}>
-              {territorio.videos.length}{' '}
-              {territorio.videos.length === 1 ? 'video' : 'videos'}
+              {t('mapa.videos', { count: territorio.videos.length })}
             </p>
 
             {territorio.videos.length === 0 ? (
-              <p className={empty}>Todavía no hay videos asignados a este territorio.</p>
+              <p className={empty}>{t('mapa.sinVideos')}</p>
             ) : (
               <ul className="list-none space-y-3 p-0">
                 {territorio.videos.map((v) => (
@@ -139,6 +140,7 @@ function MapaVideosPanel({ territorio, selectedVideo, onSelectVideo, onBackToLis
 }
 
 export default function Mapa() {
+  const { t } = useTranslation()
   const { theme = 'dark' } = useOutletContext() ?? {}
   const isLight = theme === 'light'
   const token = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN
@@ -155,31 +157,20 @@ export default function Mapa() {
   if (!token) {
     return (
       <main className="min-h-full px-6 py-10 pt-16">
-        <h1 className="mb-3 text-xl font-semibold">Mapa</h1>
+        <h1 className="mb-3 text-xl font-semibold">{t('mapa.titulo')}</h1>
         <p className="mb-4 max-w-lg text-sm leading-relaxed text-inherit/80">
-          Falta la variable{' '}
-          <code className={`rounded px-1 py-0.5 ${isLight ? 'bg-amber-100 text-amber-900' : 'bg-white/10 text-amber-200/90'}`}>
-            VITE_MAPBOX_ACCESS_TOKEN
-          </code>{' '}
-          en el entorno del build.
+          {t('mapa.faltaToken')}
         </p>
         <ul className="max-w-lg list-inside list-disc space-y-2 text-sm text-inherit/75">
           <li>
-            <strong className="text-inherit/95">Netlify:</strong> Sitio →{' '}
-            <em>Site configuration</em> → <em>Environment variables</em> → añade{' '}
-            <code className={isLight ? 'text-amber-800' : 'text-amber-200/90'}>VITE_MAPBOX_ACCESS_TOKEN</code> con tu token{' '}
-            <code className="text-inherit/85">pk.…</code>. Después ejecuta un nuevo deploy (mejor &quot;Clear cache and
-            deploy&quot;).
+            {t('mapa.netlify')}
           </li>
           <li>
-            <strong className="text-inherit/95">En tu PC:</strong> crea{' '}
-            <code className={isLight ? 'text-amber-800' : 'text-amber-200/90'}>.env</code> en la raíz del proyecto (puedes partir de{' '}
-            <code className={isLight ? 'text-amber-800' : 'text-amber-200/90'}>.env.example</code>) y pega el mismo token.
+            {t('mapa.local')}
           </li>
         </ul>
         <p className="mt-4 text-xs text-inherit/55">
-          El archivo <code>.env</code> no se sube a Git; por eso en producción hay que configurarlo en el panel de
-          Netlify.
+          {t('mapa.nota')}
         </p>
       </main>
     )
@@ -213,8 +204,8 @@ export default function Mapa() {
                   setSelectedVideo(null)
                 }}
                 className="flex h-9 w-9 -translate-x-1/2 cursor-pointer items-center justify-center rounded-full border border-black/20 bg-white text-black shadow-md transition hover:scale-105 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-black/25"
-                aria-label={`Ver videos de ${pin.nombre}`}
-                title={`${pin.nombre} (${pin.videos.length} ${pin.videos.length === 1 ? 'video' : 'videos'})`}
+                aria-label={t('mapa.verVideos', { nombre: pin.nombre })}
+                title={`${pin.nombre} (${t('mapa.videos', { count: pin.videos.length })})`}
               >
                 <span className="text-sm font-bold" aria-hidden>
                   ▶

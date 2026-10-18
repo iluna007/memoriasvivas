@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { campo } from '../i18n/campo'
 import ExpandableMediaCard from '../components/ExpandableMediaCard'
 import { EQUIPO, pickEquipoFoto } from '../data/equipo'
 import { getContentPageTheme } from '../utils/pageThemeClasses'
@@ -40,6 +42,8 @@ function useEquipoColumns() {
 export default function Equipo() {
   const { theme = 'dark' } = useOutletContext() ?? {}
   const t = getContentPageTheme(theme)
+  const { t: tr, i18n } = useTranslation()
+  const lang = i18n.language?.startsWith('en') ? 'en' : 'es'
   const cols = useEquipoColumns()
   const [expanded, setExpanded] = useState(() => ({}))
   const toggle = (key) => setExpanded((prev) => ({ ...prev, [key]: !prev[key] }))
@@ -75,14 +79,14 @@ export default function Equipo() {
                     imageSrc={imgSrc}
                     imageAlt={fullName}
                     title={fullName}
-                    subtitle={m.cargo}
-                    hint={[m.escuela, m.sede].filter(Boolean).join(' · ') || undefined}
+                    subtitle={campo(m, 'cargo', lang)}
+                    hint={[campo(m, 'escuela', lang), campo(m, 'sede', lang)].filter(Boolean).join(' · ') || undefined}
                     isOpen={isOpen}
                     onToggle={() => toggle(m.key)}
-                    expandLabel="Ver más"
-                    collapseLabel="Ocultar biografía"
+                    expandLabel={tr('equipo.verMas')}
+                    collapseLabel={tr('equipo.ocultar')}
                   >
-                    <p className={`select-text text-sm leading-relaxed ${t.cardBio}`}>{m.bio}</p>
+                    <p className={`select-text text-sm leading-relaxed ${t.cardBio}`}>{campo(m, 'bio', lang)}</p>
                   </ExpandableMediaCard>
                 )
               })}

@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { getSphereContent } from '../data/cmsSphereData'
 import { getSphereColor } from '../data/spheres'
 import {
@@ -8,6 +10,9 @@ import {
 } from '../data/citasHelpers'
 
 export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
+  const { t, i18n } = useTranslation()
+  const en = i18n.language?.startsWith('en')
+  const [traducidas, setTraducidas] = useState({})
   const isLight = theme === 'light'
   const content = selectedSphereId != null ? getSphereContent(selectedSphereId) : null
   const color = selectedSphereId != null ? getSphereColor(selectedSphereId) : null
@@ -46,7 +51,7 @@ export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
       }}
     >
       <div className="relative flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6">
-        <button type="button" onClick={onClose} className={closeBtn} aria-label="Cerrar">
+        <button type="button" onClick={onClose} className={closeBtn} aria-label={t('comun.cerrar')}>
           ×
         </button>
 
@@ -54,11 +59,11 @@ export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
           className="mb-4 pr-12 text-xl font-semibold sm:text-2xl"
           style={{ color: color ?? (isLight ? '#18181b' : '#fff') }}
         >
-          Citas
+          {t('inicio.citas')}
         </h2>
 
         {citasDelConcepto.length === 0 ? (
-          <p className={citaEmpty}>Todavía no hay citas registradas para este concepto.</p>
+          <p className={citaEmpty}>{t('inicio.sinCitas')}</p>
         ) : (
           <ul className="list-none p-0">
             {citasDelConcepto.map((cita) => {
@@ -66,9 +71,21 @@ export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
               const miniatura = urlMiniaturaYoutube(cita.ubicacion_video)
               return (
                 <li key={cita.id_cita} className={citaItem}>
-                  <p className={citaTexto}>&ldquo;{cita.texto_cita}&rdquo;</p>
+                  <p className={citaTexto}>&ldquo;{traducidas[cita.id_cita] && cita.texto_cita_en ? cita.texto_cita_en : cita.texto_cita}&rdquo;</p>
+                  {en && cita.texto_cita_en ? (
+                    <button
+                      type="button"
+                      className={citaLink}
+                      onClick={() => setTraducidas((prev) => ({ ...prev, [cita.id_cita]: !prev[cita.id_cita] }))}
+                    >
+                      {traducidas[cita.id_cita] ? t('inicio.ocultarTraduccion') : t('inicio.mostrarTraduccion')}
+                    </button>
+                  ) : null}
+                  {traducidas[cita.id_cita] && cita.texto_cita_en ? (
+                    <p className={citaMeta}>{t('inicio.traduccionNota')}</p>
+                  ) : null}
                   <p className={citaMeta}>
-                    — {getNombreEntidad(cita.codigo_entidad)}
+                    · {getNombreEntidad(cita.codigo_entidad)}
                     {cita.timestamps ? ` (${cita.timestamps})` : ''}
                   </p>
                   {yt && miniatura && (

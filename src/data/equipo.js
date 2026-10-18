@@ -5,6 +5,7 @@
  * Si hay más de una foto, Equipo.jsx elige una al azar en cada visita.
  */
 import equipoCMS from './CMS/7_equipo.js'
+import equipoEn from './equipoEn.js'
 
 const LOREM_BIO =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula, mi eget laoreet varius, libero nunc ultricies nulla, at hendrerit nisi lacus vel sapien. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.'
@@ -100,14 +101,19 @@ const equipoOrdenado = [...equipoCMS].sort(
 const mapped = equipoOrdenado.map((m) => {
   const key = slugify(m.nombre ?? '', m.apellidos ?? '')
   const archivos = FOTOS[key] ?? []
+  const en = equipoEn[m.id_equipo] ?? {}
   return {
     key,
     nombre: m.nombre ?? '',
     apellidos: m.apellidos ?? '',
     cargo: m.cargo ?? '',
+    cargo_en: m.cargo_en || en.cargo || '',
     escuela: m.escuela ?? '',
+    escuela_en: m.escuela_en || en.escuela || '',
     sede: m.sede ?? '',
+    sede_en: m.sede_en || en.sede || '',
     bio: (m.bio && typeof m.bio === 'string' && m.bio.trim()) ? m.bio : LOREM_BIO,
+    bio_en: m.bio_en || en.bio || '',
     fotos: archivos.map((archivo) => `/equipo/${archivo}`),
   }
 })

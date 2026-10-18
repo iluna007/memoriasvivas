@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import archivo from '../data/CMS/1_archivo.js'
 import conceptos from '../data/CMS/6_conceptos.js'
 import { normalizeConceptId } from '../data/cmsSphereData'
@@ -99,6 +100,7 @@ function MetaBlock({ label, children }) {
 }
 
 function RelatoExpandedPanel({ item, conceptLookup }) {
+  const { t } = useTranslation()
   const embed = item.url ? getYoutubeEmbedUrl(item.url) : null
   const concepts = formatConceptIds(item.ids_conceptos, conceptLookup)
 
@@ -112,38 +114,38 @@ function RelatoExpandedPanel({ item, conceptLookup }) {
     <div className="border-t border-zinc-500/15 bg-black/[0.03] p-3 sm:p-4">
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(260px,34%)] lg:items-start lg:gap-6">
         <div className="grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2">
-          <MetaBlock label="Identificador (ISAD 3.1.1)">{item.id_relato}</MetaBlock>
-          <MetaBlock label="Título (ISAD 3.1.2)">{item.título}</MetaBlock>
-          <MetaBlock label="Nivel de descripción (ISAD 3.1.4)">{item.tipo}</MetaBlock>
-          <MetaBlock label="Extensión / duración (ISAD 3.1.5)">{item.duracion}</MetaBlock>
-          <MetaBlock label="Fecha de registro (ISAD 3.1.3)">{item.fecha_registro}</MetaBlock>
-          <MetaBlock label="Idioma (ISAD 3.4.3)">{item.idioma}</MetaBlock>
-          <MetaBlock label="Objeto digital (URL)">
+          <MetaBlock label={t('archivo.id')}>{item.id_relato}</MetaBlock>
+          <MetaBlock label={t('archivo.tituloMeta')}>{item.título}</MetaBlock>
+          <MetaBlock label={t('archivo.nivelMeta')}>{item.tipo}</MetaBlock>
+          <MetaBlock label={t('archivo.extensionMeta')}>{item.duracion}</MetaBlock>
+          <MetaBlock label={t('archivo.fechaMeta')}>{item.fecha_registro}</MetaBlock>
+          <MetaBlock label={t('archivo.idiomaMeta')}>{item.idioma}</MetaBlock>
+          <MetaBlock label={t('archivo.url')}>
             {item.url ? (
               <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-400">
                 {item.url}
               </a>
             ) : null}
           </MetaBlock>
-          <MetaBlock label="Consentimiento / condiciones (resumen)">{item.consentimiento}</MetaBlock>
-          <MetaBlock label="Puntos de acceso — conceptos">{concepts}</MetaBlock>
-          <MetaBlock label="Entrevista">{item.Entrevista}</MetaBlock>
-          <MetaBlock label="Registro audiovisual">{item['Registro Audiovisual']}</MetaBlock>
-          <MetaBlock label="Post-producción">{item['Post-Producción']}</MetaBlock>
-          <MetaBlock label="Responsables y colaboradores">{item['Responsables y colaboradores']}</MetaBlock>
-          <MetaBlock label="Ids lugares">{formatIdList(item.ids_lugares)}</MetaBlock>
-          <MetaBlock label="Ids emociones">{formatIdList(item.ids_emociones)}</MetaBlock>
-          <MetaBlock label="Ids personas">{formatIdList(item.ids_personas)}</MetaBlock>
-          <MetaBlock label="Ids prácticas">{formatIdList(item.ids_practicas)}</MetaBlock>
+          <MetaBlock label={t('archivo.consentimiento')}>{item.consentimiento}</MetaBlock>
+          <MetaBlock label={t('archivo.conceptos')}>{concepts}</MetaBlock>
+          <MetaBlock label={t('archivo.entrevista')}>{item.Entrevista}</MetaBlock>
+          <MetaBlock label={t('archivo.registro')}>{item['Registro Audiovisual']}</MetaBlock>
+          <MetaBlock label={t('archivo.post')}>{item['Post-Producción']}</MetaBlock>
+          <MetaBlock label={t('archivo.responsables')}>{item['Responsables y colaboradores']}</MetaBlock>
+          <MetaBlock label={t('archivo.idsLugares')}>{formatIdList(item.ids_lugares)}</MetaBlock>
+          <MetaBlock label={t('archivo.idsEmociones')}>{formatIdList(item.ids_emociones)}</MetaBlock>
+          <MetaBlock label={t('archivo.idsPersonas')}>{formatIdList(item.ids_personas)}</MetaBlock>
+          <MetaBlock label={t('archivo.idsPracticas')}>{formatIdList(item.ids_practicas)}</MetaBlock>
         </div>
 
         <div className="min-w-0">
-          <p className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-inherit/50">Vista previa (objeto digital)</p>
+          <p className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-inherit/50">{t('archivo.vistaPrevia')}</p>
           {embed ? (
             <div className="aspect-video w-full max-w-lg overflow-hidden rounded-lg border border-zinc-500/25 bg-black shadow-inner lg:max-w-none">
               <iframe
                 src={embed}
-                title={item.título ? String(item.título).slice(0, 80) : 'Vídeo'}
+                title={item.título ? String(item.título).slice(0, 80) : t('archivo.video')}
                 className="h-full w-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -151,14 +153,14 @@ function RelatoExpandedPanel({ item, conceptLookup }) {
               />
             </div>
           ) : (
-            <p className="text-xs text-inherit/50">No hay URL embebible para vista previa.</p>
+            <p className="text-xs text-inherit/50">{t('archivo.sinPreview')}</p>
           )}
         </div>
       </div>
 
       {extras.length > 0 && (
         <div className="mt-4 border-t border-zinc-500/15 pt-3">
-          <p className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-inherit/50">Otros campos</p>
+          <p className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-inherit/50">{t('archivo.otros')}</p>
           <dl className="grid grid-cols-1 gap-2 font-mono text-[11px] sm:grid-cols-2">
             {extras.map(([k, v]) => (
               <Fragment key={k}>
@@ -174,6 +176,7 @@ function RelatoExpandedPanel({ item, conceptLookup }) {
 }
 
 function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle }) {
+  const { t } = useTranslation()
   const th = 'border-b border-zinc-500/20 bg-black/[0.06] px-2 py-2 text-left text-[10px] font-semibold uppercase tracking-wide text-inherit/55 sm:px-2.5'
   const td = 'border-b border-zinc-500/15 px-2 py-2 align-top text-xs sm:px-2.5 sm:text-sm'
 
@@ -182,31 +185,31 @@ function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle })
       <table className="w-full min-w-[920px] border-collapse text-left">
         <thead>
           <tr>
-            <th className={th} title="ISAD(G) 3.1.1 · Identificador">
-              Ref.
+            <th className={th} title="ISAD(G) 3.1.1">
+              {t('archivo.ref')}
             </th>
-            <th className={th} title="ISAD(G) 3.1.2 · Título">
-              Título
+            <th className={th} title={t('archivo.tituloIsad')}>
+              {t('archivo.tituloCol')}
             </th>
-            <th className={`${th} hidden md:table-cell`} title="ISAD(G) 3.1.4 · Nivel de descripción">
-              Nivel
+            <th className={`${th} hidden md:table-cell`} title={t('archivo.nivelIsad')}>
+              {t('archivo.nivel')}
             </th>
-            <th className={`${th} hidden lg:table-cell`} title="ISAD(G) 3.1.5 · Extensión y soporte">
-              Extensión
+            <th className={`${th} hidden lg:table-cell`} title={t('archivo.extensionIsad')}>
+              {t('archivo.extension')}
             </th>
-            <th className={th} title="ISAD(G) 3.1.3 · Fechas">
-              Fecha
+            <th className={th} title={t('archivo.fechaIsad')}>
+              {t('archivo.fecha')}
             </th>
-            <th className={`${th} hidden sm:table-cell`} title="ISAD(G) 3.4.3 · Idioma y alfabeto">
-              Idioma
+            <th className={`${th} hidden sm:table-cell`} title={t('archivo.idiomaIsad')}>
+              {t('archivo.idioma')}
             </th>
-            <th className={`${th} hidden xl:table-cell`} title="Puntos de acceso (conceptos)">
-              Acceso
+            <th className={`${th} hidden xl:table-cell`} title={t('archivo.accesoIsad')}>
+              {t('archivo.acceso')}
             </th>
-            <th className={`${th} hidden 2xl:table-cell`} title="ISAD(G) 3.4.1 · Condiciones de acceso (resumen)">
-              Cond. acceso
+            <th className={`${th} hidden 2xl:table-cell`} title={t('archivo.condicionesIsad')}>
+              {t('archivo.condiciones')}
             </th>
-            <th className={`${th} w-12 text-center`} title="Desplegar ficha y vista previa">
+            <th className={`${th} w-12 text-center`} title={t('archivo.desplegar')}>
               {' '}
             </th>
           </tr>
@@ -251,8 +254,8 @@ function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle })
                         onClick={() => onToggle(id)}
                         className="inline-flex min-h-[40px] min-w-[40px] items-center justify-center rounded-md border border-zinc-500/30 text-inherit/80 transition-colors hover:bg-white/10 touch-manipulation"
                         aria-expanded={isOpen}
-                        aria-label={isOpen ? 'Contraer ficha del relato' : 'Expandir ficha y vista previa'}
-                        title={isOpen ? 'Contraer' : 'Expandir ficha'}
+                        aria-label={isOpen ? t('archivo.contraer') : t('archivo.expandir')}
+                        title={isOpen ? t('archivo.contraerCorto') : t('archivo.expandirCorto')}
                       >
                         <span className="text-lg leading-none">{isOpen ? '−' : '+'}</span>
                       </button>
@@ -321,19 +324,27 @@ function VideoArchiveBlock({ title, sortBy, onSort, optionsMap, grouped, keys })
 }
 
 export default function Archivo() {
+  const { t } = useTranslation()
   const [videoSort, setVideoSort] = useState('year')
+  const opciones = useMemo(() => {
+    const map = {}
+    for (const [key, value] of Object.entries(VIDEO_SORT_OPTIONS)) {
+      map[key] = { ...value, label: t(`archivo.orden.${key}`) }
+    }
+    return map
+  }, [t])
 
   const videoData = useMemo(() => getSortedVideos(archivo, videoSort), [videoSort])
 
   return (
     <main className="min-h-full w-full pt-16">
-      <h1 className="sr-only">Archivo</h1>
+      <h1 className="sr-only">{t('archivo.titulo')}</h1>
       <div className="w-full max-w-none px-2 pb-6 pt-2 sm:px-4 lg:px-6">
         <VideoArchiveBlock
-          title="Relatos audiovisuales"
+          title={t('archivo.relatos')}
           sortBy={videoSort}
           onSort={setVideoSort}
-          optionsMap={VIDEO_SORT_OPTIONS}
+          optionsMap={opciones}
           grouped={videoData.grouped}
           keys={videoData.keys}
         />

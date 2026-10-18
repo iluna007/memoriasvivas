@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { getContentPageTheme } from '../utils/pageThemeClasses'
 import { VideoLoopBackground } from '../components/VideoLoopBackground'
 
@@ -47,6 +48,7 @@ function SocialIconButton({ href, label, Icon, theme }) {
 export default function Contacto() {
   const { theme = 'dark' } = useOutletContext() ?? {}
   const t = getContentPageTheme(theme)
+  const { t: tr } = useTranslation()
   const [sent, setSent] = useState(false)
 
   const handleSubmit = (e) => {
@@ -68,20 +70,20 @@ export default function Contacto() {
       </div>
       <div className="relative z-10 mx-auto max-w-xl px-6 py-10 sm:py-14">
         <div className={panel}>
-          <h1 className="mb-2 text-3xl font-bold text-white sm:text-4xl">Contacto</h1>
+          <h1 className="mb-2 text-3xl font-bold text-white sm:text-4xl">{tr('contacto.titulo')}</h1>
           <p className="mb-8 text-sm text-white/70">
-            Escríbenos o envíanos un mensaje sobre Memorias Vivas.
+            {tr('contacto.lead')}
           </p>
 
           {sent ? (
             <div className="rounded-lg bg-white/10 p-6 text-center">
-              <p className="text-white/90">Gracias por tu mensaje. Te responderemos lo antes posible.</p>
+              <p className="text-white/90">{tr('contacto.gracias')}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-white/80">
-                  Nombre
+                  {tr('contacto.nombre')}
                 </label>
                 <input
                   id="name"
@@ -89,13 +91,13 @@ export default function Contacto() {
                   name="name"
                   required
                   className={inputBase}
-                  placeholder="Tu nombre"
+                  placeholder={tr('contacto.nombrePh')}
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-white/80">
-                  Correo electrónico
+                  {tr('contacto.correo')}
                 </label>
                 <input
                   id="email"
@@ -109,7 +111,7 @@ export default function Contacto() {
 
               <div>
                 <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-white/80">
-                  Mensaje
+                  {tr('contacto.mensaje')}
                 </label>
                 <textarea
                   id="message"
@@ -117,7 +119,7 @@ export default function Contacto() {
                   rows={5}
                   required
                   className={`min-h-[120px] w-full resize-y rounded-lg border px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 ${t.input}`}
-                  placeholder="Escribe tu mensaje..."
+                  placeholder={tr('contacto.mensajePh')}
                 />
               </div>
 
@@ -125,31 +127,31 @@ export default function Contacto() {
                 type="submit"
                 className={`min-h-[48px] w-full touch-manipulation rounded-lg px-4 py-3 font-medium transition-colors ${t.btnPrimary}`}
               >
-                Enviar mensaje
+                {tr('contacto.enviar')}
               </button>
             </form>
           )}
 
           <div className="mt-12 border-t border-white/15 pt-8">
             <p className="mb-2 text-center text-xs font-semibold uppercase tracking-wide text-white/50">
-              Redes sociales del proyecto
+              {tr('contacto.redes')}
             </p>
             <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
               <SocialIconButton
                 href={PROJECT_SOCIAL.youtube}
-                label="Memorias Vivas en YouTube"
+                label={tr('contacto.youtube')}
                 Icon={IconYouTube}
                 theme={theme}
               />
               <SocialIconButton
                 href={PROJECT_SOCIAL.instagram}
-                label="Memorias Vivas en Instagram"
+                label={tr('contacto.instagram')}
                 Icon={IconInstagram}
                 theme={theme}
               />
             </div>
             <p className="text-center text-sm text-white/55">
-              También puedes contactarnos por correo en{' '}
+              {tr('contacto.tambien')}{' '}
               <a href="mailto:contacto@memoriasvivas.example" className={t.link}>
                 contacto@memoriasvivas.example
               </a>

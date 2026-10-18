@@ -1,5 +1,7 @@
 import { useState, useCallback, useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Outlet, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Outlet, Navigate, useLocation } from 'react-router-dom'
+import { idiomaDeRuta } from './i18n/ruta'
+import i18n from './i18n'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
 import StarfieldCSS from './components/StarfieldCSS'
@@ -34,6 +36,70 @@ function getInitialBgColor() {
     if (stored && stored.startsWith('#')) return stored
   } catch {}
   return null
+}
+
+function asegurarEnlace(hreflang) {
+  let link = document.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`)
+  if (!link) {
+    link = document.createElement('link')
+    link.rel = 'alternate'
+    link.hreflang = hreflang
+    document.head.appendChild(link)
+  }
+  return link
+}
+
+function IdiomaDocumento() {
+  const { pathname } = useLocation()
+  const lang = idiomaDeRuta(pathname)
+
+  useEffect(() => {
+    let activo = true
+    document.documentElement.lang = lang
+    i18n.changeLanguage(lang).then(() => {
+      if (!activo) return
+      document.title = i18n.t('meta.titulo')
+      let meta = document.querySelector('meta[name="description"]')
+      if (!meta) {
+        meta = document.createElement('meta')
+        meta.setAttribute('name', 'description')
+        document.head.appendChild(meta)
+      }
+      meta.setAttribute('content', i18n.t('meta.descripcion'))
+      const sin = pathname.replace(/^\/en(?=\/|$)/, '') || '/'
+      const origen = window.location.origin
+      const esUrl = origen + (sin === '/' ? '/' : sin)
+      const enUrl = origen + (sin === '/' ? '/en' : `/en${sin}`)
+      asegurarEnlace('es').href = esUrl
+      asegurarEnlace('en').href = enUrl
+      asegurarEnlace('x-default').href = esUrl
+    })
+    return () => {
+      activo = false
+    }
+  }, [lang, pathname])
+
+  return null
+}
+
+function paginas(prefijo) {
+  const p = (path) => (prefijo ? `${prefijo}/${path}` : `/${path}`)
+  return [
+    <Route key={p('constelaciones')} path={p('constelaciones')} element={<Inicio />} />,
+    <Route key={p('sobre')} path={p('sobre')} element={<Sobre />} />,
+    <Route key={p('comunidad')} path={p('comunidad')} element={<Personas />} />,
+    <Route key={p('equipo')} path={p('equipo')} element={<Equipo />} />,
+    <Route key={p('mapa')} path={p('mapa')} element={<Mapa />} />,
+    <Route key={p('archivo')} path={p('archivo')} element={<Archivo />} />,
+    <Route key={p('diccionario')} path={p('diccionario')} element={<Diccionario />} />,
+    <Route key={p('documentales')} path={p('documentales')} element={<Documentales />} />,
+    <Route key={p('activaciones')} path={p('activaciones')} element={<Publicaciones />} />,
+    <Route key={p('publicaciones')} path={p('publicaciones')} element={<Navigate to={p('activaciones')} replace />} />,
+    <Route key={p('pedagogias')} path={p('pedagogias')} element={<MaterialDivulgacion />} />,
+    <Route key={p('material-divulgacion')} path={p('material-divulgacion')} element={<Navigate to={p('pedagogias')} replace />} />,
+    <Route key={p('actividades')} path={p('actividades')} element={<Actividades />} />,
+    <Route key={p('contacto')} path={p('contacto')} element={<Contacto />} />,
+  ]
 }
 
 function Layout({ theme, onThemeToggle, bgColor, onBgColorChange }) {
@@ -88,10 +154,12 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <IdiomaDocumento />
       <Routes>
-        {/* Home = intro (sin navbar / sin WebGL) */}
         <Route path="/" element={<Intro />} />
+        <Route path="/en" element={<Intro />} />
         <Route path="/intro" element={<Navigate to="/" replace />} />
+        <Route path="/en/intro" element={<Navigate to="/en" replace />} />
 
         <Route
           element={
@@ -103,20 +171,8 @@ export default function App() {
             />
           }
         >
-          <Route path="/constelaciones" element={<Inicio />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/comunidad" element={<Personas />} />
-          <Route path="/equipo" element={<Equipo />} />
-          <Route path="/mapa" element={<Mapa />} />
-          <Route path="/archivo" element={<Archivo />} />
-          <Route path="/diccionario" element={<Diccionario />} />
-          <Route path="/documentales" element={<Documentales />} />
-          <Route path="/activaciones" element={<Publicaciones />} />
-          <Route path="/publicaciones" element={<Navigate to="/activaciones" replace />} />
-          <Route path="/pedagogias" element={<MaterialDivulgacion />} />
-          <Route path="/material-divulgacion" element={<Navigate to="/pedagogias" replace />} />
-          <Route path="/actividades" element={<Actividades />} />
-          <Route path="/contacto" element={<Contacto />} />
+          {paginas('')}
+          {paginas('/en')}
         </Route>
       </Routes>
     </BrowserRouter>

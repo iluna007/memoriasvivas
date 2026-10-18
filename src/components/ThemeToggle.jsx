@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next'
+
 export default function ThemeToggle({ theme, onToggle }) {
+  const { t } = useTranslation()
   const isDark = theme === 'dark'
   const icon = isDark ? '\u263A' : '\u263B'
 
@@ -12,8 +15,8 @@ export default function ThemeToggle({ theme, onToggle }) {
       type="button"
       onClick={onToggle}
       className={btnClass}
-      aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
-      title={isDark ? 'Modo claro' : 'Modo oscuro'}
+      aria-label={isDark ? t('comun.cambiarClaro') : t('comun.cambiarOscuro')}
+      title={isDark ? t('comun.modoClaro') : t('comun.modoOscuro')}
     >
       <span aria-hidden>{icon}</span>
     </button>

@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next'
 import { getSphereContent } from '../data/cmsSphereData'
 import { getSphereColor } from '../data/spheres'
 
 export function RightPanel({ selectedSphereId, onClose, theme = 'dark' }) {
+  const { t } = useTranslation()
   const isLight = theme === 'light'
   const content = selectedSphereId != null ? getSphereContent(selectedSphereId) : null
   const color = selectedSphereId != null ? getSphereColor(selectedSphereId) : null
@@ -32,7 +34,7 @@ export function RightPanel({ selectedSphereId, onClose, theme = 'dark' }) {
       }}
     >
       <div className="relative flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6">
-        <button type="button" onClick={onClose} className={closeBtn} aria-label="Cerrar">
+        <button type="button" onClick={onClose} className={closeBtn} aria-label={t('comun.cerrar')}>
           ×
         </button>
         <h2

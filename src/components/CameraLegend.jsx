@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function CameraLegend({ theme = 'dark' }) {
+  const { t } = useTranslation()
   const [dismissed, setDismissed] = useState(false)
   const isLight = theme === 'light'
 
@@ -27,7 +29,7 @@ export default function CameraLegend({ theme = 'dark' }) {
             <path d="M8 3V1M8 15v-2M3 8H1M15 8h-2" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
           </svg>
           <span>
-            <kbd className={kbd}>Clic izq</kbd> + arrastrar → rotar
+            <kbd className={kbd}>{t('inicio.clicIzq')}</kbd> + {t('inicio.arrastrarRotar')}
           </span>
         </div>
         <div className="flex items-center gap-2">
@@ -37,7 +39,7 @@ export default function CameraLegend({ theme = 'dark' }) {
             <path d="M5 14l-2 2M11 14l2 2" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" />
           </svg>
           <span>
-            <kbd className={kbd}>Scroll</kbd> → zoom in / out
+            <kbd className={kbd}>{t('inicio.scroll')}</kbd> → {t('inicio.zoom')}
           </span>
         </div>
         <div className="flex items-center gap-2">
@@ -46,11 +48,11 @@ export default function CameraLegend({ theme = 'dark' }) {
             <path d="M4 8L6 6M4 8L6 10M12 8L10 6M12 8L10 10M8 4L6 6M8 4L10 6M8 12L6 10M8 12L10 10" stroke="currentColor" strokeWidth="0.7" strokeLinecap="round" />
           </svg>
           <span>
-            <kbd className={kbd}>Clic der</kbd> + arrastrar → desplazar
+            <kbd className={kbd}>{t('inicio.clicDer')}</kbd> + {t('inicio.arrastrarMover')}
           </span>
         </div>
       </div>
-      <button type="button" onClick={() => setDismissed(true)} className={closeBtn} aria-label="Cerrar leyenda" title="Cerrar">
+      <button type="button" onClick={() => setDismissed(true)} className={closeBtn} aria-label={t('inicio.cerrarLeyenda')} title={t('comun.cerrar')}>
         ×
       </button>
     </div>

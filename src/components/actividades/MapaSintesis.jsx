@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { getScroller } from '../../utils/gsapSetup'
 
 function medir() {
@@ -44,6 +45,7 @@ function medir() {
 }
 
 export default function MapaSintesis({ filtrosKey, isLight }) {
+  const { t: tr } = useTranslation()
   const [estado, setEstado] = useState(null)
 
   useEffect(() => {
@@ -91,7 +93,7 @@ export default function MapaSintesis({ filtrosKey, isLight }) {
 
   return (
     <nav
-      aria-label="Mapa de la línea de tiempo"
+      aria-label={tr('actividades.mapa')}
       className={`fixed left-1 top-1/2 z-30 w-11 -translate-y-1/2 rounded-2xl border px-1 py-2 backdrop-blur-md sm:left-2 sm:w-14 sm:px-1.5 sm:py-3 lg:left-4 lg:w-16 ${marco}`}
     >
       <div className="relative mx-auto h-[min(58vh,28rem)] w-full">

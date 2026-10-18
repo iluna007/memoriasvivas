@@ -1,14 +1,16 @@
 import { useOutletContext } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import ContentSectionPage from '../components/ContentSectionPage'
 import ActividadesTimeline from '../components/actividades/ActividadesTimeline'
 
 export default function Actividades() {
   const { theme = 'dark' } = useOutletContext() ?? {}
+  const { t } = useTranslation()
 
   return (
     <ContentSectionPage
       wide
-      lead="Talleres, caminatas, encuentros y otras actividades realizadas o programadas con comunidades de la región sur de Costa Rica."
+      lead={t('actividades.lead')}
     >
       <ActividadesTimeline theme={theme} />
     </ContentSectionPage>

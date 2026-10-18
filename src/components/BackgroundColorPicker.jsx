@@ -1,6 +1,8 @@
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function BackgroundColorPicker({ theme = 'dark', currentColor, onColorChange }) {
+  const { t } = useTranslation()
   const inputRef = useRef(null)
   const displayHex = currentColor || '#000000'
   const isLight = theme === 'light'
@@ -28,13 +30,13 @@ export default function BackgroundColorPicker({ theme = 'dark', currentColor, on
         type="button"
         onClick={() => inputRef.current?.click()}
         className={btnMain}
-        aria-label="Color de fondo"
-        title="Color de fondo"
+        aria-label={t('comun.colorFondo')}
+        title={t('comun.colorFondo')}
       >
         <span aria-hidden>☼</span>
       </button>
       {currentColor && (
-        <button type="button" onClick={() => onColorChange(null)} className={btnReset} aria-label="Restablecer fondo" title="Restablecer">
+        <button type="button" onClick={() => onColorChange(null)} className={btnReset} aria-label={t('comun.restablecerFondo')} title={t('comun.restablecer')}>
           ×
         </button>
       )}

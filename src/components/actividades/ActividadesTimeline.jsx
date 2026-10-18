@@ -1,5 +1,8 @@
 import { useEffect, useId, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { campo } from '../../i18n/campo'
+import { idiomaDeRuta, ruta } from '../../i18n/ruta'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Flip } from 'gsap/Flip'
@@ -25,11 +28,6 @@ import {
   soltarReduce,
 } from './timelineMotion'
 
-const MESES = [
-  'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
-  'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre',
-]
-
 const GRUPOS = agruparRaicesPorAnio(ACTIVIDADES_RAICES)
 
 function parseFecha(iso) {
@@ -38,27 +36,48 @@ function parseFecha(iso) {
   return { y: Number(m[1]), m: Number(m[2]), d: Number(m[3]) }
 }
 
-function formatRango(inicio, fin) {
-  const a = parseFecha(inicio)
-  if (!a) return inicio || ''
-  const una = `${a.d} de ${MESES[a.m - 1]} de ${a.y}`
-  const b = parseFecha(fin)
-  if (!b || inicio === fin) return una
-  if (a.y === b.y && a.m === b.m) return `${a.d} a ${b.d} de ${MESES[a.m - 1]} de ${a.y}`
-  if (a.y === b.y) return `${a.d} de ${MESES[a.m - 1]} a ${b.d} de ${MESES[b.m - 1]} de ${a.y}`
-  return `${una} a ${b.d} de ${MESES[b.m - 1]} de ${b.y}`
+function textoFecha(lang, y, m, d, conAnio) {
+  const locale = lang === 'en' ? 'en-US' : 'es-CR'
+  const fecha = new Date(Date.UTC(y, m - 1, d))
+  return new Intl.DateTimeFormat(locale, {
+    day: 'numeric',
+    month: 'long',
+    ...(conAnio ? { year: 'numeric' } : {}),
+    timeZone: 'UTC',
+  }).format(fecha)
 }
 
-function resumenMedios(conteo) {
+function formatRango(inicio, fin, lang) {
+  const a = parseFecha(inicio)
+  if (!a) return inicio || ''
+  const nexo = lang === 'en' ? 'to' : 'a'
+  const b = parseFecha(fin)
+  if (!b || inicio === fin) return textoFecha(lang, a.y, a.m, a.d, true)
+  if (a.y === b.y && a.m === b.m) {
+    const mes = new Intl.DateTimeFormat(lang === 'en' ? 'en-US' : 'es-CR', {
+      month: 'long',
+      timeZone: 'UTC',
+    }).format(new Date(Date.UTC(a.y, a.m - 1, 1)))
+    if (lang === 'en') return `${mes} ${a.d} ${nexo} ${b.d}, ${a.y}`
+    return `${a.d} ${nexo} ${b.d} de ${mes} de ${a.y}`
+  }
+  return `${textoFecha(lang, a.y, a.m, a.d, a.y !== b.y)} ${nexo} ${textoFecha(lang, b.y, b.m, b.d, true)}`
+}
+
+function resumenMedios(conteo, tr) {
   const partes = []
-  if (conteo.fotos) partes.push(`${conteo.fotos} ${conteo.fotos === 1 ? 'foto' : 'fotos'}`)
-  if (conteo.videos) partes.push(`${conteo.videos} ${conteo.videos === 1 ? 'video' : 'videos'}`)
-  if (conteo.pdfs) partes.push(conteo.pdfs === 1 ? '1 PDF' : `${conteo.pdfs} PDFs`)
+  if (conteo.fotos) partes.push(tr('actividades.fotos', { count: conteo.fotos }))
+  if (conteo.videos) partes.push(tr('actividades.videos', { count: conteo.videos }))
+  if (conteo.pdfs) partes.push(tr('actividades.pdfs', { count: conteo.pdfs }))
   return partes.join(', ')
 }
 
-function altDe(medio, titulo) {
-  return medio.pie || titulo || 'Fotografía de la actividad'
+function altDe(medio, titulo, tr, lang) {
+  return campo(medio, 'pie', lang) || titulo || tr('actividades.altFoto')
+}
+
+function idiomaUi(i18n) {
+  return i18n.language?.startsWith('en') ? 'en' : 'es'
 }
 
 function tieneDetalle(nodo) {
@@ -216,10 +235,12 @@ function MarcoFoto({ medio, alt, className, imgClass, cargar, variante = 'thumb'
 }
 
 function Lightbox({ fotos, index, titulo, onIndex, onClose, isLight }) {
+  const { t: tr, i18n } = useTranslation()
+  const lang = idiomaUi(i18n)
   const ref = useRef(null)
   const cerrando = useRef(false)
   const foto = fotos[index]
-  const alt = altDe(foto, titulo)
+  const alt = altDe(foto, titulo, tr, lang)
   const [capas, setCapas] = useState(() => [foto])
 
   if (capas[capas.length - 1]?.id !== foto.id) {
@@ -330,17 +351,17 @@ function Lightbox({ fotos, index, titulo, onIndex, onClose, isLight }) {
       tabIndex={-1}
       className="fixed inset-0 z-[80] flex items-center justify-center bg-black/85 p-4 outline-none backdrop-blur-sm"
     >
-      <button type="button" className="absolute inset-0 cursor-default" aria-label="Cerrar" onClick={cerrar} />
+      <button type="button" className="absolute inset-0 cursor-default" aria-label={tr('comun.cerrar')} onClick={cerrar} />
       <div className="relative z-10 flex max-h-[92vh] w-full max-w-5xl flex-col items-center">
         <div className="mb-3 flex w-full items-center justify-between gap-3 text-white">
           <p className="text-sm tabular-nums">
-            {index + 1} de {fotos.length}
+            {tr('actividades.de', { actual: index + 1, total: fotos.length })}
           </p>
           <button
             type="button"
             onClick={cerrar}
             className={`flex h-10 w-10 items-center justify-center rounded-full text-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white ${btn}`}
-            aria-label="Cerrar"
+            aria-label={tr('comun.cerrar')}
           >
             ×
           </button>
@@ -351,7 +372,7 @@ function Lightbox({ fotos, index, titulo, onIndex, onClose, isLight }) {
               type="button"
               onClick={() => onIndex((index - 1 + fotos.length) % fotos.length)}
               className={`hidden h-11 w-11 shrink-0 items-center justify-center rounded-full text-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:flex ${btn}`}
-              aria-label="Foto anterior"
+              aria-label={tr('comun.fotoAnterior')}
             >
               ‹
             </button>
@@ -365,7 +386,7 @@ function Lightbox({ fotos, index, titulo, onIndex, onClose, isLight }) {
               >
                 <MarcoFoto
                   medio={capa}
-                  alt={altDe(capa, titulo)}
+                  alt={altDe(capa, titulo, tr, lang)}
                   cargar
                   variante="full"
                   prioridad
@@ -380,7 +401,7 @@ function Lightbox({ fotos, index, titulo, onIndex, onClose, isLight }) {
               type="button"
               onClick={() => onIndex((index + 1) % fotos.length)}
               className={`hidden h-11 w-11 shrink-0 items-center justify-center rounded-full text-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:flex ${btn}`}
-              aria-label="Foto siguiente"
+              aria-label={tr('comun.fotoSiguiente')}
             >
               ›
             </button>
@@ -389,17 +410,17 @@ function Lightbox({ fotos, index, titulo, onIndex, onClose, isLight }) {
         {fotos.length > 1 && (
           <div className="mt-3 flex gap-3 sm:hidden">
             <button type="button" className={`rounded-full px-4 py-2 text-sm ${btn}`} onClick={() => onIndex((index - 1 + fotos.length) % fotos.length)}>
-              Anterior
+              {tr('comun.anterior')}
             </button>
             <button type="button" className={`rounded-full px-4 py-2 text-sm ${btn}`} onClick={() => onIndex((index + 1) % fotos.length)}>
-              Siguiente
+              {tr('comun.siguiente')}
             </button>
           </div>
         )}
-        {(foto.pie || foto.credito) && (
+        {(campo(foto, 'pie', lang) || foto.credito) && (
           <p className="mt-3 max-w-3xl text-center text-sm leading-relaxed text-white/85">
-            {foto.pie}
-            {foto.pie && foto.credito ? ' ' : null}
+            {campo(foto, 'pie', lang)}
+            {campo(foto, 'pie', lang) && foto.credito ? ' ' : null}
             {foto.credito ? <span className="text-white/60">({foto.credito})</span> : null}
           </p>
         )}
@@ -409,6 +430,9 @@ function Lightbox({ fotos, index, titulo, onIndex, onClose, isLight }) {
 }
 
 function Galeria({ nodo, onOpen, isLight, t }) {
+  const { t: tr, i18n } = useTranslation()
+  const lang = idiomaUi(i18n)
+  const titulo = campo(nodo, 'titulo', lang)
   const fotos = nodo.medios.filter((m) => m.tipo === 'foto')
   const videos = nodo.medios.filter((m) => m.tipo === 'video')
   const pdfs = nodo.medios.filter((m) => m.tipo === 'pdf')
@@ -423,16 +447,16 @@ function Galeria({ nodo, onOpen, isLight, t }) {
     <div className="mt-4 space-y-4">
       {fotos.length > 0 && (
         <div>
-          <p className={`mb-2 text-[11px] font-semibold uppercase tracking-wide ${t.muted}`}>Fotos</p>
+          <p className={`mb-2 text-[11px] font-semibold uppercase tracking-wide ${t.muted}`}>{tr('actividades.fotosTitulo')}</p>
           <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
             {visibles.map((medio, i) => (
               <li key={medio.id} data-miniatura>
                 <MarcoFoto
                   medio={medio}
-                  alt={altDe(medio, nodo.titulo)}
+                  alt={altDe(medio, titulo, tr, lang)}
                   cargar
                   tamanos={SIZES.galeria}
-                  onClick={() => onOpen(fotos, i, nodo.titulo)}
+                  onClick={() => onOpen(fotos, i, titulo)}
                   className="block aspect-square w-full overflow-hidden rounded-lg bg-zinc-500/10"
                   imgClass="h-full w-full object-cover"
                 />
@@ -445,7 +469,7 @@ function Galeria({ nodo, onOpen, isLight, t }) {
               onClick={() => setLimite((n) => n + 24)}
               className={`mt-3 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current ${t.btnOutline}`}
             >
-              Ver {Math.min(24, fotos.length - limite)} fotos más
+              {tr('actividades.masFotos', { count: Math.min(24, fotos.length - limite) })}
             </button>
           )}
         </div>
@@ -453,7 +477,7 @@ function Galeria({ nodo, onOpen, isLight, t }) {
 
       {videos.length > 0 && (
         <div>
-          <p className={`mb-2 text-[11px] font-semibold uppercase tracking-wide ${t.muted}`}>Videos</p>
+          <p className={`mb-2 text-[11px] font-semibold uppercase tracking-wide ${t.muted}`}>{tr('actividades.videosTitulo')}</p>
           <ul className="space-y-3">
             {videos.map((medio) => (
               <li key={medio.id}>
@@ -468,7 +492,7 @@ function Galeria({ nodo, onOpen, isLight, t }) {
                   <source src={fullUrl(medio.archivoWeb)} />
                 </video>
                 <a href={fullUrl(medio.archivoWeb)} className={`mt-1 inline-block text-xs ${link}`} target="_blank" rel="noopener noreferrer">
-                  {medio.pie || 'Abrir video'}
+                  {campo(medio, 'pie', lang) || tr('actividades.abrirVideo')}
                 </a>
               </li>
             ))}
@@ -481,7 +505,7 @@ function Galeria({ nodo, onOpen, isLight, t }) {
           {[...pdfs, ...otros].map((medio) => (
             <li key={medio.id}>
               <a href={fullUrl(medio.archivoWeb)} className={link} target="_blank" rel="noopener noreferrer">
-                {medio.pie || (medio.tipo === 'pdf' ? 'Abrir PDF' : 'Abrir archivo')}
+                {campo(medio, 'pie', lang) || (medio.tipo === 'pdf' ? tr('actividades.abrirPdf') : tr('actividades.abrirArchivo'))}
               </a>
             </li>
           ))}
@@ -547,15 +571,17 @@ function PanelAnimado({ id, abierto, children }) {
 }
 
 function Detalle({ nodo, onOpen, isLight, t, nivel }) {
+  const { t: tr, i18n } = useTranslation()
+  const lang = idiomaUi(i18n)
   const panelId = useId()
   const [abierto, setAbierto] = useState(false)
   const [montado, setMontado] = useState(false)
   const Heading = nivel <= 2 ? 'h4' : nivel === 3 ? 'h5' : 'h6'
-  const fecha = formatRango(nodo.fecha, nodo.fechaFin)
+  const fecha = formatRango(nodo.fecha, nodo.fechaFin, lang)
 
   return (
     <article className={`rounded-xl border px-3 py-3 ${isLight ? 'border-zinc-200' : 'border-white/10'}`}>
-      <Heading className={`text-base font-semibold ${t.cardTitle}`}>{nodo.titulo}</Heading>
+      <Heading className={`text-base font-semibold ${t.cardTitle}`}>{campo(nodo, 'titulo', lang)}</Heading>
       {fecha && <p className={`mt-1 text-xs ${t.muted}`}>{fecha}</p>}
       {nodo.territorios.length > 0 && (
         <p className={`mt-1 text-xs ${t.cardSub}`}>{nodo.territorios.map((x) => x.nombre).join(', ')}</p>
@@ -571,7 +597,7 @@ function Detalle({ nodo, onOpen, isLight, t, nivel }) {
             setAbierto((v) => !v)
           }}
         >
-          {abierto ? 'Ocultar detalle' : 'Ver detalle'}
+          {abierto ? tr('actividades.ocultarDetalle') : tr('actividades.verDetalle')}
         </button>
       )}
       {montado && (
@@ -584,27 +610,30 @@ function Detalle({ nodo, onOpen, isLight, t, nivel }) {
 }
 
 function Cuerpo({ nodo, onOpen, isLight, t, nivel }) {
+  const { pathname } = useLocation()
+  const { t: tr, i18n } = useTranslation()
+  const lang = idiomaUi(i18n)
   const link = isLight ? 'text-zinc-900 underline hover:text-zinc-700' : 'text-white underline decoration-white/40 hover:text-white/80'
 
   return (
     <div className="mt-3">
-      {nodo.descripcion && <p className={`text-sm leading-relaxed ${t.cardBio}`}>{nodo.descripcion}</p>}
+      {campo(nodo, 'descripcion', lang) && <p className={`text-sm leading-relaxed ${t.cardBio}`}>{campo(nodo, 'descripcion', lang)}</p>}
       {nodo.personas.length > 0 && (
         <p className={`mt-3 text-sm ${t.cardSub}`}>
-          <span className="font-semibold">Personas: </span>
+          <span className="font-semibold">{tr('actividades.personas')} </span>
           {nodo.personas.map((p) => p.nombre).join(', ')}
         </p>
       )}
       {nodo.relato && (
         <p className="mt-3">
-          <Link to={`/archivo#relato-${encodeURIComponent(nodo.relato.id)}`} className={`text-sm ${link}`}>
-            Ver relato
+          <Link to={ruta(`/archivo#relato-${encodeURIComponent(nodo.relato.id)}`, idiomaDeRuta(pathname))} className={`text-sm ${link}`}>
+            {tr('actividades.verRelato')}
           </Link>
         </p>
       )}
       {nodo.hijos.length > 0 && (
         <div className="mt-4 space-y-3">
-          <p className={`text-[11px] font-semibold uppercase tracking-wide ${t.muted}`}>Subactividades</p>
+          <p className={`text-[11px] font-semibold uppercase tracking-wide ${t.muted}`}>{tr('actividades.subactividades')}</p>
           {nodo.hijos.map((hijo) => (
             <Detalle key={hijo.id} nodo={hijo} onOpen={onOpen} isLight={isLight} t={t} nivel={nivel} />
           ))}
@@ -621,21 +650,24 @@ function proporcion(medio) {
 }
 
 function NodoRaiz({ nodo, lado, visible, prioridad = false, onOpen, isLight, t }) {
+  const { t: tr, i18n } = useTranslation()
+  const lang = idiomaUi(i18n)
+  const titulo = campo(nodo, 'titulo', lang)
   const [ref, visto] = useEnVista(visible)
   const panelId = useId()
   const [abierto, setAbierto] = useState(false)
   const [montado, setMontado] = useState(false)
-  const fecha = formatRango(nodo.fecha, nodo.fechaFin)
+  const fecha = formatRango(nodo.fecha, nodo.fechaFin, lang)
   const lugares = nodo.territorios.map((x) => x.nombre).join(', ')
-  const mediosTxt = resumenMedios(nodo.conteo)
+  const mediosTxt = resumenMedios(nodo.conteo, tr)
   const detalle = tieneDetalle(nodo)
   const fotosPropias = nodo.medios.filter((m) => m.tipo === 'foto')
 
   const abrirPortada = () => {
     if (!nodo.portada || nodo.portada.tipo !== 'foto') return
     const index = fotosPropias.findIndex((m) => m.id === nodo.portada.id)
-    if (index >= 0) onOpen(fotosPropias, index, nodo.titulo)
-    else onOpen([nodo.portada], 0, nodo.titulo)
+    if (index >= 0) onOpen(fotosPropias, index, titulo)
+    else onOpen([nodo.portada], 0, titulo)
   }
 
   return (
@@ -657,7 +689,7 @@ function NodoRaiz({ nodo, lado, visible, prioridad = false, onOpen, isLight, t }
           {nodo.portada ? (
             <MarcoFoto
               medio={nodo.portada}
-              alt={altDe(nodo.portada, nodo.titulo)}
+              alt={altDe(nodo.portada, titulo, tr, lang)}
               cargar={visto}
               prioridad={prioridad}
               parallax
@@ -668,16 +700,16 @@ function NodoRaiz({ nodo, lado, visible, prioridad = false, onOpen, isLight, t }
               imgClass="h-full w-full object-cover"
             />
           ) : (
-            <div className={`aspect-[16/10] w-full ${isLight ? 'bg-zinc-200' : 'bg-white/5'}`} role="img" aria-label={nodo.titulo} />
+            <div className={`aspect-[16/10] w-full ${isLight ? 'bg-zinc-200' : 'bg-white/5'}`} role="img" aria-label={titulo} />
           )}
           <div className="p-4 sm:p-5">
             <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
               {nodo.categoria && (
-                <p data-revelar className={`text-[11px] font-semibold uppercase tracking-[0.16em] ${t.muted}`}>{nodo.categoria}</p>
+                <p data-revelar className={`text-[11px] font-semibold uppercase tracking-[0.16em] ${t.muted}`}>{tr(`categorias.${nodo.categoria}`, { defaultValue: nodo.categoria })}</p>
               )}
               {fecha && <p data-revelar className={`text-xs ${t.cardSub}`}>{fecha}</p>}
             </div>
-            <h3 data-revelar className={`mt-1 text-xl font-semibold leading-snug ${t.cardTitle}`}>{nodo.titulo}</h3>
+            <h3 data-revelar className={`mt-1 text-xl font-semibold leading-snug ${t.cardTitle}`}>{titulo}</h3>
             {lugares && <p data-revelar className={`mt-1 text-sm ${t.cardSub}`}>{lugares}</p>}
             {mediosTxt && <p data-revelar className={`mt-2 text-xs ${t.cardHint}`}>{mediosTxt}</p>}
             {detalle && (
@@ -692,7 +724,7 @@ function NodoRaiz({ nodo, lado, visible, prioridad = false, onOpen, isLight, t }
                   setAbierto((v) => !v)
                 }}
               >
-                {abierto ? 'Ocultar detalle' : 'Ver detalle'}
+                {abierto ? tr('actividades.ocultarDetalle') : tr('actividades.verDetalle')}
               </button>
             )}
             {montado && (
@@ -729,6 +761,7 @@ function Filtro({ label, value, onChange, children, isLight }) {
 }
 
 export default function ActividadesTimeline({ theme = 'dark' }) {
+  const { t: tr } = useTranslation()
   const isLight = theme === 'light'
   const t = getContentPageTheme(theme)
   const [anio, setAnio] = useState('')
@@ -870,20 +903,20 @@ export default function ActividadesTimeline({ theme = 'dark' }) {
         }
       >
         <div className="flex flex-wrap items-end gap-3">
-          <Filtro label="Año" value={anio} onChange={(valor) => cambiarFiltros({ anio: valor })} isLight={isLight}>
-            <option value="">Todos</option>
+          <Filtro label={tr('actividades.anio')} value={anio} onChange={(valor) => cambiarFiltros({ anio: valor })} isLight={isLight}>
+            <option value="">{tr('actividades.todos')}</option>
             {facetas.anios.map((y) => (
               <option key={y} value={String(y)}>{y}</option>
             ))}
           </Filtro>
-          <Filtro label="Categoría" value={categoria} onChange={(valor) => cambiarFiltros({ categoria: valor })} isLight={isLight}>
-            <option value="">Todas</option>
+          <Filtro label={tr('actividades.categoria')} value={categoria} onChange={(valor) => cambiarFiltros({ categoria: valor })} isLight={isLight}>
+            <option value="">{tr('actividades.todas')}</option>
             {facetas.categorias.map((c) => (
-              <option key={c} value={c}>{c}</option>
+              <option key={c} value={c}>{tr(`categorias.${c}`, { defaultValue: c })}</option>
             ))}
           </Filtro>
-          <Filtro label="Territorio" value={territorio} onChange={(valor) => cambiarFiltros({ territorio: valor })} isLight={isLight}>
-            <option value="">Todos</option>
+          <Filtro label={tr('actividades.territorio')} value={territorio} onChange={(valor) => cambiarFiltros({ territorio: valor })} isLight={isLight}>
+            <option value="">{tr('actividades.todos')}</option>
             {facetas.territorios.map((item) => (
               <option key={item.id} value={item.id}>{item.nombre}</option>
             ))}
@@ -894,17 +927,17 @@ export default function ActividadesTimeline({ theme = 'dark' }) {
               onClick={() => cambiarFiltros({ anio: '', categoria: '', territorio: '' })}
               className={`mb-0.5 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current ${t.btnOutline}`}
             >
-              Quitar filtros
+              {tr('actividades.quitar')}
             </button>
           )}
         </div>
         <p className={`mt-2 text-xs ${t.muted}`} aria-live="polite">
-          {visibles === 1 ? '1 actividad' : `${visibles} actividades`}
+          {tr('actividades.contador', { count: visibles })}
         </p>
       </div>
 
       {visibles === 0 && (
-        <p className={`text-sm ${t.body}`}>Ninguna actividad coincide con estos filtros.</p>
+        <p className={`text-sm ${t.body}`}>{tr('actividades.vacio')}</p>
       )}
       <div id="linea-tiempo" ref={lineaRef} className="relative" hidden={visibles === 0}>
           <div

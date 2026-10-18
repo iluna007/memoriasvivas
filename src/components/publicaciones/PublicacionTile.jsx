@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import gsap from 'gsap'
 
 const PALETTE_DARK = [
@@ -67,6 +68,7 @@ export default function PublicacionTile({
   onActivate,
   onHoverChange,
 }) {
+  const { t: tr } = useTranslation()
   const nodeRef = useRef(null)
   const colors = paletteFor(item, isLight)
   const isPlaceholder = item.tipo === 'placeholder'
@@ -123,8 +125,8 @@ export default function PublicacionTile({
 
   const inner = isPlaceholder ? (
     <span className="poster__ph">
-      <span className="poster__ph-label">Espacio disponible</span>
-      <span className="poster__ph-cta">Pensemos el archivo</span>
+      <span className="poster__ph-label">{tr('publicaciones.espacio')}</span>
+      <span className="poster__ph-cta">{tr('publicaciones.pensar')}</span>
     </span>
   ) : (
     <div className="poster__inner">

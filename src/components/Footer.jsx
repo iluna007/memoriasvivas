@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { getContentPageTheme } from '../utils/pageThemeClasses'
-import { CITATION_HELP, CITATION_APA, CITATION_CHICAGO } from '../data/citationStrings'
+import { CITATION_APA, CITATION_CHICAGO } from '../data/citationStrings'
 
 const LINKS = {
   sedeSur: 'https://sededelsur.ucr.ac.cr/',
@@ -50,6 +51,7 @@ function IconQuote({ className }) {
 const VISITOR_COUNT_CACHE = 'memoriasvivas-visitor-count'
 
 function VisitorCounter({ theme, t }) {
+  const { t: tr, i18n } = useTranslation()
   const [count, setCount] = useState(null)
   const [status, setStatus] = useState('idle')
 
@@ -98,20 +100,19 @@ function VisitorCounter({ theme, t }) {
 
   return (
     <div className={`rounded-xl px-4 py-3 text-center ${box}`} aria-live="polite">
-      <p className={`text-[10px] font-semibold uppercase tracking-wide ${t.muted}`}>Visitas al sitio</p>
+      <p className={`text-[10px] font-semibold uppercase tracking-wide ${t.muted}`}>{tr('footer.visitas')}</p>
       <p className={`mt-1 min-h-[2rem] text-2xl font-semibold tabular-nums ${t.cardTitle}`}>
-        {status === 'loading' ? '…' : typeof count === 'number' ? count.toLocaleString('es-CR') : '—'}
+        {status === 'loading' ? '…' : typeof count === 'number' ? count.toLocaleString(i18n.language?.startsWith('en') ? 'en-US' : 'es-CR') : '·'}
       </p>
       <p className={`mt-1.5 text-[10px] leading-snug ${t.muted}`}>
-        {status === 'unavailable'
-          ? 'Contador disponible en el sitio publicado (Netlify). En desarrollo local no hay función serverless.'
-          : 'Total acumulado en producción (Netlify Blobs). En esta sesión se cuenta una visita al cargar la aplicación.'}
+        {status === 'unavailable' ? tr('footer.contadorLocal') : tr('footer.contadorProd')}
       </p>
     </div>
   )
 }
 
 function CitationDialog({ open, onClose, theme, t }) {
+  const { t: tr } = useTranslation()
   const [copied, setCopied] = useState(null)
 
   useEffect(() => {
@@ -169,21 +170,21 @@ function CitationDialog({ open, onClose, theme, t }) {
       >
         <div className="mb-4 flex items-start justify-between gap-3">
           <h2 id="citation-dialog-title" className={`pr-4 text-lg font-semibold leading-snug ${t.cardTitle}`}>
-            Citar este proyecto
+            {tr('footer.citarTitulo')}
           </h2>
           <button type="button" onClick={onClose} className={`shrink-0 touch-manipulation ${closeBtn}`}>
-            Cerrar
+            {tr('comun.cerrar')}
           </button>
         </div>
 
-        <p className={`mb-5 text-sm leading-relaxed ${t.body}`}>{CITATION_HELP}</p>
+        <p className={`mb-5 text-sm leading-relaxed ${t.body}`}>{tr('footer.ayudaCita')}</p>
 
         <div className="space-y-5">
           <div>
             <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-              <h3 className={`text-sm font-semibold ${t.cardTitle}`}>APA (7.ª ed.)</h3>
+              <h3 className={`text-sm font-semibold ${t.cardTitle}`}>{tr('footer.apa')}</h3>
               <button type="button" onClick={() => copy('apa', CITATION_APA)} className={`touch-manipulation ${copyBtn}`}>
-                {copied === 'apa' ? 'Copiado' : 'Copiar APA'}
+                {copied === 'apa' ? tr('footer.copiado') : tr('footer.copiarApa')}
               </button>
             </div>
             <pre
@@ -196,9 +197,9 @@ function CitationDialog({ open, onClose, theme, t }) {
 
           <div>
             <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-              <h3 className={`text-sm font-semibold ${t.cardTitle}`}>Chicago (17.ª ed., bibliografía)</h3>
+              <h3 className={`text-sm font-semibold ${t.cardTitle}`}>{tr('footer.chicago')}</h3>
               <button type="button" onClick={() => copy('chi', CITATION_CHICAGO)} className={`touch-manipulation ${copyBtn}`}>
-                {copied === 'chi' ? 'Copiado' : 'Copiar Chicago'}
+                {copied === 'chi' ? tr('footer.copiado') : tr('footer.copiarChicago')}
               </button>
             </div>
             <pre
@@ -212,15 +213,12 @@ function CitationDialog({ open, onClose, theme, t }) {
 
         {copied === 'fail' && (
           <p className={`mt-4 text-xs ${theme === 'light' ? 'text-amber-800' : 'text-amber-200/90'}`}>
-            No se pudo usar el portapapeles desde el navegador. Selecciona el texto en los recuadros y copia manualmente
-            (Ctrl+C o Cmd+C).
+            {tr('footer.portapapeles')}
           </p>
         )}
 
         <p className={`mt-5 text-xs leading-relaxed ${t.muted}`}>
-          Revisa el archivo <code className="rounded bg-black/10 px-1 py-0.5 dark:bg-white/10">CITATION.cff</code> en la raíz
-          del repositorio para metadatos actualizados. Si el portapapeles no está disponible, selecciona el texto y copia
-          manualmente (Ctrl+C / Cmd+C).
+          {tr('footer.cff')}
         </p>
       </div>
     </div>
@@ -246,6 +244,7 @@ function FooterLink({ href, children, icon: Icon, t }) {
  */
 export function Footer({ theme = 'dark' }) {
   const t = getContentPageTheme(theme)
+  const { t: tr } = useTranslation()
   const frame = theme === 'light' ? 'border-zinc-200 bg-zinc-100/80' : 'border-white/10 bg-black/25'
   const [citeOpen, setCiteOpen] = useState(false)
 
@@ -255,18 +254,18 @@ export function Footer({ theme = 'dark' }) {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
           <div className="max-w-xl space-y-4">
             <div>
-              <p className={`text-sm font-semibold leading-snug ${t.cardTitle}`}>Universidad de Costa Rica</p>
+              <p className={`text-sm font-semibold leading-snug ${t.cardTitle}`}>{tr('footer.universidad')}</p>
               <p className={`mt-2 text-sm leading-relaxed ${t.body}`}>
-                Proyecto adscrito a la{' '}
+                {tr('footer.adscritoAntes')}{' '}
                 <a
                   href={LINKS.accionSocial}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`font-medium underline-offset-2 hover:underline ${t.link}`}
                 >
-                  Vicerrectoría de Acción Social
+                  {tr('footer.accionSocial')}
                 </a>{' '}
-                de la Universidad de Costa Rica.
+                {tr('footer.adscritoDespues')}
               </p>
             </div>
             <p
@@ -274,10 +273,9 @@ export function Footer({ theme = 'dark' }) {
                 theme === 'light' ? 'border-zinc-300' : 'border-white/25'
               }`}
             >
-              <span className={`font-semibold ${t.cardTitle}`}>EC 649 · Memorias Vivas</span>
-              <span className={t.muted}> — </span>
-              Preservación de la identidad local y patrimonio cultural de comunidades aledañas al Golfo Dulce en la
-              Península de Osa.
+              <span className={`font-semibold ${t.cardTitle}`}>{tr('footer.ec')}</span>
+              <span className={t.muted}> · </span>
+              {tr('footer.ecTexto')}
             </p>
             <div className="mt-5 max-w-sm">
               <VisitorCounter theme={theme} t={t} />
@@ -285,37 +283,37 @@ export function Footer({ theme = 'dark' }) {
           </div>
 
           <div className="min-w-0 shrink-0 space-y-4 lg:max-w-md">
-            <p className={`text-xs font-semibold uppercase tracking-wide ${t.muted}`}>Enlaces institucionales</p>
+            <p className={`text-xs font-semibold uppercase tracking-wide ${t.muted}`}>{tr('footer.enlaces')}</p>
             <ul className="grid list-none grid-cols-2 grid-rows-3 gap-x-5 gap-y-5 p-0 sm:gap-x-6 sm:gap-y-6">
               {[
                 {
                   src: '/branding/institucional-ef-filosofia.png',
-                  alt: 'Escuela de Filosofía',
+                  alt: tr('footer.altFilosofia'),
                   href: LINKS.filosofia,
                 },
                 {
                   src: '/branding/institucional-vas-accion-social.png',
-                  alt: 'Vicerrectoría de Acción Social',
+                  alt: tr('footer.altAccion'),
                   href: LINKS.accionSocial,
                 },
                 {
                   src: '/branding/institucional-ssur-sede-sur.png',
-                  alt: 'Sede del Sur',
+                  alt: tr('footer.altSede'),
                   href: LINKS.sedeSur,
                 },
                 {
                   src: '/branding/institucional-efll-filologia.png',
-                  alt: 'Escuela de Filología, Lingüística y Literatura',
+                  alt: tr('footer.altFilologia'),
                   href: null,
                 },
                 {
                   src: '/branding/institucional-eaq-arquitectura.png',
-                  alt: 'Escuela de Arquitectura',
+                  alt: tr('footer.altArquitectura'),
                   href: LINKS.arquitectura,
                 },
                 {
                   src: '/branding/institucional-ec649-memorias-vivas.png',
-                  alt: 'EC 649 · Memorias Vivas',
+                  alt: tr('footer.altEc'),
                   href: null,
                 },
               ].map((logo) => {
@@ -352,9 +350,9 @@ export function Footer({ theme = 'dark' }) {
           >
             <span className="flex shrink-0 items-center gap-1.5 whitespace-nowrap">
               <IconCode className={`h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4 ${theme === 'light' ? 'text-zinc-500' : 'text-white/45'}`} aria-hidden />
-              Sitio de <span className="font-medium">código abierto</span>.{' '}
+              {tr('footer.codigoAbierto')}{' '}
               <FooterLink href={LINKS.repo} icon={IconGitHub} t={t}>
-                Ver en GitHub
+                {tr('footer.github')}
               </FooterLink>
             </span>
             <span className={`shrink-0 px-0.5 ${t.muted}`} aria-hidden>
@@ -362,7 +360,7 @@ export function Footer({ theme = 'dark' }) {
             </span>
             <span className="flex shrink-0 items-center gap-1.5 whitespace-nowrap">
               <IconSpark className={`h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4 ${theme === 'light' ? 'text-zinc-500' : 'text-white/45'}`} aria-hidden />
-              Diseño{' '}
+              {tr('footer.diseno')}{' '}
               <a
                 href={LINKS.portfolio}
                 target="_blank"
@@ -382,12 +380,12 @@ export function Footer({ theme = 'dark' }) {
               className={`inline-flex min-h-[44px] shrink-0 touch-manipulation items-center gap-1 whitespace-nowrap rounded-md px-1 py-2 font-medium underline-offset-2 transition-colors hover:underline sm:min-h-0 sm:py-1 ${t.link}`}
             >
               <IconQuote className="h-3.5 w-3.5 shrink-0 opacity-80 sm:h-4 sm:w-4" aria-hidden />
-              Cómo citar · APA y Chicago
+              {tr('footer.citar')}
             </button>
           </div>
 
           <p className={`mt-6 text-xs sm:text-center ${t.muted}`}>
-            © {new Date().getFullYear()} Universidad de Costa Rica · Memorias Vivas
+            {tr('footer.derechos', { anio: new Date().getFullYear() })}
           </p>
         </div>
       </div>

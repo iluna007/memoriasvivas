@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Trans, useTranslation } from 'react-i18next'
 import ExpandableMediaCard from '../ExpandableMediaCard'
 import { getContentPageTheme } from '../../utils/pageThemeClasses'
 import {
@@ -30,11 +31,15 @@ function AvisoLicencia({ theme }) {
     <div className={`mb-8 flex items-start gap-3 rounded-xl px-5 py-4 text-sm leading-relaxed sm:text-[15px] ${box}`}>
       <CCIcon className={`mt-0.5 h-6 w-6 flex-shrink-0 ${iconWrap}`} />
       <p>
-        Todo el material de esta sección se publica bajo licencia{' '}
-        <a href={PEDAGOGIAS_LICENCIA.url} target="_blank" rel="noopener noreferrer" className={`font-semibold ${linkCls}`}>
-          {PEDAGOGIAS_LICENCIA.nombre}
-        </a>
-        : puedes descargarlo, usarlo y adaptarlo citando la fuente, siempre que no sea con fines comerciales y compartiendo bajo la misma licencia.
+        <Trans
+          i18nKey="divulgacion.licencia"
+          values={{ nombre: PEDAGOGIAS_LICENCIA.nombre }}
+          components={{
+            licencia: (
+              <a href={PEDAGOGIAS_LICENCIA.url} target="_blank" rel="noopener noreferrer" className={`font-semibold ${linkCls}`} />
+            ),
+          }}
+        />
       </p>
     </div>
   )
@@ -42,6 +47,7 @@ function AvisoLicencia({ theme }) {
 
 /** Mini-tarjeta de un archivo individual, dentro de una categoría expandida. */
 function MaterialItemCard({ item, theme }) {
+  const { t: tr } = useTranslation()
   const isLight = theme === 'light'
   const t = getContentPageTheme(theme)
   const disponible = Boolean(item.url)
@@ -80,11 +86,11 @@ function MaterialItemCard({ item, theme }) {
               : { download: true })}
             className={btnCls}
           >
-            Descargar
+            {tr('divulgacion.descargar')}
           </a>
         ) : (
-          <span className={btnCls} aria-disabled="true" title="Añade archivo_url en el CMS para activar la descarga">
-            Descargar
+          <span className={btnCls} aria-disabled="true" title={tr('divulgacion.descargarOff')}>
+            {tr('divulgacion.descargar')}
           </span>
         )}
       </div>
@@ -133,6 +139,7 @@ function usePedagogiasColumns() {
 }
 
 export default function PedagogiasGrid({ theme = 'dark' }) {
+  const { t } = useTranslation()
   const isLight = theme === 'light'
   const [expanded, setExpanded] = useState(() => ({}))
   const toggle = (key) => setExpanded((prev) => ({ ...prev, [key]: !prev[key] }))
@@ -157,14 +164,14 @@ export default function PedagogiasGrid({ theme = 'dark' }) {
                   id={`pedagogias-${grupo.key}`}
                   theme={theme}
                   imageSrc={portadaCategoria(grupo, isLight)}
-                  imageAlt={grupo.categoria}
-                  title={grupo.categoria}
-                  subtitle={`${n} ${n === 1 ? 'material' : 'materiales'}`}
+                  imageAlt={t(`pedCategorias.${grupo.categoria}`, { defaultValue: grupo.categoria })}
+                  title={t(`pedCategorias.${grupo.categoria}`, { defaultValue: grupo.categoria })}
+                  subtitle={t('divulgacion.materiales', { count: n })}
                   hint={PEDAGOGIAS_LICENCIA.nombre}
                   isOpen={isOpen}
                   onToggle={() => toggle(grupo.key)}
-                  expandLabel="Ver materiales"
-                  collapseLabel="Ocultar materiales"
+                  expandLabel={t('divulgacion.ver')}
+                  collapseLabel={t('divulgacion.ocultar')}
                 >
                   <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                     {grupo.materiales.map((item) => (
