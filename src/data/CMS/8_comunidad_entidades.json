@@ -1,14 +1,14 @@
 [
   {
-    "tipo": "Persona",
-    "nombre": "Alicia Castro Quesada",
-    "codigo": "ACQ",
+    "tipo": "Familia",
+    "nombre": "Familia Castro Cambronero",
+    "codigo": "FCC",
     "lugar": "Rancho Quemado"
   },
   {
     "tipo": "Persona",
-    "nombre": "Félix Cambronero",
-    "codigo": "FC",
+    "nombre": "Alice Castro",
+    "codigo": "AC",
     "lugar": "Rancho Quemado"
   },
   {
@@ -52,12 +52,6 @@
     "nombre": "Eida Fletes",
     "codigo": "EF",
     "lugar": "La Palma"
-  },
-  {
-    "tipo": "Grupo",
-    "nombre": "Alice Castro y Felix Cambronero (Familia Castro Cambronero)",
-    "codigo": "FCC",
-    "lugar": "Rancho Quemado"
   },
   {
     "tipo": "Persona",
@@ -108,15 +102,9 @@
     "lugar": "Rancho Quemado"
   },
   {
-    "tipo": "Persona",
-    "nombre": "Cirila “Lila” González Valdés",
-    "codigo": "CGV",
-    "lugar": "Golfito"
-  },
-  {
-    "tipo": "Persona",
-    "nombre": "Cecilia Castro González",
-    "codigo": "CCG",
+    "tipo": "Familia",
+    "nombre": "Familia Castro Gonzales",
+    "codigo": "FCG",
     "lugar": "Golfito"
   },
   {
@@ -133,8 +121,8 @@
   },
   {
     "tipo": "Persona",
-    "nombre": "Paquita Jiménez",
-    "codigo": "PJ",
+    "nombre": "Norma Paquita Jiménez",
+    "codigo": "NPJ",
     "lugar": "Golfito"
   },
   {
@@ -147,7 +135,7 @@
     "tipo": "Persona",
     "nombre": "Alexander Solórzano",
     "codigo": "AS",
-    "lugar": "Rancho Quemado"
+    "lugar": "La Palma"
   },
   {
     "tipo": "Persona",
@@ -165,7 +153,7 @@
     "tipo": "Persona",
     "nombre": "Gilberto Jiménez Álvarez",
     "codigo": "GJA",
-    "lugar": "Rancho Quemado"
+    "lugar": "La Palma"
   },
   {
     "tipo": "Persona",
@@ -225,6 +213,84 @@
     "tipo": "Grupo",
     "nombre": "Taller Memoria Histórica",
     "codigo": "TMH",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Paisaje",
+    "nombre": "Paisaje Rancho Quemado",
+    "codigo": "PRQ",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Dominga Ureña",
+    "codigo": "DOU",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Taller de mujeres en Golfito",
+    "codigo": "TMG",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Festival Chancho de Monte",
+    "codigo": "FCM",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Presentación de Documental Donde Vimos las Estrellas",
+    "codigo": "PEF",
+    "lugar": "Puerto Jiménez"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Presentación de Documental Caminar Despacio para Ver",
+    "codigo": "PRA",
+    "lugar": "La Palma"
+  },
+  {
+    "tipo": "Paisaje",
+    "nombre": "Paisaje Carretera Interamericana Sur",
+    "codigo": "PCIS",
+    "lugar": null
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Presentación Documental La Compañía",
+    "codigo": "PLC",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Grupo",
+    "nombre": "Taller de Memorias Vivas",
+    "codigo": "TMV",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Eulogía Beita Chacón",
+    "codigo": "EBC",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Manuel Arroyo",
+    "codigo": "MA",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Lila González Valdés",
+    "codigo": "CGV",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Cecilia Castro González",
+    "codigo": "CCG",
     "lugar": "Golfito"
   }
 ]

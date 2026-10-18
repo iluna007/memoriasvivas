@@ -1,5 +1,5 @@
 // Generado automáticamente desde: Citas
-// Archivo: CMS Memorias vivas | 5/9/2026
+// Archivo: CMS Memorias vivas | 17/10/2026
 
 const citas = [
   {
@@ -544,7 +544,7 @@ const citas = [
   },
   {
     "id_cita": "CIT055",
-    "codigo_entidad": null,
+    "codigo_entidad": "VMC",
     "hablante_detectado": "GINA",
     "ids_conceptos": "C06",
     "entrevista": null,
@@ -554,7 +554,7 @@ const citas = [
   },
   {
     "id_cita": "CIT056",
-    "codigo_entidad": null,
+    "codigo_entidad": "VMC",
     "hablante_detectado": "GINA",
     "ids_conceptos": "C06",
     "entrevista": null,
@@ -564,7 +564,7 @@ const citas = [
   },
   {
     "id_cita": "CIT057",
-    "codigo_entidad": null,
+    "codigo_entidad": "VMC",
     "hablante_detectado": "GINA",
     "ids_conceptos": "C07",
     "entrevista": null,
@@ -574,7 +574,7 @@ const citas = [
   },
   {
     "id_cita": "CIT058",
-    "codigo_entidad": null,
+    "codigo_entidad": "VMC",
     "hablante_detectado": "GINA",
     "ids_conceptos": "C08",
     "entrevista": null,
@@ -584,7 +584,7 @@ const citas = [
   },
   {
     "id_cita": "CIT059",
-    "codigo_entidad": null,
+    "codigo_entidad": "VMC",
     "hablante_detectado": "GINA",
     "ids_conceptos": "C12",
     "entrevista": null,
@@ -594,7 +594,7 @@ const citas = [
   },
   {
     "id_cita": "CIT060",
-    "codigo_entidad": null,
+    "codigo_entidad": "VMC",
     "hablante_detectado": "GINA",
     "ids_conceptos": "C14",
     "entrevista": null,
@@ -604,7 +604,7 @@ const citas = [
   },
   {
     "id_cita": "CIT061",
-    "codigo_entidad": null,
+    "codigo_entidad": "VMC",
     "hablante_detectado": "GINA",
     "ids_conceptos": "C17",
     "entrevista": null,
@@ -614,7 +614,7 @@ const citas = [
   },
   {
     "id_cita": "CIT062",
-    "codigo_entidad": null,
+    "codigo_entidad": "VMC",
     "hablante_detectado": "GINA",
     "ids_conceptos": "C17",
     "entrevista": null,
@@ -624,7 +624,7 @@ const citas = [
   },
   {
     "id_cita": "CIT063",
-    "codigo_entidad": null,
+    "codigo_entidad": "VMC",
     "hablante_detectado": "GINA",
     "ids_conceptos": "C18",
     "entrevista": null,
@@ -634,7 +634,7 @@ const citas = [
   },
   {
     "id_cita": "CIT064",
-    "codigo_entidad": null,
+    "codigo_entidad": "VMC",
     "hablante_detectado": "GINA",
     "ids_conceptos": "C19",
     "entrevista": null,
@@ -644,7 +644,7 @@ const citas = [
   },
   {
     "id_cita": "CIT065",
-    "codigo_entidad": "PJ",
+    "codigo_entidad": "NPJ",
     "hablante_detectado": "Paquita",
     "ids_conceptos": "C08",
     "entrevista": 1,
@@ -654,7 +654,7 @@ const citas = [
   },
   {
     "id_cita": "CIT066",
-    "codigo_entidad": "PJ",
+    "codigo_entidad": "NPJ",
     "hablante_detectado": "Paquita",
     "ids_conceptos": "C08",
     "entrevista": 1,
@@ -664,7 +664,7 @@ const citas = [
   },
   {
     "id_cita": "CIT067",
-    "codigo_entidad": "PJ",
+    "codigo_entidad": "NPJ",
     "hablante_detectado": "Paquita",
     "ids_conceptos": "C08",
     "entrevista": 1,
@@ -674,7 +674,7 @@ const citas = [
   },
   {
     "id_cita": "CIT068",
-    "codigo_entidad": "PJ",
+    "codigo_entidad": "NPJ",
     "hablante_detectado": "Paquita",
     "ids_conceptos": "C12",
     "entrevista": 1,
@@ -684,7 +684,7 @@ const citas = [
   },
   {
     "id_cita": "CIT069",
-    "codigo_entidad": "PJ",
+    "codigo_entidad": "NPJ",
     "hablante_detectado": "Paquita",
     "ids_conceptos": "C12",
     "entrevista": 1,
@@ -694,7 +694,7 @@ const citas = [
   },
   {
     "id_cita": "CIT070",
-    "codigo_entidad": "PJ",
+    "codigo_entidad": "NPJ",
     "hablante_detectado": "Paquita",
     "ids_conceptos": "C12",
     "entrevista": 1,
@@ -704,7 +704,7 @@ const citas = [
   },
   {
     "id_cita": "CIT071",
-    "codigo_entidad": "PJ",
+    "codigo_entidad": "NPJ",
     "hablante_detectado": "Paquita",
     "ids_conceptos": "C13",
     "entrevista": 1,
@@ -714,7 +714,7 @@ const citas = [
   },
   {
     "id_cita": "CIT072",
-    "codigo_entidad": "PJ",
+    "codigo_entidad": "NPJ",
     "hablante_detectado": "Paquita",
     "ids_conceptos": "C17",
     "entrevista": 1,
@@ -724,7 +724,7 @@ const citas = [
   },
   {
     "id_cita": "CIT073",
-    "codigo_entidad": "PJ",
+    "codigo_entidad": "NPJ",
     "hablante_detectado": "Paquita",
     "ids_conceptos": "C17",
     "entrevista": null,
@@ -734,7 +734,7 @@ const citas = [
   },
   {
     "id_cita": "CIT074",
-    "codigo_entidad": "PJ",
+    "codigo_entidad": "NPJ",
     "hablante_detectado": "Paquita",
     "ids_conceptos": "C19",
     "entrevista": 1,
@@ -1474,8 +1474,8 @@ const citas = [
   },
   {
     "id_cita": "CIT148",
-    "codigo_entidad": null,
-    "hablante_detectado": null,
+    "codigo_entidad": "SS",
+    "hablante_detectado": "Sérbulo",
     "ids_conceptos": "C07",
     "entrevista": null,
     "ubicacion_video": "https://youtu.be/SHnLzf6TFus",
@@ -1604,7 +1604,7 @@ const citas = [
   },
   {
     "id_cita": "CIT161",
-    "codigo_entidad": null,
+    "codigo_entidad": "SS",
     "hablante_detectado": "Rocío",
     "ids_conceptos": "C18",
     "entrevista": null,
@@ -1644,7 +1644,7 @@ const citas = [
   },
   {
     "id_cita": "CIT165",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": null,
     "ids_conceptos": "C03, C08",
     "entrevista": null,
@@ -1654,7 +1654,7 @@ const citas = [
   },
   {
     "id_cita": "CIT166",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C07",
     "entrevista": null,
@@ -1664,7 +1664,7 @@ const citas = [
   },
   {
     "id_cita": "CIT167",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C08",
     "entrevista": null,
@@ -1674,7 +1674,7 @@ const citas = [
   },
   {
     "id_cita": "CIT168",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C10, C13",
     "entrevista": null,
@@ -1684,7 +1684,7 @@ const citas = [
   },
   {
     "id_cita": "CIT169",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Rocío",
     "ids_conceptos": "C12",
     "entrevista": null,
@@ -1694,7 +1694,7 @@ const citas = [
   },
   {
     "id_cita": "CIT170",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C13",
     "entrevista": null,
@@ -1704,7 +1704,7 @@ const citas = [
   },
   {
     "id_cita": "CIT171",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Rocío",
     "ids_conceptos": "C13",
     "entrevista": null,
@@ -1714,7 +1714,7 @@ const citas = [
   },
   {
     "id_cita": "CIT172",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C14",
     "entrevista": null,
@@ -1724,7 +1724,7 @@ const citas = [
   },
   {
     "id_cita": "CIT173",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Rocío",
     "ids_conceptos": "C14",
     "entrevista": null,
@@ -1734,7 +1734,7 @@ const citas = [
   },
   {
     "id_cita": "CIT174",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C15",
     "entrevista": null,
@@ -1744,7 +1744,7 @@ const citas = [
   },
   {
     "id_cita": "CIT175",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C16",
     "entrevista": null,
@@ -1754,7 +1754,7 @@ const citas = [
   },
   {
     "id_cita": "CIT176",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C17",
     "entrevista": null,
@@ -1764,7 +1764,7 @@ const citas = [
   },
   {
     "id_cita": "CIT177",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C17",
     "entrevista": null,
@@ -1774,7 +1774,7 @@ const citas = [
   },
   {
     "id_cita": "CIT178",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C17",
     "entrevista": null,
@@ -1784,7 +1784,7 @@ const citas = [
   },
   {
     "id_cita": "CIT179",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C18",
     "entrevista": null,
@@ -1794,7 +1794,7 @@ const citas = [
   },
   {
     "id_cita": "CIT180",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C18",
     "entrevista": null,
@@ -1804,7 +1804,7 @@ const citas = [
   },
   {
     "id_cita": "CIT181",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C18",
     "entrevista": null,
@@ -1814,7 +1814,7 @@ const citas = [
   },
   {
     "id_cita": "CIT182",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C19",
     "entrevista": null,
@@ -1824,7 +1824,7 @@ const citas = [
   },
   {
     "id_cita": "CIT183",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C19",
     "entrevista": null,
@@ -1834,7 +1834,7 @@ const citas = [
   },
   {
     "id_cita": "CIT184",
-    "codigo_entidad": "ACQ",
+    "codigo_entidad": "AC",
     "hablante_detectado": "Alice",
     "ids_conceptos": "C19",
     "entrevista": null,
@@ -1864,7 +1864,7 @@ const citas = [
   },
   {
     "id_cita": "CIT187",
-    "codigo_entidad": null,
+    "codigo_entidad": "GMB",
     "hablante_detectado": "Yared",
     "ids_conceptos": "C03",
     "entrevista": null,
@@ -2024,7 +2024,7 @@ const citas = [
   },
   {
     "id_cita": "CIT203",
-    "codigo_entidad": null,
+    "codigo_entidad": "GMB",
     "hablante_detectado": "Yared",
     "ids_conceptos": "C16",
     "entrevista": null,
@@ -2044,7 +2044,7 @@ const citas = [
   },
   {
     "id_cita": "CIT205",
-    "codigo_entidad": null,
+    "codigo_entidad": "GMB",
     "hablante_detectado": "Yared",
     "ids_conceptos": "C17",
     "entrevista": null,
@@ -2054,8 +2054,8 @@ const citas = [
   },
   {
     "id_cita": "CIT206",
-    "codigo_entidad": null,
-    "hablante_detectado": "Persona",
+    "codigo_entidad": "AR",
+    "hablante_detectado": "Alberto",
     "ids_conceptos": "C17, C19",
     "entrevista": null,
     "ubicacion_video": "https://youtu.be/Q--2cluo1Rc O https://youtu.be/udEB2-xChm4",
