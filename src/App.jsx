@@ -50,7 +50,7 @@ function Layout({ theme, onThemeToggle, bgColor, onBgColorChange }) {
         bgColor={bgColor}
         onBgColorChange={onBgColorChange}
       />
-      <div className="relative z-10 flex-1 min-h-0 overflow-y-auto overscroll-y-contain">
+      <div id="scroll-root" className="relative z-10 flex-1 min-h-0 overflow-y-auto overscroll-y-contain">
         <Outlet context={{ theme, bgColor }} />
         <Footer theme={theme} />
       </div>

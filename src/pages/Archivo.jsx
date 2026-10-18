@@ -1,4 +1,4 @@
-import { Fragment, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useState } from 'react'
 import archivo from '../data/CMS/1_archivo.js'
 import conceptos from '../data/CMS/6_conceptos.js'
 import { normalizeConceptId } from '../data/cmsSphereData'
@@ -65,6 +65,13 @@ function buildConceptLookup(rows) {
   return map
 }
 
+function formatIdList(str) {
+  if (!str || typeof str !== 'string') return null
+  const parts = str.split(/[,;]/).map((s) => s.trim()).filter(Boolean)
+  if (parts.length === 0) return null
+  return parts.join(' · ')
+}
+
 function formatConceptIds(str, lookup) {
   if (!str || typeof str !== 'string') return '—'
   const parts = str.split(/[,;]/).map((s) => s.trim()).filter(Boolean)
@@ -124,10 +131,10 @@ function RelatoExpandedPanel({ item, conceptLookup }) {
           <MetaBlock label="Registro audiovisual">{item['Registro Audiovisual']}</MetaBlock>
           <MetaBlock label="Post-producción">{item['Post-Producción']}</MetaBlock>
           <MetaBlock label="Responsables y colaboradores">{item['Responsables y colaboradores']}</MetaBlock>
-          <MetaBlock label="Ids lugares">{item.ids_lugares}</MetaBlock>
-          <MetaBlock label="Ids emociones">{item.ids_emociones}</MetaBlock>
-          <MetaBlock label="Ids personas">{item.ids_personas}</MetaBlock>
-          <MetaBlock label="Ids prácticas">{item.ids_practicas}</MetaBlock>
+          <MetaBlock label="Ids lugares">{formatIdList(item.ids_lugares)}</MetaBlock>
+          <MetaBlock label="Ids emociones">{formatIdList(item.ids_emociones)}</MetaBlock>
+          <MetaBlock label="Ids personas">{formatIdList(item.ids_personas)}</MetaBlock>
+          <MetaBlock label="Ids prácticas">{formatIdList(item.ids_practicas)}</MetaBlock>
         </div>
 
         <div className="min-w-0">
@@ -221,7 +228,7 @@ function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle })
 
               return (
                 <Fragment key={id}>
-                  <tr className="transition-colors hover:bg-white/[0.04]">
+                  <tr id={`relato-${id}`} className="scroll-mt-20 transition-colors hover:bg-white/[0.04]">
                     <td className={`${td} font-mono text-[11px] text-inherit/70`}>{id}</td>
                     <td className={`${td} max-w-0`}>
                       <span className="line-clamp-2 font-medium text-inherit/95" title={item.título}>
@@ -275,6 +282,25 @@ function VideoArchiveBlock({ title, sortBy, onSort, optionsMap, grouped, keys })
   const toggle = (id) => {
     setExpanded((prev) => ({ ...prev, [id]: !prev[id] }))
   }
+
+  useEffect(() => {
+    const abrirDesdeHash = () => {
+      const match = window.location.hash.match(/^#relato-(.+)$/)
+      if (!match) return
+      const id = decodeURIComponent(match[1])
+      setExpanded((prev) => ({ ...prev, [id]: true }))
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      window.setTimeout(() => {
+        document.getElementById(`relato-${id}`)?.scrollIntoView({
+          block: 'center',
+          behavior: reduce ? 'auto' : 'smooth',
+        })
+      }, 60)
+    }
+    abrirDesdeHash()
+    window.addEventListener('hashchange', abrirDesdeHash)
+    return () => window.removeEventListener('hashchange', abrirDesdeHash)
+  }, [])
 
   return (
     <section className="mb-4 sm:mb-5 last:mb-0">

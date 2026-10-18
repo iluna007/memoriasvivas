@@ -46,7 +46,7 @@ function MaterialItemCard({ item, theme }) {
   const t = getContentPageTheme(theme)
   const disponible = Boolean(item.url)
   const externo = isExternalPedagogiasUrl(item.url)
-  const placeholderImg = `https://placehold.co/320x200/${isLight ? 'e4e4e7/71717a' : '1a1a1a/666'}?text=${encodeURIComponent(item.titulo.slice(0, 20))}`
+  const placeholderImg = `https://placehold.co/320x200/${isLight ? 'e4e4e7/71717a' : '1a1a1a/666'}?text=${encodeURIComponent(String(item.titulo || 'Material').slice(0, 20))}`
 
   const badgeCls = isLight
     ? 'inline-flex w-fit items-center rounded-full bg-zinc-100 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-zinc-500'
@@ -69,7 +69,7 @@ function MaterialItemCard({ item, theme }) {
         <h4 className={`mb-1 text-sm font-semibold ${t.cardTitle}`}>{item.titulo}</h4>
         {item.descripcion && <p className={`mb-2.5 text-xs leading-relaxed ${t.cardSub}`}>{item.descripcion}</p>}
         <div className="mb-3 flex flex-wrap gap-1.5">
-          <span className={badgeCls}>{item.formato}</span>
+          {item.formato ? <span className={badgeCls}>{item.formato}</span> : null}
           {item.fecha && <span className={badgeCls}>{item.fecha}</span>}
         </div>
         {disponible ? (

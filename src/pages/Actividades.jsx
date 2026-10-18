@@ -1,6 +1,6 @@
 import { useOutletContext } from 'react-router-dom'
 import ContentSectionPage from '../components/ContentSectionPage'
-import ActividadesGaleria from '../components/actividades/ActividadesGaleria'
+import ActividadesTimeline from '../components/actividades/ActividadesTimeline'
 
 export default function Actividades() {
   const { theme = 'dark' } = useOutletContext() ?? {}
@@ -10,7 +10,7 @@ export default function Actividades() {
       wide
       lead="Talleres, caminatas, encuentros y otras actividades realizadas o programadas con comunidades de la región sur de Costa Rica."
     >
-      <ActividadesGaleria theme={theme} />
+      <ActividadesTimeline theme={theme} />
     </ContentSectionPage>
   )
 }
