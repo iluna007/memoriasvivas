@@ -10,6 +10,7 @@
     "fetch:documentales": "node scripts/fetch-youtube-channel.mjs"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@netlify/blobs": "^10.7.6",
     "@react-three/drei": "^9.120.0",
     "@react-three/fiber": "^8.17.0",

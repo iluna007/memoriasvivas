@@ -95,6 +95,9 @@ export default function IntroSplash({ onDismiss }) {
         <span className="intro-splash__cta inline-flex items-center gap-2 rounded-md border border-white/20 bg-black/30 px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-white/80 backdrop-blur-sm transition-colors group-hover:border-white/40 group-hover:text-white group-focus-visible:text-white">
           Click para entrar
         </span>
+        <span className="text-[11px] uppercase tracking-[0.22em] text-white/55">
+          Prototipo en desarrollo
+        </span>
       </button>
     </div>
   )

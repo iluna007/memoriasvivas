@@ -86,7 +86,18 @@ const ORDEN = [
   'iker-luna',
 ]
 
-const mapped = equipoCMS.map((m) => {
+function numeroIdEquipo(id) {
+  const n = parseInt(String(id ?? '').slice(1), 10)
+  return Number.isNaN(n) ? Number.MAX_SAFE_INTEGER : n
+}
+
+// El Sheet ordena E1, E10, E2… como texto. Aquí el orden base es numérico;
+// ORDEN (abajo) sigue definiendo el orden editorial de la página.
+const equipoOrdenado = [...equipoCMS].sort(
+  (a, b) => numeroIdEquipo(a.id_equipo) - numeroIdEquipo(b.id_equipo)
+)
+
+const mapped = equipoOrdenado.map((m) => {
   const key = slugify(m.nombre ?? '', m.apellidos ?? '')
   const archivos = FOTOS[key] ?? []
   return {
