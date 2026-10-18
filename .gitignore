@@ -27,3 +27,27 @@ _assets-inbox/**
 *.njsproj
 *.sln
 *.sw?
+
+# Imagenes de Actividades: originales y pruebas locales. public/actividades-media/ si se versiona.
+_actividades-web/
+_actividades-web-test/
+_actividades-mock/
+_backup_cms_antes/
+_actividades-pdf/
+public/Actividades MV/
+public/actividades-mock/
+public/actividades-web/
+.bench/
+scripts/_bench-*
+scripts/_result-*
+scripts/_serve-bench.mjs
+vite.bench.config.js
+.env.local
+*.NEF
+*.nef
+*.CR2
+*.ARW
+*.DNG
+*.HEIC
+*.MOV
+Claude outputs/
