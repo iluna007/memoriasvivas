@@ -1,5 +1,5 @@
 // Generado automáticamente desde: Territorio
-// Archivo: CMS Memorias vivas | 5/9/2026
+// Archivo: CMS Memorias vivas | 17/10/2026
 
 const territorio = [
   {
@@ -17,8 +17,8 @@ const territorio = [
   {
     "id_territorio": "T3",
     "nombre": "La Palma",
-    "lat": 8.642588962,
-    "lon": -83.46184714
+    "lat": 8.64258896229071,
+    "lon": -83.4618471414956
   },
   {
     "id_territorio": "T4",
