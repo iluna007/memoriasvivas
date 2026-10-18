@@ -1,9 +1,11 @@
 import { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import conceptos from '../data/CMS/6_conceptos.js'
 import { CONCEPT_SORT_OPTIONS, getSortedConceptos } from '../utils/sortArchivo.js'
 import SortToolbar from './archivo/SortToolbar.jsx'
 
 function ConceptoArchiveRow({ item, expanded, onToggle }) {
+  const { t } = useTranslation()
   const id = item.id_concepto
   const open = !!expanded[id]
   const full = item.descripción_breve ?? ''
@@ -24,7 +26,7 @@ function ConceptoArchiveRow({ item, expanded, onToggle }) {
             <span className="mt-1 block text-[11px] uppercase tracking-wide text-inherit/45">{item.eje}</span>
           )}
         </div>
-        <span className="shrink-0 text-[11px] text-inherit/50">{open ? 'Ocultar' : hasMore ? 'Ampliar' : ''}</span>
+        <span className="shrink-0 text-[11px] text-inherit/50">{open ? t('diccionario.ocultar') : hasMore ? t('diccionario.ampliar') : ''}</span>
       </button>
       <div className="px-3 pb-2.5 text-xs leading-relaxed text-inherit/80 sm:px-4">
         {open ? (
@@ -39,8 +41,9 @@ function ConceptoArchiveRow({ item, expanded, onToggle }) {
 
 /** Índice alfabético: letra desplegable con términos bajo esa letra. */
 function LetterAccordion({ letter, count, children }) {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
-  const label = letter === '#' ? '0–9 · otros' : letter
+  const label = letter === '#' ? t('diccionario.otros') : letter
 
   return (
     <div className="border-b border-zinc-500/20 last:border-b-0">
@@ -60,7 +63,7 @@ function LetterAccordion({ letter, count, children }) {
           <span className="min-w-0">
             <span className="block text-sm font-semibold text-inherit/90">{label}</span>
             <span className="text-[11px] text-inherit/50">
-              {count} {count === 1 ? 'término' : 'términos'}
+              {t('diccionario.terminos', { count })}
             </span>
           </span>
         </span>
@@ -72,9 +75,17 @@ function LetterAccordion({ letter, count, children }) {
 }
 
 export function ConceptDictionaryView() {
+  const { t } = useTranslation()
   const [conceptSort, setConceptSort] = useState('abc')
   const [expanded, setExpanded] = useState(() => ({}))
 
+  const opciones = useMemo(() => {
+    const map = {}
+    for (const [key, value] of Object.entries(CONCEPT_SORT_OPTIONS)) {
+      map[key] = { ...value, label: t(`diccionario.orden.${key}`) }
+    }
+    return map
+  }, [t])
   const conceptData = useMemo(() => getSortedConceptos(conceptos, conceptSort), [conceptSort])
   const dictionaryByLetter = conceptSort === 'abc'
 
@@ -87,10 +98,10 @@ export function ConceptDictionaryView() {
   return (
     <section className="mb-4 sm:mb-5 last:mb-0" aria-labelledby="diccionario-panel-title">
       <h2 id="diccionario-panel-title" className="sr-only">
-        Listado del diccionario
+        {t('diccionario.listado')}
       </h2>
       <div className="w-full overflow-hidden border border-zinc-500/25 shadow-sm sm:rounded-md">
-        <SortToolbar sortBy={conceptSort} onSort={setConceptSort} optionsMap={CONCEPT_SORT_OPTIONS} />
+        <SortToolbar sortBy={conceptSort} onSort={setConceptSort} optionsMap={opciones} />
         <div>
           {keys.map((groupKey) => (
             <section key={groupKey}>

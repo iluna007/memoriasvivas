@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 /** Indicaciones de navegación del muro de Activaciones (mismo patrón que CameraLegend). */
 export default function ActivacionesLegend({ theme = 'dark' }) {
+  const { t } = useTranslation()
   const [dismissed, setDismissed] = useState(false)
   const isLight = theme === 'light'
 
@@ -33,7 +35,7 @@ export default function ActivacionesLegend({ theme = 'dark' }) {
             />
           </svg>
           <span>
-            <kbd className={kbd}>Arrastrar</kbd> o <kbd className={kbd}>Scroll</kbd> → explorar
+            <kbd className={kbd}>{t('publicaciones.arrastrar')}</kbd> o <kbd className={kbd}>{t('publicaciones.scroll')}</kbd> → {t('publicaciones.explorar')}
           </span>
         </div>
         <div className="flex items-center gap-2">
@@ -42,7 +44,7 @@ export default function ActivacionesLegend({ theme = 'dark' }) {
             <path d="M6 13h5a1 1 0 001-1V5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
           </svg>
           <span>
-            <kbd className={kbd}>Clic</kbd> → abrir documento
+            <kbd className={kbd}>{t('publicaciones.clic')}</kbd> → {t('publicaciones.abrirDoc')}
           </span>
         </div>
         <div className="flex items-center gap-2">
@@ -51,11 +53,11 @@ export default function ActivacionesLegend({ theme = 'dark' }) {
             <circle cx="8" cy="11" r="0.8" fill="currentColor" />
           </svg>
           <span>
-            <kbd className={kbd}>Tocar</kbd> + deslizar en móvil
+            <kbd className={kbd}>{t('publicaciones.tocar')}</kbd> + {t('publicaciones.deslizar')}
           </span>
         </div>
       </div>
-      <button type="button" onClick={() => setDismissed(true)} className={closeBtn} aria-label="Cerrar leyenda" title="Cerrar">
+      <button type="button" onClick={() => setDismissed(true)} className={closeBtn} aria-label={t('publicaciones.cerrarLeyenda')} title={t('publicaciones.cerrar')}>
         ×
       </button>
     </div>

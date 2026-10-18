@@ -1,4 +1,5 @@
 import { useOutletContext } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { getContentPageTheme } from '../utils/pageThemeClasses'
 
 /**
@@ -8,6 +9,7 @@ import { getContentPageTheme } from '../utils/pageThemeClasses'
 export default function ContentSectionPage({ title, lead, children, wide = false }) {
   const { theme = 'dark' } = useOutletContext() ?? {}
   const t = getContentPageTheme(theme)
+  const { t: tr } = useTranslation()
 
   return (
     <main className="min-h-full pt-16">
@@ -16,7 +18,7 @@ export default function ContentSectionPage({ title, lead, children, wide = false
         {lead ? <p className={`mb-8 text-sm leading-relaxed sm:text-base ${t.lead}`}>{lead}</p> : null}
         {children ?? (
           <div className={`rounded-xl border px-5 py-6 text-sm leading-relaxed ${t.card}`}>
-            <p className={t.body}>Esta sección está en construcción. Pronto se publicará material del proyecto Memorias Vivas.</p>
+            <p className={t.body}>{tr('comun.enConstruccion')}</p>
           </div>
         )}
       </div>

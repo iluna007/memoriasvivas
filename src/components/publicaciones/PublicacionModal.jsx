@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import gsap from 'gsap'
 import { getContentPageTheme } from '../../utils/pageThemeClasses'
 
 export default function PublicacionModal({ item, theme = 'dark', reducedMotion, onClose }) {
   const t = getContentPageTheme(theme)
+  const { t: tr } = useTranslation()
   const isLight = theme === 'light'
   const rootRef = useRef(null)
   const panelRef = useRef(null)
@@ -36,7 +38,7 @@ export default function PublicacionModal({ item, theme = 'dark', reducedMotion, 
       aria-modal="true"
       aria-labelledby="pub-modal-title"
     >
-      <button type="button" className="pub-modal__backdrop" aria-label="Cerrar" onClick={onClose} />
+      <button type="button" className="pub-modal__backdrop" aria-label={tr('publicaciones.cerrar')} onClick={onClose} />
       <div ref={panelRef} className={`pub-modal__panel rounded-xl ${t.card}`}>
         <p className={`mb-2 text-[11px] uppercase tracking-[0.18em] ${t.muted}`}>
           {[item.fuente, item.anio, item.idioma].filter(Boolean).join(' · ')}
@@ -59,7 +61,7 @@ export default function PublicacionModal({ item, theme = 'dark', reducedMotion, 
               rel="noopener noreferrer"
               className={`inline-flex rounded-md px-3 py-2 text-sm ${t.btnOutline}`}
             >
-              {item.enlaceTipo === 'doi' || item.doi ? 'Ver DOI' : 'Abrir enlace'}
+              {item.enlaceTipo === 'doi' || item.doi ? tr('publicaciones.doi') : tr('publicaciones.enlace')}
             </a>
           ) : null}
           {item.archivoLocal ? (
@@ -69,11 +71,11 @@ export default function PublicacionModal({ item, theme = 'dark', reducedMotion, 
               rel="noopener noreferrer"
               className={`inline-flex rounded-md px-3 py-2 text-sm ${t.btnPrimary}`}
             >
-              Abrir PDF
+              {tr('publicaciones.pdf')}
             </a>
           ) : null}
           <button type="button" className={`inline-flex rounded-md px-3 py-2 text-sm ${t.btnOutline}`} onClick={onClose}>
-            Cerrar
+            {tr('publicaciones.cerrar')}
           </button>
         </div>
       </div>

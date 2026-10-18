@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 function IconSliders() {
   return (
@@ -25,6 +26,7 @@ function IconChevronRight() {
 }
 
 export function ControlsPanel({ theme = 'dark', params, onChange }) {
+  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const isLight = theme === 'light'
   const {
@@ -83,7 +85,7 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
 
   if (!isOpen) {
     return (
-      <button type="button" onClick={() => setIsOpen(true)} style={safeStyle} className={floatBtn} title="Abrir controles" aria-label="Abrir controles">
+      <button type="button" onClick={() => setIsOpen(true)} style={safeStyle} className={floatBtn} title={t('inicio.abrirControles')} aria-label={t('inicio.abrirControles')}>
         <IconSliders />
       </button>
     )
@@ -92,8 +94,8 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
   return (
     <aside style={safeStyle} className={panel}>
       <div className={`mb-3 flex items-center justify-between pb-2 ${headBorder}`}>
-        <h3 className={titleCls}>Controles de comportamiento</h3>
-        <button type="button" onClick={() => setIsOpen(false)} className={closeCls} title="Cerrar controles" aria-label="Cerrar controles">
+        <h3 className={titleCls}>{t('inicio.controles')}</h3>
+        <button type="button" onClick={() => setIsOpen(false)} className={closeCls} title={t('inicio.cerrarControles')} aria-label={t('inicio.cerrarControles')}>
           <IconChevronRight />
         </button>
       </div>
@@ -101,7 +103,7 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
       <div className="space-y-4">
         <div>
           <label className={labelRow}>
-            <span>Velocidad</span>
+            <span>{t('inicio.velocidad')}</span>
             <span className={valMuted}>{motionSpeed.toFixed(1)}×</span>
           </label>
           <input type="range" min="0.1" max="3" step="0.1" value={motionSpeed} onChange={(e) => handleChange('motionSpeed', parseFloat(e.target.value))} className={rangeTrack} />
@@ -109,16 +111,16 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
 
         <div>
           <label className={labelRow}>
-            <span>Distancia conexión (proximidad)</span>
+            <span>{t('inicio.distancia')}</span>
             <span className={valMuted}>{proximityThreshold.toFixed(1)}</span>
           </label>
           <input type="range" min="1" max="12" step="0.5" value={proximityThreshold} onChange={(e) => handleChange('proximityThreshold', parseFloat(e.target.value))} className={rangeTrack} />
-          <p className={hint}>Líneas entre esferas a esta distancia o menor</p>
+          <p className={hint}>{t('inicio.distanciaAyuda')}</p>
         </div>
 
         <div>
           <label className={labelRow}>
-            <span>Amplitud del movimiento</span>
+            <span>{t('inicio.amplitud')}</span>
             <span className={valMuted}>{motionAmplitude.toFixed(1)}×</span>
           </label>
           <input type="range" min="0" max="4" step="0.1" value={motionAmplitude} onChange={(e) => handleChange('motionAmplitude', parseFloat(e.target.value))} className={rangeTrack} />
@@ -126,25 +128,25 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
 
         <div>
           <label className={labelRow}>
-            <span>Tamaño del espacio</span>
+            <span>{t('inicio.tamano')}</span>
             <span className={valMuted}>{spaceRadius.toFixed(0)}</span>
           </label>
           <input type="range" min="4" max="30" step="1" value={spaceRadius} onChange={(e) => handleChange('spaceRadius', parseFloat(e.target.value))} className={rangeTrack} />
-          <p className={hint}>Radio de distribución de las estrellas</p>
+          <p className={hint}>{t('inicio.tamanoAyuda')}</p>
         </div>
 
         <div>
           <label className={labelRow}>
-            <span>Rotación eje propio</span>
+            <span>{t('inicio.rotacion')}</span>
             <span className={valMuted}>{ownAxisSpin.toFixed(1)}×</span>
           </label>
           <input type="range" min="0" max="2" step="0.1" value={ownAxisSpin} onChange={(e) => handleChange('ownAxisSpin', parseFloat(e.target.value))} className={rangeTrack} />
-          <p className={hint}>Giro de cada estrella sobre su eje (0 = sin giro)</p>
+          <p className={hint}>{t('inicio.rotacionAyuda')}</p>
         </div>
 
         <div>
           <label className={labelRow}>
-            <span>Densidad símbolos de fondo (+ / ✦)</span>
+            <span>{t('inicio.densidad')}</span>
             <span className={valMuted}>
               {Math.round(20 + Math.min(1, Math.max(0, starfieldDensity)) * 300)}
             </span>
@@ -158,12 +160,12 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
             onChange={(e) => handleChange('starfieldDensity', parseFloat(e.target.value))}
             className={rangeTrack}
           />
-          <p className={hint}>Cantidad de símbolos alrededor de la escena (menos = más ligero)</p>
+          <p className={hint}>{t('inicio.densidadAyuda')}</p>
         </div>
 
         <div>
           <label className={labelRow}>
-            <span>Oscilación de opacidad (estrellas)</span>
+            <span>{t('inicio.opacidad')}</span>
             <span className={valMuted}>{opacityTwinkle.toFixed(2)}</span>
           </label>
           <input type="range" min="0" max="1" step="0.05" value={opacityTwinkle} onChange={(e) => handleChange('opacityTwinkle', parseFloat(e.target.value))} className={rangeTrack} />
@@ -172,7 +174,7 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
 
         <div>
           <label className={labelRow}>
-            <span>Oscilación de brillo (estrellas)</span>
+            <span>{t('inicio.brillo')}</span>
             <span className={valMuted}>{brightnessTwinkle.toFixed(2)}</span>
           </label>
           <input type="range" min="0" max="1" step="0.05" value={brightnessTwinkle} onChange={(e) => handleChange('brightnessTwinkle', parseFloat(e.target.value))} className={rangeTrack} />
@@ -181,7 +183,7 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
 
         <div>
           <label className={labelRow}>
-            <span>Pulso de la red (líneas)</span>
+            <span>{t('inicio.pulso')}</span>
             <span className={valMuted}>{lineTwinkle.toFixed(2)}</span>
           </label>
           <input type="range" min="0" max="1" step="0.05" value={lineTwinkle} onChange={(e) => handleChange('lineTwinkle', parseFloat(e.target.value))} className={rangeTrack} />
@@ -189,18 +191,18 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
         </div>
 
         <div className="flex items-center justify-between pt-1">
-          <label className={labelPlain}>Mostrar cubo delimitador</label>
+          <label className={labelPlain}>{t('inicio.cubo')}</label>
           <input type="checkbox" checked={showBoundingBox} onChange={(e) => handleChange('showBoundingBox', e.target.checked)} className={check} />
         </div>
 
         <div className="flex items-center justify-between">
-          <label className={labelPlain}>Mostrar red de líneas</label>
+          <label className={labelPlain}>{t('inicio.red')}</label>
           <input type="checkbox" checked={showWeb} onChange={(e) => handleChange('showWeb', e.target.checked)} className={check} />
         </div>
 
         <div>
           <label className={labelRow}>
-            <span>Color de fondo</span>
+            <span>{t('inicio.colorFondo')}</span>
             <span className={monoHex}>{backgroundColor}</span>
           </label>
           <div className="flex items-center gap-2">

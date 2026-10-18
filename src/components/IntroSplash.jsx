@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import gsap from 'gsap'
 import { VideoLoopBackground } from './VideoLoopBackground'
 import { markIntroSeen, prefersReducedMotion } from '../utils/introSession'
@@ -11,6 +12,7 @@ const LOGO_SRC = '/branding/memorias-vivas-lockup-white-bold.png'
  * Sin fase previa de animación (así el loop se monta igual que en Contacto).
  */
 export default function IntroSplash({ onDismiss }) {
+  const { t } = useTranslation()
   const rootRef = useRef(null)
   const logoWrapRef = useRef(null)
   const closingRef = useRef(false)
@@ -66,7 +68,7 @@ export default function IntroSplash({ onDismiss }) {
       ref={rootRef}
       className="intro-splash fixed inset-0 z-[100] flex items-center justify-center bg-black"
       role="dialog"
-      aria-label="Introducción Memorias Vivas"
+      aria-label={t('intro.dialogo')}
       aria-modal="true"
     >
       {/* Misma estructura que Contacto: wrapper fixed + video absoluto */}
@@ -82,7 +84,7 @@ export default function IntroSplash({ onDismiss }) {
         type="button"
         onClick={enterSite}
         className="intro-splash__enter group relative z-10 flex flex-col items-center gap-6 px-6 text-center outline-none"
-        aria-label="Entrar al sitio Memorias Vivas"
+        aria-label={t('intro.entrar')}
       >
         <span ref={logoWrapRef} className="block w-56 opacity-0 sm:w-72">
           <img
@@ -93,10 +95,10 @@ export default function IntroSplash({ onDismiss }) {
           />
         </span>
         <span className="intro-splash__cta inline-flex items-center gap-2 rounded-md border border-white/20 bg-black/30 px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-white/80 backdrop-blur-sm transition-colors group-hover:border-white/40 group-hover:text-white group-focus-visible:text-white">
-          Click para entrar
+          {t('intro.click')}
         </span>
         <span className="text-[11px] uppercase tracking-[0.22em] text-white/55">
-          Prototipo en desarrollo
+          {t('intro.prototipo')}
         </span>
       </button>
     </div>

@@ -1,6 +1,9 @@
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import ThemeToggle from './ThemeToggle'
 import BackgroundColorPicker from './BackgroundColorPicker'
+import LanguageToggle from './LanguageToggle'
+import { idiomaDeRuta, ruta } from '../i18n/ruta'
 
 const navStyle = {
   top: 'env(safe-area-inset-top, 0)',
@@ -9,6 +12,9 @@ const navStyle = {
 }
 
 export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
+  const { pathname } = useLocation()
+  const { t } = useTranslation()
+  const lang = idiomaDeRuta(pathname)
   const isLight = theme === 'light'
 
   const navClass = isLight
@@ -36,10 +42,10 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
     <nav style={navStyle} className={`fixed z-20 flex h-14 w-full items-center justify-between px-2 sm:px-4 ${navClass}`}>
       <div className="flex min-w-0 items-center gap-0.5 overflow-x-auto sm:gap-1">
         <Link
-          to="/"
+          to={ruta('/', lang)}
           className="mr-1.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-md touch-manipulation sm:mr-2"
-          aria-label="Memorias Vivas — inicio / intro"
-          title="Inicio"
+          aria-label={t('nav.inicioAyuda')}
+          title={t('nav.inicio')}
         >
           <img
             src="/branding/memorias-vivas-icon-white.png"
@@ -48,47 +54,48 @@ export function Navbar({ theme, onThemeToggle, bgColor, onBgColorChange }) {
             draggable={false}
           />
         </Link>
-        <NavLink to="/constelaciones" className={linkClass}>
-          Constelaciones
+        <NavLink to={ruta('/constelaciones', lang)} className={linkClass}>
+          {t('nav.constelaciones')}
         </NavLink>
-        <NavLink to="/sobre" className={linkClass}>
-          Sobre
+        <NavLink to={ruta('/sobre', lang)} className={linkClass}>
+          {t('nav.sobre')}
         </NavLink>
-        <NavLink to="/comunidad" className={linkClass}>
-          Comunidad
+        <NavLink to={ruta('/comunidad', lang)} className={linkClass}>
+          {t('nav.comunidad')}
         </NavLink>
-        <NavLink to="/equipo" className={linkClass}>
-          Equipo
+        <NavLink to={ruta('/equipo', lang)} className={linkClass}>
+          {t('nav.equipo')}
         </NavLink>
-        <NavLink to="/mapa" className={linkClass}>
-          Mapa
+        <NavLink to={ruta('/mapa', lang)} className={linkClass}>
+          {t('nav.mapa')}
         </NavLink>
-        <NavLink to="/diccionario" className={linkClass}>
-          Diccionario
+        <NavLink to={ruta('/diccionario', lang)} className={linkClass}>
+          {t('nav.diccionario')}
         </NavLink>
-        <NavLink to="/documentales" className={linkClass}>
-          Documentales
+        <NavLink to={ruta('/documentales', lang)} className={linkClass}>
+          {t('nav.documentales')}
         </NavLink>
-        <NavLink to="/activaciones" className={linkClass}>
-          Activaciones
-        </NavLink>        
-        <NavLink to="/pedagogias" className={linkClass}>
-          Pedagogías
+        <NavLink to={ruta('/activaciones', lang)} className={linkClass}>
+          {t('nav.activaciones')}
         </NavLink>
-        <NavLink to="/actividades" className={linkClass}>
-          Actividades
+        <NavLink to={ruta('/pedagogias', lang)} className={linkClass}>
+          {t('nav.pedagogias')}
         </NavLink>
-        <NavLink to="/contacto" className={linkClass}>
-          Contacto
+        <NavLink to={ruta('/actividades', lang)} className={linkClass}>
+          {t('nav.actividades')}
         </NavLink>
-        <NavLink to="/archivo" className={linkClass}>
-          Archivo
+        <NavLink to={ruta('/contacto', lang)} className={linkClass}>
+          {t('nav.contacto')}
+        </NavLink>
+        <NavLink to={ruta('/archivo', lang)} className={linkClass}>
+          {t('nav.archivo')}
         </NavLink>
       </div>
 
-      <div className="flex shrink-0 items-center gap-1">
+      <div className="flex shrink-0 items-center gap-0.5">
         <BackgroundColorPicker theme={theme} currentColor={bgColor} onColorChange={onBgColorChange} />
         <ThemeToggle theme={theme} onToggle={onThemeToggle} />
+        <LanguageToggle theme={theme} />
       </div>
     </nav>
   )

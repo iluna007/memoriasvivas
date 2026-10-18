@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { getContentPageTheme } from '../utils/pageThemeClasses'
 import { ConceptDictionaryView } from '../components/ConceptDictionaryView.jsx'
 
@@ -12,6 +13,7 @@ const ZOOM_STEP = 5
 export default function Diccionario() {
   const { theme = 'dark' } = useOutletContext() ?? {}
   const t = getContentPageTheme(theme)
+  const { t: tr } = useTranslation()
   const [zoomPercent, setZoomPercent] = useState(() => {
     try {
       const raw = localStorage.getItem(ZOOM_STORAGE)
@@ -47,7 +49,7 @@ export default function Diccionario() {
             htmlFor="diccionario-tamano-texto"
             className={`mb-2 block text-sm font-medium ${theme === 'light' ? 'text-zinc-800' : 'text-white/90'}`}
           >
-            Tamaño del texto en esta página
+            {tr('diccionario.tamano')}
           </label>
           <div className="flex flex-wrap items-center gap-3">
             <span className={`w-11 shrink-0 text-center text-xs tabular-nums ${t.muted}`}>{ZOOM_MIN}%</span>
@@ -62,7 +64,7 @@ export default function Diccionario() {
               aria-valuemin={ZOOM_MIN}
               aria-valuemax={ZOOM_MAX}
               aria-valuenow={zoomPercent}
-              aria-label="Porcentaje de tamaño del texto del diccionario"
+              aria-label={tr('diccionario.tamanoAyuda')}
               className={`h-2 min-w-[min(100%,14rem)] flex-1 cursor-pointer touch-manipulation ${
                 theme === 'light' ? 'accent-zinc-800' : 'accent-white'
               }`}
@@ -77,15 +79,14 @@ export default function Diccionario() {
             </output>
           </div>
           <p className={`mt-2 text-[11px] leading-snug ${t.muted}`}>
-            Ajuste local a esta página. En el navegador también puede usar Ctrl+ + / Ctrl+ − (⌘ en Mac).
+            {tr('diccionario.nota')}
           </p>
         </div>
 
         <div className="origin-top" style={{ zoom }}>
-          <h1 className={`mb-2 text-2xl font-bold sm:text-3xl ${t.cardTitle}`}>Diccionario de conceptos</h1>
+          <h1 className={`mb-2 text-2xl font-bold sm:text-3xl ${t.cardTitle}`}>{tr('diccionario.titulo')}</h1>
           <p className={`mb-4 max-w-2xl text-sm leading-relaxed ${t.lead}`}>
-            Términos y definiciones breves utilizados en el proyecto Memorias Vivas. Este índice se encuentra en proceso
-            de construcción y puede incorporar nuevos conceptos con el tiempo.
+            {tr('diccionario.lead')}
           </p>
           <ConceptDictionaryView />
         </div>
