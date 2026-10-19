@@ -58,7 +58,7 @@ const equipoEn = {
     cargo: 'Co-lead 2025-2026, creator of the web archive, and sound assistant',
     escuela: 'School of Architecture',
     sede: 'Rodrigo Facio Campus',
-    bio: 'Architect and researcher with postgraduate degrees in Investigative Architecture (Goldsmiths, University of London) and Advanced Architecture (IAAC, Barcelona). His work is a critical spatial practice grounded in forensic methods. He has worked as a research assistant at Forensic Architecture and as a researcher at Re/Presentare, applying geospatial analysis, photogrammetry, and open sources to cases of political violence in Nicaragua, Honduras, and Gaza. He is a visiting lecturer at the School of Architecture of the Universidad de Costa Rica.',
+    bio: 'Architect and researcher with postgraduate degrees in Investigative Architecture (Goldsmiths, University of London) and Advanced Architecture (IAAC, Barcelona). His interests focus on a critical spatial practice grounded in forensic methods. He has worked as a research assistant at Forensic Architecture in London and as a spatial researcher at re/Presentare for Mexico, applying geospatial analysis, photogrammetry, and open sources to cases of political violence in Nicaragua, Honduras, and Gaza. He is a visiting lecturer at the School of Architecture of the Universidad de Costa Rica.',
   },
 }
 
