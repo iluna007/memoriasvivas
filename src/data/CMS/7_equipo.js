@@ -20,7 +20,7 @@ const equipo = [
     "cargo": "Co-responsable 2025-2026, creador del archivo web y asistente de sonido",
     "escuela": "Escuela de Arquitectura",
     "sede": "Sede Rodrigo Facio",
-    "bio": "Arquitecto e investigador con posgrados en Arquitectura investigativa (Goldsmiths, University of London) y en Arquitectura Avanzada (IAAC, Barcelona). Su práctica constituye una práctica espacial crítica basada en metodologías forenses. Ha trabajado como asistente de investigación en Forensic Architecture e investigador en Re/Presentare, aplicando análisis geoespaciales, fotogrametría y fuentes abiertas a casos de violencia política en Nicaragua, Honduras y Gaza. Docente visitante en la Escuela de Arquitectura de la Universidad de Costa Rica.",
+    "bio": "Arquitecto e investigador con posgrados en Arquitectura investigativa (Goldsmiths, University of London) y en Arquitectura Avanzada (IAAC, Barcelona). Sus intereses se enfocan en una práctica espacial crítica basada en metodologías forenses. Ha trabajado como asistente de investigación en Forensic Architecture en Londres e investigador espacial en re/Presentare para México, aplicando análisis geoespaciales, fotogrametría y fuentes abiertas a casos de violencia política en Nicaragua, Honduras y Gaza. Docente visitante en la Escuela de Arquitectura de la Universidad de Costa Rica.",
     "contribuciones": null,
     "fotos": null,
   },
