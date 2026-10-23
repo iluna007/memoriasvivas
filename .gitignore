@@ -51,3 +51,4 @@ vite.bench.config.js
 *.HEIC
 *.MOV
 Claude outputs/
+_actividades-pdf/

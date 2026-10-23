@@ -570,6 +570,31 @@ function PanelAnimado({ id, abierto, children }) {
   )
 }
 
+function BotonRegistro({ abierto, onClick, controls, isLight, tr }) {
+  const cls = isLight
+    ? 'border-zinc-300 text-zinc-800 hover:border-zinc-950 hover:bg-zinc-950 hover:text-white'
+    : 'border-white/30 text-white/90 hover:border-white hover:bg-white hover:text-zinc-950'
+  return (
+    <button
+      data-revelar
+      type="button"
+      className={`group mt-4 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[13px] font-medium tracking-wide transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current ${cls}`}
+      aria-expanded={abierto}
+      aria-controls={controls}
+      onClick={onClick}
+    >
+      {abierto ? tr('actividades.ocultarDetalle') : tr('actividades.verDetalle')}
+      <svg
+        viewBox="0 0 16 16"
+        className={`h-3.5 w-3.5 transition-transform duration-200 ${abierto ? '-rotate-90' : 'group-hover:translate-x-0.5'}`}
+        aria-hidden
+      >
+        <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </button>
+  )
+}
+
 function Detalle({ nodo, onOpen, isLight, t, nivel }) {
   const { t: tr, i18n } = useTranslation()
   const lang = idiomaUi(i18n)
@@ -587,18 +612,16 @@ function Detalle({ nodo, onOpen, isLight, t, nivel }) {
         <p className={`mt-1 text-xs ${t.cardSub}`}>{nodo.territorios.map((x) => x.nombre).join(', ')}</p>
       )}
       {tieneDetalle(nodo) && (
-        <button
-          type="button"
-          className={`mt-2 text-sm underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current ${t.cardTitle}`}
-          aria-expanded={abierto}
-          aria-controls={panelId}
+        <BotonRegistro
+          abierto={abierto}
+          controls={panelId}
+          isLight={isLight}
+          tr={tr}
           onClick={() => {
             setMontado(true)
             setAbierto((v) => !v)
           }}
-        >
-          {abierto ? tr('actividades.ocultarDetalle') : tr('actividades.verDetalle')}
-        </button>
+        />
       )}
       {montado && (
         <PanelAnimado id={panelId} abierto={abierto}>
@@ -713,19 +736,16 @@ function NodoRaiz({ nodo, lado, visible, prioridad = false, onOpen, isLight, t }
             {lugares && <p data-revelar className={`mt-1 text-sm ${t.cardSub}`}>{lugares}</p>}
             {mediosTxt && <p data-revelar className={`mt-2 text-xs ${t.cardHint}`}>{mediosTxt}</p>}
             {detalle && (
-              <button
-                data-revelar
-                type="button"
-                className={`mt-4 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current ${t.btnOutline}`}
-                aria-expanded={abierto}
-                aria-controls={panelId}
+              <BotonRegistro
+                abierto={abierto}
+                controls={panelId}
+                isLight={isLight}
+                tr={tr}
                 onClick={() => {
                   setMontado(true)
                   setAbierto((v) => !v)
                 }}
-              >
-                {abierto ? tr('actividades.ocultarDetalle') : tr('actividades.verDetalle')}
-              </button>
+              />
             )}
             {montado && (
               <PanelAnimado id={panelId} abierto={abierto}>
