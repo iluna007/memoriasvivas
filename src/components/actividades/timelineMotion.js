@@ -11,6 +11,11 @@ function desplazamiento(nodo, desktop) {
   return nodo.dataset.lado === 'der' ? distancia : -distancia
 }
 
+function guardarMovimiento(nodo, tl) {
+  nodo._mov?.kill()
+  nodo._mov = tl
+}
+
 export function animarEntrada(batch, desktop = window.matchMedia('(min-width: 768px)').matches) {
   const lista = [...batch].filter((nodo) => nodo.isConnected && nodo.dataset.revelado !== '1')
   lista.forEach((nodo, i) => {
@@ -21,19 +26,46 @@ export function animarEntrada(batch, desktop = window.matchMedia('(min-width: 76
     const bits = nodo.querySelectorAll('[data-revelar]')
     if (tarjeta) gsap.set(tarjeta, { x: desplazamiento(nodo, desktop) })
     const tl = gsap.timeline({ delay: i * 0.08 })
+    guardarMovimiento(nodo, tl)
     if (tarjeta) {
       tl.to(tarjeta, {
         autoAlpha: 1,
         x: 0,
         duration: 0.95,
         ease: 'power3.out',
+        overwrite: 'auto',
         onStart() { tarjeta.style.willChange = 'transform' },
         onComplete() { tarjeta.style.willChange = 'auto' },
       }, 0)
     }
-    if (punto) tl.to(punto, { scale: 1, duration: 0.55, ease: 'back.out(2.4)' }, 0)
-    if (pulso) tl.to(pulso, { scale: 2.4, autoAlpha: 0, duration: 0.7, ease: 'power2.out' }, 0.05)
-    if (bits.length) tl.to(bits, { autoAlpha: 1, y: 0, stagger: 0.07, duration: 0.55 }, 0.12)
+    if (punto) tl.to(punto, { scale: 1, duration: 0.55, ease: 'back.out(2.4)', overwrite: 'auto' }, 0)
+    if (pulso) tl.to(pulso, { scale: 2.4, autoAlpha: 0, duration: 0.7, ease: 'power2.out', overwrite: 'auto' }, 0.05)
+    if (bits.length) tl.to(bits, { autoAlpha: 1, y: 0, stagger: 0.07, duration: 0.55, overwrite: 'auto' }, 0.12)
+  })
+}
+
+export function animarSalida(batch, desktop = window.matchMedia('(min-width: 768px)').matches) {
+  const lista = [...batch].filter((nodo) => nodo.isConnected && nodo.dataset.revelado === '1').reverse()
+  lista.forEach((nodo, i) => {
+    nodo.dataset.revelado = '0'
+    const tarjeta = nodo.querySelector('[data-tarjeta]')
+    const punto = nodo.querySelector('[data-punto]')
+    const pulso = nodo.querySelector('[data-pulso]')
+    const bits = nodo.querySelectorAll('[data-revelar]')
+    const tl = gsap.timeline({ delay: i * 0.05 })
+    guardarMovimiento(nodo, tl)
+    if (bits.length) tl.to(bits, { autoAlpha: 0, y: 16, stagger: 0.03, duration: 0.35, overwrite: 'auto' }, 0)
+    if (tarjeta) {
+      tl.to(tarjeta, {
+        autoAlpha: 0,
+        x: desplazamiento(nodo, desktop),
+        duration: 0.7,
+        ease: 'power3.in',
+        overwrite: 'auto',
+      }, 0)
+    }
+    if (punto) tl.to(punto, { scale: 0, duration: 0.4, ease: 'power2.in', overwrite: 'auto' }, 0)
+    if (pulso) tl.to(pulso, { scale: 1, autoAlpha: 0.45, duration: 0.35, overwrite: 'auto' }, 0)
   })
 }
 
@@ -203,8 +235,8 @@ export function engancharNodos(root, bucket) {
     ScrollTrigger.batch(frescos, {
       scroller: getScroller(),
       start: 'top 85%',
-      once: true,
       onEnter: (batch) => bucket.add(() => animarEntrada(batch)),
+      onLeaveBack: (batch) => bucket.add(() => animarSalida(batch)),
     })
   })
 }

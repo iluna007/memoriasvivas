@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import Map, { Marker, Source } from 'react-map-gl/mapbox'
+import Map, { Layer, Marker, Source } from 'react-map-gl/mapbox'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { buildOsaMapPins } from '../data/osaMapPins'
 
@@ -12,6 +12,13 @@ const MAP_STYLE = 'mapbox://styles/ikerluna/cmtpzoh1k00iz01s21qb3hlsf'
  * Vista inicial alineada a la captura de Studio:
  * península de Osa + Golfo Dulce, inclinada hacia el NNE.
  */
+const FERROCARRIL_SRC = '/mapa/ferrocarril-del-sur.geojson'
+
+const FERROCARRIL_TRAZO = {
+  type: 'line',
+  layout: { 'line-cap': 'round', 'line-join': 'round' },
+}
+
 const INITIAL_VIEW_STATE = {
   longitude: -83.365108,
   latitude: 8.595163,
@@ -146,6 +153,7 @@ export default function Mapa() {
   const token = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN
   const [selectedTerritorio, setSelectedTerritorio] = useState(null)
   const [selectedVideo, setSelectedVideo] = useState(null)
+  const [mostrarFerrocarril, setMostrarFerrocarril] = useState(true)
 
   const pins = useMemo(() => buildOsaMapPins(), [])
 
@@ -194,6 +202,27 @@ export default function Mapa() {
             tileSize={512}
             maxzoom={14}
           />
+          {mostrarFerrocarril && (
+            <Source id="ferrocarril-sur" type="geojson" data={FERROCARRIL_SRC}>
+              <Layer
+                id="ferrocarril-sur-halo"
+                {...FERROCARRIL_TRAZO}
+                paint={{
+                  'line-color': '#f6f1e6',
+                  'line-width': ['interpolate', ['linear'], ['zoom'], 8, 2.2, 12, 5, 15, 8],
+                  'line-opacity': 0.9,
+                }}
+              />
+              <Layer
+                id="ferrocarril-sur"
+                {...FERROCARRIL_TRAZO}
+                paint={{
+                  'line-color': '#3a2a1c',
+                  'line-width': ['interpolate', ['linear'], ['zoom'], 8, 1.1, 12, 2.4, 15, 4],
+                }}
+              />
+            </Source>
+          )}
           {pins.map((pin) => (
             <Marker key={pin.pinId} longitude={pin.longitude} latitude={pin.latitude} anchor="bottom">
               <button
@@ -214,6 +243,23 @@ export default function Mapa() {
             </Marker>
           ))}
         </Map>
+
+        <aside className="absolute right-4 top-4 z-10 min-w-44 rounded-lg bg-black/55 px-3 py-2.5 text-white shadow-md">
+          <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">{t('mapa.leyenda')}</p>
+          <button
+            type="button"
+            aria-pressed={mostrarFerrocarril}
+            aria-label={t(mostrarFerrocarril ? 'mapa.ocultarCapa' : 'mapa.mostrarCapa', { nombre: t('mapa.ferrocarril') })}
+            onClick={() => setMostrarFerrocarril((v) => !v)}
+            className={`mt-2 flex w-full items-center gap-2 text-left text-[12px] leading-none ${mostrarFerrocarril ? 'text-white' : 'text-white/40'}`}
+          >
+            <span
+              className={`inline-block h-[3px] w-6 shrink-0 rounded-full shadow-[inset_0_0_0_1px_#3a2a1c] ${mostrarFerrocarril ? 'bg-[#f6f1e6]' : 'bg-white/25'}`}
+              aria-hidden
+            />
+            {t('mapa.ferrocarril')}
+          </button>
+        </aside>
 
         {selectedTerritorio && (
           <MapaVideosPanel
