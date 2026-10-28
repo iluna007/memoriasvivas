@@ -17,7 +17,9 @@
     "pedagogias": "Pedagogies",
     "actividades": "Activities",
     "contacto": "Contact",
-    "archivo": "Archive"
+    "archivo": "Archive",
+    "abrirMenu": "Open menu",
+    "cerrarMenu": "Close menu"
   },
   "comun": {
     "cerrar": "Close",
@@ -38,7 +40,8 @@
     "cambiarEspanol": "Switch to Spanish",
     "espanol": "Español",
     "ingles": "English",
-    "enConstruccion": "This section is still being built. Material from Memorias Vivas will be published here soon."
+    "enConstruccion": "This section is still being built. Material from Memorias Vivas will be published here soon.",
+    "verYoutube": "Watch on YouTube"
   },
   "intro": {
     "dialogo": "Memorias Vivas introduction",
@@ -123,7 +126,8 @@
     "zoom": "zoom in / out",
     "clicDer": "Right click",
     "arrastrarMover": "drag to pan",
-    "cerrarLeyenda": "Close legend"
+    "cerrarLeyenda": "Close legend",
+    "opacidadAyuda": "0 = no flicker; 1 = maximum transparency contrast"
   },
   "actividades": {
     "lead": "Workshops, walks, gatherings, and other activities held or planned with communities in southern Costa Rica.",
@@ -156,7 +160,8 @@
     "videos_other": "{{count}} videos",
     "pdfs_one": "{{count}} PDF",
     "pdfs_other": "{{count}} PDFs",
-    "mapa": "Timeline map"
+    "mapa": "Timeline map",
+    "sinFecha": "No date"
   },
   "categorias": {
     "Gira": "Field trip",
@@ -232,7 +237,9 @@
       "date": "Date",
       "title": "Title",
       "id": "Account ID"
-    }
+    },
+    "sinFecha": "No date",
+    "sinTipo": "untyped"
   },
   "diccionario": {
     "titulo": "Dictionary of concepts",
@@ -251,7 +258,8 @@
       "eje": "Axis",
       "id": "ID",
       "title": "Term"
-    }
+    },
+    "sinEje": "No axis"
   },
   "contacto": {
     "titulo": "Contact",
@@ -305,6 +313,11 @@
     "abrirDoc": "to open the document",
     "tocar": "Tap",
     "deslizar": "and swipe on mobile",
-    "cerrarLeyenda": "Close legend"
+    "cerrarLeyenda": "Close legend",
+    "documental": "documentary",
+    "badgeDocumental": "Documentary"
+  },
+  "personas": {
+    "otros": "Others"
   }
 }

@@ -346,7 +346,7 @@ export function Footer({ theme = 'dark' }) {
 
         <div className={`mt-10 border-t pt-8 ${t.divider}`}>
           <div
-            className={`mx-auto flex max-w-4xl flex-nowrap items-center justify-center gap-x-2 overflow-x-auto pb-1 text-xs leading-snug sm:gap-x-4 sm:text-sm ${t.body}`}
+            className={`mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs leading-snug sm:gap-x-4 sm:text-sm ${t.body}`}
           >
             <span className="flex shrink-0 items-center gap-1.5 whitespace-nowrap">
               <IconCode className={`h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4 ${theme === 'light' ? 'text-zinc-500' : 'text-white/45'}`} aria-hidden />
