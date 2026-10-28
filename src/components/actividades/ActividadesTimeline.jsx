@@ -761,7 +761,7 @@ function NodoRaiz({ nodo, lado, visible, prioridad = false, onOpen, isLight, t }
 
 function Filtro({ label, value, onChange, children, isLight }) {
   return (
-    <label className="flex min-w-[9rem] flex-1 flex-col gap-1 text-[10px] font-semibold uppercase tracking-wide sm:flex-none">
+    <label className="flex w-full min-w-0 flex-1 flex-col gap-1 text-[10px] font-semibold uppercase tracking-wide sm:w-auto sm:min-w-[9rem] sm:flex-none">
       {label}
       <select
         value={value}
@@ -959,7 +959,7 @@ export default function ActividadesTimeline({ theme = 'dark' }) {
       {visibles === 0 && (
         <p className={`text-sm ${t.body}`}>{tr('actividades.vacio')}</p>
       )}
-      <div id="linea-tiempo" ref={lineaRef} className="relative" hidden={visibles === 0}>
+      <div id="linea-tiempo" ref={lineaRef} className="relative overflow-x-clip" hidden={visibles === 0}>
           <div
             aria-hidden
             className={`pointer-events-none absolute bottom-0 top-0 left-3 -translate-x-1/2 border-l-2 border-dotted md:left-1/2 ${isLight ? 'border-zinc-400/80' : 'border-white/30'}`}
@@ -1002,7 +1002,7 @@ export default function ActividadesTimeline({ theme = 'dark' }) {
                       data-anio
                       className="pl-10 text-4xl font-semibold tracking-tight md:pl-0 md:text-center md:text-6xl"
                     >
-                      {grupo.etiqueta}
+                      {grupo.key === 'sin-fecha' ? tr('actividades.sinFecha') : grupo.etiqueta}
                     </h2>
                   </div>
                 </div>

@@ -17,7 +17,9 @@
     "pedagogias": "Pedagogías",
     "actividades": "Actividades",
     "contacto": "Contacto",
-    "archivo": "Archivo"
+    "archivo": "Archivo",
+    "abrirMenu": "Abrir menú",
+    "cerrarMenu": "Cerrar menú"
   },
   "comun": {
     "cerrar": "Cerrar",
@@ -38,7 +40,8 @@
     "cambiarEspanol": "Cambiar a español",
     "espanol": "Español",
     "ingles": "English",
-    "enConstruccion": "Esta sección está en construcción. Pronto se publicará material del proyecto Memorias Vivas."
+    "enConstruccion": "Esta sección está en construcción. Pronto se publicará material del proyecto Memorias Vivas.",
+    "verYoutube": "Ver en YouTube"
   },
   "intro": {
     "dialogo": "Introducción Memorias Vivas",
@@ -123,7 +126,8 @@
     "zoom": "zoom in / out",
     "clicDer": "Clic der",
     "arrastrarMover": "arrastrar → desplazar",
-    "cerrarLeyenda": "Cerrar leyenda"
+    "cerrarLeyenda": "Cerrar leyenda",
+    "opacidadAyuda": "0 = sin parpadeo; 1 = máximo contraste de transparencia"
   },
   "actividades": {
     "lead": "Talleres, caminatas, encuentros y otras actividades realizadas o programadas con comunidades de la región sur de Costa Rica.",
@@ -156,7 +160,8 @@
     "videos_other": "{{count}} videos",
     "pdfs_one": "{{count}} PDF",
     "pdfs_other": "{{count}} PDFs",
-    "mapa": "Mapa de la línea de tiempo"
+    "mapa": "Mapa de la línea de tiempo",
+    "sinFecha": "Sin fecha"
   },
   "categorias": {
     "Gira": "Gira",
@@ -232,7 +237,9 @@
       "date": "Fecha",
       "title": "Título",
       "id": "ID relato"
-    }
+    },
+    "sinFecha": "Sin fecha",
+    "sinTipo": "sin tipo"
   },
   "diccionario": {
     "titulo": "Diccionario de conceptos",
@@ -251,7 +258,8 @@
       "eje": "Eje",
       "id": "ID",
       "title": "Término"
-    }
+    },
+    "sinEje": "Sin eje"
   },
   "contacto": {
     "titulo": "Contacto",
@@ -305,6 +313,11 @@
     "abrirDoc": "abrir documento",
     "tocar": "Tocar",
     "deslizar": "deslizar en móvil",
-    "cerrarLeyenda": "Cerrar leyenda"
+    "cerrarLeyenda": "Cerrar leyenda",
+    "documental": "documental",
+    "badgeDocumental": "Documental"
+  },
+  "personas": {
+    "otros": "Otros"
   }
 }
