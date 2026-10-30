@@ -169,7 +169,7 @@ export function ControlsPanel({ theme = 'dark', params, onChange }) {
             <span className={valMuted}>{opacityTwinkle.toFixed(2)}</span>
           </label>
           <input type="range" min="0" max="1" step="0.05" value={opacityTwinkle} onChange={(e) => handleChange('opacityTwinkle', parseFloat(e.target.value))} className={rangeTrack} />
-          <p className={hint}>0 = sin parpadeo; 1 = máximo contraste de transparencia</p>
+          <p className={hint}>{t('inicio.opacidadAyuda')}</p>
         </div>
 
         <div>

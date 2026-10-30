@@ -89,9 +89,9 @@ export default function PublicacionTile({
     : null
 
   const label = isPlaceholder
-    ? 'Espacio disponible — Pensemos el archivo'
+    ? `${tr('publicaciones.espacio')}: ${tr('publicaciones.pensar')}`
     : isDocumental
-      ? `${item.titulo} — documental`
+      ? `${item.titulo} (${tr('publicaciones.documental')})`
       : item.titulo
 
   const animateHover = (entering) => {
@@ -151,7 +151,7 @@ export default function PublicacionTile({
         <p className="poster__meta line-clamp-3">{item.detalle}</p>
       ) : null}
       {isDocumental ? (
-        <span className="poster__badge poster__badge--documental">▶ Documental</span>
+        <span className="poster__badge poster__badge--documental">▶ {tr('publicaciones.badgeDocumental')}</span>
       ) : null}
       {!isDocumental && item.enlaceTipo === 'archive.org' ? <span className="poster__badge">Archive.org</span> : null}
       {!isDocumental && item.doi ? <span className="poster__badge">DOI {item.doi}</span> : null}

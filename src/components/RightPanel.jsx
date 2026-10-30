@@ -3,9 +3,9 @@ import { getSphereContent } from '../data/cmsSphereData'
 import { getSphereColor } from '../data/spheres'
 
 export function RightPanel({ selectedSphereId, onClose, theme = 'dark' }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const isLight = theme === 'light'
-  const content = selectedSphereId != null ? getSphereContent(selectedSphereId) : null
+  const content = selectedSphereId != null ? getSphereContent(selectedSphereId, i18n.language) : null
   const color = selectedSphereId != null ? getSphereColor(selectedSphereId) : null
   const title = content?.title ?? ''
   const description = content?.description ?? ''

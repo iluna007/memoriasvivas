@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Outlet, Navigate, useLocation } from 'react-router-dom'
-import { idiomaDeRuta } from './i18n/ruta'
+import { LANG_KEY, idiomaDeRuta } from './i18n/ruta'
 import i18n from './i18n'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
@@ -49,9 +49,17 @@ function asegurarEnlace(hreflang) {
   return link
 }
 
+function preferenciaEspanol() {
+  try {
+    return localStorage.getItem(LANG_KEY) === 'es'
+  } catch {
+    return false
+  }
+}
+
 function IdiomaDocumento() {
   const { pathname } = useLocation()
-  const lang = idiomaDeRuta(pathname)
+  const lang = pathname === '/' && !preferenciaEspanol() ? 'en' : idiomaDeRuta(pathname)
 
   useEffect(() => {
     let activo = true
@@ -72,7 +80,7 @@ function IdiomaDocumento() {
       const enUrl = origen + (sin === '/' ? '/en' : `/en${sin}`)
       asegurarEnlace('es').href = esUrl
       asegurarEnlace('en').href = enUrl
-      asegurarEnlace('x-default').href = esUrl
+      asegurarEnlace('x-default').href = enUrl
     })
     return () => {
       activo = false
@@ -100,6 +108,12 @@ function paginas(prefijo) {
     <Route key={p('actividades')} path={p('actividades')} element={<Actividades />} />,
     <Route key={p('contacto')} path={p('contacto')} element={<Contacto />} />,
   ]
+}
+
+function Entrada() {
+  const [espanol] = useState(preferenciaEspanol)
+  if (espanol) return <Intro />
+  return <Navigate to="/en" replace />
 }
 
 function Layout({ theme, onThemeToggle, bgColor, onBgColorChange }) {
@@ -156,7 +170,7 @@ export default function App() {
     <BrowserRouter>
       <IdiomaDocumento />
       <Routes>
-        <Route path="/" element={<Intro />} />
+        <Route path="/" element={<Entrada />} />
         <Route path="/en" element={<Intro />} />
         <Route path="/intro" element={<Navigate to="/" replace />} />
         <Route path="/en/intro" element={<Navigate to="/en" replace />} />

@@ -1,6 +1,16 @@
-import citas from './CMS/citas.js'
+import citasCms from './CMS/citas.js'
+import citasEn from './en/citas.js'
 import entidades from './CMS/8_comunidad_entidades.json'
 import { normalizeConceptId } from './cmsSphereData.js'
+
+/**
+ * Citas del CMS con la traducción al inglés superpuesta desde src/data/en/citas.js
+ * (por id_cita), salvo que la hoja ya traiga texto_cita_en.
+ */
+const citas = citasCms.map((c) => ({
+  ...c,
+  texto_cita_en: c.texto_cita_en || citasEn[c.id_cita] || undefined,
+}))
 
 /** "C01, C08" -> ["C01", "C08"] */
 function parseIdsConceptos(str) {

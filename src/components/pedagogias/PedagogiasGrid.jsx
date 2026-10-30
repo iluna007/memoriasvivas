@@ -7,6 +7,7 @@ import {
   PEDAGOGIAS_LICENCIA,
   isExternalPedagogiasUrl,
 } from '../../data/pedagogias'
+import { licenciaLocalizada, pedagogiaLocalizada } from '../../data/localizado'
 
 function CCIcon({ className }) {
   return (
@@ -18,6 +19,8 @@ function CCIcon({ className }) {
 }
 
 function AvisoLicencia({ theme }) {
+  const { i18n } = useTranslation()
+  const licencia = licenciaLocalizada(PEDAGOGIAS_LICENCIA, i18n.language)
   const isLight = theme === 'light'
   const box = isLight
     ? 'border border-zinc-200 bg-white text-zinc-800'
@@ -33,10 +36,10 @@ function AvisoLicencia({ theme }) {
       <p>
         <Trans
           i18nKey="divulgacion.licencia"
-          values={{ nombre: PEDAGOGIAS_LICENCIA.nombre }}
+          values={{ nombre: licencia.nombre }}
           components={{
             licencia: (
-              <a href={PEDAGOGIAS_LICENCIA.url} target="_blank" rel="noopener noreferrer" className={`font-semibold ${linkCls}`} />
+              <a href={licencia.url} target="_blank" rel="noopener noreferrer" className={`font-semibold ${linkCls}`} />
             ),
           }}
         />
@@ -46,8 +49,9 @@ function AvisoLicencia({ theme }) {
 }
 
 /** Mini-tarjeta de un archivo individual, dentro de una categoría expandida. */
-function MaterialItemCard({ item, theme }) {
-  const { t: tr } = useTranslation()
+function MaterialItemCard({ item: itemEs, theme }) {
+  const { t: tr, i18n } = useTranslation()
+  const item = pedagogiaLocalizada(itemEs, i18n.language)
   const isLight = theme === 'light'
   const t = getContentPageTheme(theme)
   const disponible = Boolean(item.url)

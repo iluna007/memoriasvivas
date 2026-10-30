@@ -1,10 +1,12 @@
 import { useOutletContext } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { COMUNIDAD_POR_LUGAR } from '../data/comunidad'
 import { getContentPageTheme } from '../utils/pageThemeClasses'
 
 export default function Personas() {
   const { theme = 'dark' } = useOutletContext() ?? {}
   const t = getContentPageTheme(theme)
+  const { t: tr } = useTranslation()
 
   return (
     <main className="min-h-full pt-16">
@@ -14,7 +16,7 @@ export default function Personas() {
         {COMUNIDAD_POR_LUGAR.map((grupo) => (
           <section key={grupo.lugar} className="mb-10 last:mb-0">
             <h2 className={`mb-3 text-xs font-semibold uppercase tracking-[0.2em] ${t.muted}`}>
-              {grupo.lugar}
+              {grupo.lugar === 'Otros' ? tr('personas.otros') : grupo.lugar}
             </h2>
 
             <ul className={`grid grid-cols-1 gap-x-8 gap-y-1.5 sm:grid-cols-2 ${t.body}`}>
