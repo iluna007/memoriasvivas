@@ -179,7 +179,7 @@
     "sinVideos": "Todavía no hay videos asignados a este territorio.",
     "verVideos": "Ver videos de {{nombre}}",
     "leyenda": "Leyenda",
-    "ferrocarril": "Ferrocarril del Sur",
+    "ferrocarril": "Ferrocarril de la United Fruit Company (UFCO)",
     "mostrarCapa": "Mostrar {{nombre}}",
     "ocultarCapa": "Ocultar {{nombre}}",
     "faltaToken": "Falta la variable VITE_MAPBOX_ACCESS_TOKEN en el entorno del build.",

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import Map, { Layer, Marker, Source } from 'react-map-gl/mapbox'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { buildOsaMapPins } from '../data/osaMapPins'
+import { tituloVideo } from '../data/localizado'
 
 /** Estilo personalizado Mapbox Studio (agua beige / relieve Osa) */
 const MAP_STYLE = 'mapbox://styles/ikerluna/cmtpzoh1k00iz01s21qb3hlsf'
@@ -51,7 +52,8 @@ function getYoutubeEmbedUrl(url) {
 
 /** Panel lateral izquierdo (misma base visual que LeftPanel de constelaciones). */
 function MapaVideosPanel({ territorio, selectedVideo, onSelectVideo, onBackToList, onClose, theme }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const tituloDe = (v) => tituloVideo(v.id, v.titulo, i18n.language)
   const isLight = theme === 'light'
 
   const panelShell = isLight
@@ -89,11 +91,11 @@ function MapaVideosPanel({ territorio, selectedVideo, onSelectVideo, onBackToLis
               ← {t('mapa.volver')}
             </button>
             <h2 className="mb-1 pr-12 text-xl font-semibold sm:text-2xl">{territorio.nombre}</h2>
-            <p className={`mb-4 text-sm ${meta}`}>{selectedVideo.titulo}</p>
+            <p className={`mb-4 text-sm ${meta}`}>{tituloDe(selectedVideo)}</p>
             <div className={`aspect-video w-full overflow-hidden rounded-lg border bg-black ${thumbBorder}`}>
               <iframe
                 src={getYoutubeEmbedUrl(selectedVideo.url)}
-                title={selectedVideo.titulo}
+                title={tituloDe(selectedVideo)}
                 className="h-full w-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -132,7 +134,7 @@ function MapaVideosPanel({ territorio, selectedVideo, onSelectVideo, onBackToLis
                           (isLight ? 'text-zinc-800' : 'text-white/90')
                         }
                       >
-                        {v.titulo}
+                        {tituloDe(v)}
                       </span>
                     </button>
                   </li>
@@ -244,14 +246,14 @@ export default function Mapa() {
           ))}
         </Map>
 
-        <aside className="absolute right-4 top-4 z-10 min-w-44 rounded-lg bg-black/55 px-3 py-2.5 text-white shadow-md">
+        <aside className="absolute right-4 top-4 z-10 w-max max-w-[min(16rem,calc(100%-2rem))] rounded-lg bg-black/55 px-3 py-2.5 text-white shadow-md">
           <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">{t('mapa.leyenda')}</p>
           <button
             type="button"
             aria-pressed={mostrarFerrocarril}
             aria-label={t(mostrarFerrocarril ? 'mapa.ocultarCapa' : 'mapa.mostrarCapa', { nombre: t('mapa.ferrocarril') })}
             onClick={() => setMostrarFerrocarril((v) => !v)}
-            className={`mt-2 flex w-full items-center gap-2 text-left text-[12px] leading-none ${mostrarFerrocarril ? 'text-white' : 'text-white/40'}`}
+            className={`mt-2 flex w-full items-center gap-2 text-left text-[12px] leading-snug ${mostrarFerrocarril ? 'text-white' : 'text-white/40'}`}
           >
             <span
               className={`inline-block h-[3px] w-6 shrink-0 rounded-full shadow-[inset_0_0_0_1px_#3a2a1c] ${mostrarFerrocarril ? 'bg-[#f6f1e6]' : 'bg-white/25'}`}

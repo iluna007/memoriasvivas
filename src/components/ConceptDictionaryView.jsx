@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import conceptos from '../data/CMS/6_conceptos.js'
+import { conceptosLocalizados } from '../data/localizado.js'
 import { CONCEPT_SORT_OPTIONS, getSortedConceptos } from '../utils/sortArchivo.js'
 import SortToolbar from './archivo/SortToolbar.jsx'
 
@@ -75,7 +75,7 @@ function LetterAccordion({ letter, count, children }) {
 }
 
 export function ConceptDictionaryView() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [conceptSort, setConceptSort] = useState('abc')
   const [expanded, setExpanded] = useState(() => ({}))
 
@@ -86,7 +86,10 @@ export function ConceptDictionaryView() {
     }
     return map
   }, [t])
-  const conceptData = useMemo(() => getSortedConceptos(conceptos, conceptSort), [conceptSort])
+  const conceptData = useMemo(
+    () => getSortedConceptos(conceptosLocalizados(i18n.language), conceptSort),
+    [conceptSort, i18n.language]
+  )
   const dictionaryByLetter = conceptSort === 'abc'
 
   const toggle = (id) => {
@@ -107,7 +110,7 @@ export function ConceptDictionaryView() {
             <section key={groupKey}>
               {keys.length > 1 && !dictionaryByLetter && (
                 <h3 className="border-b border-zinc-500/20 bg-black/[0.06] px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-inherit/60 sm:px-4 sm:py-2">
-                  {groupKey}
+                  {groupKey === 'Sin eje' ? t('diccionario.sinEje') : groupKey}
                 </h3>
               )}
               {dictionaryByLetter ? (

@@ -12,7 +12,7 @@ import {
   MathUtils,
   SRGBColorSpace
 } from 'three'
-import { SPHERE_CONTENT } from './data/cmsSphereData'
+import { SPHERE_CONTENT, getSphereContent } from './data/cmsSphereData'
 import { getSphereInitialPositions, getSphereMotionParams, getSphereColor } from './data/spheres'
 
 const SPHERE_COUNT = SPHERE_CONTENT.length
@@ -496,7 +496,7 @@ function StarfieldBackground({ density = 0.53 }) {
 }
 
 /* ─── Escena principal ─── */
-export function Scene({ paused, onSphereClick, sceneParams = {} }) {
+export function Scene({ paused, onSphereClick, sceneParams = {}, lang = 'es' }) {
   const {
     motionSpeed = 1,
     proximityThreshold = 5,
@@ -537,7 +537,7 @@ export function Scene({ paused, onSphereClick, sceneParams = {} }) {
           id={i}
           basePosition={pos}
           motion={motionParams[i]}
-          title={SPHERE_CONTENT[i]?.title ?? `Estrella ${i + 1}`}
+          title={getSphereContent(i, lang)?.title ?? `${lang.startsWith('en') ? 'Star' : 'Estrella'} ${i + 1}`}
           color={getSphereColor(i)}
           paused={paused}
           onSelect={onSphereClick}

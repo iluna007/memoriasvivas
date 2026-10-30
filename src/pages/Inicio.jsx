@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { Scene } from '../Scene'
@@ -25,6 +26,7 @@ const DEFAULT_PARAMS = {
 
 export default function Inicio() {
   const { theme = 'dark' } = useOutletContext() ?? {}
+  const { i18n } = useTranslation()
   const [selectedSphere, setSelectedSphere] = useState(null)
   const [sceneParams, setSceneParams] = useState(DEFAULT_PARAMS)
   const isPaused = selectedSphere !== null
@@ -66,6 +68,7 @@ export default function Inicio() {
           paused={isPaused}
           onSphereClick={setSelectedSphere}
           sceneParams={sceneParams}
+          lang={i18n.language}
         />
         <OrbitControls
           enablePan={true}

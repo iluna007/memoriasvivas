@@ -5,7 +5,7 @@
  * Los colores se definen en spheres.js (SPHERE_COLORS), no aquí.
  */
 import archivo from './CMS/1_archivo.js'
-import conceptos from './CMS/6_conceptos.js'
+import { conceptosLocalizados } from './localizado.js'
 
 /** Normaliza "C1", "c01", "C18" → "C01" … "C18" */
 export function normalizeConceptId(raw) {
@@ -25,12 +25,19 @@ function parseConceptIdsFromRelato(idsConceptos) {
     .filter(Boolean)
 }
 
+const ETIQUETAS = {
+  es: { referencia: 'Referencia', eje: 'Eje', concepto: 'Concepto' },
+  en: { referencia: 'Reference', eje: 'Axis', concepto: 'Concept' },
+}
+
 /** Conceptos ordenados C01…C18 (una esfera por concepto). */
-const conceptosSorted = [...conceptos].sort((a, b) => {
-  const na = normalizeConceptId(a.id_concepto) ?? ''
-  const nb = normalizeConceptId(b.id_concepto) ?? ''
-  return na.localeCompare(nb, undefined, { numeric: true })
-})
+function ordenar(conceptos) {
+  return [...conceptos].sort((a, b) => {
+    const na = normalizeConceptId(a.id_concepto) ?? ''
+    const nb = normalizeConceptId(b.id_concepto) ?? ''
+    return na.localeCompare(nb, undefined, { numeric: true })
+  })
+}
 
 /**
  * Metadatos de producción por relato (1_archivo.js).
@@ -49,7 +56,7 @@ export function relatoToVideoEntry(rel) {
 }
 
 /** Array de entradas de vídeo por id de concepto normalizado */
-function buildVideosByConcept() {
+function buildVideosByConcept(conceptosSorted) {
   const map = new Map()
   for (const c of conceptosSorted) {
     const id = normalizeConceptId(c.id_concepto)
@@ -68,33 +75,42 @@ function buildVideosByConcept() {
   return map
 }
 
-const videosByConcept = buildVideosByConcept()
-
-function buildDescription(c) {
+function buildDescription(c, et) {
   const breve = c['descripción_breve'] ?? c.descripción_breve
   const parts = [breve].filter(Boolean)
-  if (c.autor_referencia) parts.push(`Referencia: ${c.autor_referencia}`)
-  if (c.eje) parts.push(`Eje: ${c.eje}`)
+  if (c.autor_referencia) parts.push(`${et.referencia}: ${c.autor_referencia}`)
+  if (c.eje) parts.push(`${et.eje}: ${c.eje}`)
   return parts.join('\n\n')
 }
 
-export const SPHERE_CONTENT = conceptosSorted.map((c, index) => {
-  const cid = normalizeConceptId(c.id_concepto) ?? `C${String(index + 1).padStart(2, '0')}`
-  return {
-    id: cid.toLowerCase(),
-    title: c.concepto ?? `Concepto ${index + 1}`,
-    description: buildDescription(c),
-    image: '',
-    images: [],
-    videos: videosByConcept.get(cid) ?? []
-  }
-})
+function construirContenido(lang) {
+  const et = ETIQUETAS[lang]
+  const conceptosSorted = ordenar(conceptosLocalizados(lang))
+  const videosByConcept = buildVideosByConcept(conceptosSorted)
+  return conceptosSorted.map((c, index) => {
+    const cid = normalizeConceptId(c.id_concepto) ?? `C${String(index + 1).padStart(2, '0')}`
+    return {
+      id: cid.toLowerCase(),
+      title: c.concepto ?? `${et.concepto} ${index + 1}`,
+      description: buildDescription(c, et),
+      image: '',
+      images: [],
+      videos: videosByConcept.get(cid) ?? []
+    }
+  })
+}
+
+const CONTENIDO = { es: construirContenido('es'), en: construirContenido('en') }
+
+/** Contenido en español (el número de esferas es igual en ambos idiomas). */
+export const SPHERE_CONTENT = CONTENIDO.es
 
 export const SPHERE_COUNT = SPHERE_CONTENT.length
 
 /**
  * @param {number} id - Índice de la esfera (0 … SPHERE_COUNT - 1)
+ * @param {string} [lang] - 'es' (por defecto) o 'en'
  */
-export function getSphereContent(id) {
-  return SPHERE_CONTENT[id]
+export function getSphereContent(id, lang = 'es') {
+  return (String(lang).startsWith('en') ? CONTENIDO.en : CONTENIDO.es)[id]
 }

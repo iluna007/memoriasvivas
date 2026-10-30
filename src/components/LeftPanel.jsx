@@ -14,7 +14,7 @@ export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
   const en = i18n.language?.startsWith('en')
   const [traducidas, setTraducidas] = useState({})
   const isLight = theme === 'light'
-  const content = selectedSphereId != null ? getSphereContent(selectedSphereId) : null
+  const content = selectedSphereId != null ? getSphereContent(selectedSphereId, i18n.language) : null
   const color = selectedSphereId != null ? getSphereColor(selectedSphereId) : null
   const citasDelConcepto = content?.id ? getCitasPorConcepto(content.id) : []
 
@@ -110,7 +110,7 @@ export function LeftPanel({ selectedSphereId, onClose, theme = 'dark' }) {
                   )}
                   {yt && !miniatura && (
                     <a href={yt} target="_blank" rel="noopener noreferrer" className={citaLink}>
-                      Ver en YouTube
+                      {t('comun.verYoutube')}
                     </a>
                   )}
                 </li>

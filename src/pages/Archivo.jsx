@@ -1,7 +1,6 @@
 import { Fragment, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import archivo from '../data/CMS/1_archivo.js'
-import conceptos from '../data/CMS/6_conceptos.js'
+import { archivoLocalizado, conceptosLocalizados } from '../data/localizado.js'
 import { normalizeConceptId } from '../data/cmsSphereData'
 import { VIDEO_SORT_OPTIONS, getSortedVideos } from '../utils/sortArchivo.js'
 import SortToolbar from '../components/archivo/SortToolbar.jsx'
@@ -177,6 +176,7 @@ function RelatoExpandedPanel({ item, conceptLookup }) {
 
 function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle }) {
   const { t } = useTranslation()
+  const etiquetaGrupo = (k) => (k === 'Sin fecha' ? t('archivo.sinFecha') : k === 'sin tipo' ? t('archivo.sinTipo') : k)
   const th = 'border-b border-zinc-500/20 bg-black/[0.06] px-2 py-2 text-left text-[10px] font-semibold uppercase tracking-wide text-inherit/55 sm:px-2.5'
   const td = 'border-b border-zinc-500/15 px-2 py-2 align-top text-xs sm:px-2.5 sm:text-sm'
 
@@ -219,7 +219,7 @@ function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle })
             {keys.length > 1 && (
               <tr className="bg-black/[0.08]">
                 <td colSpan={VIDEO_COL_COUNT} className="px-2 py-1.5 text-xs font-semibold uppercase tracking-wider text-inherit/65 sm:px-3">
-                  {groupKey}
+                  {etiquetaGrupo(groupKey)}
                 </td>
               </tr>
             )}
@@ -279,8 +279,9 @@ function ArchivoVideoTable({ grouped, keys, conceptLookup, expanded, onToggle })
 }
 
 function VideoArchiveBlock({ title, sortBy, onSort, optionsMap, grouped, keys }) {
+  const { i18n } = useTranslation()
   const [expanded, setExpanded] = useState(() => ({}))
-  const conceptLookup = useMemo(() => buildConceptLookup(conceptos), [])
+  const conceptLookup = useMemo(() => buildConceptLookup(conceptosLocalizados(i18n.language)), [i18n.language])
 
   const toggle = (id) => {
     setExpanded((prev) => ({ ...prev, [id]: !prev[id] }))
@@ -324,7 +325,7 @@ function VideoArchiveBlock({ title, sortBy, onSort, optionsMap, grouped, keys })
 }
 
 export default function Archivo() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [videoSort, setVideoSort] = useState('year')
   const opciones = useMemo(() => {
     const map = {}
@@ -334,7 +335,10 @@ export default function Archivo() {
     return map
   }, [t])
 
-  const videoData = useMemo(() => getSortedVideos(archivo, videoSort), [videoSort])
+  const videoData = useMemo(
+    () => getSortedVideos(archivoLocalizado(i18n.language), videoSort),
+    [videoSort, i18n.language]
+  )
 
   return (
     <main className="min-h-full w-full pt-16">

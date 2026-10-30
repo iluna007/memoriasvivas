@@ -179,7 +179,7 @@
     "sinVideos": "No videos have been assigned to this territory yet.",
     "verVideos": "See videos from {{nombre}}",
     "leyenda": "Legend",
-    "ferrocarril": "Southern Railway",
+    "ferrocarril": "United Fruit Company Railway (UFCO)",
     "mostrarCapa": "Show {{nombre}}",
     "ocultarCapa": "Hide {{nombre}}",
     "faltaToken": "The VITE_MAPBOX_ACCESS_TOKEN variable is missing from the build environment.",

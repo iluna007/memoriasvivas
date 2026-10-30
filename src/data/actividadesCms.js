@@ -8,6 +8,7 @@ import medios from './CMS/medios.js'
 import territorio from './CMS/territorio.js'
 import entidades from './CMS/8_comunidad_entidades.json'
 import archivo from './CMS/1_archivo.js'
+import actividadesEn from './en/actividades.js'
 
 /** Videos y PDFs no se publican hasta tener una URL externa. Pasar a true cuando existan. */
 export const MEDIOS_EXTERNOS_ACTIVOS = false
@@ -186,9 +187,9 @@ function construirArbol() {
       idPadre: padreId(raw.id_padre),
       categoria: texto(raw.categoria),
       titulo,
-      titulo_en: texto(raw.titulo_en),
+      titulo_en: texto(raw.titulo_en) ?? actividadesEn[raw.id_actividades]?.titulo ?? null,
       descripcion: texto(raw.descripcion),
-      descripcion_en: texto(raw.descripcion_en),
+      descripcion_en: texto(raw.descripcion_en) ?? actividadesEn[raw.id_actividades]?.descripcion ?? null,
       fecha,
       fechaFin: fechaIso(raw.fecha_fin),
       anio: anioDesdeFecha(fecha),
