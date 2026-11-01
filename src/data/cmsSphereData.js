@@ -111,6 +111,6 @@ export const SPHERE_COUNT = SPHERE_CONTENT.length
  * @param {number} id - Índice de la esfera (0 … SPHERE_COUNT - 1)
  * @param {string} [lang] - 'es' (por defecto) o 'en'
  */
-export function getSphereContent(id, lang = 'es') {
+export function getSphereContent(id, lang = 'en') {
   return (String(lang).startsWith('en') ? CONTENIDO.en : CONTENIDO.es)[id]
 }

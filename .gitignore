@@ -51,4 +51,9 @@ vite.bench.config.js
 *.HEIC
 *.MOV
 Claude outputs/
-_actividades-pdf/
+
+# Borradores locales (no hacen falta para correr el sitio)
+public/_*.html
+public/mapa_carpeta.csv
+public/mapa_carpeta.txt
+scripts/_*

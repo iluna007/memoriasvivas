@@ -496,7 +496,7 @@ function StarfieldBackground({ density = 0.53 }) {
 }
 
 /* ─── Escena principal ─── */
-export function Scene({ paused, onSphereClick, sceneParams = {}, lang = 'es' }) {
+export function Scene({ paused, onSphereClick, sceneParams = {}, lang = 'en' }) {
   const {
     motionSpeed = 1,
     proximityThreshold = 5,

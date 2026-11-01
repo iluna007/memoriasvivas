@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { lazy, Suspense, useState, useCallback, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Outlet, Navigate, useLocation } from 'react-router-dom'
 import { LANG_KEY, idiomaDeRuta } from './i18n/ruta'
 import i18n from './i18n'
@@ -6,18 +6,19 @@ import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
 import StarfieldCSS from './components/StarfieldCSS'
 import Intro from './pages/Intro'
-import Inicio from './pages/Inicio'
-import Sobre from './pages/Sobre'
-import Personas from './pages/Personas'
-import Contacto from './pages/Contacto'
-import Mapa from './pages/Mapa'
-import Equipo from './pages/Equipo'
-import Archivo from './pages/Archivo'
-import Diccionario from './pages/Diccionario'
-import Documentales from './pages/Documentales'
-import Publicaciones from './pages/Publicaciones'
-import MaterialDivulgacion from './pages/MaterialDivulgacion'
-import Actividades from './pages/Actividades'
+
+const Inicio = lazy(() => import('./pages/Inicio'))
+const Sobre = lazy(() => import('./pages/Sobre'))
+const Personas = lazy(() => import('./pages/Personas'))
+const Contacto = lazy(() => import('./pages/Contacto'))
+const Mapa = lazy(() => import('./pages/Mapa'))
+const Equipo = lazy(() => import('./pages/Equipo'))
+const Archivo = lazy(() => import('./pages/Archivo'))
+const Diccionario = lazy(() => import('./pages/Diccionario'))
+const Documentales = lazy(() => import('./pages/Documentales'))
+const Publicaciones = lazy(() => import('./pages/Publicaciones'))
+const MaterialDivulgacion = lazy(() => import('./pages/MaterialDivulgacion'))
+const Actividades = lazy(() => import('./pages/Actividades'))
 
 const THEME_KEY = 'memoriasvivas-theme'
 const BG_COLOR_KEY = 'memoriasvivas-bg-color'
@@ -131,7 +132,9 @@ function Layout({ theme, onThemeToggle, bgColor, onBgColorChange }) {
         onBgColorChange={onBgColorChange}
       />
       <div id="scroll-root" className="relative z-10 flex-1 min-h-0 overflow-y-auto overscroll-y-contain">
-        <Outlet context={{ theme, bgColor }} />
+        <Suspense fallback={null}>
+          <Outlet context={{ theme, bgColor }} />
+        </Suspense>
         <Footer theme={theme} />
       </div>
     </div>

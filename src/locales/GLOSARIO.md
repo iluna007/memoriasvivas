@@ -10,5 +10,3 @@
 | Pedagogías | Pedagogies |
 | Conceptos | Concepts |
 | Devolución | Community feedback session |
-
-// REVISAR Devolución. Alternativa: Return session. Hoy la interfaz usa Community feedback session.

@@ -33,25 +33,41 @@ La lista de personas del equipo del proyecto también está en `src/data/CMS/7_e
 
 ---
 
+## Idioma
+
+El sitio abre en **inglés**. Las rutas en inglés van bajo `/en` (la portada es `/en`). El español usa las mismas rutas sin prefijo (`/sobre`, `/mapa`, …).
+
+El botón **ES** / **EN** de la barra cambia de idioma y recuerda la elección en este navegador. Si alguien ya eligió español, la próxima visita a `/` se queda en español.
+
+Los textos de la interfaz están en `src/locales/es.json` y `src/locales/en.json`. El contenido del CMS sigue en español en `src/data/CMS/`; las traducciones al inglés se superponen desde `src/data/en/` para que una nueva exportación de la hoja no las borre.
+
 ## Contenido principal
 
 | Ruta | Descripción |
 |------|-------------|
-| `/` | **Constelaciones** — escena 3D interactiva: estrellas con billboards animados, red de proximidad entre nodos, fondo estelar, panel de controles (velocidad, amplitud, opacidad/brillo pulsantes, red, color de fondo, etc.) |
+| `/` y `/en` | Portada con el video y el logo. Al entrar se abre Constelaciones |
+| `/constelaciones` | Escena 3D: estrellas, red de proximidad, fondo y panel de controles |
 | `/sobre` | Texto del proyecto |
-| `/comunidad` | Tarjetas de personas de la comunidad (datos en `src/data/comunidad.js`) |
-| `/equipo` | Miembros del equipo (CMS `src/data/CMS/7_equipo.js`) |
-| `/mapa` | Mapa Mapbox (requiere token; ver variables de entorno) |
-| `/archivo` | Vista tipo archivo / ISAD sobre relatos y metadatos |
-| `/contacto` | Formulario de contacto |
+| `/comunidad` | Personas de la comunidad (`src/data/comunidad.js`) |
+| `/equipo` | Equipo (`src/data/CMS/7_equipo.js`) |
+| `/mapa` | Mapa Mapbox, con la capa del ferrocarril de la UFCO |
+| `/diccionario` | Diccionario de conceptos |
+| `/documentales` | Documentales destacados |
+| `/activaciones` | Publicaciones y activaciones |
+| `/pedagogias` | Material pedagógico |
+| `/actividades` | Línea de tiempo de actividades |
+| `/archivo` | Relatos y metadatos del archivo |
+| `/contacto` | Contacto |
 
-Navegación fija, **tema claro/oscuro** y selector de color de fondo (persistencia en `localStorage`). Pie de página con enlaces institucionales (UCR, Sede del Sur, Acción Social, Escuela de Filosofía, Escuela de Arquitectura), redes ([YouTube](https://www.youtube.com/@MemoriasVivasdelsur), [Instagram](https://www.instagram.com/memo.riasvivas/)), código abierto en GitHub y crédito de diseño.
+En inglés, cada ruta lleva el prefijo `/en` (por ejemplo `/en/mapa`).
+
+En pantallas estrechas la barra pasa a un menú de hamburguesa. El tema claro/oscuro y el color de fondo se guardan en `localStorage`. El pie enlaza a la UCR, la Sede del Sur, Acción Social, la Escuela de Filosofía y la Escuela de Arquitectura, y a [YouTube](https://www.youtube.com/@MemoriasVivasdelsur) e [Instagram](https://www.instagram.com/memo.riasvivas/).
 
 ---
 
 ## Requisitos
 
-- [Node.js](https://nodejs.org/) **18+** (recomendado LTS)
+- [Node.js](https://nodejs.org/) **20** (la misma versión que usa Netlify; 18 también sirve en local)
 - npm (incluido con Node)
 
 ---
@@ -97,6 +113,7 @@ Sin token, la ruta **Mapa** muestra un aviso para configurar la variable; el res
 | `npm run dev` | Servidor de desarrollo (Vite) |
 | `npm run build` | Compilación de producción en `dist/` |
 | `npm run preview` | Sirve la carpeta `dist/` para probar el build localmente |
+| `npm run fetch:documentales` | Actualiza el listado del canal de YouTube en `src/data/documentalesYoutube.js` |
 
 ---
 
@@ -119,6 +136,8 @@ Detalle para **Netlify**: ver [NETLIFY.md](./NETLIFY.md) (variable en el panel d
 - [@react-three/drei](https://github.com/pmndrs/drei) — utilidades (`OrbitControls`, `Html`, `Billboard`, etc.)
 - [Tailwind CSS](https://tailwindcss.com/) 3
 - [Mapbox GL](https://www.mapbox.com/mapbox-gljs) + [react-map-gl](https://visgl.github.io/react-map-gl/) — mapa
+- [i18next](https://www.i18next.com/) — español e inglés
+- [GSAP](https://gsap.com/) — movimiento de la línea de tiempo y de la portada
 
 ---
 
@@ -130,11 +149,14 @@ src/
   Scene.jsx            # Escena 3D (estrellas, red, fondo)
   pages/               # Una vista por ruta
   components/          # Navbar, Footer, paneles, leyendas, etc.
-  data/                # Datos y CMS en JS; adaptadores (p. ej. archivo ISAD)
+  data/CMS/            # Exportación en español del CMS
+  data/en/             # Traducciones al inglés de ese contenido
+  locales/             # Textos de la interfaz (es.json, en.json)
+  i18n/                # Idioma según la ruta
   utils/               # Utilidades (p. ej. clases de tema para páginas)
 ```
 
-Los textos y listas exportables suelen vivir en `src/data/` y `src/data/CMS/`.
+Los textos de interfaz viven en `src/locales/`. El contenido editable vive en `src/data/CMS/` y, en inglés, en `src/data/en/`. Cada sección se descarga cuando se abre, así la portada no carga el mapa ni la escena 3D.
 
 ---
 
@@ -149,12 +171,6 @@ Los textos y listas exportables suelen vivir en `src/data/` y `src/data/CMS/`.
 ## Despliegue
 
 Cualquier hosting de sitios estáticos sirve la carpeta `dist/` tras `npm run build`. Para **Netlify** y el token Mapbox, sigue [NETLIFY.md](./NETLIFY.md).
-
----
-
-## Más documentación
-
-- [GIT_SETUP.md](./GIT_SETUP.md) — notas de configuración Git (opcional)
 
 ---
 
