@@ -1,5 +1,5 @@
 // Generado automáticamente desde: Medios
-// Archivo: CMS Memorias vivas | 17/10/2026
+// Archivo: CMS Memorias vivas | 6/11/2026
 
 const medios = [
   {
@@ -34,7 +34,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/EF_Eida Fletes 3.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-02"
+    "fecha_captura": "2024-03-02 20:23:30"
   },
   {
     "id_medio": "M0003",
@@ -51,7 +51,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/EF_Eida Fletes1.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-02"
+    "fecha_captura": "2024-03-02 20:09:05"
   },
   {
     "id_medio": "M0004",
@@ -68,7 +68,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/EF_Eida Fletes2.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-02"
+    "fecha_captura": "2024-03-02 20:46:53"
   },
   {
     "id_medio": "M0005",
@@ -85,7 +85,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/Eida_libro.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-03-02"
+    "fecha_captura": "2024-03-02 20:54:47"
   },
   {
     "id_medio": "M0006",
@@ -102,7 +102,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/FCC_Familia Castro Cambronero _Félix.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-03-02"
+    "fecha_captura": "2024-03-02 16:02:05"
   },
   {
     "id_medio": "M0007",
@@ -119,7 +119,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/FCC_Familia Castro Cambronero _ambos.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-02"
+    "fecha_captura": "2024-03-02 16:22:59"
   },
   {
     "id_medio": "M0008",
@@ -136,7 +136,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/FCC_Familia Castro Cambronero _amboss.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-02"
+    "fecha_captura": "2024-03-02 16:02:21"
   },
   {
     "id_medio": "M0009",
@@ -153,7 +153,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/FCC_Familia Castro Cambronero _de pie.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-03-02"
+    "fecha_captura": "2024-03-02 17:16:45"
   },
   {
     "id_medio": "M0010",
@@ -170,7 +170,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/FCC_Familia Castro Cambronero _grupo.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-02"
+    "fecha_captura": "2024-03-02 16:25:00"
   },
   {
     "id_medio": "M0011",
@@ -187,7 +187,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/FCT_Finca Canto del Tucán.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-03-06"
+    "fecha_captura": "2024-03-06 11:35:10"
   },
   {
     "id_medio": "M0012",
@@ -204,7 +204,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/FCT_Finca Canto del Tucán_don .webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-03-06"
+    "fecha_captura": "2024-03-06 11:34:37"
   },
   {
     "id_medio": "M0013",
@@ -221,7 +221,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/FCT_Finca Canto del Tucán_fami.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-06"
+    "fecha_captura": "2024-03-06 09:45:09"
   },
   {
     "id_medio": "M0014",
@@ -238,7 +238,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/FRV_Finca Rancho Verde-dialogo.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 08:42:45"
   },
   {
     "id_medio": "M0015",
@@ -255,7 +255,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/FRV_Finca Rancho Verde_grupo.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 08:43:12"
   },
   {
     "id_medio": "M0016",
@@ -272,7 +272,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/HM_Hellen Mora_caminando.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-03-05"
+    "fecha_captura": "2024-03-05 12:42:15"
   },
   {
     "id_medio": "M0017",
@@ -289,7 +289,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/HM_Hellen Mora_fotos antig..webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-03-05"
+    "fecha_captura": "2024-03-05 12:09:55"
   },
   {
     "id_medio": "M0018",
@@ -306,7 +306,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/HM_Hellen Mora_fotos antiguas.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-03-05"
+    "fecha_captura": "2024-03-05 12:16:53"
   },
   {
     "id_medio": "M0019",
@@ -323,7 +323,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/HM_Hellen Mora_fotos circo.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-03-05"
+    "fecha_captura": "2024-03-05 12:14:36"
   },
   {
     "id_medio": "M0020",
@@ -340,7 +340,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RA_Reinaldo Aguilar EN CAMPO2.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 16:31:23"
   },
   {
     "id_medio": "M0021",
@@ -357,7 +357,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RA_Reinaldo Aguilar SIENDO ÉL .webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 14:35:14"
   },
   {
     "id_medio": "M0022",
@@ -374,7 +374,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RA_Reinaldo Aguilar SIENDO ÉL.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 14:06:35"
   },
   {
     "id_medio": "M0023",
@@ -391,7 +391,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RA_Reinaldo Aguilar SONRIENDO.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 14:36:03"
   },
   {
     "id_medio": "M0024",
@@ -408,7 +408,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RA_Reinaldo Aguilar-Mejorado-NR.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 14:36:03"
   },
   {
     "id_medio": "M0025",
@@ -425,7 +425,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RA_Reinaldo AguilarEN CAMPO.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 16:44:10"
   },
   {
     "id_medio": "M0026",
@@ -442,7 +442,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RA_Reinaldo AguilarMARCA.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 16:22:57"
   },
   {
     "id_medio": "M0027",
@@ -459,7 +459,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RA_Reinaldo Aguilar_COSAS.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 16:02:37"
   },
   {
     "id_medio": "M0028",
@@ -476,7 +476,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RA_Reinaldo Aguilar_HOJAS.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 15:15:26"
   },
   {
     "id_medio": "M0029",
@@ -493,7 +493,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RA_Reinaldo Aguilar_MANOS.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 16:48:10"
   },
   {
     "id_medio": "M0030",
@@ -510,7 +510,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/Rancho Verde_gira 1_24.webp",
     "ancho": 1024,
     "alto": 680,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 08:43:32"
   },
   {
     "id_medio": "M0031",
@@ -527,7 +527,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/Reinaldo Aguilar_gira 1_2024.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 14:36:03"
   },
   {
     "id_medio": "M0032",
@@ -544,7 +544,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/_DSC0926.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 15:23:35"
   },
   {
     "id_medio": "M0033",
@@ -561,7 +561,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/EU_Espiritu Ureña.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:58:00"
   },
   {
     "id_medio": "M0034",
@@ -578,7 +578,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7815.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:55:28"
   },
   {
     "id_medio": "M0035",
@@ -595,7 +595,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7816.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:55:32"
   },
   {
     "id_medio": "M0036",
@@ -612,7 +612,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7817.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:56:21"
   },
   {
     "id_medio": "M0037",
@@ -629,7 +629,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7818.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:56:22"
   },
   {
     "id_medio": "M0038",
@@ -646,7 +646,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7819.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:56:24"
   },
   {
     "id_medio": "M0039",
@@ -663,7 +663,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7820.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:56:25"
   },
   {
     "id_medio": "M0040",
@@ -680,7 +680,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7821.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:56:27"
   },
   {
     "id_medio": "M0041",
@@ -697,7 +697,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7822.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:56:30"
   },
   {
     "id_medio": "M0042",
@@ -714,7 +714,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7823.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:56:35"
   },
   {
     "id_medio": "M0043",
@@ -731,7 +731,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7824.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:56:47"
   },
   {
     "id_medio": "M0044",
@@ -748,7 +748,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7825.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:57:29"
   },
   {
     "id_medio": "M0045",
@@ -765,7 +765,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G1_ reconocimiento/RQ_Expresiones de Espíritu Ureña/IMG_7827.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-03-03"
+    "fecha_captura": "2024-03-03 09:58:00"
   },
   {
     "id_medio": "M0046",
@@ -782,7 +782,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_0043.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 12:29:45"
   },
   {
     "id_medio": "M0047",
@@ -799,7 +799,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_0044.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 12:33:58"
   },
   {
     "id_medio": "M0048",
@@ -816,7 +816,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_0066.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 15:45:24"
   },
   {
     "id_medio": "M0049",
@@ -833,7 +833,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_0069.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 15:46:11"
   },
   {
     "id_medio": "M0050",
@@ -850,7 +850,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_0071.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 15:47:21"
   },
   {
     "id_medio": "M0051",
@@ -867,7 +867,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_0079.webp",
     "ancho": 684,
     "alto": 1024,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 15:58:31"
   },
   {
     "id_medio": "M0052",
@@ -884,7 +884,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_0090.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 16:50:46"
   },
   {
     "id_medio": "M0053",
@@ -901,7 +901,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9355.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 12:15:37"
   },
   {
     "id_medio": "M0054",
@@ -918,7 +918,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9374.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 14:02:04"
   },
   {
     "id_medio": "M0055",
@@ -935,7 +935,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9378.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 14:09:32"
   },
   {
     "id_medio": "M0056",
@@ -952,7 +952,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9394.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 14:28:05"
   },
   {
     "id_medio": "M0057",
@@ -969,7 +969,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9395.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 14:28:09"
   },
   {
     "id_medio": "M0058",
@@ -986,7 +986,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9399.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 14:50:39"
   },
   {
     "id_medio": "M0059",
@@ -1003,7 +1003,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9401.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 15:37:34"
   },
   {
     "id_medio": "M0060",
@@ -1020,7 +1020,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9404.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 15:38:03"
   },
   {
     "id_medio": "M0061",
@@ -1037,7 +1037,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9411.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 15:39:01"
   },
   {
     "id_medio": "M0062",
@@ -1054,7 +1054,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9423.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 16:03:22"
   },
   {
     "id_medio": "M0063",
@@ -1071,7 +1071,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9426.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 16:04:19"
   },
   {
     "id_medio": "M0064",
@@ -1088,7 +1088,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/IMG_9442.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 16:21:08"
   },
   {
     "id_medio": "M0065",
@@ -1105,7 +1105,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/Desde playa Cacao.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 11:19:13"
   },
   {
     "id_medio": "M0066",
@@ -1122,7 +1122,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_0097.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:12:02"
   },
   {
     "id_medio": "M0067",
@@ -1139,7 +1139,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_0106.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:24:32"
   },
   {
     "id_medio": "M0068",
@@ -1156,7 +1156,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_0108.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:29:39"
   },
   {
     "id_medio": "M0069",
@@ -1173,7 +1173,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_0127.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 10:30:59"
   },
   {
     "id_medio": "M0070",
@@ -1190,7 +1190,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_0128.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 10:31:14"
   },
   {
     "id_medio": "M0071",
@@ -1207,7 +1207,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_9470.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:12:16"
   },
   {
     "id_medio": "M0072",
@@ -1224,7 +1224,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_9474.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:15:47"
   },
   {
     "id_medio": "M0073",
@@ -1241,7 +1241,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_9480.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:19:24"
   },
   {
     "id_medio": "M0074",
@@ -1258,7 +1258,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_9481.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:20:56"
   },
   {
     "id_medio": "M0075",
@@ -1275,7 +1275,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_9482.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:22:41"
   },
   {
     "id_medio": "M0076",
@@ -1292,7 +1292,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_9488.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:40:43"
   },
   {
     "id_medio": "M0077",
@@ -1309,7 +1309,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_9491.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:41:25"
   },
   {
     "id_medio": "M0078",
@@ -1326,7 +1326,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/IMG_9492.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 09:41:42"
   },
   {
     "id_medio": "M0079",
@@ -1343,7 +1343,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/Antiguo Pic nic/IMG_9519.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 11:50:48"
   },
   {
     "id_medio": "M0080",
@@ -1360,7 +1360,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/Antiguo Pic nic/IMG_9526.webp",
     "ancho": null,
     "alto": null,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 11:58:19"
   },
   {
     "id_medio": "M0081",
@@ -1377,7 +1377,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/Antiguo Pic nic/IMG_9527.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 11:58:21"
   },
   {
     "id_medio": "M0082",
@@ -1394,7 +1394,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/Antiguo Pic nic/IMG_9528.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 11:58:24"
   },
   {
     "id_medio": "M0083",
@@ -1411,7 +1411,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G2_ Taller Memoria Hist_Golfito/G_2_ Caminata con doña Gina/Antiguo Pic nic/IMG_9529.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-25"
+    "fecha_captura": "2024-05-25 11:58:30"
   },
   {
     "id_medio": "M0084",
@@ -1462,7 +1462,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/FTV01232.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 11:52:24"
   },
   {
     "id_medio": "M0087",
@@ -1479,7 +1479,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0072.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-27"
+    "fecha_captura": "2024-06-27 17:58:42"
   },
   {
     "id_medio": "M0088",
@@ -1496,7 +1496,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0105.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-28"
+    "fecha_captura": "2024-06-28 12:19:17"
   },
   {
     "id_medio": "M0089",
@@ -1513,7 +1513,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0110.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 05:21:47"
   },
   {
     "id_medio": "M0090",
@@ -1530,7 +1530,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0141.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 09:17:25"
   },
   {
     "id_medio": "M0091",
@@ -1547,7 +1547,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0151.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 11:54:26"
   },
   {
     "id_medio": "M0092",
@@ -1564,7 +1564,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0152.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 11:56:11"
   },
   {
     "id_medio": "M0093",
@@ -1581,7 +1581,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0155.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 11:56:31"
   },
   {
     "id_medio": "M0094",
@@ -1598,7 +1598,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0156.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 11:57:26"
   },
   {
     "id_medio": "M0095",
@@ -1615,7 +1615,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0157.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 11:57:29"
   },
   {
     "id_medio": "M0096",
@@ -1632,7 +1632,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0183.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 16:55:15"
   },
   {
     "id_medio": "M0097",
@@ -1649,7 +1649,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0184.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 16:55:20"
   },
   {
     "id_medio": "M0098",
@@ -1666,7 +1666,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0187.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 17:06:17"
   },
   {
     "id_medio": "M0099",
@@ -1683,7 +1683,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0271.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-06-30"
+    "fecha_captura": "2024-06-30 08:57:19"
   },
   {
     "id_medio": "M0100",
@@ -1700,7 +1700,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0274.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-30"
+    "fecha_captura": "2024-06-30 08:57:38"
   },
   {
     "id_medio": "M0101",
@@ -1734,7 +1734,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0293.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-30"
+    "fecha_captura": "2024-06-30 11:35:07"
   },
   {
     "id_medio": "M0103",
@@ -1751,7 +1751,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0317.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-06-30"
+    "fecha_captura": "2024-06-30 13:20:30"
   },
   {
     "id_medio": "M0104",
@@ -1768,7 +1768,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0318.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-30"
+    "fecha_captura": "2024-06-30 13:20:43"
   },
   {
     "id_medio": "M0105",
@@ -1785,7 +1785,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0323.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-30"
+    "fecha_captura": "2024-06-30 13:22:14"
   },
   {
     "id_medio": "M0106",
@@ -1802,7 +1802,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0329.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-06-30"
+    "fecha_captura": "2024-06-30 14:26:48"
   },
   {
     "id_medio": "M0107",
@@ -1819,7 +1819,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/IMG_0339.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-01"
+    "fecha_captura": "2024-07-01 07:46:01"
   },
   {
     "id_medio": "M0108",
@@ -1853,7 +1853,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/_1066833.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 06:28:08"
   },
   {
     "id_medio": "M0110",
@@ -1870,7 +1870,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/_1066836.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 06:32:07"
   },
   {
     "id_medio": "M0111",
@@ -1887,7 +1887,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/_1066853.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 06:49:10"
   },
   {
     "id_medio": "M0112",
@@ -1904,7 +1904,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/_1066857.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 06:51:26"
   },
   {
     "id_medio": "M0113",
@@ -1921,7 +1921,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/_1066866.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 06:54:47"
   },
   {
     "id_medio": "M0114",
@@ -1938,7 +1938,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/_1066898.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 13:05:29"
   },
   {
     "id_medio": "M0115",
@@ -1955,7 +1955,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/_1066899.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 13:06:01"
   },
   {
     "id_medio": "M0116",
@@ -1972,7 +1972,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G3_ Registro Eida Fletes_Corcovado/_1066900.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-06-29"
+    "fecha_captura": "2024-06-29 13:06:03"
   },
   {
     "id_medio": "M0117",
@@ -2057,7 +2057,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Alice Castro_ conversa/DSC09238-Edit.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-02"
+    "fecha_captura": "2024-08-02 17:10:44"
   },
   {
     "id_medio": "M0122",
@@ -2074,7 +2074,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Alice Castro_ conversa/DSC09238.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-02"
+    "fecha_captura": "2024-08-02 17:10:44"
   },
   {
     "id_medio": "M0123",
@@ -2091,7 +2091,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Alice Castro_ conversa/DSC09249-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-02"
+    "fecha_captura": "2024-08-02 17:13:16"
   },
   {
     "id_medio": "M0124",
@@ -2108,7 +2108,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Alice Castro_ conversa/DSC09249.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-02"
+    "fecha_captura": "2024-08-02 17:13:16"
   },
   {
     "id_medio": "M0125",
@@ -2125,7 +2125,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Alice Castro_ conversa/_1067380.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-08-02"
+    "fecha_captura": "2024-08-02 16:40:54"
   },
   {
     "id_medio": "M0126",
@@ -2142,7 +2142,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Alice Castro_ conversa/_1067382.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-08-02"
+    "fecha_captura": "2024-08-02 16:41:02"
   },
   {
     "id_medio": "M0127",
@@ -2159,7 +2159,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Alice Castro_ conversa/_1067387.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-08-02"
+    "fecha_captura": "2024-08-02 16:46:59"
   },
   {
     "id_medio": "M0128",
@@ -2176,7 +2176,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Alice Castro_ conversa/_1067402.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-08-02"
+    "fecha_captura": "2024-08-02 16:55:19"
   },
   {
     "id_medio": "M0129",
@@ -2193,7 +2193,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Alice Castro_ conversa/_1067413.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-08-02"
+    "fecha_captura": "2024-08-02 17:06:09"
   },
   {
     "id_medio": "M0130",
@@ -2210,7 +2210,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Alice Castro_ conversa/_1067414-Mejorado-NR.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-08-02"
+    "fecha_captura": "2024-08-02 17:06:09"
   },
   {
     "id_medio": "M0131",
@@ -2227,7 +2227,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Delfín Ureña_conversa/DSC09541-2.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 09:11:14"
   },
   {
     "id_medio": "M0132",
@@ -2244,7 +2244,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Delfín Ureña_conversa/DSC09541.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 09:11:14"
   },
   {
     "id_medio": "M0133",
@@ -2261,7 +2261,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Delfín Ureña_conversa/DSC09560.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 09:21:23"
   },
   {
     "id_medio": "M0134",
@@ -2278,7 +2278,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Delfín Ureña_conversa/DSC09593.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 09:29:31"
   },
   {
     "id_medio": "M0135",
@@ -2295,7 +2295,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Delfín Ureña_conversa/DSC09606-2.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 09:54:53"
   },
   {
     "id_medio": "M0136",
@@ -2312,7 +2312,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Delfín Ureña_conversa/DSC09606.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 09:54:53"
   },
   {
     "id_medio": "M0137",
@@ -2329,7 +2329,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Delfín Ureña_conversa/DSC09609.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 09:57:07"
   },
   {
     "id_medio": "M0138",
@@ -2346,7 +2346,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09659-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 14:46:10"
   },
   {
     "id_medio": "M0139",
@@ -2363,7 +2363,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09659.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 14:46:10"
   },
   {
     "id_medio": "M0140",
@@ -2380,7 +2380,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09711-Edit.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:05:02"
   },
   {
     "id_medio": "M0141",
@@ -2397,7 +2397,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09711.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:05:02"
   },
   {
     "id_medio": "M0142",
@@ -2414,7 +2414,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09712-2.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:05:08"
   },
   {
     "id_medio": "M0143",
@@ -2431,7 +2431,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09712.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:05:08"
   },
   {
     "id_medio": "M0144",
@@ -2448,7 +2448,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09718-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:06:00"
   },
   {
     "id_medio": "M0145",
@@ -2465,7 +2465,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09718.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:06:00"
   },
   {
     "id_medio": "M0146",
@@ -2482,7 +2482,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09721-Edit.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:06:38"
   },
   {
     "id_medio": "M0147",
@@ -2499,7 +2499,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09721.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:06:38"
   },
   {
     "id_medio": "M0148",
@@ -2516,7 +2516,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09723-Edit.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:07:27"
   },
   {
     "id_medio": "M0149",
@@ -2533,7 +2533,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09723.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:07:27"
   },
   {
     "id_medio": "M0150",
@@ -2550,7 +2550,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09725-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:08:29"
   },
   {
     "id_medio": "M0151",
@@ -2567,7 +2567,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09725.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:08:29"
   },
   {
     "id_medio": "M0152",
@@ -2584,7 +2584,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09727-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:08:33"
   },
   {
     "id_medio": "M0153",
@@ -2601,7 +2601,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09727.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:08:33"
   },
   {
     "id_medio": "M0154",
@@ -2618,7 +2618,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09751-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:24:03"
   },
   {
     "id_medio": "M0155",
@@ -2635,7 +2635,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09751.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:24:03"
   },
   {
     "id_medio": "M0156",
@@ -2652,7 +2652,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09763-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:32:44"
   },
   {
     "id_medio": "M0157",
@@ -2669,7 +2669,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Ismael Carvajal_conversa/DSC09763.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 15:32:44"
   },
   {
     "id_medio": "M0158",
@@ -2686,7 +2686,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC00017 2.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 16:15:38"
   },
   {
     "id_medio": "M0159",
@@ -2703,7 +2703,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC00017.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 16:15:38"
   },
   {
     "id_medio": "M0160",
@@ -2720,7 +2720,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC00021-Edit-2.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 16:16:34"
   },
   {
     "id_medio": "M0161",
@@ -2737,7 +2737,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC00021.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 16:16:34"
   },
   {
     "id_medio": "M0162",
@@ -2754,7 +2754,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09839-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 14:52:21"
   },
   {
     "id_medio": "M0163",
@@ -2771,7 +2771,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09839.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 14:52:21"
   },
   {
     "id_medio": "M0164",
@@ -2788,7 +2788,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09856-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:03:44"
   },
   {
     "id_medio": "M0165",
@@ -2805,7 +2805,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09856.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:03:44"
   },
   {
     "id_medio": "M0166",
@@ -2822,7 +2822,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09871-Edit.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:05:51"
   },
   {
     "id_medio": "M0167",
@@ -2839,7 +2839,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09871.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:05:51"
   },
   {
     "id_medio": "M0168",
@@ -2856,7 +2856,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09876-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:06:41"
   },
   {
     "id_medio": "M0169",
@@ -2873,7 +2873,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09876.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:06:41"
   },
   {
     "id_medio": "M0170",
@@ -2890,7 +2890,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09916-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:16:24"
   },
   {
     "id_medio": "M0171",
@@ -2907,7 +2907,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09916.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:16:24"
   },
   {
     "id_medio": "M0172",
@@ -2924,7 +2924,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09949-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:22:16"
   },
   {
     "id_medio": "M0173",
@@ -2941,7 +2941,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09949.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:22:16"
   },
   {
     "id_medio": "M0174",
@@ -2958,7 +2958,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09988-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:59:07"
   },
   {
     "id_medio": "M0175",
@@ -2975,7 +2975,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09988.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:59:07"
   },
   {
     "id_medio": "M0176",
@@ -2992,7 +2992,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09999-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:59:59"
   },
   {
     "id_medio": "M0177",
@@ -3009,7 +3009,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/DSC09999.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:59:59"
   },
   {
     "id_medio": "M0178",
@@ -3026,7 +3026,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Serbulo y Eraida/_1067516.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-08-05"
+    "fecha_captura": "2024-08-05 15:38:48"
   },
   {
     "id_medio": "M0179",
@@ -3060,7 +3060,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/TFJT_Taller de Fanzines con infancias impartido por Julian Torres/DJI_0216.webp",
     "ancho": 1024,
     "alto": 682,
-    "fecha_captura": "2024-08-03"
+    "fecha_captura": "2024-08-03 14:03:29"
   },
   {
     "id_medio": "M0181",
@@ -3077,7 +3077,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/TFJT_Taller de Fanzines con infancias impartido por Julian Torres/IMG_0005.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-03"
+    "fecha_captura": "2024-08-03 09:22:06"
   },
   {
     "id_medio": "M0182",
@@ -3094,7 +3094,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/TFJT_Taller de Fanzines con infancias impartido por Julian Torres/IMG_0010.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-03"
+    "fecha_captura": "2024-08-03 09:26:26"
   },
   {
     "id_medio": "M0183",
@@ -3111,7 +3111,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/TFJT_Taller de Fanzines con infancias impartido por Julian Torres/IMG_0076.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-03"
+    "fecha_captura": "2024-08-03 13:18:02"
   },
   {
     "id_medio": "M0184",
@@ -3128,7 +3128,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/TFJT_Taller de Fanzines con infancias impartido por Julian Torres/IMG_0077.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-03"
+    "fecha_captura": "2024-08-03 13:19:38"
   },
   {
     "id_medio": "M0185",
@@ -3145,7 +3145,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/TFJT_Taller de Fanzines con infancias impartido por Julian Torres/IMG_0089.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-03"
+    "fecha_captura": "2024-08-03 15:04:41"
   },
   {
     "id_medio": "M0186",
@@ -3162,7 +3162,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/TFJT_Taller de Fanzines con infancias impartido por Julian Torres/IMG_0094.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-03"
+    "fecha_captura": "2024-08-03 15:33:50"
   },
   {
     "id_medio": "M0187",
@@ -3179,7 +3179,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/TFJT_Taller de Fanzines con infancias impartido por Julian Torres/IMG_0096.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-03"
+    "fecha_captura": "2024-08-03 15:34:25"
   },
   {
     "id_medio": "M0188",
@@ -3196,7 +3196,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09377.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 07:49:58"
   },
   {
     "id_medio": "M0189",
@@ -3213,7 +3213,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09394-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 08:00:59"
   },
   {
     "id_medio": "M0190",
@@ -3230,7 +3230,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09395-Edit.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 08:02:04"
   },
   {
     "id_medio": "M0191",
@@ -3247,7 +3247,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09395.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 08:02:04"
   },
   {
     "id_medio": "M0192",
@@ -3264,7 +3264,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09456.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 08:46:17"
   },
   {
     "id_medio": "M0193",
@@ -3281,7 +3281,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09457-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 08:46:30"
   },
   {
     "id_medio": "M0194",
@@ -3298,7 +3298,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09457.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 08:46:30"
   },
   {
     "id_medio": "M0195",
@@ -3315,7 +3315,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09465.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 08:47:17"
   },
   {
     "id_medio": "M0196",
@@ -3332,7 +3332,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09498.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 08:50:57"
   },
   {
     "id_medio": "M0197",
@@ -3349,7 +3349,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09506.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 08:51:51"
   },
   {
     "id_medio": "M0198",
@@ -3366,7 +3366,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G4_ Taller Fanzines y entrevistas RQ/Yolanda Rodriguez_conversa/DSC09518-Edit.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-08-04"
+    "fecha_captura": "2024-08-04 08:54:06"
   },
   {
     "id_medio": "M0199",
@@ -3383,7 +3383,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Catalina Arias Carmona con Eida Fletes/FTV05805.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 17:35:04"
   },
   {
     "id_medio": "M0200",
@@ -3400,7 +3400,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Catalina Arias Carmona con Eida Fletes/FTV05850.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 17:53:06"
   },
   {
     "id_medio": "M0201",
@@ -3417,7 +3417,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Catalina Arias Carmona con Eida Fletes/FTV05853.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 17:55:56"
   },
   {
     "id_medio": "M0202",
@@ -3434,7 +3434,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Catalina Arias Carmona con Eida Fletes/FTV05859.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 17:58:37"
   },
   {
     "id_medio": "M0203",
@@ -3451,7 +3451,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Catalina Arias Carmona con Eida Fletes/FTV05862.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 17:59:35"
   },
   {
     "id_medio": "M0204",
@@ -3468,7 +3468,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Catalina Arias Carmona con Eida Fletes/FTV05865.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 18:06:02"
   },
   {
     "id_medio": "M0205",
@@ -3485,7 +3485,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Catalina Arias Carmona con Eida Fletes/IMG_2034.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 17:27:13"
   },
   {
     "id_medio": "M0206",
@@ -3502,7 +3502,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Dominga Ureña _ solo foto sin conversa/FTV05934.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 09:48:15"
   },
   {
     "id_medio": "M0207",
@@ -3519,7 +3519,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Dominga Ureña _ solo foto sin conversa/FTV05940.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 09:49:00"
   },
   {
     "id_medio": "M0208",
@@ -3536,7 +3536,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Jeremías Ureña/FTV05967.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 10:04:51"
   },
   {
     "id_medio": "M0209",
@@ -3553,7 +3553,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Jeremías Ureña/FTV05968.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 10:09:09"
   },
   {
     "id_medio": "M0210",
@@ -3570,7 +3570,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Jeremías Ureña/FTV05969.webp",
     "ancho": 684,
     "alto": 1024,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 10:17:59"
   },
   {
     "id_medio": "M0211",
@@ -3587,7 +3587,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Jeremías Ureña/FTV05972.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 10:18:22"
   },
   {
     "id_medio": "M0212",
@@ -3604,7 +3604,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Jeremías Ureña/FTV05973.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 10:18:40"
   },
   {
     "id_medio": "M0213",
@@ -3621,7 +3621,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Jeremías Ureña/FTV05975.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 10:18:55"
   },
   {
     "id_medio": "M0214",
@@ -3638,7 +3638,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Jeremías Ureña/FTV05987.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 10:20:45"
   },
   {
     "id_medio": "M0215",
@@ -3655,7 +3655,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/FTV05775.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 09:26:27"
   },
   {
     "id_medio": "M0216",
@@ -3672,7 +3672,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/FTV05776.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 09:27:27"
   },
   {
     "id_medio": "M0217",
@@ -3689,7 +3689,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078585.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 08:35:38"
   },
   {
     "id_medio": "M0218",
@@ -3706,7 +3706,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078587.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 08:36:32"
   },
   {
     "id_medio": "M0219",
@@ -3723,7 +3723,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078593.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 08:40:20"
   },
   {
     "id_medio": "M0220",
@@ -3740,7 +3740,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078604.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 08:44:19"
   },
   {
     "id_medio": "M0221",
@@ -3757,7 +3757,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078610.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 08:48:30"
   },
   {
     "id_medio": "M0222",
@@ -3774,7 +3774,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078611.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 08:48:34"
   },
   {
     "id_medio": "M0223",
@@ -3791,7 +3791,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078612.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 08:48:44"
   },
   {
     "id_medio": "M0224",
@@ -3808,7 +3808,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078614.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 08:54:59"
   },
   {
     "id_medio": "M0225",
@@ -3825,7 +3825,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078615.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 08:55:05"
   },
   {
     "id_medio": "M0226",
@@ -3842,7 +3842,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078670.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 09:51:30"
   },
   {
     "id_medio": "M0227",
@@ -3859,7 +3859,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078672.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 09:51:56"
   },
   {
     "id_medio": "M0228",
@@ -3876,7 +3876,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078673.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 09:52:17"
   },
   {
     "id_medio": "M0229",
@@ -3893,7 +3893,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar en Jiménez_casa botánica/_1078674.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-09-21"
+    "fecha_captura": "2024-09-21 09:52:35"
   },
   {
     "id_medio": "M0230",
@@ -3910,7 +3910,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/DJI_0300.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 12:29:43"
   },
   {
     "id_medio": "M0231",
@@ -3944,7 +3944,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/DJI_0302.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 12:34:52"
   },
   {
     "id_medio": "M0233",
@@ -3961,7 +3961,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078251.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 08:56:15"
   },
   {
     "id_medio": "M0234",
@@ -3978,7 +3978,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078256.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 08:56:34"
   },
   {
     "id_medio": "M0235",
@@ -3995,7 +3995,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078269.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:07:04"
   },
   {
     "id_medio": "M0236",
@@ -4012,7 +4012,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078325.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:24:58"
   },
   {
     "id_medio": "M0237",
@@ -4029,7 +4029,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078334.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:27:54"
   },
   {
     "id_medio": "M0238",
@@ -4046,7 +4046,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078340.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:29:08"
   },
   {
     "id_medio": "M0239",
@@ -4063,7 +4063,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078341.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:29:46"
   },
   {
     "id_medio": "M0240",
@@ -4080,7 +4080,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078342.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:29:55"
   },
   {
     "id_medio": "M0241",
@@ -4097,7 +4097,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078343.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:31:10"
   },
   {
     "id_medio": "M0242",
@@ -4114,7 +4114,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078345.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:32:11"
   },
   {
     "id_medio": "M0243",
@@ -4131,7 +4131,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078347.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:32:56"
   },
   {
     "id_medio": "M0244",
@@ -4148,7 +4148,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078348.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:32:57"
   },
   {
     "id_medio": "M0245",
@@ -4165,7 +4165,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078366.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:47:54"
   },
   {
     "id_medio": "M0246",
@@ -4182,7 +4182,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078367.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:48:00"
   },
   {
     "id_medio": "M0247",
@@ -4199,7 +4199,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078371.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:49:40"
   },
   {
     "id_medio": "M0248",
@@ -4216,7 +4216,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Reinaldo Aguilar_Los charcos de Osa/_1078374.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-09-20"
+    "fecha_captura": "2024-09-20 09:50:12"
   },
   {
     "id_medio": "M0249",
@@ -4233,7 +4233,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Trino Ureña/_1078688.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 08:34:14"
   },
   {
     "id_medio": "M0250",
@@ -4250,7 +4250,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Trino Ureña/_1078712.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 08:49:02"
   },
   {
     "id_medio": "M0251",
@@ -4267,7 +4267,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Trino Ureña/_1078721.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 09:33:55"
   },
   {
     "id_medio": "M0252",
@@ -4284,7 +4284,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Trino Ureña/_1078739.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 09:40:13"
   },
   {
     "id_medio": "M0253",
@@ -4301,7 +4301,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Trino Ureña/_1078743.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 09:40:35"
   },
   {
     "id_medio": "M0254",
@@ -4335,7 +4335,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Trino Ureña/_1078747.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 09:42:18"
   },
   {
     "id_medio": "M0256",
@@ -4352,7 +4352,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Trino Ureña/_1078751.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 09:42:52"
   },
   {
     "id_medio": "M0257",
@@ -4369,7 +4369,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G5_RQ y La Palma/Trino Ureña/_1078757.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-09-22"
+    "fecha_captura": "2024-09-22 09:44:45"
   },
   {
     "id_medio": "M0258",
@@ -4386,7 +4386,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/DSC_0117.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:27:58"
   },
   {
     "id_medio": "M0259",
@@ -4403,7 +4403,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/DSC_0128.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:32:00"
   },
   {
     "id_medio": "M0260",
@@ -4420,7 +4420,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/DSC_0132.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:33:00"
   },
   {
     "id_medio": "M0261",
@@ -4437,7 +4437,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/DSC_0133.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:33:13"
   },
   {
     "id_medio": "M0262",
@@ -4454,7 +4454,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/DSC_0138.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:34:28"
   },
   {
     "id_medio": "M0263",
@@ -4471,7 +4471,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/DSC_0190.webp",
     "ancho": 681,
     "alto": 1024,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 13:32:21"
   },
   {
     "id_medio": "M0264",
@@ -4488,7 +4488,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080480.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:30:30"
   },
   {
     "id_medio": "M0265",
@@ -4505,7 +4505,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080532.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 11:36:36"
   },
   {
     "id_medio": "M0266",
@@ -4522,7 +4522,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080535.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 11:39:03"
   },
   {
     "id_medio": "M0267",
@@ -4539,7 +4539,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080540.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 11:45:56"
   },
   {
     "id_medio": "M0268",
@@ -4556,7 +4556,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080543.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 11:46:14"
   },
   {
     "id_medio": "M0269",
@@ -4573,7 +4573,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080554.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 12:55:55"
   },
   {
     "id_medio": "M0270",
@@ -4590,7 +4590,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080574.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 13:17:07"
   },
   {
     "id_medio": "M0271",
@@ -4607,7 +4607,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080582.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 13:22:12"
   },
   {
     "id_medio": "M0272",
@@ -4624,7 +4624,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080593.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 13:22:57"
   },
   {
     "id_medio": "M0273",
@@ -4641,7 +4641,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080624.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 13:23:31"
   },
   {
     "id_medio": "M0274",
@@ -4658,7 +4658,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080661.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 13:26:30"
   },
   {
     "id_medio": "M0275",
@@ -4675,7 +4675,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080685.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 13:41:12"
   },
   {
     "id_medio": "M0276",
@@ -4692,7 +4692,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080690.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 13:42:11"
   },
   {
     "id_medio": "M0277",
@@ -4709,7 +4709,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080711.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 13:42:20"
   },
   {
     "id_medio": "M0278",
@@ -4726,7 +4726,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080732.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 13:49:20"
   },
   {
     "id_medio": "M0279",
@@ -4743,7 +4743,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080741.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 14:59:24"
   },
   {
     "id_medio": "M0280",
@@ -4760,7 +4760,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080750.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 15:12:56"
   },
   {
     "id_medio": "M0281",
@@ -4777,7 +4777,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080799.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-08"
+    "fecha_captura": "2024-12-08 10:47:06"
   },
   {
     "id_medio": "M0282",
@@ -4794,7 +4794,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080806.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-08"
+    "fecha_captura": "2024-12-08 10:53:06"
   },
   {
     "id_medio": "M0283",
@@ -4811,7 +4811,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080856.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-08"
+    "fecha_captura": "2024-12-08 12:12:12"
   },
   {
     "id_medio": "M0284",
@@ -4828,7 +4828,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/FCM_Festival Chancho de Monte/_1080859.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-12-08"
+    "fecha_captura": "2024-12-08 15:01:28"
   },
   {
     "id_medio": "M0285",
@@ -4845,7 +4845,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/3. Foto grupo taller mapeo 2025.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:53:04"
   },
   {
     "id_medio": "M0286",
@@ -4862,7 +4862,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/Exposición Rancho Quemado en Golfito.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:08:58"
   },
   {
     "id_medio": "M0287",
@@ -4879,7 +4879,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/Grupo taller mapeo.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 15:30:15"
   },
   {
     "id_medio": "M0288",
@@ -4896,7 +4896,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1090925.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 09:10:44"
   },
   {
     "id_medio": "M0289",
@@ -4913,7 +4913,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1090927.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 09:13:45"
   },
   {
     "id_medio": "M0290",
@@ -4930,7 +4930,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1090935.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 09:16:31"
   },
   {
     "id_medio": "M0291",
@@ -4947,7 +4947,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1090941.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 09:18:35"
   },
   {
     "id_medio": "M0292",
@@ -4964,7 +4964,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1090946.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 09:19:38"
   },
   {
     "id_medio": "M0293",
@@ -4981,7 +4981,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1090988.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 09:52:28"
   },
   {
     "id_medio": "M0294",
@@ -4998,7 +4998,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1091037.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 10:22:34"
   },
   {
     "id_medio": "M0295",
@@ -5015,7 +5015,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1091046.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 10:50:01"
   },
   {
     "id_medio": "M0296",
@@ -5032,7 +5032,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1091065.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 11:06:08"
   },
   {
     "id_medio": "M0297",
@@ -5049,7 +5049,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1091071.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 11:10:19"
   },
   {
     "id_medio": "M0298",
@@ -5066,7 +5066,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1091288.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 15:14:52"
   },
   {
     "id_medio": "M0299",
@@ -5083,7 +5083,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1091301.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 15:22:42"
   },
   {
     "id_medio": "M0300",
@@ -5100,7 +5100,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1091305.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 15:33:18"
   },
   {
     "id_medio": "M0301",
@@ -5117,7 +5117,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1091306.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 15:33:19"
   },
   {
     "id_medio": "M0302",
@@ -5134,7 +5134,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/_1091313.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 15:35:13"
   },
   {
     "id_medio": "M0303",
@@ -5151,7 +5151,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/mapeando Golfito.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 15:01:32"
   },
   {
     "id_medio": "M0304",
@@ -5168,7 +5168,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/G6_Diciembre/Taller Golfito Mapeo/mapeando Golfito1.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 15:42:13"
   },
   {
     "id_medio": "M0305",
@@ -5185,7 +5185,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/Paisaje Golfito/IMG_9372.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 13:41:57"
   },
   {
     "id_medio": "M0306",
@@ -5202,7 +5202,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/Paisaje Golfito/_1066218.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 17:17:16"
   },
   {
     "id_medio": "M0307",
@@ -5219,7 +5219,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/Paisaje Golfito/_1066219.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 17:17:41"
   },
   {
     "id_medio": "M0308",
@@ -5236,7 +5236,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/Paisaje Golfito/_1066220.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 17:17:43"
   },
   {
     "id_medio": "M0309",
@@ -5253,7 +5253,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/Paisaje Golfito/_1066223.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 17:19:14"
   },
   {
     "id_medio": "M0310",
@@ -5270,7 +5270,7 @@ const medios = [
     "archivo_miniatura": "thumb/2024/Paisaje Golfito/_1066232.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 17:23:11"
   },
   {
     "id_medio": "M0311",
@@ -5287,7 +5287,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/IMG_0686.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:56:57"
   },
   {
     "id_medio": "M0312",
@@ -5304,7 +5304,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/IMG_0688.webp",
     "ancho": 1024,
     "alto": 622,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:57:07"
   },
   {
     "id_medio": "M0313",
@@ -5321,7 +5321,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito01.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:51:22"
   },
   {
     "id_medio": "M0314",
@@ -5338,7 +5338,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito02.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:52:22"
   },
   {
     "id_medio": "M0315",
@@ -5355,7 +5355,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito03.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:53:04"
   },
   {
     "id_medio": "M0316",
@@ -5372,7 +5372,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito04.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:53:54"
   },
   {
     "id_medio": "M0317",
@@ -5389,7 +5389,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito05.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:18:14"
   },
   {
     "id_medio": "M0318",
@@ -5406,7 +5406,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito06.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:19:55"
   },
   {
     "id_medio": "M0319",
@@ -5423,7 +5423,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito07.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:29:41"
   },
   {
     "id_medio": "M0320",
@@ -5440,7 +5440,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito08.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:29:45"
   },
   {
     "id_medio": "M0321",
@@ -5457,7 +5457,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito09.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:29:50"
   },
   {
     "id_medio": "M0322",
@@ -5474,7 +5474,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito10.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:30:01"
   },
   {
     "id_medio": "M0323",
@@ -5491,7 +5491,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito11.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:31:24"
   },
   {
     "id_medio": "M0324",
@@ -5508,7 +5508,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito12.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:31:31"
   },
   {
     "id_medio": "M0325",
@@ -5525,7 +5525,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito13.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:32:12"
   },
   {
     "id_medio": "M0326",
@@ -5542,7 +5542,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito14.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:32:33"
   },
   {
     "id_medio": "M0327",
@@ -5559,7 +5559,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito15.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:32:51"
   },
   {
     "id_medio": "M0328",
@@ -5576,7 +5576,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito16.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:33:14"
   },
   {
     "id_medio": "M0329",
@@ -5593,7 +5593,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito17.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:33:22"
   },
   {
     "id_medio": "M0330",
@@ -5610,7 +5610,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito18.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:33:25"
   },
   {
     "id_medio": "M0331",
@@ -5627,7 +5627,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito19.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:35:50"
   },
   {
     "id_medio": "M0332",
@@ -5644,7 +5644,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito20.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:37:23"
   },
   {
     "id_medio": "M0333",
@@ -5661,7 +5661,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/Memorias Vivas - Taller - Golfito21.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:37:32"
   },
   {
     "id_medio": "M0334",
@@ -5678,7 +5678,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Encuentro para La Compañía/_1091702.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 12:41:10"
   },
   {
     "id_medio": "M0335",
@@ -5695,7 +5695,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_0673.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:36:50"
   },
   {
     "id_medio": "M0336",
@@ -5712,7 +5712,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_0674.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:37:05"
   },
   {
     "id_medio": "M0337",
@@ -5729,7 +5729,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5840.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:22:12"
   },
   {
     "id_medio": "M0338",
@@ -5746,7 +5746,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5841.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:23:08"
   },
   {
     "id_medio": "M0339",
@@ -5763,7 +5763,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5842.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:23:28"
   },
   {
     "id_medio": "M0340",
@@ -5780,7 +5780,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5843.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:23:42"
   },
   {
     "id_medio": "M0341",
@@ -5797,7 +5797,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5844.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:24:11"
   },
   {
     "id_medio": "M0342",
@@ -5814,7 +5814,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5845.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:24:23"
   },
   {
     "id_medio": "M0343",
@@ -5831,7 +5831,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5846.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:24:42"
   },
   {
     "id_medio": "M0344",
@@ -5848,7 +5848,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5847.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:25:00"
   },
   {
     "id_medio": "M0345",
@@ -5865,7 +5865,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5848.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:25:51"
   },
   {
     "id_medio": "M0346",
@@ -5882,7 +5882,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5849.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:26:03"
   },
   {
     "id_medio": "M0347",
@@ -5899,7 +5899,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5850.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:26:23"
   },
   {
     "id_medio": "M0348",
@@ -5916,7 +5916,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5851.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:26:32"
   },
   {
     "id_medio": "M0349",
@@ -5933,7 +5933,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5852.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:26:54"
   },
   {
     "id_medio": "M0350",
@@ -5950,7 +5950,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5853.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:26:55"
   },
   {
     "id_medio": "M0351",
@@ -5967,7 +5967,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5854.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:27:34"
   },
   {
     "id_medio": "M0352",
@@ -5984,7 +5984,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5855.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:27:44"
   },
   {
     "id_medio": "M0353",
@@ -6001,7 +6001,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5856.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:28:54"
   },
   {
     "id_medio": "M0354",
@@ -6018,7 +6018,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5857.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:30:11"
   },
   {
     "id_medio": "M0355",
@@ -6035,7 +6035,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5858.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:31:33"
   },
   {
     "id_medio": "M0356",
@@ -6052,7 +6052,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5859.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:39:35"
   },
   {
     "id_medio": "M0357",
@@ -6069,7 +6069,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5860.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:39:44"
   },
   {
     "id_medio": "M0358",
@@ -6086,7 +6086,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Gina/IMG_5861.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-28"
+    "fecha_captura": "2025-03-28 17:39:49"
   },
   {
     "id_medio": "M0359",
@@ -6120,7 +6120,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/Cecilia.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 09:59:16"
   },
   {
     "id_medio": "M0361",
@@ -6137,7 +6137,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/IMG_0683.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:34:13"
   },
   {
     "id_medio": "M0362",
@@ -6154,7 +6154,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/IMG_5872.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:40:20"
   },
   {
     "id_medio": "M0363",
@@ -6171,7 +6171,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/IMG_5873.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:40:21"
   },
   {
     "id_medio": "M0364",
@@ -6188,7 +6188,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/IMG_5874.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:40:25"
   },
   {
     "id_medio": "M0365",
@@ -6205,7 +6205,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/IMG_5875.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:40:29"
   },
   {
     "id_medio": "M0366",
@@ -6222,7 +6222,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/IMG_5876.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:40:35"
   },
   {
     "id_medio": "M0367",
@@ -6239,7 +6239,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/IMG_5877.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:40:36"
   },
   {
     "id_medio": "M0368",
@@ -6256,7 +6256,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/IMG_5878.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:40:45"
   },
   {
     "id_medio": "M0369",
@@ -6273,7 +6273,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/Lila.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:00:16"
   },
   {
     "id_medio": "M0370",
@@ -6290,7 +6290,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/_1091647.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 09:57:01"
   },
   {
     "id_medio": "M0371",
@@ -6307,7 +6307,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/_1091648.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 09:59:06"
   },
   {
     "id_medio": "M0372",
@@ -6324,7 +6324,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/_1091652.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 09:59:33"
   },
   {
     "id_medio": "M0373",
@@ -6341,7 +6341,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/_1091668.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:05:53"
   },
   {
     "id_medio": "M0374",
@@ -6358,7 +6358,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/_1091669.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:06:01"
   },
   {
     "id_medio": "M0375",
@@ -6375,7 +6375,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/_1091694.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:21:58"
   },
   {
     "id_medio": "M0376",
@@ -6392,7 +6392,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Lila y Cecilia/_1091696.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 10:22:28"
   },
   {
     "id_medio": "M0377",
@@ -6409,7 +6409,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Paquita/IMG_0706 4.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 16:24:45"
   },
   {
     "id_medio": "M0378",
@@ -6426,7 +6426,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5888.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:30:52"
   },
   {
     "id_medio": "M0379",
@@ -6443,7 +6443,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5889.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:31:01"
   },
   {
     "id_medio": "M0380",
@@ -6460,7 +6460,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5890.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:31:07"
   },
   {
     "id_medio": "M0381",
@@ -6477,7 +6477,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5894.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:32:32"
   },
   {
     "id_medio": "M0382",
@@ -6494,7 +6494,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5895.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:32:37"
   },
   {
     "id_medio": "M0383",
@@ -6511,7 +6511,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5896.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:32:57"
   },
   {
     "id_medio": "M0384",
@@ -6545,7 +6545,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5898.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:33:42"
   },
   {
     "id_medio": "M0386",
@@ -6596,7 +6596,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5901.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:34:36"
   },
   {
     "id_medio": "M0389",
@@ -6613,7 +6613,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5902.webp",
     "ancho": 861,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:34:42"
   },
   {
     "id_medio": "M0390",
@@ -6630,7 +6630,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5903.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:34:43"
   },
   {
     "id_medio": "M0391",
@@ -6647,7 +6647,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5904.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:35:06"
   },
   {
     "id_medio": "M0392",
@@ -6664,7 +6664,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5905.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:35:57"
   },
   {
     "id_medio": "M0393",
@@ -6681,7 +6681,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5906.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:36:00"
   },
   {
     "id_medio": "M0394",
@@ -6698,7 +6698,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5907.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:36:10"
   },
   {
     "id_medio": "M0395",
@@ -6715,7 +6715,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5908.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:36:12"
   },
   {
     "id_medio": "M0396",
@@ -6732,7 +6732,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5909.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:36:17"
   },
   {
     "id_medio": "M0397",
@@ -6749,7 +6749,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5910.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 15:36:23"
   },
   {
     "id_medio": "M0398",
@@ -6766,7 +6766,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5951.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:02:23"
   },
   {
     "id_medio": "M0399",
@@ -6834,7 +6834,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5956.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:09:31"
   },
   {
     "id_medio": "M0403",
@@ -6902,7 +6902,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5960 2.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:14:45"
   },
   {
     "id_medio": "M0407",
@@ -6919,7 +6919,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5960.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:14:45"
   },
   {
     "id_medio": "M0408",
@@ -7021,7 +7021,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5967.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:23:38"
   },
   {
     "id_medio": "M0414",
@@ -7038,7 +7038,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5968.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:23:45"
   },
   {
     "id_medio": "M0415",
@@ -7072,7 +7072,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5981.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:42:54"
   },
   {
     "id_medio": "M0417",
@@ -7089,7 +7089,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5982.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:43:05"
   },
   {
     "id_medio": "M0418",
@@ -7106,7 +7106,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5987.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:46:24"
   },
   {
     "id_medio": "M0419",
@@ -7208,7 +7208,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5993.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:50:04"
   },
   {
     "id_medio": "M0425",
@@ -7225,7 +7225,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5994.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:50:11"
   },
   {
     "id_medio": "M0426",
@@ -7242,7 +7242,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5995.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:51:14"
   },
   {
     "id_medio": "M0427",
@@ -7259,7 +7259,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5996.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:51:19"
   },
   {
     "id_medio": "M0428",
@@ -7276,7 +7276,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Entrevista Vicky/IMG_5997.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-30"
+    "fecha_captura": "2025-03-30 17:51:27"
   },
   {
     "id_medio": "M0429",
@@ -7293,7 +7293,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito22.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 22:45:38"
   },
   {
     "id_medio": "M0430",
@@ -7310,7 +7310,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito23.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 22:46:14"
   },
   {
     "id_medio": "M0431",
@@ -7327,7 +7327,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito24.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 22:51:37"
   },
   {
     "id_medio": "M0432",
@@ -7344,7 +7344,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito25.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 22:51:46"
   },
   {
     "id_medio": "M0433",
@@ -7361,7 +7361,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito26.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 22:55:45"
   },
   {
     "id_medio": "M0434",
@@ -7378,7 +7378,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito27.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 22:55:47"
   },
   {
     "id_medio": "M0435",
@@ -7395,7 +7395,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito28.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:01:00"
   },
   {
     "id_medio": "M0436",
@@ -7412,7 +7412,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito29.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:01:26"
   },
   {
     "id_medio": "M0437",
@@ -7429,7 +7429,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito30.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:07:15"
   },
   {
     "id_medio": "M0438",
@@ -7446,7 +7446,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito31.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:07:36"
   },
   {
     "id_medio": "M0439",
@@ -7463,7 +7463,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito32.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:09:24"
   },
   {
     "id_medio": "M0440",
@@ -7480,7 +7480,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito33.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:14:14"
   },
   {
     "id_medio": "M0441",
@@ -7497,7 +7497,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito34.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:17:38"
   },
   {
     "id_medio": "M0442",
@@ -7514,7 +7514,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito35.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:18:34"
   },
   {
     "id_medio": "M0443",
@@ -7531,7 +7531,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito36.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:19:08"
   },
   {
     "id_medio": "M0444",
@@ -7548,7 +7548,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito37.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:23:21"
   },
   {
     "id_medio": "M0445",
@@ -7565,7 +7565,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito38.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:23:38"
   },
   {
     "id_medio": "M0446",
@@ -7582,7 +7582,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito39.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-09"
+    "fecha_captura": "2016-01-09 23:24:30"
   },
   {
     "id_medio": "M0447",
@@ -7599,7 +7599,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito40.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:15:04"
   },
   {
     "id_medio": "M0448",
@@ -7616,7 +7616,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito41.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:16:36"
   },
   {
     "id_medio": "M0449",
@@ -7633,7 +7633,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito42.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:26:51"
   },
   {
     "id_medio": "M0450",
@@ -7650,7 +7650,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito43.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:29:12"
   },
   {
     "id_medio": "M0451",
@@ -7667,7 +7667,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito44.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:34:33"
   },
   {
     "id_medio": "M0452",
@@ -7684,7 +7684,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito45.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:35:27"
   },
   {
     "id_medio": "M0453",
@@ -7701,7 +7701,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito46.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:40:36"
   },
   {
     "id_medio": "M0454",
@@ -7718,7 +7718,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito47.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:41:01"
   },
   {
     "id_medio": "M0455",
@@ -7735,7 +7735,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/Memorias Vivas - Retratos - Golfito48.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 00:41:21"
   },
   {
     "id_medio": "M0456",
@@ -7752,7 +7752,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/BTS/_1091705.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 12:57:44"
   },
   {
     "id_medio": "M0457",
@@ -7769,7 +7769,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/BTS/_1091710.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 12:59:34"
   },
   {
     "id_medio": "M0458",
@@ -7786,7 +7786,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/BTS/_1091714.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:00:33"
   },
   {
     "id_medio": "M0459",
@@ -7803,7 +7803,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/BTS/_1091718.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:01:15"
   },
   {
     "id_medio": "M0460",
@@ -7820,7 +7820,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/BTS/_1091735.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:13:40"
   },
   {
     "id_medio": "M0461",
@@ -7837,7 +7837,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/BTS/_1091736.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:14:02"
   },
   {
     "id_medio": "M0462",
@@ -7854,7 +7854,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/BTS/_1091741.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:15:37"
   },
   {
     "id_medio": "M0463",
@@ -7871,7 +7871,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Retratos señoras_ Golfito_ Caro Bello/BTS/_1091745.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:17:06"
   },
   {
     "id_medio": "M0464",
@@ -8126,7 +8126,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/Grupo taller mapeo.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-12-10"
+    "fecha_captura": "2024-12-10 15:30:15"
   },
   {
     "id_medio": "M0479",
@@ -8143,7 +8143,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/IMG_1383.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 10:59:04"
   },
   {
     "id_medio": "M0480",
@@ -8160,7 +8160,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/IMG_1386.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 11:36:12"
   },
   {
     "id_medio": "M0481",
@@ -8177,7 +8177,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/Memorias Vivas - Taller - Golfito14.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:32:33"
   },
   {
     "id_medio": "M0482",
@@ -8194,7 +8194,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/Memorias Vivas - Taller - Golfito19.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2016-01-10"
+    "fecha_captura": "2016-01-10 01:35:50"
   },
   {
     "id_medio": "M0483",
@@ -8211,7 +8211,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/Pres. doc 2025 del corto.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 13:29:45"
   },
   {
     "id_medio": "M0484",
@@ -8228,7 +8228,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/Taller mañana 2024 Golfito.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 12:29:45"
   },
   {
     "id_medio": "M0485",
@@ -8245,7 +8245,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/_1066223.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2024-05-24"
+    "fecha_captura": "2024-05-24 17:19:14"
   },
   {
     "id_medio": "M0486",
@@ -8262,7 +8262,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/_1091647.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 09:57:01"
   },
   {
     "id_medio": "M0487",
@@ -8279,7 +8279,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/_1091705.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 12:57:44"
   },
   {
     "id_medio": "M0488",
@@ -8296,7 +8296,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/_1091706.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 12:58:52"
   },
   {
     "id_medio": "M0489",
@@ -8313,7 +8313,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/_1091715.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:01:00"
   },
   {
     "id_medio": "M0490",
@@ -8330,7 +8330,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/_1091727.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:08:11"
   },
   {
     "id_medio": "M0491",
@@ -8347,7 +8347,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/_1091736.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:14:02"
   },
   {
     "id_medio": "M0492",
@@ -8364,7 +8364,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G1_Marzo/T1_Golfito/Selección general proceso Golfito_no cronológico/_1091737.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-29"
+    "fecha_captura": "2025-03-29 13:14:23"
   },
   {
     "id_medio": "M0493",
@@ -8381,7 +8381,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/AS_Alexander Solorzano/DSC05867.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-29"
+    "fecha_captura": "2025-08-29 14:52:26"
   },
   {
     "id_medio": "M0494",
@@ -8398,7 +8398,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/AS_Alexander Solorzano/DSC05869.webp",
     "ancho": 684,
     "alto": 1024,
-    "fecha_captura": "2025-08-29"
+    "fecha_captura": "2025-08-29 14:52:38"
   },
   {
     "id_medio": "M0495",
@@ -8415,7 +8415,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/AS_Alexander Solorzano/DSC05872.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-29"
+    "fecha_captura": "2025-08-29 14:53:23"
   },
   {
     "id_medio": "M0496",
@@ -8432,7 +8432,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/AS_Alexander Solorzano/DSC05879.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-29"
+    "fecha_captura": "2025-08-29 14:54:38"
   },
   {
     "id_medio": "M0497",
@@ -8449,7 +8449,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/AS_Alexander Solorzano/DSC05895.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-29"
+    "fecha_captura": "2025-08-29 15:04:17"
   },
   {
     "id_medio": "M0498",
@@ -8466,7 +8466,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/AS_Alexander Solorzano/DSC05911.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-29"
+    "fecha_captura": "2025-08-29 15:07:29"
   },
   {
     "id_medio": "M0499",
@@ -8483,7 +8483,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/1. Imagen de grupo.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 10:49:31"
   },
   {
     "id_medio": "M0500",
@@ -8500,7 +8500,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/DSC05852.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-29"
+    "fecha_captura": "2025-08-29 10:36:48"
   },
   {
     "id_medio": "M0501",
@@ -8517,7 +8517,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/FTV01637.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 10:09:40"
   },
   {
     "id_medio": "M0502",
@@ -8534,7 +8534,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/FTV01642.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 10:19:17"
   },
   {
     "id_medio": "M0503",
@@ -8551,7 +8551,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/FTV01647.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 10:29:07"
   },
   {
     "id_medio": "M0504",
@@ -8568,7 +8568,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/FTV01649.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 10:30:22"
   },
   {
     "id_medio": "M0505",
@@ -8585,7 +8585,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/FTV01650.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 10:30:25"
   },
   {
     "id_medio": "M0506",
@@ -8602,7 +8602,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/FTV01652.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 10:50:12"
   },
   {
     "id_medio": "M0507",
@@ -8619,7 +8619,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/IMG_20250830_085625785.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 08:56:26"
   },
   {
     "id_medio": "M0508",
@@ -8636,7 +8636,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/IMG_20250830_091926497.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 09:19:26"
   },
   {
     "id_medio": "M0509",
@@ -8670,7 +8670,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/IMG_7898.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 11:23:20"
   },
   {
     "id_medio": "M0511",
@@ -8704,7 +8704,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/_1102887.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 08:45:01"
   },
   {
     "id_medio": "M0513",
@@ -8721,7 +8721,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/_1102896.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 08:53:13"
   },
   {
     "id_medio": "M0514",
@@ -8738,7 +8738,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/_1102898.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 08:55:12"
   },
   {
     "id_medio": "M0515",
@@ -8755,7 +8755,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/_1102935.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 09:52:10"
   },
   {
     "id_medio": "M0516",
@@ -8772,7 +8772,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/_1102937.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 09:52:52"
   },
   {
     "id_medio": "M0517",
@@ -8789,7 +8789,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/_1102947.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 09:54:38"
   },
   {
     "id_medio": "M0518",
@@ -8806,7 +8806,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/_1102950.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 09:54:54"
   },
   {
     "id_medio": "M0519",
@@ -8823,7 +8823,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/_1102957.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 09:56:51"
   },
   {
     "id_medio": "M0520",
@@ -8840,7 +8840,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G2_Agosto/GMB_Monitoreo biológico comunitario/_1102975.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-08-30"
+    "fecha_captura": "2025-08-30 10:29:14"
   },
   {
     "id_medio": "M0521",
@@ -8857,7 +8857,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/DSC_0136.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 13:04:27"
   },
   {
     "id_medio": "M0522",
@@ -8874,7 +8874,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/DSC_0137.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 13:04:36"
   },
   {
     "id_medio": "M0523",
@@ -8891,7 +8891,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/DSC_0138.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 13:04:47"
   },
   {
     "id_medio": "M0524",
@@ -8908,7 +8908,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/DSC_0139.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 13:04:49"
   },
   {
     "id_medio": "M0525",
@@ -8925,7 +8925,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/DSC_0140.webp",
     "ancho": 681,
     "alto": 1024,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 13:05:00"
   },
   {
     "id_medio": "M0526",
@@ -8942,7 +8942,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/IMG_9673.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 09:10:44"
   },
   {
     "id_medio": "M0527",
@@ -8959,7 +8959,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/IMG_9674.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 09:10:51"
   },
   {
     "id_medio": "M0528",
@@ -8976,7 +8976,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/_1103134.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 09:24:40"
   },
   {
     "id_medio": "M0529",
@@ -8993,7 +8993,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/_1103139.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 09:26:05"
   },
   {
     "id_medio": "M0530",
@@ -9010,7 +9010,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/_1103144.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 09:27:01"
   },
   {
     "id_medio": "M0531",
@@ -9027,7 +9027,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G3_Octubre/T3_La Palma/GJA_Gilberto Jiménez Álvarez/_1103170.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 09:31:32"
   },
   {
     "id_medio": "M0532",
@@ -9044,7 +9044,7 @@ const medios = [
     "archivo_miniatura": "thumb/2025/G4_Diciembre/La compañía_ver devoluciones/_1113875.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 13:41:03"
   },
   {
     "id_medio": "M0533",
@@ -9061,7 +9061,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Cafe reencuentro sonido/IMG_3575.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:50:15"
   },
   {
     "id_medio": "M0534",
@@ -9078,7 +9078,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Cafe reencuentro sonido/IMG_3589.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:58:17"
   },
   {
     "id_medio": "M0535",
@@ -9095,7 +9095,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Cafe reencuentro sonido/IMG_3597.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 15:09:13"
   },
   {
     "id_medio": "M0536",
@@ -9112,7 +9112,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Cafe reencuentro sonido/IMG_3612.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 15:45:05"
   },
   {
     "id_medio": "M0537",
@@ -9129,7 +9129,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5446.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:22:37"
   },
   {
     "id_medio": "M0538",
@@ -9146,7 +9146,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5447.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:22:42"
   },
   {
     "id_medio": "M0539",
@@ -9163,7 +9163,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5452.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:47:52"
   },
   {
     "id_medio": "M0540",
@@ -9180,7 +9180,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5455.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:51:37"
   },
   {
     "id_medio": "M0541",
@@ -9197,7 +9197,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5459.webp",
     "ancho": 1024,
     "alto": 864,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 15:55:45"
   },
   {
     "id_medio": "M0542",
@@ -9214,7 +9214,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5461.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 16:07:33"
   },
   {
     "id_medio": "M0543",
@@ -9282,7 +9282,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/44BF3B1F-38E8-4C6D-A228-DA8BD4055AFA.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2026-07-10"
+    "fecha_captura": "2026-07-10 11:52:39"
   },
   {
     "id_medio": "M0547",
@@ -9299,7 +9299,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/901D693A-868B-41CD-9155-38C5B19B00D0.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2026-07-10"
+    "fecha_captura": "2026-07-10 10:55:21"
   },
   {
     "id_medio": "M0548",
@@ -9316,7 +9316,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_3301.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:50:29"
   },
   {
     "id_medio": "M0549",
@@ -9333,7 +9333,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_3310.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:52:23"
   },
   {
     "id_medio": "M0550",
@@ -9350,7 +9350,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_3517.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 08:59:41"
   },
   {
     "id_medio": "M0551",
@@ -9367,7 +9367,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_3520.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 08:59:55"
   },
   {
     "id_medio": "M0552",
@@ -9384,7 +9384,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_5308.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:06:23"
   },
   {
     "id_medio": "M0553",
@@ -9401,7 +9401,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_5310.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:19:47"
   },
   {
     "id_medio": "M0554",
@@ -9418,7 +9418,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_5376.webp",
     "ancho": 711,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 19:13:44"
   },
   {
     "id_medio": "M0555",
@@ -9435,7 +9435,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_5391.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 09:04:22"
   },
   {
     "id_medio": "M0556",
@@ -9452,7 +9452,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_5398.webp",
     "ancho": 1024,
     "alto": 796,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 09:42:49"
   },
   {
     "id_medio": "M0557",
@@ -9469,7 +9469,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_5400.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 09:57:56"
   },
   {
     "id_medio": "M0558",
@@ -9486,7 +9486,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_5564.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 08:38:32"
   },
   {
     "id_medio": "M0559",
@@ -9503,7 +9503,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_5586.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 10:36:28"
   },
   {
     "id_medio": "M0560",
@@ -9520,7 +9520,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_5604.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 11:09:46"
   },
   {
     "id_medio": "M0561",
@@ -9537,7 +9537,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_6871.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:50:20"
   },
   {
     "id_medio": "M0562",
@@ -9554,7 +9554,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_6874.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:51:22"
   },
   {
     "id_medio": "M0563",
@@ -9571,7 +9571,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_6880 2.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 10:11:01"
   },
   {
     "id_medio": "M0564",
@@ -9588,7 +9588,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_6880.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 10:11:01"
   },
   {
     "id_medio": "M0565",
@@ -9605,7 +9605,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_6881.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 10:11:04"
   },
   {
     "id_medio": "M0566",
@@ -9622,7 +9622,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_6972.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 09:18:38"
   },
   {
     "id_medio": "M0567",
@@ -9639,7 +9639,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_6996.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 09:56:26"
   },
   {
     "id_medio": "M0568",
@@ -9656,7 +9656,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/IMG_6998.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 09:57:18"
   },
   {
     "id_medio": "M0569",
@@ -9707,7 +9707,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G2_Julio/Julio Talleres 2026/Taller registro memoria/caa55d62-0f58-482f-93d0-18d856cd05e1.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 10:35:16"
   },
   {
     "id_medio": "M0572",
@@ -9775,7 +9775,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/Foto de grupo entrevista Eulogia.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 10:49:45"
   },
   {
     "id_medio": "M0576",
@@ -9792,7 +9792,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_1407.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 09:22:31"
   },
   {
     "id_medio": "M0577",
@@ -9826,7 +9826,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_1414.webp",
     "ancho": 1024,
     "alto": 612,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 11:19:02"
   },
   {
     "id_medio": "M0579",
@@ -9843,7 +9843,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_4414.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 09:30:30"
   },
   {
     "id_medio": "M0580",
@@ -9860,7 +9860,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_4429.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 09:32:30"
   },
   {
     "id_medio": "M0581",
@@ -9877,7 +9877,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_4430.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 09:32:30"
   },
   {
     "id_medio": "M0582",
@@ -9894,7 +9894,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_4432.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 09:46:56"
   },
   {
     "id_medio": "M0583",
@@ -9911,7 +9911,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_4436.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 09:47:05"
   },
   {
     "id_medio": "M0584",
@@ -9928,7 +9928,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_4445.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 09:57:33"
   },
   {
     "id_medio": "M0585",
@@ -9945,7 +9945,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_4452.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 09:58:05"
   },
   {
     "id_medio": "M0586",
@@ -9962,7 +9962,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_4466.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 10:16:48"
   },
   {
     "id_medio": "M0587",
@@ -9979,7 +9979,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_6474.webp",
     "ancho": 1024,
     "alto": 684,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 09:25:38"
   },
   {
     "id_medio": "M0588",
@@ -9996,7 +9996,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_6772.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 09:19:39"
   },
   {
     "id_medio": "M0589",
@@ -10013,7 +10013,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_6793.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 10:44:08"
   },
   {
     "id_medio": "M0590",
@@ -10030,7 +10030,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_6808.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 11:29:18"
   },
   {
     "id_medio": "M0591",
@@ -10047,7 +10047,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/EBC_Eulogía Beita Chacón/IMG_6835.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 11:42:06"
   },
   {
     "id_medio": "M0592",
@@ -10132,7 +10132,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/MA_Manuel Arroyo/IMG_1429_1.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 14:15:13"
   },
   {
     "id_medio": "M0597",
@@ -10149,7 +10149,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/MA_Manuel Arroyo/IMG_4498.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 14:36:23"
   },
   {
     "id_medio": "M0598",
@@ -10166,7 +10166,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/MA_Manuel Arroyo/IMG_4506.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 14:36:48"
   },
   {
     "id_medio": "M0599",
@@ -10183,7 +10183,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/MA_Manuel Arroyo/IMG_4508.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 14:38:02"
   },
   {
     "id_medio": "M0600",
@@ -10200,7 +10200,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/MA_Manuel Arroyo/IMG_6845.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 13:58:26"
   },
   {
     "id_medio": "M0601",
@@ -10217,7 +10217,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/MA_Manuel Arroyo/IMG_6872.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 15:05:31"
   },
   {
     "id_medio": "M0602",
@@ -10234,7 +10234,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/MA_Manuel Arroyo/IMG_6876.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 15:06:03"
   },
   {
     "id_medio": "M0603",
@@ -10251,7 +10251,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/MA_Manuel Arroyo/IMG_6881.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 15:28:47"
   },
   {
     "id_medio": "M0604",
@@ -10268,7 +10268,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/MA_Manuel Arroyo/IMG_6884.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 15:58:30"
   },
   {
     "id_medio": "M0605",
@@ -10302,7 +10302,7 @@ const medios = [
     "archivo_miniatura": "thumb/2026/G3_Septiembre/T1_Golfito/MA_Manuel Arroyo/foto de grupo.webp",
     "ancho": 1024,
     "alto": 952,
-    "fecha_captura": "2026-09-26"
+    "fecha_captura": "2026-09-26 16:04:58"
   },
   {
     "id_medio": "M0607",
@@ -10319,7 +10319,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/01091855.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:19:56"
   },
   {
     "id_medio": "M0608",
@@ -10336,7 +10336,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/01091874.webp",
     "ancho": 683,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:57:55"
   },
   {
     "id_medio": "M0609",
@@ -10353,7 +10353,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/01091883.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:59:44"
   },
   {
     "id_medio": "M0610",
@@ -10370,7 +10370,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/01091891.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 11:04:50"
   },
   {
     "id_medio": "M0611",
@@ -10404,7 +10404,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/IMG_0716 6.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 09:22:18"
   },
   {
     "id_medio": "M0613",
@@ -10421,7 +10421,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/IMG_0717 6.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:03:09"
   },
   {
     "id_medio": "M0614",
@@ -10438,7 +10438,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/IMG_0723 3.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:33:07"
   },
   {
     "id_medio": "M0615",
@@ -10455,7 +10455,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/IMG_0725 3.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:36:00"
   },
   {
     "id_medio": "M0616",
@@ -10472,7 +10472,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/IMG_0727 3.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:38:37"
   },
   {
     "id_medio": "M0617",
@@ -10489,7 +10489,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/IMG_0733 3.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 11:46:34"
   },
   {
     "id_medio": "M0618",
@@ -10506,7 +10506,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/_1091844.webp",
     "ancho": 767,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:18:33"
   },
   {
     "id_medio": "M0619",
@@ -10523,7 +10523,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/_1091860.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:21:05"
   },
   {
     "id_medio": "M0620",
@@ -10540,7 +10540,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/_1091867.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:23:40"
   },
   {
     "id_medio": "M0621",
@@ -10557,7 +10557,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/_1091884.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:59:44"
   },
   {
     "id_medio": "M0622",
@@ -10574,7 +10574,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/_1091886.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 10:59:57"
   },
   {
     "id_medio": "M0623",
@@ -10591,7 +10591,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/_1091890.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 11:00:30"
   },
   {
     "id_medio": "M0624",
@@ -10608,7 +10608,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Auditorio Golfito Sede del Sur_2025/_1091896.webp",
     "ancho": 1024,
     "alto": 767,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 11:17:17"
   },
   {
     "id_medio": "M0625",
@@ -10625,7 +10625,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/DSC_0024.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 18:48:28"
   },
   {
     "id_medio": "M0626",
@@ -10642,7 +10642,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/DSC_0032.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 18:57:31"
   },
   {
     "id_medio": "M0627",
@@ -10659,7 +10659,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/DSC_0035.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 18:58:13"
   },
   {
     "id_medio": "M0628",
@@ -10676,7 +10676,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/DSC_0037.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 18:59:26"
   },
   {
     "id_medio": "M0629",
@@ -10693,7 +10693,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/DSC_0042.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 19:02:20"
   },
   {
     "id_medio": "M0630",
@@ -10710,7 +10710,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/DSC_0072.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 19:31:42"
   },
   {
     "id_medio": "M0631",
@@ -10727,7 +10727,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/DSC_0075.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 19:34:00"
   },
   {
     "id_medio": "M0632",
@@ -10744,7 +10744,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/DSC_0113.webp",
     "ancho": 1024,
     "alto": 681,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 19:50:10"
   },
   {
     "id_medio": "M0633",
@@ -10761,7 +10761,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/IMG_2960.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 19:50:18"
   },
   {
     "id_medio": "M0634",
@@ -10778,7 +10778,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/_1080435.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 18:16:44"
   },
   {
     "id_medio": "M0635",
@@ -10795,7 +10795,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/_1080447.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 18:30:20"
   },
   {
     "id_medio": "M0636",
@@ -10812,7 +10812,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/_1080451.webp",
     "ancho": 1024,
     "alto": 683,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 18:35:58"
   },
   {
     "id_medio": "M0637",
@@ -10829,7 +10829,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Eida Fletes_Puerto Jiménez_2024/_1080462.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2024-12-06"
+    "fecha_captura": "2024-12-06 18:58:54"
   },
   {
     "id_medio": "M0638",
@@ -10880,7 +10880,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/IMG_1120.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 11:03:21"
   },
   {
     "id_medio": "M0641",
@@ -10897,7 +10897,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/IMG_1124.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 11:09:39"
   },
   {
     "id_medio": "M0642",
@@ -10914,7 +10914,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/IMG_1140 2.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 12:11:32"
   },
   {
     "id_medio": "M0643",
@@ -10931,7 +10931,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/IMG_1386.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 11:36:12"
   },
   {
     "id_medio": "M0644",
@@ -10948,7 +10948,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/IMG_1397.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 12:34:34"
   },
   {
     "id_medio": "M0645",
@@ -10965,7 +10965,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/IMG_1398.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 12:34:51"
   },
   {
     "id_medio": "M0646",
@@ -10982,7 +10982,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/IMG_1400.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 13:12:39"
   },
   {
     "id_medio": "M0647",
@@ -10999,7 +10999,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/IMG_1405.webp",
     "ancho": 1024,
     "alto": 576,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 13:30:33"
   },
   {
     "id_medio": "M0648",
@@ -11016,7 +11016,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/_1113736.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-12-12"
+    "fecha_captura": "2025-12-12 06:22:13"
   },
   {
     "id_medio": "M0649",
@@ -11033,7 +11033,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/_1113866.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 10:20:24"
   },
   {
     "id_medio": "M0650",
@@ -11050,7 +11050,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/_1113871.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 13:38:04"
   },
   {
     "id_medio": "M0651",
@@ -11067,7 +11067,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/_1113872.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 13:38:45"
   },
   {
     "id_medio": "M0652",
@@ -11084,7 +11084,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/_1113874.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 13:40:28"
   },
   {
     "id_medio": "M0653",
@@ -11101,7 +11101,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_2025 primer corte/_1113875.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-12-13"
+    "fecha_captura": "2025-12-13 13:41:03"
   },
   {
     "id_medio": "M0654",
@@ -11118,7 +11118,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_Pres. Pública_2026/IMG_2611.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-05-28"
+    "fecha_captura": "2026-05-28 10:44:32"
   },
   {
     "id_medio": "M0655",
@@ -11135,7 +11135,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_Pres. Pública_2026/IMG_2629.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-05-28"
+    "fecha_captura": "2026-05-28 11:03:45"
   },
   {
     "id_medio": "M0656",
@@ -11152,7 +11152,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_Pres. Pública_2026/_1114281.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-05-28"
+    "fecha_captura": "2026-05-28 11:18:31"
   },
   {
     "id_medio": "M0657",
@@ -11169,7 +11169,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_Pres. Pública_2026/_1114286.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-05-28"
+    "fecha_captura": "2026-05-28 11:19:22"
   },
   {
     "id_medio": "M0658",
@@ -11186,7 +11186,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_Pres. Pública_2026/_1114334.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-05-28"
+    "fecha_captura": "2026-05-28 11:25:21"
   },
   {
     "id_medio": "M0659",
@@ -11203,7 +11203,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_Pres. Pública_2026/_1114338.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-05-28"
+    "fecha_captura": "2026-05-28 11:27:46"
   },
   {
     "id_medio": "M0660",
@@ -11220,7 +11220,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_Pres. Pública_2026/_1114352.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-05-28"
+    "fecha_captura": "2026-05-28 11:58:54"
   },
   {
     "id_medio": "M0661",
@@ -11237,7 +11237,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/La compañía_Pres. Pública_2026/_1114358.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-05-28"
+    "fecha_captura": "2026-05-28 12:07:28"
   },
   {
     "id_medio": "M0662",
@@ -11254,7 +11254,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/5091660D-DB7E-4F2D-AED5-CD1BFAE37836.webp",
     "ancho": 1024,
     "alto": 747,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:18:57"
   },
   {
     "id_medio": "M0663",
@@ -11271,7 +11271,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9639.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:18:53"
   },
   {
     "id_medio": "M0664",
@@ -11288,7 +11288,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9640.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:18:54"
   },
   {
     "id_medio": "M0665",
@@ -11305,7 +11305,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9641.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:18:54"
   },
   {
     "id_medio": "M0666",
@@ -11322,7 +11322,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9642.webp",
     "ancho": 1024,
     "alto": 744,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:18:57"
   },
   {
     "id_medio": "M0667",
@@ -11339,7 +11339,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9643.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:18:57"
   },
   {
     "id_medio": "M0668",
@@ -11356,7 +11356,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9645.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:19:03"
   },
   {
     "id_medio": "M0669",
@@ -11373,7 +11373,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9646.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:19:03"
   },
   {
     "id_medio": "M0670",
@@ -11390,7 +11390,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9647.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:19:04"
   },
   {
     "id_medio": "M0671",
@@ -11407,7 +11407,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9648.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:19:04"
   },
   {
     "id_medio": "M0672",
@@ -11424,7 +11424,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9716.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 15:40:11"
   },
   {
     "id_medio": "M0673",
@@ -11441,7 +11441,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9717.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 15:41:23"
   },
   {
     "id_medio": "M0674",
@@ -11458,7 +11458,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9718.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 15:41:38"
   },
   {
     "id_medio": "M0675",
@@ -11475,7 +11475,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9719.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 15:41:49"
   },
   {
     "id_medio": "M0676",
@@ -11492,7 +11492,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9720.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 15:46:03"
   },
   {
     "id_medio": "M0677",
@@ -11509,7 +11509,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9721.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 16:03:39"
   },
   {
     "id_medio": "M0678",
@@ -11526,7 +11526,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9722.webp",
     "ancho": 1024,
     "alto": 624,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 16:04:03"
   },
   {
     "id_medio": "M0679",
@@ -11543,7 +11543,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9724.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 16:04:43"
   },
   {
     "id_medio": "M0680",
@@ -11560,7 +11560,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9736.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 16:17:31"
   },
   {
     "id_medio": "M0681",
@@ -11577,7 +11577,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9737.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 16:17:37"
   },
   {
     "id_medio": "M0682",
@@ -11594,7 +11594,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9738.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 16:22:34"
   },
   {
     "id_medio": "M0683",
@@ -11611,7 +11611,7 @@ const medios = [
     "archivo_miniatura": "thumb/Devoluciones_presentaciones cortos/Reinaldo Aguilar_Osacoop/IMG_9740.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-04"
+    "fecha_captura": "2025-10-04 16:23:15"
   },
   {
     "id_medio": "M0684",
@@ -11645,7 +11645,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/1. Montaje en Rancho Quemado/IMG_2968.webp",
     "ancho": 1024,
     "alto": 1017,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 08:40:34"
   },
   {
     "id_medio": "M0686",
@@ -11662,7 +11662,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/1. Montaje en Rancho Quemado/IMG_2970.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:14:18"
   },
   {
     "id_medio": "M0687",
@@ -11679,7 +11679,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/1. Montaje en Rancho Quemado/IMG_2971.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:14:26"
   },
   {
     "id_medio": "M0688",
@@ -11696,7 +11696,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/1. Montaje en Rancho Quemado/IMG_2972.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:14:36"
   },
   {
     "id_medio": "M0689",
@@ -11713,7 +11713,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/1. Montaje en Rancho Quemado/IMG_2979.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:23:05"
   },
   {
     "id_medio": "M0690",
@@ -11730,7 +11730,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/1. Montaje en Rancho Quemado/IMG_2981.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-12-07"
+    "fecha_captura": "2024-12-07 09:24:04"
   },
   {
     "id_medio": "M0691",
@@ -11764,7 +11764,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0737.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:06:14"
   },
   {
     "id_medio": "M0693",
@@ -11781,7 +11781,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0738.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:06:18"
   },
   {
     "id_medio": "M0694",
@@ -11798,7 +11798,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0739.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:06:26"
   },
   {
     "id_medio": "M0695",
@@ -11815,7 +11815,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0740.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:06:28"
   },
   {
     "id_medio": "M0696",
@@ -11832,7 +11832,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0741.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:07:31"
   },
   {
     "id_medio": "M0697",
@@ -11849,7 +11849,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0742.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:07:34"
   },
   {
     "id_medio": "M0698",
@@ -11866,7 +11866,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0743.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:07:39"
   },
   {
     "id_medio": "M0699",
@@ -11883,7 +11883,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0744.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:07:42"
   },
   {
     "id_medio": "M0700",
@@ -11900,7 +11900,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0745.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:07:49"
   },
   {
     "id_medio": "M0701",
@@ -11917,7 +11917,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0746.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:07:52"
   },
   {
     "id_medio": "M0702",
@@ -11934,7 +11934,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/2. Montaje en la sede del sur/IMG_0747.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-03-31"
+    "fecha_captura": "2025-03-31 12:08:08"
   },
   {
     "id_medio": "M0703",
@@ -12019,7 +12019,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9395.webp",
     "ancho": 1024,
     "alto": 508,
-    "fecha_captura": "2025-09-10"
+    "fecha_captura": "2025-09-10 19:35:40"
   },
   {
     "id_medio": "M0708",
@@ -12036,7 +12036,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9414.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 10:59:20"
   },
   {
     "id_medio": "M0709",
@@ -12053,7 +12053,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9415.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 10:59:26"
   },
   {
     "id_medio": "M0710",
@@ -12070,7 +12070,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9416.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 11:03:56"
   },
   {
     "id_medio": "M0711",
@@ -12087,7 +12087,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9417.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 11:04:04"
   },
   {
     "id_medio": "M0712",
@@ -12104,7 +12104,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9418.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 11:07:22"
   },
   {
     "id_medio": "M0713",
@@ -12121,7 +12121,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9422.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 12:17:34"
   },
   {
     "id_medio": "M0714",
@@ -12138,7 +12138,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9423.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 12:17:37"
   },
   {
     "id_medio": "M0715",
@@ -12155,7 +12155,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9424.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 12:17:40"
   },
   {
     "id_medio": "M0716",
@@ -12172,7 +12172,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9425.webp",
     "ancho": 1024,
     "alto": 470,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 12:17:55"
   },
   {
     "id_medio": "M0717",
@@ -12189,7 +12189,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Rancho Quemado_dic2024/3. Montaje en la Escuela de Arquitectura/IMG_9426.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 12:35:10"
   },
   {
     "id_medio": "M0718",
@@ -12376,7 +12376,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Reinaldo Aguilar/Osacoop/Mandalas y texto + fotos montaje/3EDE47F9-147F-4EEE-A85E-CBB4FA40F43A_1_105_c.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 16:19:04"
   },
   {
     "id_medio": "M0729",
@@ -12393,7 +12393,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Reinaldo Aguilar/Osacoop/Mandalas y texto + fotos montaje/6985AC85-9446-41FF-80D8-0C66DDEC7C06_1_105_c.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 15:44:48"
   },
   {
     "id_medio": "M0730",
@@ -12410,7 +12410,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Reinaldo Aguilar/Osacoop/Mandalas y texto + fotos montaje/Abarema adenophora_arte.webp",
     "ancho": 1024,
     "alto": 1024,
-    "fecha_captura": "2025-09-11"
+    "fecha_captura": "2025-09-11 17:08:25"
   },
   {
     "id_medio": "M0731",
@@ -12631,7 +12631,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Reinaldo Aguilar/Osacoop/Mandalas y texto + fotos montaje/_1103097.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 15:52:45"
   },
   {
     "id_medio": "M0744",
@@ -12648,7 +12648,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Reinaldo Aguilar/Osacoop/Mandalas y texto + fotos montaje/_1103103.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2025-10-03"
+    "fecha_captura": "2025-10-03 15:53:37"
   },
   {
     "id_medio": "M0745",
@@ -12682,7 +12682,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Reinaldo Aguilar/Osacoop/Mandalas y texto + fotos montaje/zarcillos de Passiflora_arte.webp",
     "ancho": 1024,
     "alto": 1024,
-    "fecha_captura": "2018-08-22"
+    "fecha_captura": "2018-08-22 11:25:26"
   },
   {
     "id_medio": "M0747",
@@ -12750,7 +12750,7 @@ const medios = [
     "archivo_miniatura": "thumb/Exposiciones_Curadurías/Reinaldo Aguilar/Vitrina Mall San Pedro/Reinaldo viendo su expo en el Mall.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-08-17"
+    "fecha_captura": "2026-08-17 13:46:38"
   },
   {
     "id_medio": "M0751",
@@ -13192,7 +13192,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (1).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 09:58:56"
   },
   {
     "id_medio": "M0777",
@@ -13209,7 +13209,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (1.2).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:02:30"
   },
   {
     "id_medio": "M0778",
@@ -13226,7 +13226,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (10).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:13:56"
   },
   {
     "id_medio": "M0779",
@@ -13243,7 +13243,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (10.1).webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:14:14"
   },
   {
     "id_medio": "M0780",
@@ -13260,7 +13260,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (11).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:14:45"
   },
   {
     "id_medio": "M0781",
@@ -13277,7 +13277,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (11.1).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:15:11"
   },
   {
     "id_medio": "M0782",
@@ -13294,7 +13294,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (12).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:15:33"
   },
   {
     "id_medio": "M0783",
@@ -13311,7 +13311,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (12.1).webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:15:47"
   },
   {
     "id_medio": "M0784",
@@ -13328,7 +13328,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (13).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:16:20"
   },
   {
     "id_medio": "M0785",
@@ -13345,7 +13345,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (13.1).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:16:34"
   },
   {
     "id_medio": "M0786",
@@ -13362,7 +13362,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (14).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:16:46"
   },
   {
     "id_medio": "M0787",
@@ -13379,7 +13379,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (14.1).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:16:56"
   },
   {
     "id_medio": "M0788",
@@ -13396,7 +13396,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (15).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:17:14"
   },
   {
     "id_medio": "M0789",
@@ -13413,7 +13413,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (15.1).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:17:31"
   },
   {
     "id_medio": "M0790",
@@ -13430,7 +13430,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (2).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:03:03"
   },
   {
     "id_medio": "M0791",
@@ -13447,7 +13447,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (2.1).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:06:28"
   },
   {
     "id_medio": "M0792",
@@ -13464,7 +13464,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (3).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:08:04"
   },
   {
     "id_medio": "M0793",
@@ -13481,7 +13481,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (3.1).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:08:22"
   },
   {
     "id_medio": "M0794",
@@ -13498,7 +13498,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (4).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:08:53"
   },
   {
     "id_medio": "M0795",
@@ -13515,7 +13515,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (4.1).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:09:07"
   },
   {
     "id_medio": "M0796",
@@ -13532,7 +13532,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (5).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:09:36"
   },
   {
     "id_medio": "M0797",
@@ -13549,7 +13549,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (5.1).webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:10:06"
   },
   {
     "id_medio": "M0798",
@@ -13566,7 +13566,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (6).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:11:43"
   },
   {
     "id_medio": "M0799",
@@ -13583,7 +13583,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (6.1).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:12:05"
   },
   {
     "id_medio": "M0800",
@@ -13600,7 +13600,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (7).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:12:22"
   },
   {
     "id_medio": "M0801",
@@ -13617,7 +13617,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (7.1).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:12:33"
   },
   {
     "id_medio": "M0802",
@@ -13634,7 +13634,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (8).webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:13:01"
   },
   {
     "id_medio": "M0803",
@@ -13651,7 +13651,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (8.1).webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:13:15"
   },
   {
     "id_medio": "M0804",
@@ -13668,7 +13668,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (9).webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:13:31"
   },
   {
     "id_medio": "M0805",
@@ -13685,7 +13685,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2024/PR_Producto Collages_Golfito/Collage (9.1).webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2024-07-25"
+    "fecha_captura": "2024-07-25 10:13:41"
   },
   {
     "id_medio": "M0806",
@@ -13702,7 +13702,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Cafe reencuentro sonido/IMG_3575.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:50:15"
   },
   {
     "id_medio": "M0807",
@@ -13719,7 +13719,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Cafe reencuentro sonido/IMG_3589.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:58:17"
   },
   {
     "id_medio": "M0808",
@@ -13736,7 +13736,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Cafe reencuentro sonido/IMG_3597.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 15:09:13"
   },
   {
     "id_medio": "M0809",
@@ -13753,7 +13753,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Cafe reencuentro sonido/IMG_3612.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 15:45:05"
   },
   {
     "id_medio": "M0810",
@@ -13770,7 +13770,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5446.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:22:37"
   },
   {
     "id_medio": "M0811",
@@ -13787,7 +13787,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5447.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:22:42"
   },
   {
     "id_medio": "M0812",
@@ -13804,7 +13804,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5452.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:47:52"
   },
   {
     "id_medio": "M0813",
@@ -13821,7 +13821,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5455.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 14:51:37"
   },
   {
     "id_medio": "M0814",
@@ -13838,7 +13838,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5459.webp",
     "ancho": 1024,
     "alto": 864,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 15:55:45"
   },
   {
     "id_medio": "M0815",
@@ -13855,7 +13855,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Cafe reencuentro sonido/IMG_5461.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 16:07:33"
   },
   {
     "id_medio": "M0816",
@@ -13923,7 +13923,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/44BF3B1F-38E8-4C6D-A228-DA8BD4055AFA.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2026-07-10"
+    "fecha_captura": "2026-07-10 11:52:39"
   },
   {
     "id_medio": "M0820",
@@ -13940,7 +13940,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/901D693A-868B-41CD-9155-38C5B19B00D0.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2026-07-10"
+    "fecha_captura": "2026-07-10 10:55:21"
   },
   {
     "id_medio": "M0821",
@@ -13957,7 +13957,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_3301.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:50:29"
   },
   {
     "id_medio": "M0822",
@@ -13974,7 +13974,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_3310.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:52:23"
   },
   {
     "id_medio": "M0823",
@@ -13991,7 +13991,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_3517.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 08:59:41"
   },
   {
     "id_medio": "M0824",
@@ -14008,7 +14008,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_3520.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 08:59:55"
   },
   {
     "id_medio": "M0825",
@@ -14025,7 +14025,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_5308.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:06:23"
   },
   {
     "id_medio": "M0826",
@@ -14042,7 +14042,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_5310.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:19:47"
   },
   {
     "id_medio": "M0827",
@@ -14059,7 +14059,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_5376.webp",
     "ancho": 711,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 19:13:44"
   },
   {
     "id_medio": "M0828",
@@ -14076,7 +14076,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_5391.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 09:04:22"
   },
   {
     "id_medio": "M0829",
@@ -14093,7 +14093,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_5398.webp",
     "ancho": 1024,
     "alto": 796,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 09:42:49"
   },
   {
     "id_medio": "M0830",
@@ -14110,7 +14110,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_5400.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-15"
+    "fecha_captura": "2026-07-15 09:57:56"
   },
   {
     "id_medio": "M0831",
@@ -14127,7 +14127,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_5564.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 08:38:32"
   },
   {
     "id_medio": "M0832",
@@ -14144,7 +14144,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_5586.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 10:36:28"
   },
   {
     "id_medio": "M0833",
@@ -14161,7 +14161,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_5604.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 11:09:46"
   },
   {
     "id_medio": "M0834",
@@ -14178,7 +14178,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_6871.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:50:20"
   },
   {
     "id_medio": "M0835",
@@ -14195,7 +14195,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_6874.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 08:51:22"
   },
   {
     "id_medio": "M0836",
@@ -14212,7 +14212,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_6880 2.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 10:11:01"
   },
   {
     "id_medio": "M0837",
@@ -14229,7 +14229,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_6880.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 10:11:01"
   },
   {
     "id_medio": "M0838",
@@ -14246,7 +14246,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_6881.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-14"
+    "fecha_captura": "2026-07-14 10:11:04"
   },
   {
     "id_medio": "M0839",
@@ -14263,7 +14263,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_6972.webp",
     "ancho": 1024,
     "alto": 768,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 09:18:38"
   },
   {
     "id_medio": "M0840",
@@ -14280,7 +14280,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_6996.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 09:56:26"
   },
   {
     "id_medio": "M0841",
@@ -14297,7 +14297,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/IMG_6998.webp",
     "ancho": 768,
     "alto": 1024,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 09:57:18"
   },
   {
     "id_medio": "M0842",
@@ -14348,7 +14348,7 @@ const medios = [
     "archivo_miniatura": "thumb/Talleres/2026/Julio Talleres 2026/Taller registro memoria/caa55d62-0f58-482f-93d0-18d856cd05e1.webp",
     "ancho": 576,
     "alto": 1024,
-    "fecha_captura": "2026-07-16"
+    "fecha_captura": "2026-07-16 10:35:16"
   }
 ];
 

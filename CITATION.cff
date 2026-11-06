@@ -12,11 +12,14 @@ abstract: >-
   adscrito a la Vicerrectoría de Acción Social de la Universidad de Costa Rica.
   Incluye constelación interactiva en 3D, archivo de relatos, mapa y contenidos curados.
 authors:
+  # Cada persona puede añadir su ORCID en la línea de abajo de su nombre:
+  #   orcid: "https://orcid.org/0000-0000-0000-0000"
   - family-names: Zamora-Sauma
     given-names: Rocío
     affiliation: Universidad de Costa Rica
   - family-names: Luna
     given-names: Iker
+    orcid: "https://orcid.org/0009-0003-5894-3300"
     affiliation: Universidad de Costa Rica
   - family-names: Hidalgo Redondo
     given-names: Giselle

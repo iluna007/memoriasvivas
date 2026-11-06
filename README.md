@@ -31,6 +31,8 @@ GitHub detecta el archivo [`CITATION.cff`](./CITATION.cff) en la raíz y muestra
 
 La lista de personas del equipo del proyecto también está en `src/data/CMS/7_equipo.js`; si cambia el equipo, actualiza `CITATION.cff` para mantener la cita al día.
 
+Para asociar un ORCID, añade bajo el nombre de esa persona en `CITATION.cff` la línea `orcid: "https://orcid.org/0000-0000-0000-0000"`. GitHub y Zenodo leen ese identificador al citar el software. Hoy está el de Iker Luna (`0009-0003-5894-3300`). Los demás se agregan igual, uno por persona.
+
 ---
 
 ## Idioma
