@@ -4,6 +4,7 @@ import { archivoLocalizado, conceptosLocalizados } from '../data/localizado.js'
 import { normalizeConceptId } from '../data/cmsSphereData'
 import { VIDEO_SORT_OPTIONS, getSortedVideos } from '../utils/sortArchivo.js'
 import SortToolbar from '../components/archivo/SortToolbar.jsx'
+import ArchivoDisco from '../components/archivo/ArchivoDisco.jsx'
 
 function getYoutubeEmbedUrl(url) {
   if (!url || typeof url !== 'string') return null
@@ -344,6 +345,7 @@ export default function Archivo() {
     <main className="min-h-full w-full pt-16">
       <h1 className="sr-only">{t('archivo.titulo')}</h1>
       <div className="w-full max-w-none px-2 pb-6 pt-2 sm:px-4 lg:px-6">
+        <ArchivoDisco />
         <VideoArchiveBlock
           title={t('archivo.relatos')}
           sortBy={videoSort}

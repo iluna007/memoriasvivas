@@ -239,7 +239,29 @@
       "id": "Account ID"
     },
     "sinFecha": "No date",
-    "sinTipo": "untyped"
+    "sinTipo": "untyped",
+    "disco": {
+      "titulo": "Archivo Map",
+      "buscar": "Search a folder or file",
+      "sinResultados": "Nothing matches that search.",
+      "archivos_one": "{{count}} file",
+      "archivos_other": "{{count}} files",
+      "mas": "Show {{count}} more",
+      "grafica": "Space by type",
+      "colapsar": "Collapse all",
+      "abrir": "Open folders",
+      "tipos": {
+        "foto": "Photographs",
+        "raw": "RAW",
+        "video": "Video",
+        "audio": "Audio",
+        "camara": "Camera data",
+        "zip": "Compressed",
+        "documento": "Documents",
+        "diseno": "Design and projects",
+        "otros": "Other"
+      }
+    }
   },
   "diccionario": {
     "titulo": "Dictionary of concepts",

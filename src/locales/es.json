@@ -239,7 +239,29 @@
       "id": "ID relato"
     },
     "sinFecha": "Sin fecha",
-    "sinTipo": "sin tipo"
+    "sinTipo": "sin tipo",
+    "disco": {
+      "titulo": "Archivo Map",
+      "buscar": "Buscar carpeta o archivo",
+      "sinResultados": "Nada coincide con esa búsqueda.",
+      "archivos_one": "{{count}} archivo",
+      "archivos_other": "{{count}} archivos",
+      "mas": "Ver {{count}} más",
+      "grafica": "Espacio por tipo",
+      "colapsar": "Colapsar todas",
+      "abrir": "Abrir carpetas",
+      "tipos": {
+        "foto": "Fotografía",
+        "raw": "RAW",
+        "video": "Video",
+        "audio": "Audio",
+        "camara": "Datos de cámara",
+        "zip": "Comprimidos",
+        "documento": "Documentos",
+        "diseno": "Diseño y proyectos",
+        "otros": "Otros"
+      }
+    }
   },
   "diccionario": {
     "titulo": "Diccionario de conceptos",
