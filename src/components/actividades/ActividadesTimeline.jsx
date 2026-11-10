@@ -64,6 +64,10 @@ function formatRango(inicio, fin, lang) {
   return `${textoFecha(lang, a.y, a.m, a.d, a.y !== b.y)} ${nexo} ${textoFecha(lang, b.y, b.m, b.d, true)}`
 }
 
+function descripcionVisible(nodo, lang) {
+  return campo(nodo, 'descripcion', lang).replace(/\s+/g, ' ').trim()
+}
+
 function resumenMedios(conteo, tr) {
   const partes = []
   if (conteo.fotos) partes.push(tr('actividades.fotos', { count: conteo.fotos }))
@@ -603,11 +607,13 @@ function Detalle({ nodo, onOpen, isLight, t, nivel }) {
   const [montado, setMontado] = useState(false)
   const Heading = nivel <= 2 ? 'h4' : nivel === 3 ? 'h5' : 'h6'
   const fecha = formatRango(nodo.fecha, nodo.fechaFin, lang)
+  const descripcion = descripcionVisible(nodo, lang)
 
   return (
     <article className={`rounded-xl border px-3 py-3 ${isLight ? 'border-zinc-200' : 'border-white/10'}`}>
       <Heading className={`text-base font-semibold ${t.cardTitle}`}>{campo(nodo, 'titulo', lang)}</Heading>
       {fecha && <p className={`mt-1 text-xs ${t.muted}`}>{fecha}</p>}
+      {descripcion && <p className={`mt-2 text-sm leading-relaxed ${t.cardBio}`}>{descripcion}</p>}
       {nodo.territorios.length > 0 && (
         <p className={`mt-1 text-xs ${t.cardSub}`}>{nodo.territorios.map((x) => x.nombre).join(', ')}</p>
       )}
@@ -640,7 +646,6 @@ function Cuerpo({ nodo, onOpen, isLight, t, nivel }) {
 
   return (
     <div className="mt-3">
-      {campo(nodo, 'descripcion', lang) && <p className={`text-sm leading-relaxed ${t.cardBio}`}>{campo(nodo, 'descripcion', lang)}</p>}
       {nodo.personas.length > 0 && (
         <p className={`mt-3 text-sm ${t.cardSub}`}>
           <span className="font-semibold">{tr('actividades.personas')} </span>
@@ -681,6 +686,7 @@ function NodoRaiz({ nodo, lado, visible, prioridad = false, onOpen, isLight, t }
   const [abierto, setAbierto] = useState(false)
   const [montado, setMontado] = useState(false)
   const fecha = formatRango(nodo.fecha, nodo.fechaFin, lang)
+  const descripcion = descripcionVisible(nodo, lang)
   const lugares = nodo.territorios.map((x) => x.nombre).join(', ')
   const mediosTxt = resumenMedios(nodo.conteo, tr)
   const detalle = tieneDetalle(nodo)
@@ -732,6 +738,9 @@ function NodoRaiz({ nodo, lado, visible, prioridad = false, onOpen, isLight, t }
               )}
               {fecha && <p data-revelar className={`text-xs ${t.cardSub}`}>{fecha}</p>}
             </div>
+            {descripcion && (
+              <p data-revelar className={`mt-2 text-sm leading-relaxed ${t.cardBio}`}>{descripcion}</p>
+            )}
             <h3 data-revelar className={`mt-1 text-xl font-semibold leading-snug ${t.cardTitle}`}>{titulo}</h3>
             {lugares && <p data-revelar className={`mt-1 text-sm ${t.cardSub}`}>{lugares}</p>}
             {mediosTxt && <p data-revelar className={`mt-2 text-xs ${t.cardHint}`}>{mediosTxt}</p>}
