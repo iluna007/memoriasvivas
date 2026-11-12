@@ -33,7 +33,7 @@
     "tipo": "Persona",
     "nombre": "Hazel Leitón",
     "codigo": "HL",
-    "lugar": null
+    "lugar": "Golfito"
   },
   {
     "tipo": "Persona",
@@ -45,7 +45,7 @@
     "tipo": "Persona",
     "nombre": "Evangelina Granados Vargas",
     "codigo": "EGV",
-    "lugar": null
+    "lugar": "Rancho Quemado"
   },
   {
     "tipo": "Persona",
@@ -87,7 +87,7 @@
     "tipo": "Persona",
     "nombre": "Catalina Arias Carmona",
     "codigo": "CAC",
-    "lugar": null
+    "lugar": "La Palma"
   },
   {
     "tipo": "Persona",
@@ -129,7 +129,7 @@
     "tipo": "Persona",
     "nombre": "Jorge Rojas Jiménez",
     "codigo": "JRJ",
-    "lugar": null
+    "lugar": "Rancho Quemado"
   },
   {
     "tipo": "Persona",
@@ -283,7 +283,7 @@
   },
   {
     "tipo": "Persona",
-    "nombre": "Lila González Valdés",
+    "nombre": "Cirila \"Lila\" González Valdés",
     "codigo": "CGV",
     "lugar": "Golfito"
   },
@@ -291,6 +291,138 @@
     "tipo": "Persona",
     "nombre": "Cecilia Castro González",
     "codigo": "CCG",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Alice Cambronero Castro",
+    "codigo": "ACC",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Félix Cambronero",
+    "codigo": "FC",
+    "lugar": "Rancho Quemado"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Cecilia Villegas Carvajal",
+    "codigo": "CVC",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Desidora Jiménez",
+    "codigo": "DJ",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Doris Vindas Mora",
+    "codigo": "DVM",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Eida María Carraspo Heranera",
+    "codigo": "ECH",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Elizabeth Arce Calvo",
+    "codigo": "EAC",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Eunice Gutiérrez Bradbelt",
+    "codigo": "EGB",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Flor Delgado Vega",
+    "codigo": "FDV",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Julia María Acosta Jiménez",
+    "codigo": "JAJ",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "María Eugenia Picado Fuentes",
+    "codigo": "EPF",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Xinia Miranda Cabezas",
+    "codigo": "XMC",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Marta Luz Rosales Rosales",
+    "codigo": "MRR",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Alejandría Fallas Batista",
+    "codigo": "AFB",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Ana Isabel Artavia Murillo",
+    "codigo": "AAM",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Beatriz Rodríguez Amaya",
+    "codigo": "BRA",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Daisy Guzman Espinoza",
+    "codigo": "AGE",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Margarita Boza Boza Ruiz",
+    "codigo": "MBR",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "María Eugenia Chávez Acevedo",
+    "codigo": "ECA",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Kristyn Caroline Carmona Calderón",
+    "codigo": "KCC",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Kattia Camacho Sánchez",
+    "codigo": "KCS",
+    "lugar": "Golfito"
+  },
+  {
+    "tipo": "Persona",
+    "nombre": "Sandra Mariela Sánchez Chavarría",
+    "codigo": "MSC",
     "lugar": "Golfito"
   }
 ]
