@@ -89,5 +89,5 @@ export function getYoutubeVideoId(url) {
 /** URL de la miniatura estándar de YouTube para ese video. */
 export function urlMiniaturaYoutube(url) {
   const id = getYoutubeVideoId(url)
-  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : null
+  return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : null
 }
