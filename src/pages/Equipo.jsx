@@ -68,6 +68,7 @@ export default function Equipo() {
               {colItems.map((m) => {
                 const isOpen = !!expanded[m.key]
                 const fullName = `${m.nombre} ${m.apellidos}`
+                const bio = campo(m, 'bio', lang).trim()
                 const placeholder = `https://placehold.co/400x480/1a1a1a/666?text=${encodeURIComponent(fullName.slice(0, 18))}`
                 const imgSrc = fotoByKey[m.key] || placeholder
 
@@ -86,7 +87,9 @@ export default function Equipo() {
                     expandLabel={tr('equipo.verMas')}
                     collapseLabel={tr('equipo.ocultar')}
                   >
-                    <p className={`select-text text-sm leading-relaxed ${t.cardBio}`}>{campo(m, 'bio', lang)}</p>
+                    {bio ? (
+                      <p className={`select-text text-sm leading-relaxed ${t.cardBio}`}>{bio}</p>
+                    ) : null}
                   </ExpandableMediaCard>
                 )
               })}

@@ -57,37 +57,41 @@ export default function ExpandableMediaCard({
           {hint ? <p className={`text-[11px] ${t.cardHint}`}>{hint}</p> : null}
         </div>
 
-        <button
-          type="button"
-          onClick={() => {
-            onToggle()
-            if (!isOpen && id) {
-              requestAnimationFrame(() => {
-                document.getElementById(id)?.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'nearest',
-                })
-              })
-            }
-          }}
-          className={`flex w-full touch-manipulation items-center justify-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${t.btnOutline}`}
-          aria-expanded={isOpen}
-        >
-          {isOpen ? collapseLabel : expandLabel}
-          <span className={`inline-block transition-transform ${isOpen ? 'rotate-180' : ''}`} aria-hidden>
-            ▼
-          </span>
-        </button>
+        {children ? (
+          <>
+            <button
+              type="button"
+              onClick={() => {
+                onToggle()
+                if (!isOpen && id) {
+                  requestAnimationFrame(() => {
+                    document.getElementById(id)?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'nearest',
+                    })
+                  })
+                }
+              }}
+              className={`flex w-full touch-manipulation items-center justify-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${t.btnOutline}`}
+              aria-expanded={isOpen}
+            >
+              {isOpen ? collapseLabel : expandLabel}
+              <span className={`inline-block transition-transform ${isOpen ? 'rotate-180' : ''}`} aria-hidden>
+                ▼
+              </span>
+            </button>
 
-        <div
-          className={`grid transition-[grid-template-rows] duration-300 ease-out ${
-            isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-          }`}
-        >
-          <div className="min-h-0 overflow-hidden">
-            <div className={`mt-4 border-t pt-4 ${t.divider}`}>{children}</div>
-          </div>
-        </div>
+            <div
+              className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+              }`}
+            >
+              <div className="min-h-0 overflow-hidden">
+                <div className={`mt-4 border-t pt-4 ${t.divider}`}>{children}</div>
+              </div>
+            </div>
+          </>
+        ) : null}
       </div>
     </article>
   )

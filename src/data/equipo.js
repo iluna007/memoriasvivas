@@ -1,14 +1,10 @@
 /**
  * Datos del equipo construidos desde CMS/7_equipo.js.
- * Si un miembro no tiene bio, se usa un placeholder.
  * Las fotos viven en /public/equipo y se sirven desde /equipo/<archivo>.
  * Si hay más de una foto, Equipo.jsx elige una al azar en cada visita.
  */
 import equipoCMS from './CMS/7_equipo.js'
 import equipoEn from './equipoEn.js'
-
-const LOREM_BIO =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula, mi eget laoreet varius, libero nunc ultricies nulla, at hendrerit nisi lacus vel sapien. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.'
 
 function slugify(nombre, apellidos) {
   return `${nombre}-${apellidos}`
@@ -112,7 +108,7 @@ const mapped = equipoOrdenado.map((m) => {
     escuela_en: m.escuela_en || en.escuela || '',
     sede: m.sede ?? '',
     sede_en: m.sede_en || en.sede || '',
-    bio: (m.bio && typeof m.bio === 'string' && m.bio.trim()) ? m.bio : LOREM_BIO,
+    bio: typeof m.bio === 'string' ? m.bio.trim() : '',
     bio_en: m.bio_en || en.bio || '',
     fotos: archivos.map((archivo) => `/equipo/${archivo}`),
   }

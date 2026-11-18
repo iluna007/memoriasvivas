@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next'
 import { getContentPageTheme } from '../utils/pageThemeClasses'
 import { ConceptDictionaryView } from '../components/ConceptDictionaryView.jsx'
 
-const ZOOM_STORAGE = 'memoriasvivas-diccionario-zoom'
+const ZOOM_STORAGE = 'memoriasvivas-diccionario-zoom-v2'
 const ZOOM_MIN = 50
 const ZOOM_MAX = 250
-const ZOOM_DEFAULT = 50
+const ZOOM_DEFAULT = 250
 const ZOOM_STEP = 5
 
 export default function Diccionario() {
